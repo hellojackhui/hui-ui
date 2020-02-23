@@ -1,0 +1,25 @@
+// Bordered & Pulled
+// -------------------------
+
+.#{$hui-icon-css-prefix}-border {
+  padding: .2em .25em .15em;
+  border: solid .08em $hui-icon-border-color;
+  border-radius: .1em;
+}
+
+.#{$hui-icon-css-prefix}-pull-left { float: left; }
+.#{$hui-icon-css-prefix}-pull-right { float: right; }
+
+.#{$hui-icon-css-prefix} {
+  &.#{$hui-icon-css-prefix}-pull-left { margin-right: .3em; }
+  &.#{$hui-icon-css-prefix}-pull-right { margin-left: .3em; }
+}
+
+/* Deprecated as of 4.4.0 */
+.pull-right { float: right; }
+.pull-left { float: left; }
+
+.#{$hui-icon-css-prefix} {
+  &.pull-left { margin-right: .3em; }
+  &.pull-right { margin-left: .3em; }
+}

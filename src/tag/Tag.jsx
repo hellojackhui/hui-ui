@@ -3,7 +3,7 @@
  * @Author: hellojackhui 
  * @Date: 2020-02-23 21:09:17 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-02-23 21:40:10
+ * @Last Modified time: 2020-02-23 22:53:36
  */
 
 import React from 'react';
@@ -35,11 +35,11 @@ export default class Tag extends Component {
             'is-hit': hit
           })}
           style={this.styles({
-            'background-color': color
+            'backgroundColor': color
           })}
         >
           {this.props.children}
-          {closable && <i className="hui-tag__close hui-close" onClick={this.onClose}></i>}
+          {closable && <i className="hui-tag__close hui-icon hui-icon-close" onClick={this.onClose}></i>}
         </span>
       </View>
     )

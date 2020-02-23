@@ -1,0 +1,71 @@
+.hui-tag {
+  display: inline-block;
+  position: relative;
+  padding: 0 5px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #8391a5;
+  color: #fff;
+  &--gray {
+    background-color: #e4e8f1;
+    border-color: #e4e8f1;
+    color: #48576a;
+    &.hui-tag__close:hover {
+      background-color: #fff;
+      color: #8391a5;
+    }
+  }
+  &--primary {
+    background-color: rgba(32,160,255,.1);
+    border-color: rgba(32,160,255,.2);
+    color: #20a0ff;
+    &.hui-tag__close:hover {
+      background-color: #fff;
+      color: #20a0ff;
+    }
+  }
+  &--success {
+    background-color: rgba(18,206,102,.1);
+    border-color: rgba(18,206,102,.2);
+    color: #13ce66;
+    &.hui-tag__close:hover {
+      background-color: #fff;
+      color: #13ce66;
+    }
+  }
+  &--warning {
+    background-color: rgba(247,186,41,.1);
+    border-color: rgba(247,186,41,.2);
+    color: #f7ba2a;
+    &.hui-tag__close:hover {
+      background-color: #fff;
+      color: #f7ba2a;
+    }
+  }
+  &--danger {
+    background-color: rgba(255,73,73,.1);
+    border-color: rgba(255,73,73,.2);
+    color: #ff4949;
+    &.hui-tag__close:hover {
+      background-color: #fff;
+      color: #ff4949;
+    }
+  }
+}
+
+.hui-tag__close {
+  text-align: center;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  position: relative;
+  cursor: pointer;
+  font-size: 12px;
+  vertical-align: middle;
+  top: -2px;
+  right: -2px;
+}

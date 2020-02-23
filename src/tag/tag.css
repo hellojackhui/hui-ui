@@ -16,9 +16,17 @@
   border-color: #e4e8f1;
   color: #48576a;
 }
+.hui-tag--gray .hui-tag__close:hover {
+  background-color: #fff;
+  color: #8391a5;
+}
 .hui-tag--primary {
   background-color: rgba(32,160,255,.1);
   border-color: rgba(32,160,255,.2);
+  color: #20a0ff;
+}
+.hui-tag--primary .hui-tag__close:hover {
+  background-color: #fff;
   color: #20a0ff;
 }
 .hui-tag--success {
@@ -26,9 +34,17 @@
   border-color: rgba(18,206,102,.2);
   color: #13ce66;
 }
+.hui-tag--success .hui-tag__close:hover {
+  background-color: #fff;
+  color: #13ce66;
+}
 .hui-tag--warning {
   background-color: rgba(247,186,41,.1);
   border-color: rgba(247,186,41,.2);
+  color: #f7ba2a;
+}
+.hui-tag--warning .hui-tag__close:hover {
+  background-color: #fff;
   color: #f7ba2a;
 }
 .hui-tag--danger {
@@ -36,7 +52,12 @@
   border-color: rgba(255,73,73,.2);
   color: #ff4949;
 }
+.hui-tag--danger .hui-tag__close:hover {
+  background-color: #fff;
+  color: #ff4949;
+}
 .hui-tag__close {
+  border-radius: 50%;
   text-align: center;
   width: 18px;
   height: 18px;
@@ -45,6 +66,6 @@
   cursor: pointer;
   font-size: 12px;
   vertical-align: middle;
-  top: -1px;
+  top: -2px;
   right: -2px;
 }
