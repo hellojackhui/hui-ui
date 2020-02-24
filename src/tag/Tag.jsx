@@ -3,11 +3,11 @@
  * @Author: hellojackhui 
  * @Date: 2020-02-23 21:09:17 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-02-23 22:53:36
+ * @Last Modified time: 2020-02-24 22:19:21
  */
 
 import React from 'react';
-import {Component, PropType, View} from '../libs/index';
+import {Component, PropType, View} from '../../libs/index';
 import './tag.css';
 
 export default class Tag extends Component {
