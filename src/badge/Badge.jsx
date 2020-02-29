@@ -13,7 +13,7 @@ export default class Badge extends Component {
   render() {
     const {isDot, children} = this.props;
     return (
-      <div children="hui-badge">
+      <div className="hui-badge">
         <span className={this.classname('hui-badge__icon', isDot && 'hui-badge__dot')}>
           {this.getValue()}
         </span>
@@ -24,7 +24,7 @@ export default class Badge extends Component {
 }
 
 Badge.propTypes = {
-  value: PropType.oneOfType(PropType.number, PropType.string),
+  value: PropType.oneOfType([PropType.number, PropType.string]),
   max: PropType.number,
   isDot: PropType.bool,
 }

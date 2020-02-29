@@ -29,7 +29,7 @@ export default class Alert extends Component {
         
       // </Transition>
       <View show={this.state.visible}>
-        <div className={this.classname('hui-alert', type && `hui-alert--${type}`)}>
+        <div className={this.classname('hui-alert', type && `hui-alert--${type}`)} style={this.styles()}>
           { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `hui-icon-${type}`, {
             'is-big': description
           })}></i>}
