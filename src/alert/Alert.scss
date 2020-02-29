@@ -1,0 +1,68 @@
+.hui-alert {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  color: #fff;
+  opacity: 1;
+  display: table;
+  transition: opacity .2s;
+  &--success {
+    background-color: #13ce66;
+  }
+  &--info {
+    background-color: #50bfff;
+  }
+  &--warning {
+    background-color: #f7ba2a;
+  }
+  &--error {
+    background-color: #ff4949;
+  }
+  &__icon {
+    font-size: 16px;
+    width: 16px;
+    display: table-cell;
+    color: #fff;
+    vertical-align: middle;
+  }
+  &__content {
+    display: table-cell;
+    padding: 0 8px;
+    line-height: 100%;
+  }
+  &__title {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  &__description {
+    color: #fff;
+    font-size: 12px;
+    margin: 5px 0 0;
+  }
+  &__close {
+    font-size: 18px;
+    color: #fff;
+    opacity: 1;
+    top: 10px;
+    right: 13px;
+    position: absolute;
+    cursor: pointer;
+  }
+}
+.is-big {
+  font-size: 28px;
+  width: 28px;
+}
+.is-bold {
+  font-weight: 700;
+}
+.is-customed {
+  font-style: normal;
+  font-size: 13px;
+  top: 9px;
+}

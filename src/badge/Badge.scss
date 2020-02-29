@@ -1,0 +1,27 @@
+.hui-badge {
+  display: inline-block;
+  position: relative;
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 0px 6px;
+    display: inline-block;
+    outline: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #ff4949;
+    font-size: 12px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+  &__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    right: 0;
+    border-radius: 50%;
+  }
+}

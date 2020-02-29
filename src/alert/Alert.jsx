@@ -1,5 +1,6 @@
 import React from 'react';
-import {Component, PropType, Transition, View} from '../../libs/index';
+import {Component, PropType, View} from '../../libs/index';
+import './Alert.scss';
 
 export default class Alert extends Component {
   constructor(props) {
@@ -24,30 +25,31 @@ export default class Alert extends Component {
   render() {
     const {title, description, type, closable, closeText, showIcon} = this.props;
     return (
-      <Transition name="hui-alert-fade" onExited={this.onClose}>
-        <View show={this.state.visible}>
-          <div className={this.classname('hui-alert', type && `hui-alert-${type}`)}>
-            { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `hui-icon-${type}`, {
-              'is-big': description
-            })}></i>}
-            <div className="hui-alert__content">
-              {title && <span className={this.classname('hui-alert__title', {
-                  'is-bold': description
-              })}>{title}</span>}
-              {description && <p className={this.classname('hui-alert__description')}>{description}</p>}
-            </div>
-            <View show={closable}>
-              <i className={this.classname('hui-alert__close', {
-                'hui-icon': !closeText,
-                'hui-icon-close': !closeText,
-                'is-customed': closeText,
-              })}
-                onClick={this.onClose}
-              >{closeText}</i>
-            </View>
+      // <Transition name="hui-alert-fade" onExited={this.onClose}>
+        
+      // </Transition>
+      <View show={this.state.visible}>
+        <div className={this.classname('hui-alert', type && `hui-alert--${type}`)}>
+          { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `hui-icon-${type}`, {
+            'is-big': description
+          })}></i>}
+          <div className="hui-alert__content">
+            {title && <span className={this.classname('hui-alert__title', {
+                'is-bold': description
+            })}>{title}</span>}
+            {description && <p className={this.classname('hui-alert__description')}>{description}</p>}
           </div>
-        </View>
-      </Transition>
+          <View show={closable}>
+            <i className={this.classname('hui-alert__close', {
+              'hui-icon': !closeText,
+              'hui-icon-close': !closeText,
+              'is-customed': closeText,
+            })}
+              onClick={this.onClose}
+            >{closeText}</i>
+          </View>
+        </div>
+      </View>
     )
   }
 }
@@ -62,7 +64,7 @@ Alert.propTypes = {
 }
 
 Alert.defaultProps = {
-  title: 'info',
+  type: 'info',
   closable: true,
   showIcon: false,
 }
