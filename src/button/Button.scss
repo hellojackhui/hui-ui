@@ -1,0 +1,133 @@
+.h-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #c4c4c4;
+  border-radius: 4px;
+  color: #1f2d3d;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #ffffff;
+  margin: 0px;
+  outline-style: none;
+  &--large {
+    padding: 11px 19px;
+    font-size: 16px;
+  }
+  &--small {
+    padding: 7px 9px;
+    font-size: 14px;
+  }
+  &--tiny {
+    padding: 4px;
+    font-size: 12px;
+  }
+  &--primary {
+    background-color: #50bfff;
+    border-color: #50bfff;
+    color: #ffffff;
+    &.is-plain:hover {
+      color: #73ccff;
+      border-color: #73ccff;
+      background: #ffffff;
+    }
+    &:hover {
+      background-color: #73ccff;
+      border-color: #73ccff;
+    }
+  }
+  &--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: #50bfff;
+    &.is-plain:hover {
+      color: #73ccff;
+    }
+    &:hover {
+      color: #73ccff;
+    }
+  }
+  &--success {
+    background-color: #13ce66;
+    border-color: #13ce66;
+    color: #ffffff;
+    &.is-plain:hover {
+      color: #42d885;
+      border-color: #42d885; 
+      background: #ffffff;
+    }
+    &:hover {
+      background-color: #42d885;
+      border-color: #42d885;
+    }
+  }
+  &--info {
+    background-color: #50bfff;
+    border-color: #50bfff;
+    color: #ffffff;
+    &.is-plain:hover {
+      color: #73ccff;
+      border-color: #73ccff;
+      background: #ffffff;
+    }
+    &:hover {
+      background-color: #73ccff;
+      border-color: #73ccff;
+    }
+  }
+  &--warning {
+    background-color: #f7ba2a;
+    border-color: #f7ba2a;
+    color: #ffffff;
+    &.is-plain:hover {
+      color: #f9c855;
+      border-color: #f9c855;
+      background: #ffffff;
+    }
+    &:hover {
+      background-color: #f9c855;
+      border-color: #f9c855;
+    }
+  }
+  &--danger {
+    background-color: #ff4949;
+    border-color: #ff4949;
+    color: #ffffff;
+    &.is-plain:hover {
+      color: #ff6d6d;
+      border-color: #ff6d6d;
+      background: #ffffff;
+    }
+    &:hover {
+      background-color: #ff6d6d;
+      border-color: #ff6d6d;
+    }
+  }
+  &__icon {
+    position: relative;
+    top: 1px;
+    &+ span {
+      margin-left: 5px;
+    }
+  }
+}
+
+.is-plain {
+  background-color: #ffffff;
+  border-color: #c4c4c4;
+  color: #1f2d3d;
+}
+
+.is-disabled {
+  background: #ffffff;
+  pointer-events: none;
+  cursor: not-allowed;
+  color: #d1dbe5;
+  border-color: #d1dbe5;
+}
+
+.is-loading {
+  pointer-events: none;
+  cursor: auto;
+  position: relative;
+}
