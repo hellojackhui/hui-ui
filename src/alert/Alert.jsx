@@ -37,28 +37,30 @@ export default class Alert extends Component {
       <Animate visible={this.state.visible} enterClassName="hui-alert--fadein" leaveClassName="hui-alert--fadeout" onEnd={this.onEnd}>
         {
           ({classNameType}) => (
-            <div className={this.classname('hui-alert', type && `hui-alert--${type}`, classNameType, {
-              'is-disabled': !this.state.domVisible
-            })} style={this.styles()}>
-              { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `hui-icon-${type}`, {
-                'is-big': description
-              })}></i>}
-              <div className="hui-alert__content">
-                {title && <span className={this.classname('hui-alert__title', {
-                    'is-bold': description
-                })}>{title}</span>}
-                {description && <p className={this.classname('hui-alert__description')}>{description}</p>}
+            <View show={this.state.domVisible}>
+              <div className={this.classname('hui-alert', type && `hui-alert--${type}`, classNameType, {
+                'is-disabled': !this.state.domVisible
+              })} style={this.styles()}>
+                { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `hui-icon-${type}`, {
+                  'is-big': description
+                })}></i>}
+                <div className="hui-alert__content">
+                  {title && <span className={this.classname('hui-alert__title', {
+                      'is-bold': description
+                  })}>{title}</span>}
+                  {description && <p className={this.classname('hui-alert__description')}>{description}</p>}
+                </div>
+                <View show={closable}>
+                  <i className={this.classname('hui-alert__close', {
+                    'hui-icon': !closeText,
+                    'hui-icon-close': !closeText,
+                    'is-customed': closeText,
+                  })}
+                    onClick={this.onClose}
+                  >{closeText}</i>
+                </View>
               </div>
-              <View show={closable}>
-                <i className={this.classname('hui-alert__close', {
-                  'hui-icon': !closeText,
-                  'hui-icon-close': !closeText,
-                  'is-customed': closeText,
-                })}
-                  onClick={this.onClose}
-                >{closeText}</i>
-              </View>
-            </div>
+            </View>
           )
         }
       </Animate>
