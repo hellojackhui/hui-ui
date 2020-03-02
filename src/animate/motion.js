@@ -1,7 +1,5 @@
 const canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
-// ================= Transition =================
-// Event wrapper. Copy from react source code
 function makePrefixMap(styleProp, eventName) {
   const prefixes = {};
 
@@ -66,8 +64,11 @@ function getVendorPrefixedEventName(eventName) {
 }
 const animationEndName = getVendorPrefixedEventName('animationend');
 const transitionEndName = getVendorPrefixedEventName('transitionend');
-module.exports = {
+
+const exportProperty = {
   animationEndName: animationEndName,
   transitionEndName: transitionEndName,
   supportTransition: !!(animationEndName && transitionEndName)
-};
+}
+
+export default exportProperty;
