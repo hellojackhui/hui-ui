@@ -75,3 +75,52 @@
   display: inline-block;
   position: relative;
 }
+
+.hui-radio-button {
+  display: inline-block;
+  position: relative;
+  &__wrap {
+    padding: 10px 15px;
+    border: 1px solid #bfcbd9;
+    cursor: pointer;
+    font-size: 14px;
+    border-left: 0;
+    white-space: nowrap;
+    background-color: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    border-radius: 0;
+    &.is-disabled {
+      color: #bfcbd9;
+      cursor: not-allowed;
+      background-image: none;
+      background-color: #eef1f6;
+      border-color: #d1dbe5;
+      box-shadow: none;
+    }
+    &.is-checked {
+      color: #ffffff;
+      background-image: none;
+      background-color: #50bfff;
+      border-color: #50bfff;
+      box-shadow: none;
+    }
+  }
+  &__input {
+    opacity: 0;
+    outline: 0;
+    position: absolute;
+    z-index: -1;
+    left: -999px;
+  }
+  &:first-child .hui-radio-button__wrap {
+    border-left: 1px solid #bfcbd9;
+    border-radius: 4px 0px 0px 4px;
+  }
+  &:last-child .hui-radio-button__wrap {
+    border-radius: 0px 4px 4px 0px;
+  }
+}

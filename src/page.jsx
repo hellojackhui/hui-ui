@@ -51,6 +51,13 @@ export default class Page extends React.Component {
             <Radio value={0}>0</Radio>
           </Radio.group>
         </div>
+        <div style={{'marginTop': '20px'}}>
+          <Radio.group value={this.state.radiovalue} onChange={this.radioChange}>
+            <Radio.button value={1}>1</Radio.button>
+            <Radio.button value={0}>0</Radio.button>
+            <Radio.button value={2}>2</Radio.button>
+          </Radio.group>
+        </div>
       </div>
     )
   }
