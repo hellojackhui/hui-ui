@@ -4,12 +4,14 @@ import Badge from './badge';
 import Tag from './tag';
 import Button from './button';
 import Radio from './radio';
+import Switch from './switch';
 
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       radiovalue: 0,
+      switchValue: 0,
     }
   }
   onClick = () => {
@@ -18,6 +20,11 @@ export default class Page extends React.Component {
   radioChange = (val) => {
     this.setState({
       radiovalue: val
+    })
+  }
+  switchChange = (val) => {
+    this.setState({
+      switchValue: val
     })
   }
   render() {
@@ -57,6 +64,17 @@ export default class Page extends React.Component {
             <Radio.button value={0}>0</Radio.button>
             <Radio.button value={2}>2</Radio.button>
           </Radio.group>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Switch 
+            value={this.state.switchValue}
+            onChange={this.switchChange}
+            onValue={100}
+            offValue={0}
+            onFocus={()=>console.log('focus')}
+            onBlur={()=>console.log('blur')}
+            onText="22"
+            offText="22"/>
         </div>
       </div>
     )
