@@ -1,0 +1,55 @@
+.hui-loading {
+  &--overflow {
+    overflow: hidden;
+  }
+  &__wrap {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    margin-top: -21px;
+    width: 100%;
+    left: 0px;
+    text-align: center;
+  }
+  &__svg {
+    width: 50px;
+    height: 50px;
+    animation: rotate 2s linear infinite;
+    .path {
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-dasharray: 90 150;
+      stroke-dashoffset: 0;
+      animation: line 2s linear infinite;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    margin: 3px 0;
+  }
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes line {
+  0% {
+    stroke-dasharray: 1 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90 150;
+    stroke-dasharray: -40px;
+  }
+  100% {
+    stroke-dasharray: 90 150;
+    stroke-dashoffset: -120px;
+  }
+}

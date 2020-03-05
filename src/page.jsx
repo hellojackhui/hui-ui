@@ -5,6 +5,7 @@ import Tag from './tag';
 import Button from './button';
 import Radio from './radio';
 import Switch from './switch';
+import Loading from './loading';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -75,6 +76,11 @@ export default class Page extends React.Component {
             onBlur={()=>console.log('blur')}
             onText="22"
             offText="22"/>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Loading loading={true} text={'hello'}>
+            <div style={{'width': '300px', 'height': '400px'}}></div>
+          </Loading>
         </div>
       </div>
     )
