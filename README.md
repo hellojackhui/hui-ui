@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- 临时拿一个图标充数 -->
 
-## Available Scripts
+<p align="center"><a href="https://www.baidu.com"><img alt="hui_ui logo" src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"/></a></p>
+<p align="center"></p>
 
-In the project directory, you can run:
+# hui_ui
 
-### `yarn start`
+`hui_ui`是一款基于[React](https://reactjs.org/)开发的组件库,组件库提供了丰富的通用性组件，可以提升团队组件化开发的效率，提升用户体验。
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 开发计划
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- 完成所有基础组件的开发与测试
+- 完善测试用例和文档编写
+- 完成css的整体架构调整
+- 完成example文档编写
+- 部署上线
 
-### `yarn test`
+## 特性
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- :book: **文档**: 完善的使用文档
+- :art: **设计**: 精美的风格设计
+- :rocket: **技术栈**: 使用前沿的前端技术栈
+- :gem: **配置**:  开发的组件配置
+- :gear: **工程化**: 良好的工程化实践
 
-### `yarn build`
+## 兼容性
+现代浏览器及IE11以上版本
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 参与贡献
+非常欢迎你的贡献，你可以通过以下方式共同建设组件库
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- 通过[issue](https://github.com/hellojackhui/hui-ui/issues)进行提问
+- 通过提交[request](https://github.com/hellojackhui/hui-ui/pulls)改进代码
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 开发进度
 
-### `yarn eject`
+开发者|修改内容|时间
+---|----|----
+惠嘉伟|基础版|2020-03-05
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
