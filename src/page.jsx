@@ -6,6 +6,7 @@ import Button from './button';
 import Radio from './radio';
 import Switch from './switch';
 import Loading from './loading';
+import Progress from './progress';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -81,6 +82,16 @@ export default class Page extends React.Component {
           <Loading loading={true} text={'hello'}>
             <div style={{'width': '300px', 'height': '400px'}}></div>
           </Loading>
+        </div>
+        <div style={{'width': '350px', 'marginTop': '40px'}}>
+          <Progress type="line" percentage={90} />
+          <Progress type="line" percentage={70} status="success" />
+          <Progress strokeWidth={18} percentage={50} status="success" textInside />
+          <br/>
+          <Progress type="circle" percentage={80} width={80}/>
+          <Progress type="circle" percentage={70} width={80}/>
+          <Progress type="circle" percentage={100}  width={80} status="success" />
+          <Progress type="circle" percentage={50}  width={80} status="exception" />
         </div>
       </div>
     )
