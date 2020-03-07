@@ -1,0 +1,75 @@
+.hui-message {
+  display: inline-block;
+  min-width: 300px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border-radius: 2px;
+  position: fixed;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
+  animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  animation-duration: .2s;
+  animation-fill-mode: both;
+  &--enter {
+    animation-name: enter;
+  }
+  &--leave {
+    animation-name: leave;
+  }
+  &__image {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__title {
+    margin-left: 38px;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+  }
+  &__close {
+    top: 3px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    color: #bfcbd9;
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0 34px 0 0;
+    color: #8391a5;
+    text-align: justify;
+  }
+  .is-disabled {
+    display: none;
+  }
+}
+
+@keyframes enter {
+  from {
+    top: 0px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes leave {
+  from {
+    top: 20px;
+    opacity: 1;
+  }
+  to {
+    top: 0px;
+    opacity: 0;
+  }
+}

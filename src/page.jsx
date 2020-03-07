@@ -7,6 +7,7 @@ import Radio from './radio';
 import Switch from './switch';
 import Loading from './loading';
 import Progress from './progress';
+import Message from './message';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -93,6 +94,12 @@ export default class Page extends React.Component {
           <Progress type="circle" percentage={100}  width={80} status="success" />
           <Progress type="circle" percentage={50}  width={80} status="exception" />
         </div>
+        {
+          Message.warning({
+            message: 'hello',
+            showClose: true,
+          })
+        }
       </div>
     )
   }

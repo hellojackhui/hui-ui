@@ -3,7 +3,7 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-06 17:09:42 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-03-06 20:23:00
+ * @Last Modified time: 2020-03-07 11:45:21
  */
 
 const React = require('react');
@@ -18,10 +18,6 @@ class Progress extends Component {
     textInside: false,
     width: 126,
     showText: true
-  }
-  
-  constructor(props) {
-    super(props);
   }
 
   // 根据storkewidth和width的比值获取进度圈的直径
@@ -92,7 +88,7 @@ class Progress extends Component {
   render() {
     let {type, percentage, strokeWidth, textInside, status, width, showText} = this.props
     let progress;
-    if (type == 'line') {
+    if (type === 'line') {
       progress = (
         <div className="hui-progress-bar">
           <div className="hui-progress-bar__outer" style={{'height': `${strokeWidth}px`}}>
