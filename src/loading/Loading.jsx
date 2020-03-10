@@ -57,7 +57,7 @@ export default class Loading extends Component {
             }}>
                 <div className={this.classname('hui-loading__wrap')}>
                     <svg className="hui-loading__svg" viewBox="25 25 50 50">
-                        <circle class="path" cx="50" cy="50" r="20" fill="#ffffff" stroke={color}></circle>
+                        <circle className="path" cx="50" cy="50" r="20" fill="#ffffff" stroke={color}></circle>
                     </svg>
                     {text && <p className="hui-loading__text" style={{'color': color}}>{text}</p>}
                 </div>

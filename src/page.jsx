@@ -8,6 +8,7 @@ import Switch from './switch';
 import Loading from './loading';
 import Progress from './progress';
 import Message from './message';
+import Input from './input';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -100,6 +101,9 @@ export default class Page extends React.Component {
             showClose: true,
           })
         }
+        <div style={{'marginTop': '20px'}}>
+          <Input value={244} disabled/>
+        </div>
       </div>
     )
   }

@@ -3,12 +3,12 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-06 17:09:42 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-03-07 11:45:21
+ * @Last Modified time: 2020-03-10 21:05:12
  */
 
-const React = require('react');
-const {Component, PropType} = require('../../libs/index');
-require('./Progress.scss');
+import React from 'react';
+import {Component, PropType} from '../../libs/index';
+import './Progress.scss';
 
 class Progress extends Component {
   static defaultProps = {
@@ -168,4 +168,4 @@ Progress.propTypes = {
   showText: PropType.bool,
 }
 
-module.exports = Progress;
+export default Progress;
