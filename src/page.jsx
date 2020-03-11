@@ -9,6 +9,7 @@ import Loading from './loading';
 import Progress from './progress';
 import Message from './message';
 import Input from './input';
+import Checkbox from './checkbox';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -102,7 +103,10 @@ export default class Page extends React.Component {
           })
         }
         <div style={{'marginTop': '20px'}}>
-          <Input type="textarea" autoSize/>
+          <Input type="textarea" autoSize={false}/>
+        </div>
+        <div>
+          <Checkbox checked={true} disabled>123</Checkbox>
         </div>
       </div>
     )

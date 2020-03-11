@@ -32,7 +32,7 @@
 - 通过[issue](https://github.com/hellojackhui/hui-ui/issues)进行提问
 - 通过提交[request](https://github.com/hellojackhui/hui-ui/pulls)改进代码
 
-## 开发进度
+## 文档更新进度
 
 开发者|修改内容|时间
 ---|----|----

@@ -1,7 +1,6 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import './Input.scss';
-import PropTypes from '../../libs/prop-type';
 import {calculateTextareaStyle} from './utils';
 
 export default class Input extends Component {
@@ -124,7 +123,7 @@ Input.propTypes = {
 
   // autocomplete attrs
   rows: PropType.number,
-  resize: PropTypes.oneOf(['none', 'both', 'horizontal', 'vertical']),
+  resize: PropType.oneOf(['none', 'both', 'horizontal', 'vertical']),
   autoComplete: PropType.string,
 
   // input events

@@ -1,0 +1,59 @@
+.hui-checkbox {
+  display: inline-block;
+  position: relative;
+  &__inner {
+    top: 4px;
+    margin-right: 4px;
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #bfcbd9;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
+    &.is-checked {
+      background-color: #50bfff;
+      border-color: #50bfff;
+      &::after {
+        transform: rotate(45deg) scale(1);
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      border: 2px solid #fff;
+      box-sizing: content-box;
+      border-left: 0;
+      border-top: 0;
+      width: 4px;
+      height: 8px;
+      left: 5px;
+      top: 1px;
+      transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+      transform: rotate(45deg) scale(0.2);
+      transform-origin: center;
+    }
+  }
+  &.is-disabled {
+    color: #bbb;
+    cursor: not-allowed;
+    & .hui-checkbox__inner {
+      background-color: #eef1f6;
+      border-color: #d1dbe5;
+      cursor: not-allowed;
+    }
+  }
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: -1000;
+    opacity: 0;
+  }
+  &__title {
+      font-size: 14px;
+  }
+}
