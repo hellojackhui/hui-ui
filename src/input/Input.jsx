@@ -2,6 +2,7 @@ import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import './Input.scss';
 import PropTypes from '../../libs/prop-type';
+import {calculateTextareaStyle} from './utils';
 
 export default class Input extends Component {
   constructor(props) {
@@ -43,8 +44,7 @@ export default class Input extends Component {
     }
     const minRows = this.props.minRows;
     const maxRows = this.props.maxRows;
-    // const calTextAreaStyle = calculateTextareaStyle(this.refs.textarea, minRows, maxRows);
-    const calTextAreaStyle = {};
+    const calTextAreaStyle = calculateTextareaStyle(this.refs.textarea, minRows, maxRows);
     this.setState({
       textareaStyle: Object.assign({}, this.state.textareaStyle, calTextAreaStyle)
     });
@@ -75,6 +75,7 @@ export default class Input extends Component {
             {...otherprops}
             ref="textarea"
             rows={rows}
+            style={this.state.textareaStyle}
             onChange={this.textChangeHandler}
             onFocus={this.onfocus}
             onBlur={this.onblur}

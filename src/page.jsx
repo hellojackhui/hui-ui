@@ -102,7 +102,7 @@ export default class Page extends React.Component {
           })
         }
         <div style={{'marginTop': '20px'}}>
-          <Input value={244} disabled/>
+          <Input type="textarea" autoSize/>
         </div>
       </div>
     )
