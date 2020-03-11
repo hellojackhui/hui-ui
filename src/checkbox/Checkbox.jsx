@@ -13,7 +13,7 @@ export default class Checkbox extends Component {
     return props.checked;
   }
   onChange = (e) => {
-    const val = e.target.checked;
+    let val = e.target.checked;
     const {onChange} = this.props;
     this.setState({
       checked: val,
@@ -31,8 +31,8 @@ export default class Checkbox extends Component {
         'is-disabled': disabled,
       })}>
         <span className={this.classname("hui-checkbox__inner", {
-          'is-indeterminate': indeterminate,
           'is-checked': checked,
+          'is-indeterminate': indeterminate,
         })}></span>
         <input 
           className="hui-checkbox__input"

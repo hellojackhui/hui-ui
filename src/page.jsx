@@ -106,7 +106,7 @@ export default class Page extends React.Component {
           <Input type="textarea" autoSize={false}/>
         </div>
         <div>
-          <Checkbox checked={true} disabled>123</Checkbox>
+          <Checkbox indeterminate={false} checked={true}>123</Checkbox>
         </div>
       </div>
     )

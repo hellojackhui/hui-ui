@@ -20,6 +20,25 @@
         transform: rotate(45deg) scale(1);
       }
     }
+    &.is-indeterminate {
+      background-color: #50bfff;
+      border-color: #50bfff;
+      &::after {
+        transform: scale(1) !important;
+      }
+    }
+    &.is-indeterminate::after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        width: 10px;
+        height: 1px;
+        left: 2px;
+        background-color: #fff;
+        transform: scale(0);
+        transform-origin: center;
+        transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+      }
     &::after {
       content: '';
       position: absolute;
