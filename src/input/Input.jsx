@@ -137,7 +137,7 @@ Input.propTypes = {
 
 Input.defaultProps = {
   type: 'text',
-  autosize: false,
+  autoSize: false,
   trim: false,
   rows: 2,
   autoComplete: 'off',

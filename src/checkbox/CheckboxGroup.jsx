@@ -9,6 +9,15 @@ export default class CheckboxGroup extends Component {
       options: this.props.value || []
     }
   }
+  static childContextTypes = {
+    group: PropType.any
+  }
+  getChildContext() {
+    return {
+      group: this,
+    }
+  }
+  
   componentWillReceiveProps(nextProps) {
     if (nextProps.value !== this.props.value) {
       this.setState({
@@ -31,19 +40,20 @@ export default class CheckboxGroup extends Component {
     }
   }
   render() {
-    const {options} = this.props;
+    const {options} = this.state;
     return (
       <div style={this.styles()} className="hui-checkbox-group">
         {
           React.Children.map(this.props.children, (node, index) => {
             if (!node) return null;
             let {name} = node.type;
-            if (name !== 'Checkbox' && name !== 'CheckboxButton') {
+            if (name !== 'Checkbox' && name !== 'CheckButton') {
               return null;
             }
+            console.log(options.indexOf(node.props.label))
             return React.cloneElement(node, Object.assign({}, node.props, {
               key: index,
-              checked: node.props.checked || options.indexOf(node.props.value) > 0 || options.indexOf(node.props.label) > 0,
+              checked: node.props.checked || options.indexOf(node.props.value) >= 0 || options.indexOf(node.props.label) >= 0,
               onChange: this.onChange.bind(this, node.props.value ? node.props.value : node.props.value === 0 ? 0 : node.props.label)
             }))
           })
@@ -60,7 +70,5 @@ CheckboxGroup.propTypes = {
   size: PropType.oneOf(['large', 'small']),
   fill: PropType.string,
   textColor: PropType.string,
-  min: PropType.number,
-  max: PropType.number,
   onChange: PropType.func,
 }

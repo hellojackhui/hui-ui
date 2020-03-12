@@ -6,26 +6,71 @@ export default class Checkbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked: this.calCheckStatus(props)
+      checked: props.checked,
+      focus: false,
+      label: this.getLabel(props)
     }
   }
-  calCheckStatus = (props) => {
-    return props.checked;
+  static contextTypes = {
+    group: PropType.any,
+  }
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      checked: nextProps.checked,
+      label: this.getLabel(nextProps),
+      focus: nextProps.focus,
+    })
+  }
+  parent = () => {
+    return this.context.group;
+  }
+  onFocus = () => {
+    this.setState({
+      focus: true,
+    })
+  }
+  onBlur = () => {
+    this.setState({
+      focus: false,
+    })
+  }
+  getLabel = (props) => {
+    if (props.trueLabel || props.falseLabel) {
+      return props.checked ? props.trueLabel : props.falseLabel;
+    } else {
+      return props.label;
+    }
   }
   onChange = (e) => {
     let val = e.target.checked;
-    const {onChange} = this.props;
+    const {onChange, trueLabel, falseLabel} = this.props;
+    let ctx = this.parent();
+    let arr = ctx.state.options;
+    let len = arr.length + (val ? 1 : -1);
+    if (ctx) {
+      if (ctx.props.min !== undefined && ctx.props.min > len) {
+        return;
+      }
+      if (ctx.props.max !== undefined && ctx.props.max < len) {
+        return;
+      }
+    }
+    let newlabel = this.state.label;
+    if (trueLabel || falseLabel) {
+      newlabel = val ? trueLabel : falseLabel;
+    }
     this.setState({
       checked: val,
+      label: newlabel,
     }, () => {
-      if (onChange && val) {
+      if (onChange) {
         onChange(val);
       }
     })
   }
   render() {
     const {disabled, children, indeterminate} = this.props;
-    const {checked} = this.state;
+    const {checked, label, focus} = this.state;
     return (
       <label style={this.styles()} className={this.classname('hui-checkbox', {
         'is-disabled': disabled,
@@ -33,15 +78,18 @@ export default class Checkbox extends Component {
         <span className={this.classname("hui-checkbox__inner", {
           'is-checked': checked,
           'is-indeterminate': indeterminate,
+          'is-focus': focus,
         })}></span>
         <input 
           className="hui-checkbox__input"
           type="checkbox"
           disabled={disabled}
           onChange={this.onChange}
+          onFocus={this.onFocus}
+          onBlur={this.onBlur}
           checked={checked}
         />
-        <span className="hui-checkbox__title">{children}</span>
+        <span className="hui-checkbox__title">{children || label}</span>
       </label>
     )
   }

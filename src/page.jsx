@@ -17,6 +17,10 @@ export default class Page extends React.Component {
     this.state = {
       radiovalue: 0,
       switchValue: 0,
+      cities: ['上海', '北京', '广州', '深圳'],
+      checkboxGroup1: ['上海'],
+      checkboxGroup2: ['北京'],
+      checkboxGroup3: ['广州']
     }
   }
   onClick = () => {
@@ -105,8 +109,22 @@ export default class Page extends React.Component {
         <div style={{'marginTop': '20px'}}>
           <Input type="textarea" autoSize={false}/>
         </div>
-        <div>
-          <Checkbox indeterminate={false} checked={true}>123</Checkbox>
+        <div style={{'marginTop': '20px'}}>
+          {/* <Checkbox indeterminate={false} checked={true}>123</Checkbox> */}
+          <Checkbox.Group value={['hello', 'world']}>
+            <Checkbox label={'hello'}>hello</Checkbox>
+            <Checkbox label={'hello1'}>hello1</Checkbox>
+            <Checkbox label={'world'}>world</Checkbox>
+          </Checkbox.Group>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Checkbox.Group value={this.state.checkboxGroup1}>
+            {
+              this.state.cities.map((city, index) => {
+                return <Checkbox.Button key={index} label={city}>{city}</Checkbox.Button>
+              })
+            }
+          </Checkbox.Group>
         </div>
       </div>
     )
