@@ -10,6 +10,7 @@ import Progress from './progress';
 import Message from './message';
 import Input from './input';
 import Checkbox from './checkbox';
+import Notification from './notification';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -126,6 +127,15 @@ export default class Page extends React.Component {
             }
           </Checkbox.Group>
         </div>
+        {
+          Notification.info('message')
+        }
+        {
+          Notification.info({
+            msg: 'message',
+            duration: 4000
+          })
+        }
       </div>
     )
   }
