@@ -11,6 +11,7 @@ import Message from './message';
 import Input from './input';
 import Checkbox from './checkbox';
 import Notification from './notification';
+import Slider from './slider';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -136,6 +137,9 @@ export default class Page extends React.Component {
             duration: 4000
           })
         }
+        <div style={{'marginTop': '20px'}}>
+          <Slider value={20} formatTooltip={(val) => val / 100} showStops/>
+        </div>
       </div>
     )
   }

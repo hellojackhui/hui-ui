@@ -27,7 +27,7 @@ export default function Notification(props = {}, type) {
   }
 
   const instances = document.querySelectorAll('.hui-notification-wrap');
-  const lastInstance = instances[instances.length - 1];
+  // const lastInstance = instances[instances.length - 1];
   // props.top = (lastInstance ? (parseInt(lastInstance.style.top) + lastInstance.offsetHeigtht) : props.offset) + 16;
   props.top = instances.length > 1 ? (instances.length - 1) * 104 + 16 : 16; 
 

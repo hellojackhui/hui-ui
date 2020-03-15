@@ -6,7 +6,6 @@ import {default as Assets} from './assets';
 export default class NotificationItem extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     this.state = {
       visible: true,
     }
@@ -69,6 +68,7 @@ export default class NotificationItem extends Component {
                     onMouseEnter={this.stoptimer}
                     onMouseLeave={this.starttimer}
                     onClick={this.onClick}
+                    // eslint-disable-next-line
                     style={{
                       'top': top
                     }}
@@ -84,7 +84,7 @@ export default class NotificationItem extends Component {
                   <div className={this.classname('hui-notification__group', {
                     'is-with-icon': type || iconClass
                   })}>
-                    <h2 className="hui-notification__title">提示</h2>
+                    <h2 className="hui-notification__title">{title}</h2>
                     <div className="hui-notification__content">{msg}</div>
                     <i className="hui-notification__close hui-icon hui-icon-close" onClick={this.onClose}></i>
                   </div>
@@ -109,5 +109,6 @@ NotificationItem.propTypes = {
 NotificationItem.defaultProps = {
   top: 16,
   duration: 3000,
+  title: '提示',
   type: 'success',
 }
