@@ -13,11 +13,13 @@ export default class Input extends Component {
   componentDidMount() {
     this.calTextArea();
   }
-  onfocus = () => {
-    (this.refs.input || this.refs.textarea).focus();
+  onfocus = (e) => {
+    const { onFocus } = this.props;
+    if (onFocus) onFocus(e)
   }
-  onblur = () => {
-    (this.refs.input || this.refs.textarea).blur();
+  onblur = (e) => {
+    const { onBlur } = this.props;
+    if (onBlur) onBlur(e)
   }
   textChangeHandler = (e) => {
     let val = e.target.value;

@@ -12,6 +12,7 @@ import Input from './input';
 import Checkbox from './checkbox';
 import Notification from './notification';
 import Slider from './slider';
+import InputNumber from './input-number';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -139,6 +140,9 @@ export default class Page extends React.Component {
         }
         <div style={{'marginTop': '20px'}}>
           <Slider value={20} formatTooltip={(val) => val / 100} showStops/>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <InputNumber value={20} step={2} />
         </div>
       </div>
     )
