@@ -98,7 +98,6 @@ InputNumber.propTypes = {
   value: PropType.number,
   min: PropType.number,
   max: PropType.number,
-  min: PropType.number,
   step: PropType.number,
   size: PropType.oneOf(['large', 'small']),
   disabled: PropType.bool,

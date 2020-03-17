@@ -10,9 +10,9 @@ import Progress from './progress';
 import Message from './message';
 import Input from './input';
 import Checkbox from './checkbox';
-import Notification from './notification';
 import Slider from './slider';
 import InputNumber from './input-number';
+import Tabs from './tabs';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -23,7 +23,8 @@ export default class Page extends React.Component {
       cities: ['上海', '北京', '广州', '深圳'],
       checkboxGroup1: ['上海'],
       checkboxGroup2: ['北京'],
-      checkboxGroup3: ['广州']
+      checkboxGroup3: ['广州'],
+      tabarr: [0],
     }
   }
   onClick = () => {
@@ -37,6 +38,13 @@ export default class Page extends React.Component {
   switchChange = (val) => {
     this.setState({
       switchValue: val
+    })
+  }
+  tabAdd = () => {
+    const {tabarr} = this.state;
+    tabarr.push(tabarr[tabarr.length - 1] + 1)
+    this.setState({
+      tabarr,
     })
   }
   render() {
@@ -129,7 +137,7 @@ export default class Page extends React.Component {
             }
           </Checkbox.Group>
         </div>
-        {
+        {/* {
           Notification.info('message')
         }
         {
@@ -137,12 +145,23 @@ export default class Page extends React.Component {
             msg: 'message',
             duration: 4000
           })
-        }
+        } */}
         <div style={{'marginTop': '20px'}}>
           <Slider value={20} formatTooltip={(val) => val / 100} showStops/>
         </div>
         <div style={{'marginTop': '20px'}}>
           <InputNumber value={20} step={2} />
+        </div>
+        <div style={{'marginTop': '20px', 'width': '500px'}}>
+          <Tabs type="border-card" editable currentName="1" onTabAdd={this.tabAdd}>
+            {
+              this.state.tabarr.map((item, index) => {
+                return (
+                  <Tabs.Pane label={`apple-${index}`} name={`${index}`}>label={`apple-${index}`}</Tabs.Pane>
+                )
+              })
+            }
+          </Tabs>
         </div>
       </div>
     )
