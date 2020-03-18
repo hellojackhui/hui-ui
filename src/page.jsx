@@ -13,6 +13,7 @@ import Checkbox from './checkbox';
 import Slider from './slider';
 import InputNumber from './input-number';
 import Tabs from './tabs';
+import Card from './card';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -162,6 +163,13 @@ export default class Page extends React.Component {
               })
             }
           </Tabs>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Card
+            header={<h1>hello</h1>}
+          >
+            <Progress type="line" percentage={90} />
+          </Card>
         </div>
       </div>
     )
