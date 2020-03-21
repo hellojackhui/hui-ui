@@ -13,12 +13,21 @@ export default class InputNumber extends Component {
     };
     this.timeout = null;
   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.value != this.state.value) {
+      this.setState({
+        value: nextProps.value
+      })
+    }
+  }
   onIncrease = () => {
     const {value} = this.state;
     const {step, max} = this.props;
     let newValue = value >= max ? value : value + step;
     this.setState({
       value: newValue
+    }, () => {
+      this.onStopInput();
     })
   }
   onDecrease = () => {
@@ -27,11 +36,13 @@ export default class InputNumber extends Component {
     let newValue = value <= min ? value : value - step;
     this.setState({
       value: newValue
+    }, () => {
+      this.onStopInput();
     })
   }
   onStopInput = () => {
     let value = this.state.value;
-    const {min, max} = this.props;
+    const {min, max, onChange} = this.props;
     let newValue = value;
     if (min >= newValue) {
       newValue = min;
@@ -41,6 +52,8 @@ export default class InputNumber extends Component {
     }
     this.setState({
       value: newValue
+    }, () => {
+      onChange && onChange(newValue);
     })
   }
   onChange = (val) => {
@@ -65,7 +78,7 @@ export default class InputNumber extends Component {
   }
   render() {
     const {value, focus} = this.state;
-    const {size, disabled, controls, max, min} = this.props;
+    const {size, disabled, max, min} = this.props;
     return (
       <div className={this.classname('hui-input-number', size && `hui-input-number--${size}`, {
         'is-disabled': disabled,
@@ -102,6 +115,7 @@ InputNumber.propTypes = {
   size: PropType.oneOf(['large', 'small']),
   disabled: PropType.bool,
   controls: PropType.boolean,
+  onChange: PropType.func,
 }
 
 InputNumber.defaultProps = {

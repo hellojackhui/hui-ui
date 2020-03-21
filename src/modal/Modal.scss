@@ -1,0 +1,89 @@
+.hui-modal {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  &__mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 3000;
+  }
+  &__inner {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #d1dbe5;
+    border-radius: 4px;
+    animation-timing-function: linear;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+    z-index: 3004;
+  }
+  &--enter {
+    animation-name: modal-enter;
+  }
+  &--leave {
+    animation-name: modal-leave;
+  }
+  &__header {
+    position: relative;
+    padding: 15px 20px 0;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    color: #1f2d3d;
+    line-height: 1;
+  }
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 24px;
+    color: #bfcbd9;
+    cursor: pointer;
+    &:hover {
+      color: #20a0ff;
+    }
+  }
+  &__body {
+    padding: 20px 20px;
+    color: #48576a;
+    font-size: 14px;
+  }
+  &__footer {
+    padding: 10px 20px 15px;
+    text-align: right;
+    box-sizing: border-box;
+  }
+}
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0px);
+  }
+}
+
+@keyframes modal-leave {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+}

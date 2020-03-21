@@ -14,6 +14,7 @@ import Slider from './slider';
 import InputNumber from './input-number';
 import Tabs from './tabs';
 import Card from './card';
+import Modal from './modal';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -148,7 +149,8 @@ export default class Page extends React.Component {
           })
         } */}
         <div style={{'marginTop': '20px'}}>
-          <Slider value={20} formatTooltip={(val) => val / 100} showStops/>
+        111
+          <Slider value={20} formatTooltip={(val) => val / 100} showStops showInput/>
         </div>
         <div style={{'marginTop': '20px'}}>
           <InputNumber value={20} step={2} />
@@ -171,6 +173,16 @@ export default class Page extends React.Component {
             <Progress type="line" percentage={90} />
           </Card>
         </div>
+        {/* <div>
+          <Modal title="提示" visible={true}>
+            <Modal.Body>
+              123
+            </Modal.Body>
+            <Modal.Footer>
+              12323
+            </Modal.Footer>
+          </Modal>
+        </div> */}
       </div>
     )
   }

@@ -3,12 +3,13 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-15 20:46:23 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-03-15 21:52:47
+ * @Last Modified time: 2020-03-21 21:25:54
  */
 
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import './Slider.scss';
+import InputNumber from '../input-number';
 
 export default class Slider extends Component {
   constructor(props) {
@@ -32,6 +33,15 @@ export default class Slider extends Component {
     const {max, min} = this.props;
     let percent = typeof e != 'object' ? parseFloat((e * 100) / (max - min)) : this.getComputedPercent(e);
     this.setPositionState(percent);
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.value !== this.state.value) {
+      this.setState({
+        value: nextProps.value
+      }, () => {
+        this.setPosition(this.state.value);
+      })
+    }
   }
   setPositionState = (percent) => {
     const {max, min} = this.props;
@@ -64,7 +74,6 @@ export default class Slider extends Component {
     const iconX = e.clientX;
     const {left, width} = this.$thunk.getBoundingClientRect();
     let newWidth = parseFloat(iconX - left);    // 新的宽度
-    console.log(newWidth);
     if (iconX <= left ) {
         newWidth = 0
     } else if (iconX >= parseFloat(left + width)) {
@@ -122,6 +131,11 @@ export default class Slider extends Component {
             </div>
           )
         }
+        {
+          showInput && (
+            <InputNumber value={value} onChange={(value) => this.setState({value}, () => this.setPosition(this.state.value))} min={range[0]} max={range[1]} />
+          )
+        }
       </div>
     )
   }
@@ -143,7 +157,7 @@ Slider.defaultProps = {
   min: 0,
   max: 100,
   disabled: false,
-  showInputControls: true,
+  showInputControls: false,
   showStops: false,
   showTooltip: true,
   range: false,

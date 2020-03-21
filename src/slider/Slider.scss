@@ -1,5 +1,4 @@
 .hui-slider {
-  display: inline-block;
   position: relative;
   min-width: 500px;
   &__inner {
@@ -26,7 +25,7 @@
     display: inline-block;
     background-color: transparent;
     z-index: 1001;
-    top: -3px;
+    top: -18px;
     display: inline-block;
     text-align: center;
     transform: translateX(-50%);
@@ -38,7 +37,7 @@
     position: relative;
     height: 12px;
     vertical-align: middle;
-    top: 8px;
+    top: 7px;
     background-color: #20a0ff;
     border-radius: 50%;
     transition: .2s;
