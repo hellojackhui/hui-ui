@@ -173,7 +173,7 @@ export default class Page extends React.Component {
             <Progress type="line" percentage={90} />
           </Card>
         </div>
-        {/* <div>
+        <div>
           <Modal title="提示" visible={true}>
             <Modal.Body>
               123
@@ -182,7 +182,7 @@ export default class Page extends React.Component {
               12323
             </Modal.Footer>
           </Modal>
-        </div> */}
+        </div>
       </div>
     )
   }

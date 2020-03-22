@@ -1,0 +1,2719 @@
+{
+  "config": {
+    "title": "hui_ui",
+    "description": "A UI Design language and React Component implementation",
+    "menu": [],
+    "version": "0.1.0",
+    "repository": false,
+    "native": false,
+    "codeSandbox": true,
+    "themeConfig": {
+      "mode": "dark"
+    },
+    "separator": "-",
+    "typescript": false,
+    "theme": "/Users/huijiawei/Documents/projects/hui_ui/node_modules/docz-theme-umi/es/index.js",
+    "base": "/docs",
+    "plugins": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  "props": [
+    {
+      "key": "libs/animate/Animate.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Animate",
+          "methods": [
+            {
+              "name": "onMotionEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "addEventListener",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "$ele",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "removeEventListener",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "$ele",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Animate"
+        }
+      ]
+    },
+    {
+      "key": "src/alert/Alert.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Alert",
+          "methods": [
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Alert",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'info'",
+                "computed": false
+              }
+            },
+            "description": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "closable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "closeText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showIcon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/badge/Badge.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Badge",
+          "methods": [
+            {
+              "name": "getValue",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Badge",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "isDot": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/button/Button.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Button",
+          "methods": [
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Button",
+          "props": {
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small', 'tiny'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'info'",
+                "computed": false
+              }
+            },
+            "plain": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "loading": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "nativeType": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/checkbox/CheckButton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CheckButton",
+          "methods": [
+            {
+              "name": "getInnerStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "CheckButton",
+          "props": {
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.number, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "group": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/checkbox/Checkbox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Checkbox",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getLabel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Checkbox",
+          "props": {
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.number, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "indeterminate": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "group": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/checkbox/CheckboxGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CheckboxGroup",
+          "methods": [
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                },
+                {
+                  "name": "checked",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "CheckboxGroup",
+          "props": {
+            "min": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.arrayOf(PropType.string)"
+              },
+              "required": false,
+              "description": ""
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "fill": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "group": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/icon/Icon.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Icon",
+          "methods": [],
+          "actualName": "Icon",
+          "props": {
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/input/Input.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Input",
+          "methods": [
+            {
+              "name": "onfocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onblur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "textChangeHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "trimHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "iconClickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calTextArea",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Input",
+          "props": {
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'text'",
+                "computed": false
+              }
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "placeholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "readOnly": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "autoFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "maxLength": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "minLength": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false,
+              "description": ""
+            },
+            "trim": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small', 'mini'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "autoSize": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "prepend": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "append": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "rows": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "2",
+                "computed": false
+              }
+            },
+            "resize": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['none', 'both', 'horizontal', 'vertical'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "autoComplete": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'off'",
+                "computed": false
+              }
+            },
+            "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onBlur": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onIconClick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onMouseEnter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onMouseLeave": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/input-number/InputNumber.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "InputNumber",
+          "methods": [
+            {
+              "name": "onIncrease",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onDecrease",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onStopInput",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "InputNumber",
+          "props": {
+            "defaultValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "min": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "Number.MAX_SAFE_INTEGER",
+                "computed": true
+              }
+            },
+            "step": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "1",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "controls": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.boolean"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/loading/Loading.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Loading",
+          "methods": [
+            {
+              "name": "currentStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "disableScroll",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "enableScroll",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Loading",
+          "props": {
+            "fullScreen": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "text": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "color": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#50bfff'",
+                "computed": false
+              }
+            },
+            "loading": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/message/MessageBox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MessageBox",
+          "methods": [
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "startTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stopTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MessageBox",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "showClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "message": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/notification/NotificationItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NotificationItem",
+          "methods": [
+            {
+              "name": "starttimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stoptimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "NotificationItem",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['success', 'info', 'warning', 'error'])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'success'",
+                "computed": false
+              }
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'提示'",
+                "computed": false
+              }
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "msg": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "top": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "16",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/modal/Modal.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Modal",
+          "methods": [
+            {
+              "name": "setBodyOverflow",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "clearScrollBar",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "closeModal",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "clickOverflow",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "keyDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Modal",
+          "props": {
+            "visible": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'small'",
+                "computed": false
+              }
+            },
+            "mask": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "lockScroll": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "customClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "closeOnClickModal": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "closeOnEsc": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "onOpen": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "top": {
+              "defaultValue": {
+                "value": "'15%'",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/modal/ModalBody.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ModalBody",
+          "methods": [],
+          "actualName": "ModalBody"
+        }
+      ]
+    },
+    {
+      "key": "src/modal/ModalFooter.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ModalFooter",
+          "methods": [],
+          "actualName": "ModalFooter"
+        }
+      ]
+    },
+    {
+      "key": "src/progress/Progress.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Progress",
+          "methods": [
+            {
+              "name": "relativeStrokeWidth",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "trackPath",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stroke",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "perimeter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "circlePathStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "iconSvg",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getTextSize",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Progress",
+          "props": {
+            "percentage": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'line'",
+                "computed": false
+              }
+            },
+            "strokeWidth": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "6",
+                "computed": false
+              }
+            },
+            "textInside": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "status": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "width": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "126",
+                "computed": false
+              }
+            },
+            "showText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/radio/Radio.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Radio",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Radio",
+          "props": {
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number, PropType.bool])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/radio/RadioButton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "RadioButton",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onfocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onblur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "RadioButton",
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/radio/RadioGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "RadioGroup",
+          "methods": [
+            {
+              "name": "handleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "RadioGroup",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "fill": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/slider/Slider.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Slider",
+          "methods": [
+            {
+              "name": "setPosition",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "setPositionState",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "percent",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "getComputedPercent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseMove",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseUp",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Slider",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showInput": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showInputControls": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showStops": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "step": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "range": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showTooltip": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "formatTooltip": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "min": {
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              },
+              "required": false
+            },
+            "max": {
+              "defaultValue": {
+                "value": "100",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/switch/Switch.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Switch",
+          "methods": [
+            {
+              "name": "getChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentWidth",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "switchTitle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "type",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentBackground",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Switch",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "offValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "onColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#13ce66'",
+                "computed": false
+              }
+            },
+            "offColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#c4c4c4'",
+                "computed": false
+              }
+            },
+            "onText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'ON'",
+                "computed": false
+              }
+            },
+            "offText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'OFF'",
+                "computed": false
+              }
+            },
+            "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onBlur": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "allowFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/tabs/Pane.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Pane",
+          "methods": [],
+          "actualName": "Pane",
+          "props": {
+            "disabled": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "closable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/tabs/Tabs.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tabs",
+          "methods": [
+            {
+              "name": "update",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "tabAdd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "tabRemove",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "tab",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "scrollToActiveTab",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "scrollPrev",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "scrollNext",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getCurrentScrollOffset",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "setOffset",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "tabclick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcBarStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "firstRendering",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Tabs",
+          "props": {
+            "closable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "addable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "editable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/tag/Tag.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tag",
+          "methods": [
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Tag",
+          "props": {
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'primary'",
+                "computed": false
+              }
+            },
+            "closable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "hit": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "color": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/tree/Node.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Node",
+          "methods": [],
+          "actualName": "Node"
+        }
+      ]
+    },
+    {
+      "key": "src/tree/Tree.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tree",
+          "methods": [],
+          "actualName": "Tree",
+          "props": {
+            "data": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "options": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "highlightCurrent": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onCheckChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onNodeClicked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "isShowCheckbox": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "renderContent": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "nodeKey": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "defaultExpandedKeys": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "defaultCheckedKeys": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "key": "docs/Alert.mdx",
+      "value": {
+        "id": "034d8202c0cb788d9ad0e22c17c653d0",
+        "filepath": "docs/Alert.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/docs/Alert.mdx",
+        "slug": "docs-alert",
+        "route": "/docs/docs-alert",
+        "name": "Alert",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "alert组件",
+            "depth": 1,
+            "value": "Alert组件"
+          },
+          {
+            "slug": "测试一下",
+            "depth": 2,
+            "value": "测试一下"
+          },
+          {
+            "slug": "配置",
+            "depth": 2,
+            "value": "配置"
+          }
+        ]
+      }
+    }
+  ]
+}

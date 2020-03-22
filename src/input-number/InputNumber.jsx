@@ -14,7 +14,7 @@ export default class InputNumber extends Component {
     this.timeout = null;
   }
   componentWillReceiveProps(nextProps) {
-    if (nextProps.value != this.state.value) {
+    if (nextProps.value !== this.state.value) {
       this.setState({
         value: nextProps.value
       })

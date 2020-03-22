@@ -2,6 +2,33 @@
   "name": "hui_ui",
   "version": "0.1.0",
   "private": true,
+  "keywords": [
+    "react",
+    "react-component",
+    "design",
+    "frontend",
+    "ui",
+    "Modal",
+    "Table",
+    "Form",
+    "Input",
+    "Icon",
+    "Empty",
+    "hellojackhui"
+  ],
+  "description": "A UI Design language and React Component implementation",
+  "homepage": "https://github.com/hellojackhui/hui-ui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hellojackhui/hui-ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellojackhui/hui-ui.git"
+  },
+  "contributors": [
+    "hellojackhui"
+  ],
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
@@ -87,7 +114,6 @@
     ]
   },
   "devDependencies": {
-    "father": "^2.29.2",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.1",
     "react-transition-group": "^4.3.0"

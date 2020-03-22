@@ -79,6 +79,6 @@ Alert.propTypes = {
 
 Alert.defaultProps = {
   type: 'info',
-  closable: true,
+  closable: false,
   showIcon: false,
 }
