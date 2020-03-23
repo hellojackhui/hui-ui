@@ -1,0 +1,72 @@
+---
+name: Alert
+route: /Alert
+---
+
+import {Playground} from 'docz';
+import Alert from '../../src/alert';
+
+# Alert 警告
+用于在页面提示重要信息
+
+### 基础用法
+在页面显示提示，不会凭空消失
+
+<Playground>
+  <Alert type={'success'} title={'这是成功提示'}/>
+  <Alert type={'info'} title={'这是信息提示'} />
+  <Alert type={'warning'} title={'这是警告提示'} />
+  <Alert type={'error'} title={'这是错误提示'} />
+</Playground>
+
+### 自定义关闭按钮
+可以自定义显示关闭按钮
+
+<Playground>
+  <Alert type={'success'} title={'这是成功提示'} closable={true}/>
+  <Alert type={'info'} title={'这是信息提示'} closable={true} closeText={'知道了'}/>
+</Playground>
+
+### 自定义图标
+可以自定义显示图标
+
+<Playground>
+  <Alert type={'success'} title={'这是成功提示'} showIcon={true}/>
+  <Alert type={'info'} title={'这是信息提示'} showIcon={true} />
+  <Alert type={'warning'} title={'这是成功提示'} showIcon={true}/>
+  <Alert type={'error'} title={'这是信息提示'} showIcon={true} />
+</Playground>
+
+### 自定义描述
+可以在主要内容下自定义添加描述内容
+
+<Playground>
+  <Alert type={'success'} title={'这是成功提示'} showIcon={true} description={"成功提示在这里"}/>
+</Playground>
+
+### 携带图标和描述内容
+
+<Playground>
+  <Alert type={'success'} title={'这是成功提示'} showIcon={true} description={"成功提示在这里"}/>
+  <Alert type={'info'} title={'这是信息提示'} showIcon={true} description={"成功提示在这里"}/>
+  <Alert type={'warning'} title={'这是成功提示'} showIcon={true} description={"成功提示在这里"}/>
+  <Alert type={'error'} title={'这是信息提示'} showIcon={true} description={"成功提示在这里"}/>
+</Playground>
+
+
+## Attribute
+
+属性|名称|类型|默认值
+---|----|—--|---
+title|提示标题|String|-
+type|类型|String|'info'
+description|描述|String|-
+closable|显示关闭按钮|Boolean|false
+closeText|关闭按钮文本|String|-
+showIcon|是否显示图标|Boolean|false
+
+## Event
+
+属性|名称|回调参数
+---|----|—--
+onClose|关闭事件|-

@@ -15,6 +15,7 @@ import InputNumber from './input-number';
 import Tabs from './tabs';
 import Card from './card';
 import Modal from './modal';
+import WaterMask from './watermask';
 
 export default class Page extends React.Component {
   constructor(props) {
@@ -182,6 +183,11 @@ export default class Page extends React.Component {
               12323
             </Modal.Footer>
           </Modal>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <WaterMask content={"hellojackhui"} style={{'width': '600px', 'height': '600px'}}>
+            <div >hello world</div>
+          </WaterMask>
         </div>
       </div>
     )

@@ -1,3 +1,3 @@
-import WaterMask from './WaterMask';
+import WaterMask from './WaterMask.jsx';
 
 export default WaterMask;
