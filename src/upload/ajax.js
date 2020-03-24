@@ -1,6 +1,6 @@
 // 封装ajax
 
-const getError = function(action, options, xhr = new XMLHttpRequest()) {
+const getError = function(action, xhr = new XMLHttpRequest()) {
   let msg;
   if (xhr.response) {
     msg = `${xhr.status} ${xhr.response}`
@@ -26,11 +26,11 @@ const getBody = function(xhr = new XMLHttpRequest()) {
   }
 }
 
-export function upload(options) {
+export default function upload(options) {
   if (!window.XMLHttpRequest) return;
   let xhr = new XMLHttpRequest();
   let action = options.action;
-  //   xhr上传的进度监听
+  //  xhr上传的进度监听
   if (xhr.upload) {
     xhr.upload.onprogress = function(e) {
         if (e.total > 0) {
@@ -46,7 +46,7 @@ export function upload(options) {
   //  xhr请求完成监听
   xhr.onload = function(e) {
     if (xhr.status < 200 || xhr.status >= 300) {
-      options.onerror(getError(action, options, xhr))
+      options.onerror(getError(action, xhr))
     }
     options.onsuccess(getBody(xhr))
   }
@@ -72,7 +72,6 @@ export function upload(options) {
       if (options.headers[key] != null) {
         xhr.setRequestHeader(key, options.headers[key]);
       }
-      
     }
   }
   xhr.send(formData);
