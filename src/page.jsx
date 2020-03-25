@@ -191,8 +191,10 @@ export default class Page extends React.Component {
         </div>
         <div style={{'marginTop': '20px'}}>
           <Row gutter={20}>
+            <Column span="4"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
             <Column span="12"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
-            <Column span="12"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
+            <Column span="3"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
+            <Column span="5"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
           </Row>
         </div>
       </div>
