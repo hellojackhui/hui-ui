@@ -1,0 +1,71 @@
+.yon-column {
+  border-radius: 4px;
+  @for $i from 1 through 24 {
+    &-#{$i} {
+      float: left;
+      width: 4.16667% * $i;
+      box-sizing: border-box;
+    }
+    &-offset-#{$i} {
+      margin-left: 4.16667% * $i;
+    }
+    &-push-#{$i} {
+      left: 4.16667% * $i;
+    }
+    &-pull-#{$i} {
+      right: 4.16667% * $i;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .yon-column {
+    @for $j from 1 to 24 {
+      &-lg-#{$j} {
+        width: 4.16667% * $j;
+      }
+      &-lg-offset-#{$j} {
+        margin-left: 4.16667% * $j;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .yon-column {
+    @for $k from 1 to 24 {
+      &-md-#{$k} {
+        width: 4.16667% * $k;
+      }
+      &-md-offset-#{$k} {
+        margin-left: 4.16667% * $k;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .yon-column {
+    @for $l from 1 to 24 {
+      &-sm-#{$l} {
+        width: 4.16667% * $l;
+      }
+      &-sm-offset-#{$l} {
+        margin-left: 4.16667% * $l;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .yon-column {
+    @for $m from 1 to 24 {
+      &-xs-#{$m} {
+        width: 4.16667% * $m;
+      }
+      &-xs-offset-#{$m} {
+        margin-left: 4.16667% * $m;
+      }
+    }
+  }
+}

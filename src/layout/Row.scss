@@ -1,0 +1,30 @@
+.yon-row {
+  box-sizing: border-box;
+  &::before, &::after {
+    display: table;
+  }
+  &--flex {
+    display: flex;
+  }
+  &--end {
+    justify-content: end;
+  }
+  &--center {
+    justify-content: center;
+  }
+  &--space-around {
+    justify-content: space-around;
+  }
+  &--space-between {
+    justify-content: space-between;
+  }
+  &--start {
+    justify-content: start;
+  }
+  &--middle {
+    align-items: center;
+  }
+  &--bottom {
+    align-items: flex-end;
+  }
+}

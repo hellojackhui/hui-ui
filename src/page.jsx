@@ -16,7 +16,7 @@ import Tabs from './tabs';
 import Card from './card';
 import Modal from './modal';
 import WaterMask from './watermask';
-
+import {Row, Column} from './layout/index';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -188,6 +188,12 @@ export default class Page extends React.Component {
           <WaterMask content={"hellojackhui"} style={{'width': '600px', 'height': '600px'}}>
             <div >hello world</div>
           </WaterMask>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Row gutter={20}>
+            <Column span="12"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
+            <Column span="12"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
+          </Row>
         </div>
       </div>
     )
