@@ -8,7 +8,7 @@ export default class View extends React.Component {
     let mixins = {style: {...children.props.style}};
     if (!show) mixins.style['display'] = 'none';
     if (children.props.className) classNames.push(children.props.className);
-    if (className) children.push(className);
+    if (className) classNames.push(className);
     mixins.className = classNames.join(' ');
     return React.cloneElement(React.Children.only(children), mixins);
   }

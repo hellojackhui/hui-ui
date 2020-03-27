@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
-
+import './upload.scss';
 
 export default class Cover extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ export default class Cover extends Component {
     e.preventDefault();
     if (!this.props.disabled) {
       this.setState({
-        dragable: true,
+        dragOver: true,
       })
     }
   }
@@ -31,17 +31,17 @@ export default class Cover extends Component {
   onDragLeaveHandler = (e) => {
     e.preventDefault();
     this.setState({
-      dragable: false,
+      dragOver: false,
     })
   }
 
 
   render() {
-    const {dragable} = this.state;
+    const {dragOver} = this.state;
     const {children} = this.props;
     return (
       <div className={this.classname('hui-upload-dragger', {
-        'is-dragging': dragable
+        'is-dragging': dragOver
       })}
         onDrop={this.onDropHandler}
         onDragOver={this.onDragOverHandler}

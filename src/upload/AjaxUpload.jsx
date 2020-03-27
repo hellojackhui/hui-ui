@@ -2,15 +2,16 @@ import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import ajax from './ajax';
 import Cover from './Cover';
-
-class AjaxUpload extends Component {
+import './upload.scss';
+export default class AjaxUpload extends Component {
   static defaultProps = {
     name: 'file'
   };
     
   handleChange = (e) => {
     if (e.target instanceof HTMLInputElement) {
-      let file = e.target.file;
+      console.log(e);
+      let file = e.target.files;
       if (!file) return;
       this.uploadFiles(file);
       this.refs.input.value = null;
@@ -27,7 +28,7 @@ class AjaxUpload extends Component {
     if (limit && fileList.length + files.length > limit) {
       onExceed && onExceed(files, fileList);
     }
-    let filesArr = Object.prototype.slice.call(files);
+    let filesArr = Array.prototype.slice.call(files);
     if (filesArr.length <= 0) {
       return;
     }
@@ -50,13 +51,13 @@ class AjaxUpload extends Component {
         ) {
           this.post(processedFile);
         } else {
-          this.post(rawFile);
+          this.post(rawfile);
         }
       }, () => {
         if (file && this.props.onRemove) this.props.onRemove(file) 
       })
     } else if (before !== false) {
-      this.post(rawFile);
+      this.post(rawfile);
     } else {
       if (file && typeof this.props.onRemove === 'function') this.props.onRemove(file);
     }
@@ -64,13 +65,12 @@ class AjaxUpload extends Component {
   post = (file) => {
     const {
       name: filename,
-      file,
       headers,
       withCredentials,
       data,
       action,
       onSuccess,
-      onprocess,
+      onProgress,
       onerror
     } = this.props;
     const {httpRequest = ajax} = this.props;
@@ -78,14 +78,15 @@ class AjaxUpload extends Component {
       filename,
       action,
       data,
+      file,
       headers,
       withCredentials,
       onSuccess: res => onSuccess(res, file),
-      onprocess: e => onprocess(e, file),
+      onProgress: e => onProgress(e, file),
       onerror: e => onerror(e, file)
     })
     if (res && res.then) {
-      res.then(onsuccess, onerror);
+      res.then(onSuccess, onerror);
     }
   }
 
@@ -110,7 +111,7 @@ class AjaxUpload extends Component {
   }
 }
 
-AjaxUpload.propTypes = {
+AjaxUpload.PropType = {
   drag: PropType.bool,
   data: PropType.object,
   headers: PropType.object,
@@ -120,15 +121,15 @@ AjaxUpload.propTypes = {
   name: PropType.string,
   onStart: PropType.func,
   onerror: PropType.func,
-  onprocess: PropType.func,
+  onProgress: PropType.func,
   onsuccess: PropType.func,
   multiple: PropType.bool,
   disabled: PropType.bool,
-  listType: PropTypes.string,
-  fileList: PropTypes.array,
+  listType: PropType.string,
+  fileList: PropType.array,
   beforeUpload: PropType.func,
   autoUpload: PropType.func,
-  limit: PropTypes.number,
-  onExceed: PropTypes.func,
+  limit: PropType.number,
+  onExceed: PropType.func,
   httpRequest: PropType.func,
 }

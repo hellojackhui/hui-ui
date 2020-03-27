@@ -1,5 +1,5 @@
 export default {
-  yonyou: {
+  hui: {
     colorpicker: {
       confirm: '확인',
       clear: '초기화'

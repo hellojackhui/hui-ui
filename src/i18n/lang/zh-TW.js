@@ -1,5 +1,5 @@
 export default {
-  yonyou: {
+  hui: {
     colorpicker: {
       confirm: '確認',
       clear: '清空'

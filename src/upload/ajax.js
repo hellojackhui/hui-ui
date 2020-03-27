@@ -36,7 +36,7 @@ export default function upload(options) {
         if (e.total > 0) {
           e.percent = (e.loaded / e.total) * 100;
         }
-        options.onprogress(e);
+        options.onProgress(e);
       }
   }
   //  xhr捕获错误
@@ -48,7 +48,7 @@ export default function upload(options) {
     if (xhr.status < 200 || xhr.status >= 300) {
       options.onerror(getError(action, xhr))
     }
-    options.onsuccess(getBody(xhr))
+    options.onSuccess(getBody(xhr))
   }
   // 处理formdata
   let formData = new FormData();

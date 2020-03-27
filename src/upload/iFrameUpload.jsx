@@ -2,7 +2,7 @@ import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import Cover from './Cover';
 
-export default class IframeUpload extends Component {
+export default class IFrameUpload extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -88,7 +88,7 @@ export default class IframeUpload extends Component {
   render() {
     const { drag, action, name, accept, listType } = this.props;
     const { frameName } = this.state;
-    const classes = this.classNames({
+    const classes = this.classnames({
       'hui-upload': true,
       [`hui-upload--${listType}`]: true
     });
@@ -100,7 +100,7 @@ export default class IframeUpload extends Component {
         onDragOver={e => this.handleDragover(e)}
         onDragLeave={e => this.handleDragleave(e)}
       >
-        <iframe onLoad={() => this.onload()} ref="iframe" name={frameName} />
+        <iframe onLoad={() => this.onload()} ref="iframe" name={frameName} title={`${frameName}`}/>
         <form
           ref="form"
           action={action}
@@ -129,7 +129,7 @@ export default class IframeUpload extends Component {
   }
 }
 
-IframeUpload.propTypes = {
+IFrameUpload.propTypes = {
   drag: PropType.bool,
   data: PropType.object,
   action: PropType.string.isRequired,

@@ -20,7 +20,7 @@ function t(path, options) {
   return '';
 }
 
-export {
+export default {
   use,
   t,
 }
