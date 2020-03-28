@@ -3,7 +3,6 @@ import {Component, PropType} from '../../libs/index';
 import UploadList from './UploadList';
 import IFrameUpload from './IFrameUpload';
 import AjaxUpload from './AjaxUpload';
-import './upload.scss';
 
 export default class Upload extends Component {
   constructor(props) {

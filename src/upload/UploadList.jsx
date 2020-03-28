@@ -36,7 +36,7 @@ export default class UploadList extends Component {
                 <i
                   className={this.classnames({
                     'hui-icon': true,
-                    'hui-icon-circle-check': listType === 'text',
+                    'hui-icon-check-circle': listType === 'text',
                     'hui-icon-check': ['picture-card', 'picture'].includes(
                       listType
                     )

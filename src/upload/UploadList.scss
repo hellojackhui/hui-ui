@@ -39,6 +39,9 @@
       top: 0;
       line-height: inherit;
       display: none;
+      & .hui-icon-check-circle {
+        color: #20a0ff;
+      }
     }
     &.is-success &-status-label {
       display: block;
@@ -61,6 +64,52 @@
     }
     & .hui-icon-check {
       color: #13ce66;
+    }
+  }
+  &--picture {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & .hui-upload__list__item {
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid #c0ccda;
+      border-radius: 6px;
+      box-sizing: border-box;
+      margin-top: 10px;
+      padding: 10px 10px 10px 90px;
+    }
+    & .hui-upload__list__item-thumbnail {
+      vertical-align: middle;
+      display: inline-block;
+      width: 70px;
+      height: 70px;
+      float: left;
+      position: relative;
+      z-index: 1;
+      margin-left: -80px;
+    }
+    & .hui-upload__list__item-name {
+      line-height: 70px;
+      margin-top: 0;
+    }
+    & .hui-upload__list__item-status-label {
+      position: absolute;
+      right: -17px;
+      top: -7px;
+      width: 46px;
+      height: 26px;
+      background: #13ce66;
+      text-align: center;
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      box-shadow: 0 0 1pc 1px rgba(0,0,0,.2);
+    }
+    & .hui-upload__list__item .hui-icon-check {
+      position: relative;
+      color: #ffffff;
+      top: 5px;
+      transform: rotate(-42deg);
     }
   }
   &--picture-card {
