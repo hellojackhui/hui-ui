@@ -1,6 +1,7 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import Cover from './Cover';
+import './iFrameUpload.scss';
 
 export default class IFrameUpload extends Component {
   constructor(props) {

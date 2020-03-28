@@ -143,7 +143,6 @@ export default class Upload extends Component {
       showFileList,
       autoUpload,
       drag,
-      tip,
       action,
       multiple,
       beforeUpload,
@@ -199,7 +198,6 @@ export default class Upload extends Component {
         {this.props.trigger
           ? [uploadComponent, this.props.children]
           : uploadComponent}
-        {tip}
         {listType !== 'picture-card' ? uploadList : ''}
       </div>
     )
@@ -224,7 +222,6 @@ Upload.propTypes = {
   accept: PropType.string,
   drag: PropType.bool,
   listType: PropType.oneOf(['text', 'picture', 'picture-card']),
-  tip: PropType.node,
   trigger: PropType.node,
   beforeUpload: PropType.func,
   onRemove: PropType.func,
@@ -254,5 +251,6 @@ Upload.defaultProps = {
   onProgress() {},
   onSuccess() {},
   onError() {},
-  onChange() {}
+  onChange() {},
+  onExceed() {}
 };

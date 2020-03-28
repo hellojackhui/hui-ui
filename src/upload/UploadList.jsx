@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component, PropType, View} from '../../libs/index';
 import Progress from '../progress/index';
-import './upload.scss';
+import './UploadList.scss';
 export default class UploadList extends Component {
   uploadlist = () => {
     const { onPreview, onRemove } = this.context;
@@ -35,7 +35,7 @@ export default class UploadList extends Component {
               >
                 <i
                   className={this.classnames({
-                    'hui-icon-upload-success': true,
+                    'hui-icon': true,
                     'hui-icon-circle-check': listType === 'text',
                     'hui-icon-check': ['picture-card', 'picture'].includes(
                       listType
@@ -53,13 +53,13 @@ export default class UploadList extends Component {
                     onClick={() => onPreview(file)}
                     className="hui-upload__list__item-preview"
                   >
-                    <i className="hui-icon-view" />
+                    <i className="hui-icon hui-icon-search-plus" />
                   </span>
                   <span
                     className="hui-upload__list__item-delete"
                     onClick={() => onRemove(file)}
                   >
-                    <i className="hui-icon hui-icon-delete" />
+                    <i className="hui-icon hui-icon-trash-o" />
                   </span>
                 </span>
               </View>
@@ -68,6 +68,7 @@ export default class UploadList extends Component {
                 strokeWidth={listType === 'picture-card' ? 6 : 2}
                 type={listType === 'picture-card' ? 'circle' : 'line'}
                 percentage={parseInt(file.percentage, 10)}
+                width={148}
                 status={
                   isFinished(file.status) && file.showProgress ? 'success' : ''
                 }

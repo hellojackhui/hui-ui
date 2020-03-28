@@ -40,13 +40,13 @@ export default function upload(options) {
       }
   }
   //  xhr捕获错误
-  xhr.onerror = function(e) {
-    options.onerror(e);
+  xhr.onError = function(e) {
+    options.onError(e);
   }
   //  xhr请求完成监听
   xhr.onload = function(e) {
     if (xhr.status < 200 || xhr.status >= 300) {
-      options.onerror(getError(action, xhr))
+      options.onError(getError(action, xhr))
     }
     options.onSuccess(getBody(xhr))
   }

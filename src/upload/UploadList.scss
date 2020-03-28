@@ -1,0 +1,143 @@
+.hui-upload__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  &__item {
+    transition: all .5s cubic-bezier(.55,0,.1,1);
+    font-size: 14px;
+    color: #48576a;
+    line-height: 1.8;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+    &:hover {
+      background-color: #eef1f6;
+      & .hui-icon-close {
+        display: inline-block;
+      }
+      &.is-success .hui-upload__list__item-status-label {
+        display: none;
+      }
+    }
+    &:first-child {
+      margin-top: 10px;
+    }
+    &-name {
+      color: #48576a;
+      display: block;
+      margin-right: 40px;
+      overflow: hidden;
+      padding-left: 4px;
+      text-overflow: ellipsis;
+      transition: color .3s;
+    }
+    &-status-label {
+      position: absolute;
+      right: 5px;
+      top: 0;
+      line-height: inherit;
+      display: none;
+    }
+    &.is-success &-status-label {
+      display: block;
+    }
+    &.is-success &-name:hover {
+      color: #20a0ff;
+      cursor: pointer;
+    }
+    & .hui-icon-close {
+      display: none;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      cursor: pointer;
+      opacity: .75;
+      font-size: 17px;
+      color: #48576a;
+      -ms-transform: scale(.7);
+      transform: scale(.7);
+    }
+    & .hui-icon-check {
+      color: #13ce66;
+    }
+  }
+  &--picture-card {
+    margin: 0;
+    display: inline;
+    vertical-align: top;
+    & .hui-upload__list__item {
+      overflow: hidden;
+      background-color: #fff;
+      border: 1px solid #c0ccda;
+      border-radius: 6px;
+      box-sizing: border-box;
+      width: 148px;
+      height: 148px;
+      margin: 0 8px 8px 0;
+      display: inline-block;
+    }
+    & .hui-upload__list__item-thumbnail {
+      width: 100%;
+      height: 100%;
+    }
+    & .hui-upload__list__item-name {
+      display: none;
+    }
+    & .hui-upload__list__item-status-label {
+      position: absolute;
+      right: -15px;
+      top: -6px;
+      width: 40px;
+      height: 24px;
+      background: #13ce66;
+      text-align: center;
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      box-shadow: 0 0 1pc 1px rgba(0,0,0,.2);
+    }
+    & .hui-upload__list__item-actions {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      cursor: default;
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      font-size: 20px;
+      background-color: rgba(0,0,0,.5);
+      transition: opacity .3s;
+      &:hover {
+        opacity: 1;
+        span {
+          display: inline-block;
+        }
+      }
+      span {
+        display: none;
+        cursor: pointer;
+      }
+      .hui-upload__list__item-delete, .hui-upload__list__item-preview {
+        position: static;
+        font-size: inherit;
+        color: inherit;
+        line-height: 138px;
+      }
+      span+span {
+        margin-left: 15px;
+      }
+    }
+    & .hui-upload__list__item .hui-icon-close {
+      display: none;
+    }
+    & .hui-upload__list__item .hui-icon-check {
+      position: relative;
+      color: #ffffff;
+      top: 5px;
+      transform: rotate(-42deg);
+    }
+  }
+}

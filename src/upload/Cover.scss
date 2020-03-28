@@ -1,0 +1,34 @@
+.hui-upload-dragger {
+  width: 360px;
+  height: 180px;
+  background-color: #ffffff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  &__icon {
+    font-size: 67px;
+    color: #97a8be;
+    margin: 40px 0 16px;
+    line-height: 50px;
+  }
+  &__tip {
+    color: #97a8be;
+    font-size: 14px;
+    text-align: center;
+    & em {
+      color: #20a0ff;
+      font-style: normal;
+    }
+  }
+  &:hover {
+    border-color: #20a0ff;
+  }
+  &.is-dragover {
+    background-color: #deeaf3;
+    border: 2px dashed #d9d9d9;
+  }
+}

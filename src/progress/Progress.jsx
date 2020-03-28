@@ -3,7 +3,7 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-06 17:09:42 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-03-10 21:05:12
+ * @Last Modified time: 2020-03-28 12:18:49
  */
 
 import React from 'react';
@@ -16,7 +16,7 @@ class Progress extends Component {
     type: 'line',
     strokeWidth: 6,
     textInside: false,
-    width: 126,
+    width: '126',
     showText: true
   }
 

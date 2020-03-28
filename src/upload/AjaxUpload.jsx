@@ -2,10 +2,10 @@ import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import ajax from './ajax';
 import Cover from './Cover';
-import './upload.scss';
+import './AjaxUpload.scss';
 export default class AjaxUpload extends Component {
   static defaultProps = {
-    name: 'file'
+    name: 'file',
   };
     
   handleChange = (e) => {
@@ -71,7 +71,7 @@ export default class AjaxUpload extends Component {
       action,
       onSuccess,
       onProgress,
-      onerror
+      onError
     } = this.props;
     const {httpRequest = ajax} = this.props;
     let res = httpRequest({
@@ -83,15 +83,15 @@ export default class AjaxUpload extends Component {
       withCredentials,
       onSuccess: res => onSuccess(res, file),
       onProgress: e => onProgress(e, file),
-      onerror: e => onerror(e, file)
+      onError: e => onError(e, file)
     })
     if (res && res.then) {
-      res.then(onSuccess, onerror);
+      res.then(onSuccess, onError);
     }
   }
 
   render() {
-    const {listType, drag, children, disabled, multiple, onExceed, accept} = this.props;
+    const {listType, drag, children, disabled, multiple, accept} = this.props;
     return (
       <div className={this.classname('hui-upload', listType && `hui-upload--${listType}`)} onClick={() => this.handleClick()}>
         {
@@ -102,7 +102,6 @@ export default class AjaxUpload extends Component {
           type="file"
           ref="input"
           multiple={multiple}
-          onExceed={onExceed}
           accept={accept}
           onChange={e => this.handleChange(e)}
         />
@@ -120,7 +119,7 @@ AjaxUpload.PropType = {
   accept: PropType.string,
   name: PropType.string,
   onStart: PropType.func,
-  onerror: PropType.func,
+  onError: PropType.func,
   onProgress: PropType.func,
   onsuccess: PropType.func,
   multiple: PropType.bool,

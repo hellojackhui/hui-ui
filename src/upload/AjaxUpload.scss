@@ -1,0 +1,26 @@
+.hui-upload {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  &--text {
+    
+  }
+  &--picture {
+    
+  }
+  &--picture-card {
+    width: 150px;
+    height: 150px;
+    line-height: 148px;
+    border: 1px dashed #c0ccda;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+    vertical-align: top;
+  }
+  &__input {
+    display: none;
+  }
+}

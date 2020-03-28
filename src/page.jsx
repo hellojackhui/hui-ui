@@ -29,6 +29,8 @@ export default class Page extends React.Component {
       checkboxGroup2: ['北京'],
       checkboxGroup3: ['广州'],
       tabarr: [0],
+      dialogImageUrl: '',
+      dialogVisible: false,
     }
   }
   onClick = () => {
@@ -51,17 +53,21 @@ export default class Page extends React.Component {
       tabarr,
     })
   }
-  handlePreview(file) {
-    console.log('preview');
+  handleRemove(file, fileList) {
+    console.log(file, fileList);
   }
   
-  handleRemove(file, fileList) {
-    console.log('remove');
+  handlePictureCardPreview(file) {
+    this.setState({
+      dialogImageUrl: file.url,
+      dialogVisible: true,
+    })
   }
   render() {
     const fileList = [
       {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}
     ];
+    const { dialogImageUrl, dialogVisible } = this.state;
     return (
       // <div>
       //   <div style={{'marginTop': '20px'}}>
@@ -209,20 +215,37 @@ export default class Page extends React.Component {
       //     </Row>
       //   </div>
       // </div>
-      <Upload
-        className="upload-demo"
-        action="//jsonplaceholder.typicode.com/posts/"
-        onPreview={file => this.handlePreview(file)}
-        onRemove={(file, fileList) => this.handleRemove(file, fileList)}
-        fileList={fileList}
-        limit={3}
-        onExceed={(files, fileList) => {
-          Message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
-        }}
-        tip={<div className="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>}
-      >
-        <Button size="small" type="primary">点击上传</Button>
-      </Upload>
+    //   <Upload
+    //     className="upload-demo"
+    //     action="//jsonplaceholder.typicode.com/posts/"
+    //     onPreview={file => this.handlePreview(file)}
+    //     onRemove={(file, fileList) => this.handleRemove(file, fileList)}
+    //     fileList={fileList}
+    //     limit={3}
+    //     onExceed={(files, fileList) => {
+    //       Message.warning(`当前限制选择 3 个文件，本次选择了 ${files.length} 个文件，共选择了 ${files.length + fileList.length} 个文件`);
+    //     }}
+    //     tip={<div className="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>}
+    //   >
+    //     <Button size="small" type="primary">点击上传</Button>
+    // </Upload>
+      <div>
+        <Upload
+          action="//jsonplaceholder.typicode.com/posts/"
+          listType="picture-card"
+          onPreview={file => this.handlePictureCardPreview(file)}
+          onRemove={(file, fileList) => this.handleRemove(file, fileList)}
+        >
+          <i className="hui-icon hui-icon-plus"></i>
+        </Upload>
+        {/* <Dialog
+          visible={dialogVisible}
+          size="tiny"
+          onCancel={() => this.setState({ dialogVisible: false })}
+        >
+          <img width="100%" src={dialogImageUrl} alt="" />
+        </Dialog> */}
+      </div>
     )
   }
 }

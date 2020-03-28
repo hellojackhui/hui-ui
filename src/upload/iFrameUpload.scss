@@ -1,0 +1,20 @@
+.hui-upload {
+  &--text {
+
+  }
+  &--picture-card {
+    background-color: #fbfdff;
+    border: 1px dashed #c0ccda;
+    border-radius: 6px;
+    box-sizing: border-box;
+    width: 148px;
+    height: 148px;
+    cursor: pointer;
+    line-height: 146px;
+    vertical-align: top;
+    &:hover {
+      border-color: #20a0ff;
+      color: #20a0ff;
+    }
+  }
+}
