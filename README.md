@@ -1,6 +1,6 @@
 <!-- 临时拿一个图标充数 -->
 
-<p align="center"><a href="https://www.baidu.com"><img alt="hui_ui logo" src="https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"/></a></p>
+<p align="center"><a href="https://www.baidu.com"><img alt="hui_ui logo" src="https://ftp.bmp.ovh/imgs/2020/03/0de4eeb164d6fedb.jpg"/></a></p>
 <p align="center"></p>
 
 # hui_ui
