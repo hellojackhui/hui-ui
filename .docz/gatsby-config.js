@@ -19,7 +19,7 @@ const config = {
   pathPrefix: '/',
 
   siteMetadata: {
-    title: 'Hui Ui',
+    title: 'Docz Sass',
     description: 'A UI Design language and React Component implementation',
   },
   plugins: [
@@ -30,7 +30,7 @@ const config = {
         themesDir: 'src',
         mdxExtensions: ['.md', '.mdx'],
         docgenConfig: {},
-        menu: [],
+        menu: ['Getting Started', 'Components'],
         mdPlugins: [],
         hastPlugins: [],
         ignore: [],
@@ -44,7 +44,7 @@ const config = {
         o: false,
         open: false,
         'open-browser': false,
-        root: '/Users/huijiawei/Documents/projects/hui_ui/.docz',
+        root: '/Users/huijiawei/Documents/projects/hui-ui/.docz',
         base: '/',
         source: './',
         src: './',
@@ -56,37 +56,37 @@ const config = {
         eb: 'master',
         'edit-branch': 'master',
         config: '',
-        title: 'Hui Ui',
+        title: 'Docz Sass',
         description: 'A UI Design language and React Component implementation',
         host: 'localhost',
         port: 3000,
         p: 3000,
         separator: '-',
         paths: {
-          root: '/Users/huijiawei/Documents/projects/hui_ui',
+          root: '/Users/huijiawei/Documents/projects/hui-ui',
           templates:
-            '/Users/huijiawei/Documents/projects/hui_ui/node_modules/docz-core/dist/templates',
-          docz: '/Users/huijiawei/Documents/projects/hui_ui/.docz',
-          cache: '/Users/huijiawei/Documents/projects/hui_ui/.docz/.cache',
-          app: '/Users/huijiawei/Documents/projects/hui_ui/.docz/app',
+            '/Users/huijiawei/Documents/projects/hui-ui/node_modules/docz-core/dist/templates',
+          docz: '/Users/huijiawei/Documents/projects/hui-ui/.docz',
+          cache: '/Users/huijiawei/Documents/projects/hui-ui/.docz/.cache',
+          app: '/Users/huijiawei/Documents/projects/hui-ui/.docz/app',
           appPackageJson:
-            '/Users/huijiawei/Documents/projects/hui_ui/package.json',
+            '/Users/huijiawei/Documents/projects/hui-ui/package.json',
           gatsbyConfig:
-            '/Users/huijiawei/Documents/projects/hui_ui/gatsby-config.js',
+            '/Users/huijiawei/Documents/projects/hui-ui/gatsby-config.js',
           gatsbyBrowser:
-            '/Users/huijiawei/Documents/projects/hui_ui/gatsby-browser.js',
+            '/Users/huijiawei/Documents/projects/hui-ui/gatsby-browser.js',
           gatsbyNode:
-            '/Users/huijiawei/Documents/projects/hui_ui/gatsby-node.js',
-          gatsbySSR: '/Users/huijiawei/Documents/projects/hui_ui/gatsby-ssr.js',
+            '/Users/huijiawei/Documents/projects/hui-ui/gatsby-node.js',
+          gatsbySSR: '/Users/huijiawei/Documents/projects/hui-ui/gatsby-ssr.js',
           importsJs:
-            '/Users/huijiawei/Documents/projects/hui_ui/.docz/app/imports.js',
+            '/Users/huijiawei/Documents/projects/hui-ui/.docz/app/imports.js',
           rootJs:
-            '/Users/huijiawei/Documents/projects/hui_ui/.docz/app/root.jsx',
+            '/Users/huijiawei/Documents/projects/hui-ui/.docz/app/root.jsx',
           indexJs:
-            '/Users/huijiawei/Documents/projects/hui_ui/.docz/app/index.jsx',
+            '/Users/huijiawei/Documents/projects/hui-ui/.docz/app/index.jsx',
           indexHtml:
-            '/Users/huijiawei/Documents/projects/hui_ui/.docz/app/index.html',
-          db: '/Users/huijiawei/Documents/projects/hui_ui/.docz/app/db.json',
+            '/Users/huijiawei/Documents/projects/hui-ui/.docz/app/index.html',
+          db: '/Users/huijiawei/Documents/projects/hui-ui/.docz/app/db.json',
         },
       },
     },

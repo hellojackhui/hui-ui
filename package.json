@@ -1,6 +1,7 @@
 {
-  "name": "hui_ui",
+  "name": "hui-ui",
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "keywords": [
     "react",
@@ -18,7 +19,6 @@
   ],
   "description": "A UI Design language and React Component implementation",
   "homepage": "https://github.com/hellojackhui/hui-ui",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hellojackhui/hui-ui/issues"
   },
@@ -29,6 +29,14 @@
   "contributors": [
     "hellojackhui"
   ],
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "docz-dev": "docz dev",
+    "docz-build": "docz build",
+    "docz-serve": "docz serve"
+  },
   "dependencies": {
     "@babel/core": "7.8.4",
     "@emotion/core": "^10.0.28",
@@ -47,9 +55,7 @@
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "classnames": "^2.2.6",
     "css-loader": "3.4.2",
-    "docz": "^2.2.0",
-    "docz-plugin-css": "^0.11.0",
-    "docz-theme-default": "^1.2.0",
+    "docz": "latest",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.6.0",
@@ -62,6 +68,7 @@
     "eslint-plugin-react-hooks": "^1.6.1",
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
+    "gatsby-plugin-sass": "^2.2.1",
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
@@ -77,10 +84,10 @@
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.0",
-    "react-dom": "^16.12.0",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",
@@ -94,18 +101,10 @@
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
   },
-  "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "docz-dev": "docz dev",
-    "docz-build": "docz build",
-    "docz-serve": "docz serve"
-  },
   "eslintConfig": {
     "extends": "react-app",
-    "rules":{
-      "jsx-a11y/anchor-is-valid":"off"
+    "rules": {
+      "jsx-a11y/anchor-is-valid": "off"
     }
   },
   "browserslist": {
