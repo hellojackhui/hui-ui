@@ -18,6 +18,7 @@ import WaterMask from './watermask';
 import {Row, Column} from './layout/index';
 import Upload from './upload/index';
 import { View } from '../libs';
+import Rate from './rate';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -238,6 +239,11 @@ export default class Page extends React.Component {
           <View show={dialogVisible}>
             <img width="100%" src={dialogImageUrl} alt="" />
           </View>
+        </div>
+        <div>
+          <Rate colors={['#99A9BF', '#F7BA2A', '#FF9900']} />
+          <Rate allowHalf={true} onChange={(val) => console.log(val)} />
+          <Rate showText={true} disabled={true} value={3.9}/>
         </div>
       </div>
       

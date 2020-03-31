@@ -43,7 +43,6 @@ class Rate extends Component {
   }
   setCurrentValue = (e, index) => {
     const {disabled, allowHalf} = this.props;
-    const {value} = this.state;
     if (disabled) {
       return;
     }
@@ -58,13 +57,16 @@ class Rate extends Component {
       }
       this.setState({
         pointerAtLeftHalf: (e.clientX - target.getBoundingClientRect().left) * 2 <= target.clientWidth,
-        currentValue: ((e.clientX - target.getBoundingClientRect().left) * 2 <= target.clientWidth) ? value - 0.5 : value
+        currentValue: ((e.clientX - target.getBoundingClientRect().left) * 2 <= target.clientWidth) ? index - 0.5 : index
       })
     } else {
       this.setState({
-        currentValue: value,
+        currentValue: index,
       })
     }
+    this.setState({
+      hoverIndex: index
+    })
   }
   resetStarValue = () => {
     const {disabled, allowHalf} = this.props;
@@ -87,7 +89,7 @@ class Rate extends Component {
     const {currentValue} = this.state;
     let voidColor = disabled ? this.colorMap.disabledVoidColor : this.colorMap.voidColor;
     return {
-      color: item < currentValue ? this.activeColor() : voidColor
+      color: item <= currentValue ? this.activeColor() : voidColor
     }
   }
   activeColor() {
@@ -132,7 +134,7 @@ class Rate extends Component {
     let i = 0;
     let threshold = currentValue;
     if (allowHalf && currentValue !== Math.floor(currentValue)) {
-      threshold;
+      threshold = threshold;
     }
     for (; i <= threshold; i++) {
       result.push(this.activeClass());
@@ -210,12 +212,13 @@ class Rate extends Component {
                 >
                   <i
                     style={this.getIconStyle(k)}
-                    className={
-                      hoverIndex == k ? `hover hui-rate__star ${this.classes()[k]}` : `hui-rate__star ${this.classes()[k]}`
+                    className={this.classname(`hui-rate__star hui-icon hui-icon-star ${this.classes()[k]}`, {
+                      hover: hoverIndex === k
+                    })
                     }
                   >
                     {
-                      this.showDecimalIcon(k) ? <i style={this.decimalStyle()} className={`hui-rate__decimal ${this.decimalIconClass()}`}></i> : null
+                      this.showDecimalIcon(k) ? <i style={this.decimalStyle()} className={`hui-rate__decimal hui-icon ${this.decimalIconClass()}`}></i> : null
                     }
                   </i>
                 </span>
@@ -240,16 +243,16 @@ Rate.propTypes = {
   disabled: PropType.bool,
   value: PropType.number,
   onChange: PropType.func,
-  textTemplate: PropTypes.string,
-  lowThreshold: PropTypes.number,
-  highThreshold: PropTypes.number,
-  max: PropTypes.number,
-  voidColor: PropTypes.string,
-  disabledVoidColor: PropTypes.string,
-  iconClasses: PropTypes.array,
-  voidIconClass: PropTypes.string,
-  disabledVoidIconClass: PropTypes.string,
-  allowHalf: PropTypes.bool
+  textTemplate: PropType.string,
+  lowThreshold: PropType.number,
+  highThreshold: PropType.number,
+  max: PropType.number,
+  voidColor: PropType.string,
+  disabledVoidColor: PropType.string,
+  iconClasses: PropType.array,
+  voidIconClass: PropType.string,
+  disabledVoidIconClass: PropType.string,
+  allowHalf: PropType.bool
 }
 
 Rate.defaultProps = {
@@ -264,9 +267,11 @@ Rate.defaultProps = {
   max: 5,
   voidColor: '#C6D1DE',
   disabledVoidColor: '#EFF2F7',
-  iconClasses: ['el-icon-star-on', 'el-icon-star-on', 'el-icon-star-on'],
-  voidIconClass: 'el-icon-star-off',
-  disabledVoidIconClass: 'el-icon-star-on',
+  iconClasses: ['hui-icon-star', 'hui-icon-star', 'hui-icon-star'],
+  voidIconClass: 'hui-icon-star',
+  disabledVoidIconClass: 'hui-icon-star',
   allowHalf: false,
   textTemplate: '{value}'
 }
+
+export default Rate;
