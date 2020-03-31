@@ -1,0 +1,75 @@
+---
+title: Rate
+route: /Rate
+---
+
+import {PlayBackground} from 'docz';
+import Rate from './Rate.jsx';
+
+# Rate组件
+简单的评分组件实现
+
+## 基本使用
+
+### 1. 默认显示
+不进行任何设置，直接使用
+
+<PlayBackground>
+    <Rate />
+</PlayBackground>
+
+### 2. 添加颜色设置
+评分分为三个等级，可通过颜色对分数和情感倾向进行分级。颜色通过colors设置，对应的两个阈值则通过 lowThreshold 和 highThreshold 设定， change可监听分值改变。
+
+<PlayBackground>
+    <Rate colors={['#99A9BF', '#F7BA2A', '#FF9900']} />
+</PlayBackground>
+
+### 3. 允许半选
+支持鼠标进行半星选择
+
+<PlayBackground>
+    <Rate allowHalf={true} onChange={(val) => console.log(val)} />
+</PlayBackground>
+
+
+### 4. 辅助文字
+可以通过分数显示相应的文字内容
+
+<PlayBackground>
+   <Rate showText={true} value={3.9}/> 
+</PlayBackground>
+
+### 5. 只读
+只读用来展示分数，允许半星显示
+
+<PlayBackground>
+  <Rate showText={true} disabled={true} value={3.9}/>
+</PlayBackground>
+
+## 属性控制
+
+属性|名称|类型|默认值
+---|----|—--|---
+colors|颜色分级|Array|['#F7BA2A', '#F7BA2A', '#F7BA2A']
+texts|文本显示分级|Array|['极差', '失望', '一般', '喜欢', '满意']
+showtext|是否显示文本|boolean|false
+textColor|文本显示颜色|string|"1F2D3D"
+disabled|是否只读|boolean|false
+value|分数|number|0
+textTemplate|文本模版|string|{value}
+lowThreshold|低分和中等分数的界限值|number|2
+highThreshold|高分和中等分数的界限值|number|4
+max|最大分值|number|5
+voidColor|未选中 icon 的颜色|string|#C6D1DE
+disabledVoidColor|只读时未选中 icon 的颜色|string|#EFF2F7
+iconClasses|icon 的类名数组|Array|['hui-icon-star', 'hui-icon-star', 'hui-icon-star']
+voidIconClass|未选中icon的类名|string|-
+disabledVoidIconClass|只读时未选中icon的类名|string|-
+allowHalf|是否允许半星|boolean|false
+
+## Event
+
+属性|名称|回调参数
+---|----|—--
+onChange|分数改变|-
