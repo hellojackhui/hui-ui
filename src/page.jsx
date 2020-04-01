@@ -19,6 +19,7 @@ import {Row, Column} from './layout/index';
 import Upload from './upload/index';
 import { View } from '../libs';
 import Rate from './rate';
+import Steps from './steps';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -244,6 +245,13 @@ export default class Page extends React.Component {
           <Rate colors={['#99A9BF', '#F7BA2A', '#FF9900']} />
           <Rate allowHalf={true} onChange={(val) => console.log(val)} />
           <Rate showText={true} disabled={true} value={3.9}/>
+        </div>
+        <div>
+        <Steps space={200} active={1} direction="vertical">
+          <Steps.Step title="步骤 1" description="这是一段很长很长很长的描述性文字"></Steps.Step>
+          <Steps.Step title="步骤 2" description="这是一段很长2222很长很长的描述性文字"></Steps.Step>
+          <Steps.Step title="步骤 3" description="这是一段很长很长很长的描述性文字"></Steps.Step>
+        </Steps>
         </div>
       </div>
       

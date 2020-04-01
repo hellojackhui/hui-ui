@@ -1,0 +1,131 @@
+.hui-step {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    &:last-child .hui-step__line {
+        display: none;
+    }
+    &__head {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: transparent;
+        line-height: 28px;
+        font-size: 28px;
+        vertical-align: top;
+        transition: all 150ms;
+        &.is-text {
+            font-size: 14px;
+            border-width: 2px;
+            border-style: solid;
+        }
+        &.is-success {
+            color: #13ce66;
+            border-color: #13ce66;
+        }
+        &.is-success {
+            &.is-text {
+                color: #fff;
+                background-color: #13ce66;
+                border-color: #13ce66;
+            }
+        }
+        &.is-process {
+            &.is-text {
+                color: #fff;
+                background-color: #bfcbd9;
+                border-color: #bfcbd9;
+            }
+        }
+        &.is-wait {
+            &.is-text {
+                color: #bfcbd9;
+                background-color: #ffffff;
+                border-color: #bfcbd9;
+            }
+        }
+        &.is-finish {
+            &.is-text {
+                color: #fff;
+                background-color: #20a0ff;
+                border-color: #20a0ff;
+            }
+        }
+    }
+    &__line {
+        position: absolute;
+        display: inline-block;
+        border-color: inherit;
+        background-color: #bfcbd9;
+        &.is-horizontal {
+            top: 15px;
+            height: 2px;
+            left: 32px;
+            right: 0;
+        }
+        &.is-vertical {
+            width: 2px;
+            box-sizing: border-box;
+            top: 32px;
+            bottom: 0;
+            left: 15px;
+        }
+    }
+    &__inner {
+      display: block;
+      border-width: 1px;
+      border-style: solid;
+      border-color: inherit;
+      transition: all 150ms;
+      box-sizing: border-box;
+      width: 0;
+      height: 0;
+    }
+    &__icon {
+        display: block;
+        line-height: 28px;
+        text-align: center;
+    }
+    &__main {
+        white-space: normal;
+        padding-right: 10px;
+        text-align: left;
+    }
+    &__title {
+        font-size: 14px;
+        line-height: 32px;
+        display: inline-block;
+        &.is-success {
+            font-weight: 700;
+            color: #13ce66;
+        }
+        &.is-process {
+            font-weight: 700;
+            color: #48576a;
+        }
+        &.is-wait {
+            font-weight: 400;
+            color: #97a8be;
+        }
+    }
+    &__description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        &.is-success {
+            color: #13ce66;
+        }
+        &.is-process {
+            color: #8391a5;
+        }
+        &.is-wait {
+            color: #bfcbd9;
+        }
+    }
+    &.is-vertical {
+      display: inline-block;
+      .hui-step__main {
+        padding-left: 10px;
+      }
+    }
+}
