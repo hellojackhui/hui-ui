@@ -20,6 +20,7 @@ import Upload from './upload/index';
 import { View } from '../libs';
 import Rate from './rate';
 import Steps from './steps';
+import Breadcrumb from './breadcrumb';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -252,6 +253,12 @@ export default class Page extends React.Component {
           <Steps.Step title="步骤 2" description="这是一段很长2222很长很长的描述性文字"></Steps.Step>
           <Steps.Step title="步骤 3" description="这是一段很长很长很长的描述性文字"></Steps.Step>
         </Steps>
+        <Breadcrumb>
+        <Breadcrumb.Item>首页</Breadcrumb.Item>
+      <Breadcrumb.Item>活动管理</Breadcrumb.Item>
+      <Breadcrumb.Item>活动列表</Breadcrumb.Item>
+      <Breadcrumb.Item>活动详情</Breadcrumb.Item>
+    </Breadcrumb>
         </div>
       </div>
       

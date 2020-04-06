@@ -1,0 +1,26 @@
+.hui-breadcrumb {
+  line-height: 1;
+  &::after {
+    display: table;
+    content: "";
+  }
+}
+
+.hui-breadcrumb-item {
+    float: left;
+    cursor: pointer;
+    &__wrap {
+        transition: color .15s linear;
+        color: #48576a;
+        &:hover {
+          color: #73ccff;
+        }
+    }
+    &__seperator {
+        margin: 0 8px;
+        color: #bfcbd9;
+    }
+    &:nth-last-of-type(1) &__seperator {
+      display: none;
+    }
+  }
