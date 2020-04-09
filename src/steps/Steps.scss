@@ -1,6 +1,7 @@
 .hui-step {
     display: inline-block;
     position: relative;
+    min-width: 200px;
     vertical-align: top;
     &:last-child .hui-step__line {
         display: none;

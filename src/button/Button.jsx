@@ -28,7 +28,7 @@ export default class Button extends Component {
 }
 
 Button.propTypes = {
-  size: PropType.oneOf(['large', 'small', 'tiny']),
+  size: PropType.oneOf(['large', 'small', 'mini']),
   type: PropType.string,
   plain: PropType.bool,
   loading: PropType.bool,

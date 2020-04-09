@@ -45,9 +45,9 @@ export default class Checkbox extends Component {
     let val = e.target.checked;
     const {onChange, trueLabel, falseLabel} = this.props;
     let ctx = this.parent();
-    let arr = ctx.state.options;
-    let len = arr.length + (val ? 1 : -1);
     if (ctx) {
+      let arr = ctx.state.options;
+      let len = arr.length + (val ? 1 : -1);
       if (ctx.props.min !== undefined && ctx.props.min > len) {
         return;
       }

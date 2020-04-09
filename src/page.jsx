@@ -21,6 +21,7 @@ import { View } from '../libs';
 import Rate from './rate';
 import Steps from './steps';
 import Breadcrumb from './breadcrumb';
+import Tree from './tree';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,65 @@ export default class Page extends React.Component {
       tabarr: [0],
       dialogImageUrl: '',
       dialogVisible: false,
+      treedata: [
+        {
+          title: 'title0',
+          value: 'title0',
+          children: [
+            {
+              title: 'title0-1',
+              value: 'title0-1',
+            }, {
+              title: 'title0-2',
+              value: 'title0-2',
+              children: [
+                {
+                  title: 'title0-2-1',
+                  value: 'title0-2-1',
+                }, {
+                  title: 'title0-2-2',
+                  value: 'title0-2-2',
+                  children: [
+                    {
+                      title: 'title0-2-2-1',
+                      value: 'title0-2-2-1',
+                      children: [
+                        {
+                          title: 'title0-2-2-1-1',
+                          value: 'title0-2-2-1-1',
+                        }, {
+                          title: 'title0-2-2-1-2',
+                          value: 'title0-2-2-1-2',
+                        }
+                      ],
+                    }, {
+                      title: 'title0-2-2-2',
+                      value: 'title0-2-2-2',
+                      children: [
+                        {
+                          title: 'title0-2-2-2-1',
+                          value: 'title0-2-2-2-1',
+                        }, {
+                          title: 'title0-2-2-2-2',
+                          value: 'title0-2-2-2-2',
+                        }
+                      ],
+                    }
+                  ],
+                }
+              ],
+            }
+          ],
+        },
+        {
+          title: 'title2',
+          value: 'title2',
+        },
+        {
+          title: 'title3',
+          value: 'title3',
+        }
+      ],
     }
   }
   onClick = () => {
@@ -59,7 +119,21 @@ export default class Page extends React.Component {
   handleRemove(file, fileList) {
     console.log(file, fileList);
   }
-  
+
+  // tree
+  handleSelect = (selectItems = []) => {
+    this.setState({
+      selectItems
+    });
+  };
+  handleClear = () => {
+    this.setState({
+      clearAll: false
+    });
+  };
+  handleItemChecked = (currItem) => {
+    console.log(currItem);
+  };
   handlePictureCardPreview(file) {
     this.setState({
       dialogImageUrl: file.url,
@@ -70,7 +144,7 @@ export default class Page extends React.Component {
     const fileList2 = [
       {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}
     ];
-    const { dialogImageUrl, dialogVisible } = this.state;
+    const { dialogImageUrl, dialogVisible, treedata } = this.state;
     return (
       <div>
         <div style={{'marginTop': '20px'}}>
@@ -259,6 +333,20 @@ export default class Page extends React.Component {
       <Breadcrumb.Item>活动列表</Breadcrumb.Item>
       <Breadcrumb.Item>活动详情</Breadcrumb.Item>
     </Breadcrumb>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Tree
+            data={treedata}
+            multiple={true}
+            clearAll={false}
+            defaultExpandAll={true}
+            expandOnClickNode={true}
+            selectItems={[]}
+            showQuery={true}
+            onSelect={this.handleSelect}
+            onClear={this.handleClear}
+            onItemChecked={this.handleItemChecked}
+          />
         </div>
       </div>
       

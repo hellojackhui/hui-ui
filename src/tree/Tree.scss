@@ -1,0 +1,131 @@
+$tree-checked-hover: #f3f3f3;
+$tree-checked-bg: #e4e4e4;
+$tree-checked-span-color: #e14c46;
+
+.modal-tree-body {
+    .hui-tree {
+        margin: 0 -16px;
+    }
+}
+
+.hui-tree {
+    min-width: 320px;
+    position: relative;
+    cursor: default;
+    background: #fff;
+    border: 1px solid #d1dbe5;
+    transition: all 0.3s linear;
+
+    &.query-spacing {
+        padding-top: 40px;
+    }
+
+    .tree-search-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        z-index: 105;
+    }
+
+    .hui-tree-parent-node li {
+        margin-top: 5px;
+        list-style: none;
+    }
+
+    .hui-tree-parent-node {
+        max-height: 400px;
+        overflow-y: auto;
+        transition: linear 0.5s;
+        &.is-disabled {
+            height: 0;
+            z-index: -1;
+        }
+        &.is-visible {
+            height: auto;
+            z-index: 1;
+        }
+        li ul {
+            margin: 0;
+            padding: 0 0 0 24px;
+        }
+    }
+
+    .tree-checked > .tree-node-title,
+    .tree-checked > .tree-btn-folder {
+        background-color: #edf7ff;
+    }
+
+    .tree-btn-folder {
+        display: inline-block;
+        width: 32px;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+        line-height: 32px;
+        font-size: 10px;
+        transition: transform 0.1s linear;
+
+        &:hover {
+            background-color: $tree-checked-hover;
+        }
+
+        &.tree-btn-hide {
+            visibility: hidden;
+            cursor: auto;
+        }
+
+        &.tree-btn-open {
+            transform: rotate(90deg);
+        }
+
+        + .custom-checkbox {
+            display: inline-block;
+            height: 24px;
+            top: 8px;
+            float: left;
+        }
+    }
+
+    .tree-node-title {
+        display: inline-block;
+        padding: 0 5px;
+        cursor: pointer;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: background-color 0.1s linear;
+        height: 32px;
+        line-height: 32px;
+        &:hover {
+            background-color: $tree-checked-hover;
+        }
+    }
+
+    .hui-tree-empty {
+        text-align: center;
+        padding: 15px 0;
+        color: #aaa;
+
+        img {
+            width: 60px;
+            opacity: 0.8;
+        }
+    }
+    .hui-checkbox {
+        vertical-align: top;
+        &__inner {
+            height: 20px;
+        }
+    }
+    .hui-tree__nodata {
+        display: inline-block;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+    &-child-node {
+        position: relative;
+    }
+}

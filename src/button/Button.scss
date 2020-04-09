@@ -18,7 +18,7 @@
     padding: 7px 9px;
     font-size: 14px;
   }
-  &--tiny {
+  &--mini {
     padding: 4px;
     font-size: 12px;
   }
@@ -109,6 +109,9 @@
     &+ span {
       margin-left: 5px;
     }
+  }
+  &+ & {
+    margin-left: 10px;
   }
 }
 
