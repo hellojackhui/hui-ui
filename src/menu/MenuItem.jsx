@@ -22,7 +22,7 @@ export default class MenuItem extends MixinComponent {
     return (
       <li
         style={this.styles()}
-        className={this.classname('hui-menu-item', {
+        className={this.classname('hui-menu__item', {
           'is-active': this.active(),
           'is-disabled': disabled,
         })}

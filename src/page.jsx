@@ -350,7 +350,7 @@ export default class Page extends React.Component {
           />
         </div>
         <div style={{'marginTop': '30px'}}>
-        <Menu theme="dark" defaultActive="1" className="el-menu-demo" mode="horizontal">
+        <Menu theme="dark" defaultActive="1" className="el-menu-demo" mode="horizontal" menuTrigger="click">
         <Menu.Item index="1">处理中心</Menu.Item>
         <Menu.SubMenu index="2" title="我的工作台">
           <Menu.Item index="2-1">选项1</Menu.Item>
