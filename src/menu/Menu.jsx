@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
+import './Menu.scss';
 
 export default class Menu extends Component {
   constructor(props) {
@@ -136,20 +137,20 @@ Menu.childContextTypes = {
 };
 
 Menu.propTypes = {
-    mode: PropType.string,
-    defaultActive: PropType.string,
-    defaultOpeneds: PropType.arrayOf(PropType.any),
-    theme: PropType.string,
-    uniqueOpened: PropType.bool,
-    menuTrigger: PropType.string,
-    onSelect: PropType.func,
-    onOpen: PropType.func,
-    onClose: PropType.func
-  };
+  mode: PropType.string,
+  defaultActive: PropType.string,
+  defaultOpeneds: PropType.arrayOf(PropType.any),
+  theme: PropType.string,
+  uniqueOpened: PropType.bool,
+  menuTrigger: PropType.string,
+  onSelect: PropType.func,
+  onOpen: PropType.func,
+  onClose: PropType.func
+};
   
-  Menu.defaultProps = {
-    mode: 'vertical',
-    theme: 'light',
-    menuTrigger: 'hover'
-  }
+Menu.defaultProps = {
+  mode: 'vertical',
+  theme: 'light',
+  menuTrigger: 'hover'
+}
   
