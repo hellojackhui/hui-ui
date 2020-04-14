@@ -1,0 +1,45 @@
+.hui-collapse {
+  border: 1px solid #dfe6ec;
+  border-radius: 0;
+  &-item {
+    &.is-active > &__header &__header__arrow {
+      transform: rotate(90deg);
+    }
+    &__header {
+      height: 43px;
+      line-height: 43px;
+      padding-left: 15px;
+      background-color: #fff;
+      color: #48576a;
+      cursor: pointer;
+      border-bottom: 1px solid #dfe6ec;
+      font-size: 13px;
+      &__arrow {
+        margin-right: 8px;
+        transition: transform .3s;
+      }
+    }
+    &__content {
+      padding: 10px 15px;
+      font-size: 13px;
+      color: #1f2d3d;
+      line-height: 1.769230769230769;
+    }
+    &__wrap {
+      will-change: height;
+      background-color: #fbfdff;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-bottom: 1px solid #dfe6ec;
+      transition: 1s height ease-in-out,.3s padding-top ease-in-out,.3s padding-bottom ease-in-out;
+    }
+  }
+  &--open {
+    height: auto;
+    z-index: 1;
+  }
+  &--close {
+    height: 0;
+    z-index: -1;
+  }
+}
