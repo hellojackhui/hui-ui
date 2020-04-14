@@ -76,6 +76,9 @@
         height: 60px;
         line-height: 60px;
         border-bottom: 1px solid transparent;
+        &.is-active {
+          border-bottom: 5px solid #20a0ff;
+        }
       }
       .hui-submenu__icon {
         font-size: 12px;
@@ -84,6 +87,7 @@
         margin-left: 5px;
         color: #97a8be;
         margin-top: -3px;
+        transition: all 0.3s linear;
       }
       & > .hui-menu {
         position: absolute;
@@ -127,6 +131,9 @@
     transition: border-color .3s,background-color .3s,color .3s;
     box-sizing: border-box;
     white-space: nowrap;
+    &.is-active {
+      border-bottom: 5px solid #20a0ff;
+    }
     &:hover {
       background-color: #d1dbe5;
     }

@@ -60,11 +60,11 @@ export default class SubMenu extends MixinComponent {
         'is-active': this.state.active,
         'is-opened': this.opened(),
       })}>
-        <div ref="submenu-title" className="hui-submenu__title">
+        <div ref="submenu-title" className={this.classname("hui-submenu__title")}>
           {this.props.title}
           <i className={this.classname('hui-submenu__icon', 'hui-icon', {
             'hui-icon-chevron-down': this.rootMenu().props.mode === 'vertical',
-            'hui-icon-caret_down': this.rootMenu().props.mode === 'horizontal'
+            'hui-icon-caret-down': this.rootMenu().props.mode === 'horizontal'
           })}></i>
         </div>
         {
