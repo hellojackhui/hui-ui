@@ -1,10 +1,9 @@
 {
   "config": {
-    "title": "Docz Sass",
+    "title": "Hui-ui",
     "description": "A UI Design language and React Component implementation",
     "menu": [
-      "Getting Started",
-      "Components"
+      "简介"
     ],
     "version": "0.1.0",
     "repository": "https://github.com/hellojackhui/hui-ui",
@@ -61,7 +60,7 @@
     {
       "key": "src/index.mdx",
       "value": {
-        "name": "Getting Started",
+        "name": "简介",
         "route": "/",
         "id": "6576455a124f9aaefd860597f03a8fe4",
         "filepath": "src/index.mdx",
@@ -71,14 +70,34 @@
         "menu": "",
         "headings": [
           {
-            "slug": "getting-started",
+            "slug": "hui_ui",
             "depth": 1,
-            "value": "Getting Started"
+            "value": "hui_ui"
           },
           {
-            "slug": "consistency",
+            "slug": "开发计划",
             "depth": 2,
-            "value": "Consistency"
+            "value": "开发计划"
+          },
+          {
+            "slug": "特性",
+            "depth": 2,
+            "value": "特性"
+          },
+          {
+            "slug": "兼容性",
+            "depth": 2,
+            "value": "兼容性"
+          },
+          {
+            "slug": "参与贡献",
+            "depth": 2,
+            "value": "参与贡献"
+          },
+          {
+            "slug": "文档更新进度",
+            "depth": 2,
+            "value": "文档更新进度"
           }
         ]
       }
@@ -126,14 +145,14 @@
             "value": "携带图标和描述内容"
           },
           {
-            "slug": "attribute",
+            "slug": "属性",
             "depth": 2,
-            "value": "Attribute"
+            "value": "属性"
           },
           {
-            "slug": "event",
+            "slug": "事件",
             "depth": 2,
-            "value": "Event"
+            "value": "事件"
           }
         ]
       }
@@ -171,44 +190,70 @@
             "value": "自定义标记类型"
           },
           {
-            "slug": "attribute",
+            "slug": "属性",
             "depth": 2,
-            "value": "Attribute"
+            "value": "属性"
           }
         ]
       }
     },
     {
-      "key": "src/components/Alert.mdx",
+      "key": "src/rate/Rate.mdx",
       "value": {
-        "name": "Alert",
-        "menu": "Components",
-        "id": "411d2842c3d65e6ee7d3ec119ed4c5a0",
-        "filepath": "src/components/Alert.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/components/Alert.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/components/Alert.mdx",
-        "slug": "src-components-alert",
-        "route": "/src-components-alert",
+        "title": "Rate",
+        "route": "/Rate",
+        "id": "2eced1cd9d36ad7b4f6dc5e68f92b3f6",
+        "filepath": "src/rate/Rate.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/rate/Rate.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/rate/Rate.mdx",
+        "slug": "src-rate-rate",
+        "name": "Rate",
+        "menu": "",
         "headings": [
           {
-            "slug": "alert",
+            "slug": "rate组件",
             "depth": 1,
-            "value": "Alert"
+            "value": "Rate组件"
           },
           {
-            "slug": "properties",
+            "slug": "基本使用",
             "depth": 2,
-            "value": "Properties"
+            "value": "基本使用"
           },
           {
-            "slug": "basic-usage",
-            "depth": 2,
-            "value": "Basic usage"
+            "slug": "1-默认显示",
+            "depth": 3,
+            "value": "1. 默认显示"
           },
           {
-            "slug": "using-different-kinds",
+            "slug": "2-添加颜色设置",
+            "depth": 3,
+            "value": "2. 添加颜色设置"
+          },
+          {
+            "slug": "3-允许半选",
+            "depth": 3,
+            "value": "3. 允许半选"
+          },
+          {
+            "slug": "4-辅助文字",
+            "depth": 3,
+            "value": "4. 辅助文字"
+          },
+          {
+            "slug": "5-只读",
+            "depth": 3,
+            "value": "5. 只读"
+          },
+          {
+            "slug": "属性控制",
             "depth": 2,
-            "value": "Using different kinds"
+            "value": "属性控制"
+          },
+          {
+            "slug": "事件",
+            "depth": 2,
+            "value": "事件"
           }
         ]
       }
@@ -321,6 +366,37 @@
                 },
                 {
                   "name": "fileList",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "selectItems",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleClear",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleItemChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "currItem",
                   "type": null
                 }
               ],
@@ -641,6 +717,18 @@
               "modifiers": [],
               "params": [],
               "returns": null
+            },
+            {
+              "name": "genIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "type",
+                  "type": null
+                }
+              ],
+              "returns": null
             }
           ],
           "actualName": "Alert",
@@ -759,6 +847,89 @@
       ]
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumb",
+          "methods": [],
+          "actualName": "BreadCrumb",
+          "props": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'/'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/breadcrumb/BreadCrumbItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumbItem",
+          "methods": [],
+          "actualName": "BreadCrumbItem",
+          "context": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/button/Button.jsx",
       "value": [
         {
@@ -778,7 +949,7 @@
             "size": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.oneOf(['large', 'small', 'tiny'])"
+                "raw": "PropType.oneOf(['large', 'small', 'mini'])"
               },
               "required": false,
               "description": ""
@@ -843,35 +1014,6 @@
               "type": {
                 "name": "custom",
                 "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/card/Card.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Card",
-          "methods": [],
-          "actualName": "Card",
-          "props": {
-            "header": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "bodyStyle": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
               },
               "required": false,
               "description": ""
@@ -1146,42 +1288,107 @@
       ]
     },
     {
-      "key": "src/components/Alert.jsx",
+      "key": "src/collapse/Collapse.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "Alert",
-          "methods": [],
-          "actualName": "Alert",
+          "displayName": "Collapse",
+          "methods": [
+            {
+              "name": "setActiveNames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "activeNames",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "name",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Collapse",
           "props": {
-            "kind": {
+            "accordion": {
               "type": {
-                "name": "enum",
-                "value": [
-                  {
-                    "value": "'info'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'positive'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'negative'",
-                    "computed": false
-                  },
-                  {
-                    "value": "'warning'",
-                    "computed": false
-                  }
-                ]
+                "name": "custom",
+                "raw": "PropType.bool"
               },
               "required": false,
-              "description": "The kind prop is used to set the alert's background color",
-              "defaultValue": {
-                "value": "'info'",
-                "computed": false
-              }
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.array, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/collapse/CollapseItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CollapseItem",
+          "methods": [],
+          "actualName": "CollapseItem",
+          "props": {
+            "isActive": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }
@@ -1816,6 +2023,453 @@
       ]
     },
     {
+      "key": "src/menu/Menu.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Menu",
+          "methods": [
+            {
+              "name": "openMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                },
+                {
+                  "name": "indexPath",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "closeMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleSubmenuClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                },
+                {
+                  "name": "indexPath",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "defaultOpenedsChanged",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "defaultActiveChanged",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                },
+                {
+                  "name": "indexPath",
+                  "type": null
+                },
+                {
+                  "name": "instance",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "openActiveItemMenus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Menu",
+          "props": {
+            "mode": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'vertical'",
+                "computed": false
+              }
+            },
+            "defaultActive": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "defaultOpeneds": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.arrayOf(PropType.any)"
+              },
+              "required": false,
+              "description": ""
+            },
+            "theme": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'light'",
+                "computed": false
+              }
+            },
+            "uniqueOpened": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "menuTrigger": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'hover'",
+                "computed": false
+              }
+            },
+            "onSelect": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onOpen": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/menu/MenuItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MenuItem",
+          "methods": [
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "active",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MenuItem",
+          "props": {
+            "index": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string.isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/menu/MenuItemGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MenuItemGroup",
+          "methods": [
+            {
+              "name": "initPadding",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MenuItemGroup",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string.isRequired"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/menu/SubMenu.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SubMenu",
+          "methods": [
+            {
+              "name": "initEvents",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handlerMouseEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleMouseleave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "opened",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onItemSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                },
+                {
+                  "name": "indexPath",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "SubMenu",
+          "props": {
+            "index": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string.isRequired"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/message/MessageBox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MessageBox",
+          "methods": [
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "startTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stopTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MessageBox",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "showClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "message": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/modal/Modal.jsx",
       "value": [
         {
@@ -2007,96 +2661,6 @@
           "displayName": "ModalFooter",
           "methods": [],
           "actualName": "ModalFooter"
-        }
-      ]
-    },
-    {
-      "key": "src/message/MessageBox.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "MessageBox",
-          "methods": [
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onClose",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "startTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "stopTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getIcon",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "MessageBox",
-          "props": {
-            "duration": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "3000",
-                "computed": false
-              }
-            },
-            "showClose": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "message": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "iconClass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
         }
       ]
     },
@@ -2610,6 +3174,367 @@
       ]
     },
     {
+      "key": "src/rate/Rate.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Rate",
+          "methods": [
+            {
+              "name": "hasClass",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "target",
+                  "type": null
+                },
+                {
+                  "name": "classname",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "setCurrentValue",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "resetStarValue",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getIconStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "activeColor",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getValueFromMap",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                },
+                {
+                  "name": "map",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "activeClass",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "voidClass",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "showDecimalIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "isDecimal",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "classes",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "decimalIconClass",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "selectValue",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "decimalStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "showText",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Rate",
+          "props": {
+            "colors": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "['#F7BA2A', '#F7BA2A', '#F7BA2A']",
+                "computed": false
+              }
+            },
+            "texts": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "['极差', '失望', '一般', '喜欢', '满意']",
+                "computed": false
+              }
+            },
+            "showtext": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "textColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "\"#1F2D3D\"",
+                "computed": false
+              }
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textTemplate": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'{value}'",
+                "computed": false
+              }
+            },
+            "lowThreshold": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "2",
+                "computed": false
+              }
+            },
+            "highThreshold": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "4",
+                "computed": false
+              }
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "5",
+                "computed": false
+              }
+            },
+            "voidColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#C6D1DE'",
+                "computed": false
+              }
+            },
+            "disabledVoidColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#EFF2F7'",
+                "computed": false
+              }
+            },
+            "iconClasses": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "['hui-icon-star', 'hui-icon-star', 'hui-icon-star']",
+                "computed": false
+              }
+            },
+            "voidIconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'hui-icon-star'",
+                "computed": false
+              }
+            },
+            "disabledVoidIconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'hui-icon-star'",
+                "computed": false
+              }
+            },
+            "allowHalf": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/slider/Slider.jsx",
       "value": [
         {
@@ -2801,6 +3726,159 @@
               "defaultValue": {
                 "value": "100",
                 "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Step.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Step",
+          "methods": [],
+          "actualName": "Step",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "description": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Steps.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Steps",
+          "methods": [
+            {
+              "name": "calStatus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcProgress",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "status",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Steps",
+          "props": {
+            "space": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "direction": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'horizontal'",
+                "computed": false
+              }
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "processStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'process'",
+                "computed": false
+              }
+            },
+            "finishStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'finish'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
               },
               "required": false
             }
@@ -3254,29 +4332,348 @@
       ]
     },
     {
-      "key": "src/tree/Node.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Node",
-          "methods": [],
-          "actualName": "Node"
-        }
-      ]
-    },
-    {
       "key": "src/tree/Tree.jsx",
       "value": [
         {
           "description": "",
           "displayName": "Tree",
-          "methods": [],
+          "methods": [
+            {
+              "name": "prepareSelectItemsValueArr",
+              "docblock": "准备选中数据源",
+              "modifiers": [],
+              "params": [],
+              "returns": null,
+              "description": "准备选中数据源"
+            },
+            {
+              "name": "prepareTreeDataTile",
+              "docblock": "组装数据源\n@param data\n@param baseKey\n@param treeDataTile\n@returns {{treeDataTile: *, treeData: *}}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "{data = [], baseKey = '0', treeDataTile = {}, selectItemsValueArr = [], level = 0}"
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": null
+              },
+              "description": "组装数据源"
+            },
+            {
+              "name": "renderTree",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "treeData",
+                  "type": null
+                },
+                {
+                  "name": "key",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderTreeItems",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "treeItems",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "treeItem",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "titleClickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "filterCheckedItems",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getChildrenKeys",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "type": null
+                },
+                {
+                  "name": "keys",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "multipleChange",
+              "docblock": "多选或者单选title\n@param checked\n@param key",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "checked",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                },
+                {
+                  "name": "key",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": null,
+              "description": "多选或者单选title"
+            },
+            {
+              "name": "handleCallBackData",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "currItem",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "toggleChildren",
+              "docblock": "展开关闭下级节点\n@param key\n@param props",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "key",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                },
+                {
+                  "name": "props",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": null,
+              "description": "展开关闭下级节点"
+            },
+            {
+              "name": "changeTreeDataTile",
+              "docblock": "展开，选择状态修改\n@param selKey\n@param data\n@param props\n@returns {*}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "{selKey, data, props}"
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": {
+                  "name": "mixed"
+                }
+              },
+              "description": "展开，选择状态修改"
+            },
+            {
+              "name": "changeTreeDataChecked",
+              "docblock": "选择状态修改，单选时反选其他节点\n@param selKey\n@param data\n@returns {*}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "{selKey, data}"
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": {
+                  "name": "mixed"
+                }
+              },
+              "description": "选择状态修改，单选时反选其他节点"
+            },
+            {
+              "name": "changeChildrenNodesChecked",
+              "docblock": "@param data\n@param checked",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                },
+                {
+                  "name": "checked",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": null,
+              "description": null
+            },
+            {
+              "name": "judgeCurrParentChecked",
+              "docblock": "判断当前父级节点是否选中\n@param data\n@param selKey\n@returns {*}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                },
+                {
+                  "name": "selKey",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": {
+                  "name": "mixed"
+                }
+              },
+              "description": "判断当前父级节点是否选中"
+            },
+            {
+              "name": "judgeParentChecked",
+              "docblock": "判断父级节点是否选中\n@param data\n@returns {*}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": {
+                  "name": "mixed"
+                }
+              },
+              "description": "判断父级节点是否选中"
+            },
+            {
+              "name": "childrenAllChecked",
+              "docblock": "判断当前子节点是否全选中\n@param data\n@param checked\n@returns {string}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                },
+                {
+                  "name": "checked",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": {
+                  "name": "string"
+                }
+              },
+              "description": "判断当前子节点是否全选中"
+            },
+            {
+              "name": "handleChange",
+              "docblock": "模糊匹配\n@param value",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": null,
+              "description": "模糊匹配"
+            },
+            {
+              "name": "filterTreeData",
+              "docblock": "条件过滤\n@param value",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": null,
+              "description": "条件过滤"
+            },
+            {
+              "name": "childrenNodeShow",
+              "docblock": "子节点是否匹配\n@param data\n@returns {boolean}",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "description": null,
+                  "type": null,
+                  "optional": false
+                }
+              ],
+              "returns": {
+                "description": null,
+                "type": {
+                  "name": "boolean"
+                }
+              },
+              "description": "子节点是否匹配"
+            }
+          ],
           "actualName": "Tree",
           "props": {
             "data": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.object"
+                "raw": "PropType.array"
               },
               "required": false,
               "description": ""
@@ -3287,7 +4684,35 @@
                 "raw": "PropType.object"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "{\n  title: 'title',\n  children: 'children'\n}",
+                "computed": false
+              }
+            },
+            "emptyText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'没有数据哦～'",
+                "computed": false
+              }
+            },
+            "showQuery": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
             },
             "highlightCurrent": {
               "type": {
@@ -3295,33 +4720,25 @@
                 "raw": "PropType.bool"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
             },
-            "onCheckChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onNodeClicked": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "isShowCheckbox": {
+            "defaultExpandAll": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.bool"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
             },
-            "renderContent": {
+            "filterNodeMethod": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
@@ -3329,29 +4746,29 @@
               "required": false,
               "description": ""
             },
-            "nodeKey": {
+            "expandOnClickNode": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.string"
+                "raw": "PropType.bool"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
             },
-            "defaultExpandedKeys": {
+            "renderOptions": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.object"
+                "raw": "PropType.func"
               },
               "required": false,
-              "description": ""
-            },
-            "defaultCheckedKeys": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
-              },
-              "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "(data) => {\n  return (\n    <span style={{float: 'right', marginRight: '20px'}}>\n      <Button size=\"mini\" plain>Append</Button>\n      <Button size=\"mini\" plain>Delete</Button>\n    </span>\n  )\n}",
+                "computed": false
+              }
             }
           }
         }

@@ -3,8 +3,9 @@ name: Alert
 route: /Alert
 ---
 
-import {Playground} from 'docz';
+import {Playground, Props} from 'docz';
 import Alert from './alert';
+import '../../style/css/font-awesome.css';
 
 # Alert 警告
 用于在页面提示重要信息
@@ -47,26 +48,26 @@ import Alert from './alert';
 ### 携带图标和描述内容
 
 <Playground>
-  <Alert type={'success'} title={'这是成功提示'} showIcon={true} description={"成功提示在这里"}/>
-  <Alert type={'info'} title={'这是信息提示'} showIcon={true} description={"成功提示在这里"}/>
-  <Alert type={'warning'} title={'这是成功提示'} showIcon={true} description={"成功提示在这里"}/>
-  <Alert type={'error'} title={'这是信息提示'} showIcon={true} description={"成功提示在这里"}/>
+  <Alert type={'success'} title={'这是成功提示'} showIcon={true} description={"携带图标和描述内容"} closable={true}/>
+  <Alert type={'info'} title={'这是信息提示'} showIcon={true} description={"携带图标和描述内容"} closable={true}/>
+  <Alert type={'warning'} title={'这是成功提示'} showIcon={true} description={"携带图标和描述内容"}/>
+  <Alert type={'error'} title={'这是信息提示'} showIcon={true} description={"携带图标和描述内容"}/>
 </Playground>
 
 
-## Attribute
+## 属性
 
-属性|名称|类型|默认值
----|----|—--|---
+属性名|名称|类型|默认值
+----|---|---|---
 title|提示标题|String|-
-type|类型|String|'info'
+type|类型|String|'info'|-
 description|描述|String|-
 closable|显示关闭按钮|Boolean|false
 closeText|关闭按钮文本|String|-
 showIcon|是否显示图标|Boolean|false
 
-## Event
+## 事件
 
 属性|名称|回调参数
----|----|—--
+----|---|---
 onClose|关闭事件|-

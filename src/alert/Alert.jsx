@@ -30,6 +30,15 @@ export default class Alert extends Component {
       this.props.onClose();
     }
   }
+  
+  genIcon = (type) => {
+    switch(type) {
+      case 'success': return 'hui-icon-check-circle';
+        case 'warning': return 'hui-icon-exclamation-circle';
+          case 'info': return 'hui-icon-info-circle';
+            case 'error': return 'hui-icon-times-circle';
+    }
+  }
 
   render() {
     const {title, description, type, closable, closeText, showIcon} = this.props;
@@ -41,7 +50,7 @@ export default class Alert extends Component {
               <div className={this.classname('hui-alert', type && `hui-alert--${type}`, classNameType, {
                 'is-disabled': !this.state.domVisible
               })} style={this.styles()}>
-                { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `hui-icon-${type}`, {
+                { showIcon && <i className={this.classname('hui-alert__icon', 'hui-icon', `${this.genIcon(type)}`, {
                   'is-big': description
                 })}></i>}
                 <div className="hui-alert__content">

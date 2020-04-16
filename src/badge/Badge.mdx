@@ -3,9 +3,10 @@ name: Badge
 route: /Badge
 ---
 
-import {PlayGround} from 'docz';
-import {Badge} from './badge';
-import {Button} from './button';
+import {Playground, Props} from 'docz';
+import Badge from './Badge';
+import Button from '../button';
+import '../../style/css/font-awesome.css';
 
 # Badge 标记
 为按钮和文本提供提示标志。
@@ -13,38 +14,38 @@ import {Button} from './button';
 ## 基本用法
 为按钮和文本提供提示标志.
 
-<PlayGround>
-  <Badge value={20}>
+<Playground>
+  <Badge value={'20'}>
     <Button type="primary" size={'small'} onClick={() => {}}>icon</Button>
   </Badge>
-</PlayGround>
+</Playground>
 
 ## 自定义最大值
 为该组件自定义最大值，如果当前值大于最大值，就返回最大值加+号
 
-<PlayGround>
+<Playground>
   <Badge value={20} max={19}>
     <Button type="primary" size={'small'} onClick={() => {}}>icon</Button>
   </Badge>
-</PlayGround>
+</Playground>
 
 ## 自定义标记类型
 为该组件自定义标记类型，可设置为圆点或普通类型
 
-<PlayGround>
-  <Badge value={20}>
+<Playground>
+  <Badge value={'20'}>
     <Button type="primary" size={'small'} onClick={() => {}}>icon</Button>
   </Badge>
-  <Badge value={20} isDot={true}>
+  <div style={{'display': 'inline-block', 'width': '20px'}} />
+  <Badge value={'20'} isDot={true}>
     <Button type="primary" size={'small'} onClick={() => {}}>icon</Button>
   </Badge>
-</PlayGround>
+</Playground>
 
+## 属性
 
-## Attribute
-
-属性|名称|类型|默认值
----|----|—--|---
+属性名|名称|类型|默认值
+----|---|---|---
 value|数值|[String, Number]|-
 max|最大值|Number|-
 isDot|是否为圆点|Boolean|false

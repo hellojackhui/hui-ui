@@ -3,9 +3,9 @@ name: Upload
 route: /upload
 ---
 
-import {PlayGround} from 'docz';
+import {Playground, Props} from 'docz';
 import Upload from './upload';
-import Button from './button';
+import Button from '../button';
 
 # 上传组件
 完成对多种文件格式的上传。
@@ -14,53 +14,53 @@ import Button from './button';
 
 ### 点击上传
 
-<PlayGround>
+<Playground>
   <Upload 
     action="//jsonplaceholder.typicode.com/posts/"
     listType="picture-card"
     onPreview={file => this.handlePictureCardPreview(file)}
     onRemove={(file, fileList) => this.handleRemove(file, fileList)}
   />
-</PlayGround>
+</Playground>
 
 ### 拖拽上传
 
-<PlayGround>
+<Playground>
   <Upload 
     drag
     action="//jsonplaceholder.typicode.com/posts/"
     onPreview={file => this.handlePreview(file)}
     onRemove={(file, fileList) => this.handleRemove(file, fileList)}
-    fileList={fileList2}
+    fileList={[]}
     listType="picture"
     tip={<div className="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>}
   />
-</PlayGround>
+</Playground>
 
 ### 照片墙
-<PlayGround>
+<Playground>
   <Upload 
     action="//jsonplaceholder.typicode.com/posts/"
     listType="picture-card"
     onPreview={file => this.handlePictureCardPreview(file)}
     onRemove={(file, fileList) => this.handleRemove(file, fileList)}
   />
-</PlayGround>
+</Playground>
 
 ### 图片列表缩略图
 
-<PlayGround>
+<Playground>
   <Upload
     className="upload-demo"
     action="//jsonplaceholder.typicode.com/posts/"
     onPreview={file => this.handlePreview(file)}
     onRemove={(file, fileList) => this.handleRemove(file, fileList)}
-    fileList={fileList2}
+    fileList={[]}
     listType="picture"
   >
     <Button size="small" type="primary">点击上传</Button>
   </Upload>
-</PlayGround>
+</Playground>
 
 ## 属性
 

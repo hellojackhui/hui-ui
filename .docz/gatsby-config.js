@@ -27,10 +27,12 @@ const config = {
       resolve: 'gatsby-theme-docz',
       options: {
         themeConfig: {},
+        src: './',
+        gatsbyRoot: null,
         themesDir: 'src',
         mdxExtensions: ['.md', '.mdx'],
         docgenConfig: {},
-        menu: ['Getting Started', 'Components'],
+        menu: ['Getting Started'],
         mdPlugins: [],
         hastPlugins: [],
         ignore: [],
@@ -40,14 +42,14 @@ const config = {
         'props-parser': true,
         debug: false,
         native: false,
-        openBrowser: false,
-        o: false,
-        open: false,
-        'open-browser': false,
+        openBrowser: null,
+        o: null,
+        open: null,
+        'open-browser': null,
         root: '/Users/huijiawei/Documents/projects/hui-ui/.docz',
         base: '/',
         source: './',
-        src: './',
+        'gatsby-root': null,
         files: '**/*.{md,markdown,mdx}',
         public: '/public',
         dest: '.docz/dist',
@@ -71,6 +73,8 @@ const config = {
           app: '/Users/huijiawei/Documents/projects/hui-ui/.docz/app',
           appPackageJson:
             '/Users/huijiawei/Documents/projects/hui-ui/package.json',
+          appTsConfig:
+            '/Users/huijiawei/Documents/projects/hui-ui/tsconfig.json',
           gatsbyConfig:
             '/Users/huijiawei/Documents/projects/hui-ui/gatsby-config.js',
           gatsbyBrowser:

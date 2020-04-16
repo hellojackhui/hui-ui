@@ -1,4 +1,4 @@
 export default {
-  title: 'Docz Sass',
-  menu: ['Getting Started', 'Components'],
+  title: 'Hui-ui',
+  menu: ['简介'],
 }
