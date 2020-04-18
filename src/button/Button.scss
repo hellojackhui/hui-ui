@@ -113,6 +113,9 @@
   &+ & {
     margin-left: 10px;
   }
+  &__loading {
+    animation: icnloading 1s linear infinite;
+  }
 }
 
 .is-plain {
@@ -121,15 +124,25 @@
   color: #1f2d3d;
 }
 
-.is-disabled {
+.h-button.is-disabled {
   background: #ffffff;
   cursor: not-allowed;
   color: #d1dbe5;
   border-color: #d1dbe5;
+  display: inline-block;
 }
 
 .is-loading {
   pointer-events: none;
   cursor: auto;
   position: relative;
+}
+
+@keyframes icnloading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -19,7 +19,7 @@ export default class Button extends Component {
         type={nativeType}
         onClick={this.handleClick}
       >
-        {loading && <i className={this.classname("h-button__icon", "hui-icon", 'hui-icon-upload')} />}
+        {loading && <i className={this.classname("h-button__icon", "hui-icon", 'hui-icon-repeat', 'h-button__loading')} />}
         {!loading && icon && <i className={this.classname("h-button__icon", "hui-icon", `hui-icon-${icon}`)}></i>}
         <span>{children}</span>
       </button>

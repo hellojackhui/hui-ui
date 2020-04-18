@@ -1,0 +1,41 @@
+---
+name: WaterMask
+route: /WaterMask
+---
+
+import {Playground, Props} from 'docz';
+import WaterMask from './index.js';
+import '../../style/css/font-awesome.css';
+
+# watermask 水印组件
+为内容添加需要的水印效果
+
+## 基本使用
+
+为内容添加水印
+
+<Playground>
+  <WaterMask content={"mask"} style={{'width': '100%', 'height': '300px'}}>
+    <div style={{
+      'textAlign': 'center',
+      'transform': 'translate(0px, 130px)',
+    }}>hellojackhui</div>
+  </WaterMask>
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+content|水印内容|String|-
+width|水印界面宽度|[String, Number]|300
+height|水印界面高度|[String, Number]|200
+textAlign|水印文字对其模式｜String|left
+textBaseline|水印文字基准线｜String|bottom
+container|水印组件所在元素｜node|document.body
+font|水印组件文字|String|16px Microsoft Yahei
+fillStyle|水印组件文字颜色|String|#000
+globalAlpha|设置图形和图像透明度的值|Number|0.1
+rotate|文字旋转角度|Number|16
+zIndex|元素堆叠顺序|Number|1000

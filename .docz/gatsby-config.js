@@ -19,7 +19,7 @@ const config = {
   pathPrefix: '/',
 
   siteMetadata: {
-    title: 'Docz Sass',
+    title: 'Hui-ui',
     description: 'A UI Design language and React Component implementation',
   },
   plugins: [
@@ -32,7 +32,7 @@ const config = {
         themesDir: 'src',
         mdxExtensions: ['.md', '.mdx'],
         docgenConfig: {},
-        menu: ['Getting Started'],
+        menu: ['简介'],
         mdPlugins: [],
         hastPlugins: [],
         ignore: [],
@@ -58,7 +58,7 @@ const config = {
         eb: 'master',
         'edit-branch': 'master',
         config: '',
-        title: 'Docz Sass',
+        title: 'Hui-ui',
         description: 'A UI Design language and React Component implementation',
         host: 'localhost',
         port: 3000,

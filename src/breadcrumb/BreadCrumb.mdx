@@ -1,0 +1,32 @@
+---
+name: BreadCrumb
+route: /BreadCrumb
+---
+ 
+import {Playground, Props} from 'docz';
+import BreadCrumb from './index.js';
+import '../../style/css/font-awesome.css';
+
+# BreadCrumb 面包屑
+使用于页面导航的面包屑组件
+
+## 基本使用
+
+显示多级页面标题
+
+<Playground>
+  <div style={{'marginTop': '10px', 'marginBottom': '30px', 'marginLeft': '10px'}}>
+    <BreadCrumb>
+      <BreadCrumb.Item>首页</BreadCrumb.Item>
+      <BreadCrumb.Item>次页</BreadCrumb.Item>
+      <BreadCrumb.Item>尾页</BreadCrumb.Item>
+    </BreadCrumb>
+  </div>
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+seperator|分割符|String|/
+

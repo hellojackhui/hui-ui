@@ -40,6 +40,7 @@ export function waterMask(options) {
     background-image:url('${base64Url}')`;
   waterMaskDiv.setAttribute('style', styleStr);
   waterMaskDiv.classList.add('__wm');
+  console.log(container)
   container.style.position = 'relative';
   if (!__wm) {
     container.appendChild(waterMaskDiv); // 添加元素

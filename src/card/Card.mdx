@@ -1,0 +1,24 @@
+---
+name: Card
+route: /Card
+---
+
+# Card 卡片
+通用卡片组件
+
+import {Playground, Props} from 'docz';
+import Card from './index.js';
+import '../../style/css/font-awesome.css';
+
+<Playground>
+  <Card
+    header={<h1>hello</h1>}
+  >
+    <span>this is card component</span>
+  </Card>
+</Playground>
+
+属性名|名称|类型|默认值
+----|---|---|---
+header|头部信息|String|-
+bodyStyle|内容区样式|object|-

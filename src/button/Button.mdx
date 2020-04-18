@@ -1,0 +1,70 @@
+---
+name: Button
+route: /Button
+---
+
+import {Playground, Props} from 'docz';
+import Button from './index';
+import '../../style/css/font-awesome.css';
+
+# Button 按钮
+
+## 基本使用
+
+设置含有不同颜色情绪的按钮
+
+<Playground>
+  <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+    <Button type={"success"}>success</Button>
+    <Button size={'warning'}>warning</Button>
+    <Button size={'info'}>info</Button>
+    <Button size={'danger'}>danger</Button>
+  </div>
+  <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+    <Button plain={true}>plain</Button>
+    <Button plain={true} type={"success"}>success</Button>
+    <Button plain={true} size={'warning'}>warning</Button>
+    <Button plain={true} size={'info'}>info</Button>
+    <Button plain={true} size={'danger'}>danger</Button>
+  </div>
+</Playground>
+
+
+可以调整按钮的尺寸，适应不同的按钮大小
+
+<Playground>
+  <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+    <Button size={'large'}>large</Button>
+    <Button size={'small'}>small</Button>
+    <Button size={'mini'}>mini</Button>
+  </div>
+</Playground>
+
+可以使按钮携带图标
+
+<Playground>
+  <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+    <Button loading={true}>loading</Button>
+    <Button icon={'user'}>withIcon</Button>
+  </div>
+</Playground>
+
+可以设置按钮无效化
+
+<Playground>
+  <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+    <Button disabled>loading</Button>
+  </div>
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|值|默认值
+----|---|---|---|---
+size|按钮大小|String|'large', 'small', 'tiny'|-
+type|按钮类型|String|'info', 'warning', 'success', 'danger'|'info'
+plain|是否为黑白风格|bool|-|false
+loading|是否有加载图标|String|-|-
+disabled|是否不可用|bool|-|false
+icon|按钮图标类型|String|-|-
