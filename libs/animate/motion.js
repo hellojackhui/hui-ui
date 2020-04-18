@@ -62,13 +62,19 @@ function getVendorPrefixedEventName(eventName) {
 
   return '';
 }
+const animationStartName = getVendorPrefixedEventName('animationstart');
 const animationEndName = getVendorPrefixedEventName('animationend');
+
+const transitionStartName = getVendorPrefixedEventName('transitionstart');
 const transitionEndName = getVendorPrefixedEventName('transitionend');
 
 const exportProperty = {
+  animationStartName: animationStartName,
   animationEndName: animationEndName,
+  transitionStartName: transitionStartName,
   transitionEndName: transitionEndName,
   supportTransition: !!(animationEndName && transitionEndName)
 }
 
 export default exportProperty;
+
