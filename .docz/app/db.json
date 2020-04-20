@@ -278,6 +278,31 @@
       }
     },
     {
+      "key": "src/i18n/i18n.mdx",
+      "value": {
+        "name": "i18n",
+        "route": "/i18n",
+        "id": "1482865d4c2cdaa14015455df3b2757c",
+        "filepath": "src/i18n/i18n.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/i18n/i18n.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/i18n/i18n.mdx",
+        "slug": "src-i18n-i18n",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "international-国际化",
+            "depth": 1,
+            "value": "International 国际化"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/rate/Rate.mdx",
       "value": {
         "title": "Rate",
@@ -536,6 +561,18 @@
           "description": "",
           "displayName": "Animate",
           "methods": [
+            {
+              "name": "onMotionStart",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
             {
               "name": "onMotionEnd",
               "docblock": null,
@@ -1104,6 +1141,17 @@
       ]
     },
     {
+      "key": "src/button/ButtonGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ButtonGroup",
+          "methods": [],
+          "actualName": "ButtonGroup"
+        }
+      ]
+    },
+    {
       "key": "src/card/Card.jsx",
       "value": [
         {
@@ -1499,6 +1547,193 @@
               },
               "required": false,
               "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/dropdown/Dropdown.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Dropdown",
+          "methods": [
+            {
+              "name": "initEvent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "show",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hide",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleMenuItemClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "command",
+                  "type": null
+                },
+                {
+                  "name": "instance",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Dropdown",
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/dropdown/DropdownItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DropdownItem",
+          "methods": [
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DropdownItem",
+          "props": {
+            "command": {
+              "type": {
+                "name": "custom",
+                "raw": "PropTypes.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropTypes.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "divided": {
+              "type": {
+                "name": "custom",
+                "raw": "PropTypes.bool"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/dropdown/DropdownMenu.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DropdownMenu",
+          "methods": [
+            {
+              "name": "onVisibleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onStart",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "placement",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DropdownMenu",
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropTypes.any"
+              },
+              "required": false
             }
           }
         }

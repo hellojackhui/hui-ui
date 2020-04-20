@@ -1,0 +1,64 @@
+---
+name: i18n
+route: /i18n
+---
+
+import {Playground} from 'docz';
+import Card from '../card/Card.jsx';
+import Row from '../layout/Row.jsx';
+import i18n from '../i18n/index.js';
+import en from '../i18n/lang/en.js';
+import cn from '../i18n/lang/zh-CN.js';
+import jp from '../i18n/lang/jp.js';
+import Column from '../layout/Column.jsx';
+
+# International 国际化
+国际化内容显示，可以设置不同国家语言的内容
+
+
+## 基本使用
+
+<Playground>
+    <div>
+        {i18n.use(en)}
+        <Card header={i18n.t("hui.select.loading")}>
+            {
+              [1,2,3,4,5,6,7,8,9,10,11,12].map((value) => {
+                return (
+                  <span>{i18n.t(`hui.datepicker.month${value}`)} </span>
+                )
+              })
+            } 
+        </Card>
+    </div>
+</Playground>
+
+<Playground>
+    <div>
+        {i18n.use(cn)}
+        <Card header={i18n.t("hui.select.loading")}>
+            {
+              [1,2,3,4,5,6,7,8,9,10,11,12].map((value) => {
+                return (
+                  <span>{i18n.t(`hui.datepicker.month${value}`)} </span>
+                )
+              })
+            }
+        </Card>
+    </div>
+</Playground>
+
+<Playground>
+    <div>
+        {i18n.use(jp)}
+        <Card header={i18n.t("hui.select.loading")}>
+          {
+            [1,2,3,4,5,6,7,8,9,10,11,12].map((value) => {
+              return (
+                <span>{i18n.t(`hui.datepicker.month${value}`)} </span>
+              )
+            })
+          }
+        </Card>
+    </div>
+</Playground>
