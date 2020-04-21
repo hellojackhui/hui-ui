@@ -62,6 +62,9 @@
   &--fadeout {
     animation-name: fadeOut;
   }
+  .is-disabled {
+    display: none;
+  }
 }
 .is-big {
   font-size:  25px !important;
@@ -74,9 +77,6 @@
   font-style: normal;
   font-size: 13px;
   top: 11px;;
-}
-.is-disabled {
-  display: none;
 }
 
 @keyframes fadeIn {

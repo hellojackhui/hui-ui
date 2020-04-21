@@ -50,9 +50,9 @@ export default class CheckboxGroup extends Component {
             if (name !== 'Checkbox' && name !== 'CheckButton') {
               return null;
             }
-            console.log(options.indexOf(node.props.label))
             return React.cloneElement(node, Object.assign({}, node.props, {
               key: index,
+              style: {'marginRight': '10px'},
               checked: node.props.checked || options.indexOf(node.props.value) >= 0 || options.indexOf(node.props.label) >= 0,
               onChange: this.onChange.bind(this, node.props.value ? node.props.value : node.props.value === 0 ? 0 : node.props.label)
             }))

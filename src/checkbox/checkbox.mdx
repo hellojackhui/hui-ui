@@ -1,0 +1,103 @@
+---
+name: Checkbox
+route: /Checkbox
+---
+
+import {Playground, Props} from 'docz';
+import Checkbox from './index.js';
+
+# Checkbox 单选框
+
+实现多种场景的内容单选
+
+## 基本使用
+
+单独使用可以表示两种状态之间的切换。
+
+<Playground>
+  <Checkbox checked style={{'marginLeft': '20px'}}>选中状态</Checkbox>
+</Playground>
+
+## 禁用状态
+多选框不可用状态。
+
+<Playground>
+  <Checkbox disabled style={{'marginLeft': '20px', 'marginRight': '20px'}}>未选中禁用状态</Checkbox>
+  <Checkbox checked disabled>选中禁用状态</Checkbox>
+</Playground>
+
+## 多选框组
+适用于多个勾选框绑定到同一个数组的情景
+
+<Playground>
+    <Checkbox.Group value={["2"]} style={{'marginLeft': '20px'}}>
+      <Checkbox label="1"></Checkbox>
+      <Checkbox label="2"></Checkbox>
+      <Checkbox label="3"></Checkbox>
+    </Checkbox.Group>
+</Playground>
+
+## indeterminate状态
+用于表示多选框的不确定状态
+
+<Playground>
+ {() => {
+    const [checkAll, setcheckAll] = React.useState(false)
+    const [cities, setcities] = React.useState(['上海', '北京', '广州', '深圳'])
+    const [checkedCities, setcheckedCities] = React.useState(['上海', '北京'])
+    const [isIndeterminate, setisIndeterminate] = React.useState(true)
+    function handleCheckAllChange(checked) {
+      setisIndeterminate(false)
+      setcheckAll(checked)
+      setcheckedCities(checked ? ['上海', '北京', '广州', '深圳'] : [])
+    }
+    function handleCheckedCitiesChange(value) {
+      const checkedCount = value.length
+      const citiesLength = cities.length
+      setcheckedCities(value)
+      setcheckAll(checkedCount === citiesLength)
+      setisIndeterminate(checkedCount > 0 && checkedCount < citiesLength)
+    }
+    return (
+      <div style={{'marginLeft': '20px'}}>
+        <Checkbox
+          checked={checkAll}
+          indeterminate={isIndeterminate}
+          onChange={() => handleCheckAllChange(true)}>全选</Checkbox>
+        <Checkbox.Group
+          value={checkedCities}
+          onChange={(value) => handleCheckedCitiesChange(value)}>
+          {
+            cities.map((city, index) =>
+              <Checkbox key={index} label={city}></Checkbox>
+            )
+          }
+        </Checkbox.Group>
+      </div>
+    )
+  }}
+</Playground>
+
+## 属性
+
+### Checkbox 相关属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+checked|是否选中|[String, number, Boolean]|-
+disabled|是否禁用|Boolean|-
+label|标示|string|-
+indeterminate|是否为不稳定状态|Boolean|false
+onChange|选中状态改变回调|function|() => {}
+
+### CheckboxGroup 相关属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+min|最小选择数量|[String, number]|-
+max|最大选择数量|[String, number]|-
+value|选中值|string|-
+size|单选框大小|['large', 'small']|-
+fill|填充颜色|string|-
+textColor|文本颜色|string|-
+onChange|选中状态改变回调|function|() => {}

@@ -62,6 +62,9 @@
       background-color: #eef1f6;
       border-color: #d1dbe5;
       cursor: not-allowed;
+      &.is-checked {
+        background-color: #d1dbe5;
+      }
     }
   }
   &__input {

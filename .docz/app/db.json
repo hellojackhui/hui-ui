@@ -158,36 +158,6 @@
       }
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
-      "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
-        "slug": "src-breadcrumb-bread-crumb",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "breadcrumb-面包屑",
-            "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/badge/Badge.mdx",
       "value": {
         "name": "Badge",
@@ -278,6 +248,91 @@
       }
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "value": {
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "slug": "src-breadcrumb-bread-crumb",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "breadcrumb-面包屑",
+            "depth": 1,
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/checkbox/checkbox.mdx",
+      "value": {
+        "name": "Checkbox",
+        "route": "/Checkbox",
+        "id": "d267daafcc699913c4983dcc5e64b42d",
+        "filepath": "src/checkbox/checkbox.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/checkbox/checkbox.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/checkbox/checkbox.mdx",
+        "slug": "src-checkbox-checkbox",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "checkbox-单选框",
+            "depth": 1,
+            "value": "Checkbox 单选框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "禁用状态",
+            "depth": 2,
+            "value": "禁用状态"
+          },
+          {
+            "slug": "多选框组",
+            "depth": 2,
+            "value": "多选框组"
+          },
+          {
+            "slug": "indeterminate状态",
+            "depth": 2,
+            "value": "indeterminate状态"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          },
+          {
+            "slug": "checkbox-相关属性",
+            "depth": 3,
+            "value": "Checkbox 相关属性"
+          },
+          {
+            "slug": "checkboxgroup-相关属性",
+            "depth": 3,
+            "value": "CheckboxGroup 相关属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/i18n/i18n.mdx",
       "value": {
         "name": "i18n",
@@ -359,56 +414,6 @@
             "slug": "事件",
             "depth": 2,
             "value": "事件"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/upload/upload.mdx",
-      "value": {
-        "name": "Upload",
-        "route": "/upload",
-        "id": "3d8fc8d9c84ae0e454b902401f44e7bf",
-        "filepath": "src/upload/upload.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/upload/upload.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/upload/upload.mdx",
-        "slug": "src-upload-upload",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "上传组件",
-            "depth": 1,
-            "value": "上传组件"
-          },
-          {
-            "slug": "基本用法",
-            "depth": 2,
-            "value": "基本用法"
-          },
-          {
-            "slug": "点击上传",
-            "depth": 3,
-            "value": "点击上传"
-          },
-          {
-            "slug": "拖拽上传",
-            "depth": 3,
-            "value": "拖拽上传"
-          },
-          {
-            "slug": "照片墙",
-            "depth": 3,
-            "value": "照片墙"
-          },
-          {
-            "slug": "图片列表缩略图",
-            "depth": 3,
-            "value": "图片列表缩略图"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
           }
         ]
       }
@@ -555,6 +560,54 @@
       ]
     },
     {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
+        }
+      ]
+    },
+    {
       "key": "libs/animate/Animate.jsx",
       "value": [
         {
@@ -611,54 +664,6 @@
             }
           ],
           "actualName": "Animate"
-        }
-      ]
-    },
-    {
-      "key": "libs/component/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Component",
-          "methods": [
-            {
-              "name": "classnames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "classname",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "styles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "styles",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Component"
         }
       ]
     },
@@ -994,60 +999,6 @@
       ]
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumb",
-          "methods": [],
-          "actualName": "BreadCrumb",
-          "props": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'/'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumbItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumbItem",
-          "methods": [],
-          "actualName": "BreadCrumbItem",
-          "context": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/button/Button.jsx",
       "value": [
         {
@@ -1152,29 +1103,54 @@
       ]
     },
     {
-      "key": "src/card/Card.jsx",
+      "key": "src/breadcrumb/BreadCrumb.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "Card",
+          "displayName": "BreadCrumb",
           "methods": [],
-          "actualName": "Card",
+          "actualName": "BreadCrumb",
           "props": {
-            "header": {
+            "seperator": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.string"
               },
               "required": false,
-              "description": ""
-            },
-            "bodyStyle": {
+              "description": "",
+              "defaultValue": {
+                "value": "'/'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "seperator": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.object"
+                "raw": "PropType.string"
               },
-              "required": false,
-              "description": ""
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/breadcrumb/BreadCrumbItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumbItem",
+          "methods": [],
+          "actualName": "BreadCrumbItem",
+          "context": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
             }
           }
         }
@@ -1440,6 +1416,35 @@
                 "raw": "PropType.any"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }
@@ -2725,96 +2730,6 @@
       ]
     },
     {
-      "key": "src/message/MessageBox.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "MessageBox",
-          "methods": [
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onClose",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "startTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "stopTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getIcon",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "MessageBox",
-          "props": {
-            "duration": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "3000",
-                "computed": false
-              }
-            },
-            "showClose": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "message": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "iconClass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/modal/Modal.jsx",
       "value": [
         {
@@ -3006,6 +2921,96 @@
           "displayName": "ModalFooter",
           "methods": [],
           "actualName": "ModalFooter"
+        }
+      ]
+    },
+    {
+      "key": "src/message/MessageBox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MessageBox",
+          "methods": [
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "startTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stopTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MessageBox",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "showClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "message": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
         }
       ]
     },
