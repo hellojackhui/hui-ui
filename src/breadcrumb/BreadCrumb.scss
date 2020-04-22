@@ -20,6 +20,9 @@
         margin: 0 8px;
         color: #bfcbd9;
     }
+    &.is-highlight &__wrap{
+      color: #50bfff;
+    }
     &:nth-last-of-type(1) &__seperator {
       display: none;
     }

@@ -1,0 +1,69 @@
+---
+name: Loading
+route: /Loading
+---
+
+import {Playground, Props} from 'docz';
+import Loading from './index.js';
+import Button from '../button/index.js';
+import '../../style/css/font-awesome.css';
+
+# Loading 加载
+用于在页面内容未加载完成时进行加载显示
+
+
+## 基本用法
+<Playground>
+  {
+    () => {
+      const [isloading, setisloading] = React.useState(true);
+      function toggleloading() {
+        setisloading(!isloading)
+      }
+      return (
+        <div style={{'padding': '8px'}}>
+          <Button onClick={() => toggleloading()} style={{'marginBottom': '10px'}}>loading切换</Button>
+          <Loading loading={isloading} color={'purple'} text={'loading'}>
+            <div style={{'width': '100%', 'height': '200px', 'border': '1px solid #dddddd'}}>
+              <center style={{'position': 'relative', 'top': '90px'}}>hellojackhui</center>
+            </div>
+          </Loading>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+
+## 全屏加载
+设置**fullscreen**属性实现页面的loading
+<Playground>
+  {
+    () => {
+      const [isfullscreen, setisfullscreen] = React.useState(false);
+      function togglesecondloading() {
+        setisfullscreen(!isfullscreen)
+        window.setTimeout(() => {
+            setisfullscreen(false)
+        }, 2000)
+      }
+      return (
+        <div>
+            <Button onClick={() => togglesecondloading()}>全屏加载</Button>
+            <Loading loading={isfullscreen} fullScreen={isfullscreen}>
+            </Loading>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+fullScreen|是否全屏|Boolean|false
+text|loading文本|string|-
+color|loading颜色|string|'#50bfff'
+loading|loading状态|Boolean|false

@@ -1,10 +1,10 @@
 import { Playground, Props } from 'docz';
-import Alert from "../../../../../src/alert/Alert";
+import Loading from "../../../../../src/loading/index.js";
 import "../../../../../style/css/font-awesome.css";
 import * as React from 'react';
 export default {
   Playground,
   Props,
-  Alert,
+  Loading,
   React
 };

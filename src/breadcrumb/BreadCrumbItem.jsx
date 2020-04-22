@@ -4,9 +4,11 @@ import './BreadCrumb.scss';
 
 export default class BreadCrumbItem extends Component {
   render() {
-    const {children} = this.props;
+    const {active, children} = this.props;
     return (
-      <span style={this.styles()} className={this.classname('hui-breadcrumb-item')}>
+      <span style={this.styles()} className={this.classname('hui-breadcrumb-item', {
+        'is-highlight': active,
+      })}>
         <span className="hui-breadcrumb-item__wrap" ref="link">{children}</span>
         <span className="hui-breadcrumb-item__seperator">{this.context.seperator}</span>
       </span>
@@ -16,4 +18,5 @@ export default class BreadCrumbItem extends Component {
   
 BreadCrumbItem.contextTypes = {
   seperator: PropType.string,
+  active: PropType.bool,
 }

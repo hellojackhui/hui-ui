@@ -32,9 +32,12 @@
     display: table-cell;
     color: #fff;
     vertical-align: middle;
+    &.hui-icon {
+      display: table-cell;
+    }
   }
   &__content {
-    display: table-cell;
+    display: inline-block;
     padding: 0 8px;
     line-height: 100%;
   }

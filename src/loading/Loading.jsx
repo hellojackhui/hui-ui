@@ -7,6 +7,11 @@ export default class Loading extends Component {
   constructor(props) {
     super(props);
   }
+  componentWillReceiveProps(nextprops) {
+    if (!nextprops.fullScreen) {
+      this.enableScroll();
+    }
+  }
   componentWillUnmount() {
     this.enableScroll();
   }
@@ -25,7 +30,6 @@ export default class Loading extends Component {
       if (this.props.loading) {
         return {
           'position': 'relative',
-          'width': 'fit-content',
         }
       } else {
         return {};
