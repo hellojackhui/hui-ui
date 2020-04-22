@@ -52,7 +52,7 @@ const config = {
         'gatsby-root': null,
         files: '**/*.{md,markdown,mdx}',
         public: '/public',
-        dest: '.docz/dist',
+        dest: '/dist',
         d: '.docz/dist',
         editBranch: 'master',
         eb: 'master',
