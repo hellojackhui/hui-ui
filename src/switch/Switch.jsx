@@ -88,8 +88,8 @@ export default class Switch extends Component {
           'width': this.currentWidth(),
         }}>
           <span className={this.classname('hui-switch-thumb')} />
-          <span className={this.classname('hui-switch-title', 'hui-switch-title--prev')}>{this.switchTitle(false)}</span>
-          <span className={this.classname('hui-switch-title', 'hui-switch-title--next')}>{this.switchTitle(true)}</span>
+          <span className={this.classname('hui-switch-title', 'hui-switch-title--prev')}>{this.switchTitle(true)}</span>
+          <span className={this.classname('hui-switch-title', 'hui-switch-title--next')}>{this.switchTitle(false)}</span>
         </span>
       </label>
     )

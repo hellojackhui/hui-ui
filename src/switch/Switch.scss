@@ -69,11 +69,12 @@
     position: absolute;
     color: #fff;
     transition: all 0.3s linear;
+    font-size: 16px;
     &--prev {
       transform: translateX(10px);
     }
     &--next {
-      transform: translateX(30px);
+      transform: translateX(23px);
     }
   }
 }

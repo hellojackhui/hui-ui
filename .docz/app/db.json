@@ -158,46 +158,6 @@
       }
     },
     {
-      "key": "src/badge/Badge.mdx",
-      "value": {
-        "name": "Badge",
-        "route": "/Badge",
-        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
-        "filepath": "src/badge/Badge.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
-        "slug": "src-badge-badge",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "badge-标记",
-            "depth": 1,
-            "value": "Badge 标记"
-          },
-          {
-            "slug": "基本用法",
-            "depth": 2,
-            "value": "基本用法"
-          },
-          {
-            "slug": "自定义最大值",
-            "depth": 2,
-            "value": "自定义最大值"
-          },
-          {
-            "slug": "自定义标记类型",
-            "depth": 2,
-            "value": "自定义标记类型"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/breadcrumb/BreadCrumb.mdx",
       "value": {
         "name": "BreadCrumb",
@@ -248,6 +208,46 @@
             "slug": "基本使用",
             "depth": 2,
             "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/badge/Badge.mdx",
+      "value": {
+        "name": "Badge",
+        "route": "/Badge",
+        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
+        "filepath": "src/badge/Badge.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
+        "slug": "src-badge-badge",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "badge-标记",
+            "depth": 1,
+            "value": "Badge 标记"
+          },
+          {
+            "slug": "基本用法",
+            "depth": 2,
+            "value": "基本用法"
+          },
+          {
+            "slug": "自定义最大值",
+            "depth": 2,
+            "value": "自定义最大值"
+          },
+          {
+            "slug": "自定义标记类型",
+            "depth": 2,
+            "value": "自定义标记类型"
           },
           {
             "slug": "属性",
@@ -454,6 +454,66 @@
             "slug": "事件",
             "depth": 2,
             "value": "事件"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/switch/Switch.mdx",
+      "value": {
+        "name": "Switch",
+        "route": "/Switch",
+        "id": "346c505ae60903f14087f9fa08029324",
+        "filepath": "src/switch/Switch.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/switch/Switch.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/switch/Switch.mdx",
+        "slug": "src-switch-switch",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "switch-开关",
+            "depth": 1,
+            "value": "Switch 开关"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "禁用状态",
+            "depth": 2,
+            "value": "禁用状态"
+          },
+          {
+            "slug": "自定义设置属性",
+            "depth": 2,
+            "value": "自定义设置属性"
+          },
+          {
+            "slug": "自定义开启和关闭值显示",
+            "depth": 3,
+            "value": "自定义开启和关闭值显示"
+          },
+          {
+            "slug": "自定义开启和关闭文本显示",
+            "depth": 3,
+            "value": "自定义开启和关闭文本显示"
+          },
+          {
+            "slug": "自定义开启和关闭颜色显示",
+            "depth": 3,
+            "value": "自定义开启和关闭颜色显示"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          },
+          {
+            "slug": "回调函数",
+            "depth": 2,
+            "value": "回调函数"
           }
         ]
       }
@@ -1204,6 +1264,35 @@
       ]
     },
     {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/checkbox/CheckButton.jsx",
       "value": [
         {
@@ -1463,35 +1552,6 @@
                 "raw": "PropType.any"
               },
               "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/card/Card.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Card",
-          "methods": [],
-          "actualName": "Card",
-          "props": {
-            "header": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "bodyStyle": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
-              },
-              "required": false,
-              "description": ""
             }
           }
         }
@@ -2335,6 +2395,85 @@
                 "raw": "PropType.oneOfType([PropType.number, PropType.string])"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/loading/Loading.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Loading",
+          "methods": [
+            {
+              "name": "currentStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "disableScroll",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "enableScroll",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Loading",
+          "props": {
+            "fullScreen": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "text": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "color": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#50bfff'",
+                "computed": false
+              }
+            },
+            "loading": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
             }
           }
         }
@@ -3853,6 +3992,131 @@
       ]
     },
     {
+      "key": "src/select/Option.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Option",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "currentSelected",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "currentLabel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "itemSelected",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hoverItem",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "selectOptionClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "resetIndex",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Option",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any.isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "selected": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/select/OptionGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "OptionGroup",
+          "methods": [],
+          "actualName": "OptionGroup",
+          "props": {
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/slider/Slider.jsx",
       "value": [
         {
@@ -4199,222 +4463,6 @@
                 "raw": "PropType.any"
               },
               "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/switch/Switch.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Switch",
-          "methods": [
-            {
-              "name": "getChecked",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "props",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "currentWidth",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "switchTitle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "type",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "currentBackground",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onFocus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onBlur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Switch",
-          "props": {
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "offValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "onColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#13ce66'",
-                "computed": false
-              }
-            },
-            "offColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#c4c4c4'",
-                "computed": false
-              }
-            },
-            "onText": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'ON'",
-                "computed": false
-              }
-            },
-            "offText": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'OFF'",
-                "computed": false
-              }
-            },
-            "onFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onBlur": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "allowFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
             }
           }
         }
@@ -5957,37 +6005,194 @@
       ]
     },
     {
-      "key": "src/loading/Loading.jsx",
+      "key": "src/switch/Switch.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "Loading",
+          "displayName": "Switch",
           "methods": [
             {
-              "name": "currentStyle",
+              "name": "getChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentWidth",
               "docblock": null,
               "modifiers": [],
               "params": [],
               "returns": null
             },
             {
-              "name": "disableScroll",
+              "name": "switchTitle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "type",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentBackground",
               "docblock": null,
               "modifiers": [],
               "params": [],
               "returns": null
             },
             {
-              "name": "enableScroll",
+              "name": "onFocus",
               "docblock": null,
               "modifiers": [],
-              "params": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
               "returns": null
             }
           ],
-          "actualName": "Loading",
+          "actualName": "Switch",
           "props": {
-            "fullScreen": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "offValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "onColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#13ce66'",
+                "computed": false
+              }
+            },
+            "offColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#c4c4c4'",
+                "computed": false
+              }
+            },
+            "onText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'ON'",
+                "computed": false
+              }
+            },
+            "offText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'OFF'",
+                "computed": false
+              }
+            },
+            "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onBlur": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.bool"
@@ -5999,27 +6204,7 @@
                 "computed": false
               }
             },
-            "text": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "color": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#50bfff'",
-                "computed": false
-              }
-            },
-            "loading": {
+            "allowFocus": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.bool"

@@ -1,0 +1,107 @@
+---
+name: Switch
+route: /Switch
+---
+
+import {Playground} from 'docz';
+import Switch from './index.js';
+import '../../style/css/font-awesome.css';
+
+# Switch 开关
+
+## 基本使用
+
+<Playground>
+ {
+   () => {
+    const [checked, setchecked] = React.useState(false);
+    return (
+      <div style={{'marginLeft': '20px', 'marginTop': '10px'}}>
+        <Switch value={checked} />
+        <Switch value={!checked} style={{'marginLeft': '20px'}} />
+      </div>
+    )
+   }
+ }
+</Playground>
+
+## 禁用状态
+
+<Playground>
+    <div style={{'marginLeft': '20px', 'marginTop': '10px'}}>
+      <Switch value={true} disabled />
+      <Switch style={{'marginLeft': '20px'}} value={false} disabled />
+    </div>
+</Playground>
+
+
+## 自定义设置属性
+
+### 自定义开启和关闭值显示
+
+<Playground>
+ {
+   () => {
+    const [checked, setchecked] = React.useState('ok');
+    return (
+      <div style={{'marginLeft': '20px', 'marginTop': '10px'}}>
+        <Switch value={checked} onValue={'ok'} offValue={'off'} onChange={() => setchecked(checked == 'ok' ? 'off' : 'ok')}/>
+      </div>
+    )
+   } 
+ }
+</Playground>
+
+### 自定义开启和关闭文本显示
+
+<Playground>
+ {
+   () => {
+    const [checked, setchecked] = React.useState(false);
+    return (
+      <div style={{'marginLeft': '20px', 'marginTop': '10px'}}>
+        <Switch value={checked} onText={'ok'} offText={'off'} onChange={() => setchecked(!checked)}/>
+      </div>
+    )
+   } 
+ }
+</Playground>
+
+### 自定义开启和关闭颜色显示
+
+<Playground>
+ {
+   () => {
+    const [checked, setchecked] = React.useState(false);
+    return (
+      <div style={{'marginLeft': '20px', 'marginTop': '10px'}}>
+        <Switch value={checked} onColor={'#50bfff'} offColor={'#ff4949'} onChange={() => setchecked(!checked)}/>
+      </div>
+    )
+   } 
+ }
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+value|值|[boolean, string, number]|-
+onValue|开状态的值|[boolean, string, number]|-
+offValue|关状态的值|[boolean, string, number]|-
+onColor|开状态颜色|string|'#13ce66'
+offColor|关状态颜色|string|'#ff4949'
+onText|开状态文本|string|'ON'
+offText|关状态文本|string|'OFF'
+disabled|是否禁用|boolean|false
+allowFocus|允许聚焦|boolean|false
+
+
+## 回调函数
+
+属性名|名称|类型|默认值
+----|---|---|---
+onFocus|获取焦点回调|function|-
+onBlur|失去焦点回调|function|-
+onChange|状态改变回调|function|-
