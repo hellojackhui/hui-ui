@@ -24,6 +24,7 @@ import Breadcrumb from './breadcrumb';
 import Tree from './tree';
 import Menu from './menu';
 import Collapse from './collapse';
+import Transfer from './transfer';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -96,6 +97,7 @@ export default class Page extends React.Component {
           value: 'title3',
         }
       ],
+      transfervalue: [1,4],
     }
   }
   onClick = () => {
@@ -141,6 +143,20 @@ export default class Page extends React.Component {
       dialogImageUrl: file.url,
       dialogVisible: true,
     })
+  }
+  get transferdata() {
+    const data = [];
+    for (let i = 1; i <= 15; i++) {
+      data.push({
+        key: i,
+        label: `备选项 ${ i }`,
+        disabled: i % 4 === 0
+      });
+    }
+    return data;
+  }
+  handleTranferChange = (value) => {
+    this.setState({ value })
   }
   render() {
     const fileList2 = [
@@ -381,6 +397,9 @@ export default class Page extends React.Component {
           <div>结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。</div>
         </Collapse.Item>
       </Collapse>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Transfer value={this.state.transfervalue} data={this.transferdata} onChange={this.handleTranferChange}/>
         </div>
       </div>
       

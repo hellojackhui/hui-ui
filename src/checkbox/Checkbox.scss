@@ -1,19 +1,15 @@
 .hui-checkbox {
   display: inline-block;
   position: relative;
-  &__inner {
-    top: 4px;
-    margin-right: 4px;
-    position: relative;
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #bfcbd9;
-    border-radius: 4px;
-    background-color: #fff;
-    box-sizing: border-box;
+  &__input {
     cursor: pointer;
-    &.is-checked {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    outline: 0;
+    line-height: 1;
+    vertical-align: middle;
+    &.is-checked .hui-checkbox__inner {
       background-color: #50bfff;
       border-color: #50bfff;
       &::after {
@@ -28,17 +24,42 @@
       }
     }
     &.is-indeterminate::after {
-        content: '';
-        position: absolute;
-        top: 7px;
-        width: 10px;
-        height: 1px;
-        left: 2px;
-        background-color: #fff;
-        transform: scale(0);
-        transform-origin: center;
-        transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+      content: '';
+      position: absolute;
+      top: 7px;
+      width: 10px;
+      height: 1px;
+      left: 2px;
+      background-color: #fff;
+      transform: scale(0);
+      transform-origin: center;
+      transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
+    }
+    &.is-disabled {
+      color: #bbb;
+      cursor: not-allowed;
+      & .hui-checkbox__inner {
+        background-color: #eef1f6;
+        border-color: #d1dbe5;
+        cursor: not-allowed;
+        &.is-checked {
+          background-color: #d1dbe5;
+        }
       }
+    }
+  }
+  &__inner {
+    top: 4px;
+    margin-right: 4px;
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #bfcbd9;
+    border-radius: 4px;
+    background-color: #fff;
+    box-sizing: border-box;
+    cursor: pointer;
     &::after {
       content: '';
       position: absolute;
@@ -55,19 +76,7 @@
       transform-origin: center;
     }
   }
-  &.is-disabled {
-    color: #bbb;
-    cursor: not-allowed;
-    & .hui-checkbox__inner {
-      background-color: #eef1f6;
-      border-color: #d1dbe5;
-      cursor: not-allowed;
-      &.is-checked {
-        background-color: #d1dbe5;
-      }
-    }
-  }
-  &__input {
+  &__original {
     position: absolute;
     top: 0;
     left: 0;
@@ -76,7 +85,8 @@
     opacity: 0;
   }
   &__title {
-      font-size: 14px;
+    font-size: 14px;
+    vertical-align: middle;
   }
 }
 

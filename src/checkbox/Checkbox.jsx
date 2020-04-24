@@ -72,23 +72,24 @@ export default class Checkbox extends Component {
     const {disabled, children, indeterminate} = this.props;
     const {checked, label, focus} = this.state;
     return (
-      <label style={this.styles()} className={this.classname('hui-checkbox', {
-        'is-disabled': disabled,
-      })}>
-        <span className={this.classname("hui-checkbox__inner", {
-          'is-checked': checked,
-          'is-indeterminate': indeterminate,
-          'is-focus': focus,
-        })}></span>
-        <input 
-          className="hui-checkbox__input"
-          type="checkbox"
-          disabled={disabled}
-          onChange={this.onChange}
-          onFocus={this.onFocus}
-          onBlur={this.onBlur}
-          checked={checked}
-        />
+      <label style={this.styles()} className={this.classname('hui-checkbox')}>
+        <span className={this.classnames("hui-checkbox__input", {
+            'is-checked': checked,
+            'is-indeterminate': indeterminate,
+            'is-focus': focus,
+            'is-disabled': this.props.disabled,
+        })}>
+          <span className="hui-checkbox__inner"></span>
+          <input 
+            className="hui-checkbox__original"
+            type="checkbox"
+            disabled={disabled}
+            onChange={this.onChange}
+            onFocus={this.onFocus}
+            onBlur={this.onBlur}
+            checked={checked}
+          />
+        </span>
         <span className="hui-checkbox__title">{children || label}</span>
       </label>
     )

@@ -1,0 +1,100 @@
+.hui-transfer {
+  font-size: 14px;
+  &__buttons {
+    display: inline-block;
+    vertical-align: 450%;
+    padding: 0 10px;
+    & .h-button {
+      display: block;
+      margin: 0 auto;
+      padding: 8px 12px;
+    }
+  }
+  &-panel {
+    display: inline-block;
+    border: 1px solid #d1dbe5;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
+    width: 200px;
+    &__header {
+      height: 36px;
+      line-height: 36px;
+      background-color: #fbfbff;
+      padding-left: 20px;
+      border-bottom: 1px solid #d1dbe5;
+      margin: 0;
+      box-sizing: border-box;
+      color: #1f2d3d;
+    }
+    &__body {
+      padding-bottom: 36px;
+      height: 246px;
+    }
+    &__filter {
+      
+    }
+    &__list {
+      margin: 0;
+      list-style: none;
+      padding: 6px 0;
+      height: 246px;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+    &__item {
+      height: 32px;
+      line-height: 32px;
+      padding-left: 20px;
+      display: block;
+      & .hui-checkbox__input {
+        position: absolute;
+        top: 3px;
+      }
+      &.hui-checkbox {
+        color: #48576a;
+      }
+      &:hover {
+        background-color: #e4e8f1;
+      }
+      & .hui-checkbox__title {
+        width: 100%;
+        padding-left: 28px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: block;
+        box-sizing: border-box;
+      }
+    }
+    &__footer {
+      height: 36px;
+      line-height: 36px;
+      border-top: 1px solid #d1dbe5;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      & .hui-checkbox {
+        padding-left: 20px;
+        color: #8391a5;
+      }
+      & .hui-checkbox__title {
+        padding-left: 10px;
+      }
+      & .hui-checkbox-inner {
+        top: 1px;
+      }
+    }
+    &__empty {
+      margin: 0;
+      height: 32px;
+      line-height: 32px;
+      padding: 6px 20px 0;
+      color: #8391a5;
+    }
+  }
+}

@@ -42,7 +42,7 @@ export default class CheckboxGroup extends Component {
   render() {
     const {options} = this.state;
     return (
-      <div style={this.styles()} className="hui-checkbox-group">
+      <div style={this.styles()} className={this.classname("hui-checkbox-group")}>
         {
           React.Children.map(this.props.children, (node, index) => {
             if (!node) return null;
