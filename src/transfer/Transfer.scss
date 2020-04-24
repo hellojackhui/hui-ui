@@ -2,7 +2,7 @@
   font-size: 14px;
   &__buttons {
     display: inline-block;
-    vertical-align: 450%;
+    vertical-align: middle;
     padding: 0 10px;
     & .h-button {
       display: block;
@@ -14,6 +14,7 @@
     display: inline-block;
     border: 1px solid #d1dbe5;
     position: relative;
+    vertical-align: middle;
     box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
     width: 200px;
     &__header {
@@ -31,7 +32,21 @@
       height: 246px;
     }
     &__filter {
-      
+      margin-top: 10px;
+      text-align: center;
+      padding: 0 10px;
+      width: 100%;
+      box-sizing: border-box;
+      & .hui-input__icon {
+        right: 10px;
+        top: 4px;
+      }
+      & .hui-input__inner {
+        height: 22px;
+        width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+      }
     }
     &__list {
       margin: 0;
@@ -84,6 +99,9 @@
       }
       & .hui-checkbox__title {
         padding-left: 10px;
+      }
+      & .hui-checkbox__input {
+        top: -2px;
       }
       & .hui-checkbox-inner {
         top: 1px;

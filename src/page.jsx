@@ -156,7 +156,7 @@ export default class Page extends React.Component {
     return data;
   }
   handleTranferChange = (value) => {
-    this.setState({ value })
+    this.setState({ transfervalue: value })
   }
   render() {
     const fileList2 = [
@@ -399,7 +399,7 @@ export default class Page extends React.Component {
       </Collapse>
         </div>
         <div style={{'marginTop': '20px'}}>
-          <Transfer value={this.state.transfervalue} data={this.transferdata} onChange={this.handleTranferChange}/>
+          <Transfer value={this.state.transfervalue} filterable data={this.transferdata} onChange={this.handleTranferChange}/>
         </div>
       </div>
       

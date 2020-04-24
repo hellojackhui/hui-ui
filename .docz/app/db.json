@@ -158,66 +158,6 @@
       }
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
-      "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
-        "slug": "src-breadcrumb-bread-crumb",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "breadcrumb-面包屑",
-            "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/button/Button.mdx",
-      "value": {
-        "name": "Button",
-        "route": "/Button",
-        "id": "67a149a3adc4df5bff0c346fd826b652",
-        "filepath": "src/button/Button.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
-        "slug": "src-button-button",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "button-按钮",
-            "depth": 1,
-            "value": "Button 按钮"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/badge/Badge.mdx",
       "value": {
         "name": "Badge",
@@ -258,14 +198,94 @@
       }
     },
     {
-      "key": "src/checkbox/checkbox.mdx",
+      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "value": {
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "slug": "src-breadcrumb-bread-crumb",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "breadcrumb-面包屑",
+            "depth": 1,
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/card/Card.mdx",
+      "value": {
+        "name": "Card",
+        "route": "/Card",
+        "id": "8ea95e41a991c0c2aa1539b418d3a658",
+        "filepath": "src/card/Card.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
+        "slug": "src-card-card",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "card-卡片",
+            "depth": 1,
+            "value": "Card 卡片"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/button/Button.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/Button",
+        "id": "67a149a3adc4df5bff0c346fd826b652",
+        "filepath": "src/button/Button.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
+        "slug": "src-button-button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button-按钮",
+            "depth": 1,
+            "value": "Button 按钮"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/checkbox/Checkbox.mdx",
       "value": {
         "name": "Checkbox",
         "route": "/Checkbox",
-        "id": "d267daafcc699913c4983dcc5e64b42d",
-        "filepath": "src/checkbox/checkbox.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/checkbox/checkbox.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/checkbox/checkbox.mdx",
+        "id": "ea646c7bdd3e88dec9f528cffda16d72",
+        "filepath": "src/checkbox/Checkbox.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/checkbox/Checkbox.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/checkbox/Checkbox.mdx",
         "slug": "src-checkbox-checkbox",
         "menu": "",
         "headings": [
@@ -308,26 +328,6 @@
             "slug": "checkboxgroup-相关属性",
             "depth": 3,
             "value": "CheckboxGroup 相关属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/card/Card.mdx",
-      "value": {
-        "name": "Card",
-        "route": "/Card",
-        "id": "8ea95e41a991c0c2aa1539b418d3a658",
-        "filepath": "src/card/Card.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
-        "slug": "src-card-card",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "card-卡片",
-            "depth": 1,
-            "value": "Card 卡片"
           }
         ]
       }
@@ -519,6 +519,61 @@
       }
     },
     {
+      "key": "src/transfer/Transfer.mdx",
+      "value": {
+        "name": "Transfer",
+        "route": "/Transfer",
+        "id": "c12d5cd61a3745fdd234dc904ed297da",
+        "filepath": "src/transfer/Transfer.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/transfer/Transfer.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/transfer/Transfer.mdx",
+        "slug": "src-transfer-transfer",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "transfer-穿梭框",
+            "depth": 1,
+            "value": "Transfer 穿梭框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "自定义设置",
+            "depth": 2,
+            "value": "自定义设置"
+          },
+          {
+            "slug": "自定义设置值和显示内容",
+            "depth": 4,
+            "value": "自定义设置值和显示内容"
+          },
+          {
+            "slug": "可搜索",
+            "depth": 3,
+            "value": "可搜索"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          },
+          {
+            "slug": "transfer-相关属性",
+            "depth": 3,
+            "value": "Transfer 相关属性"
+          },
+          {
+            "slug": "回调属性",
+            "depth": 3,
+            "value": "回调属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/watermask/WaterMask.mdx",
       "value": {
         "name": "WaterMask",
@@ -649,6 +704,27 @@
               "params": [
                 {
                   "name": "file",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "transferdata",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleTranferChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
                   "type": null
                 }
               ],
@@ -4469,6 +4545,222 @@
       ]
     },
     {
+      "key": "src/switch/Switch.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Switch",
+          "methods": [
+            {
+              "name": "getChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentWidth",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "switchTitle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "type",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentBackground",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Switch",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "offValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "onColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#13ce66'",
+                "computed": false
+              }
+            },
+            "offColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#c4c4c4'",
+                "computed": false
+              }
+            },
+            "onText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'ON'",
+                "computed": false
+              }
+            },
+            "offText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'OFF'",
+                "computed": false
+              }
+            },
+            "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onBlur": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "allowFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/tabs/Pane.jsx",
       "value": [
         {
@@ -4689,6 +4981,236 @@
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/transfer/Transfer.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Transfer",
+          "methods": [
+            {
+              "name": "onLeftCheckedChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onRightCheckedChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "addToLeft",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "addToRight",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "sourceData",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "targetData",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Transfer",
+          "props": {
+            "data": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "titles": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "buttonTexts": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "filterPlaceholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "''",
+                "computed": false
+              }
+            },
+            "filterMethod": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "leftDefaultChecked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "rightDefaultChecked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "renderContent": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "footerFormat": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
+            },
+            "filterable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "propsAlias": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{\n  label: 'label',\n  key: 'key',\n  disabled: 'disabled'\n}",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "leftFooter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "rightFooter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
               },
               "required": false,
               "description": ""
@@ -6005,170 +6527,199 @@
       ]
     },
     {
-      "key": "src/switch/Switch.jsx",
+      "key": "src/transfer/TransferPanel.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "Switch",
+          "displayName": "TransferPanel",
           "methods": [
             {
-              "name": "getChecked",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "props",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "currentWidth",
+              "name": "inputhover",
               "docblock": null,
               "modifiers": [],
               "params": [],
               "returns": null
             },
             {
-              "name": "switchTitle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "type",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "currentBackground",
+              "name": "inputBlur",
               "docblock": null,
               "modifiers": [],
               "params": [],
               "returns": null
             },
             {
-              "name": "onFocus",
+              "name": "clearQuery",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleAllCheckedChange",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "e",
+                  "name": "ischecked",
                   "type": null
                 }
               ],
               "returns": null
             },
             {
-              "name": "onBlur",
+              "name": "handleCheckedChange",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "e",
+                  "name": "value",
                   "type": null
                 }
               ],
+              "returns": null
+            },
+            {
+              "name": "handleInputChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "contentRender",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "renderContent",
+                  "type": null
+                },
+                {
+                  "name": "key",
+                  "type": null
+                },
+                {
+                  "name": "label",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "allChecked",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "filteredData",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "checkedSummary",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getindeterminate",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hasNoMatch",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "checkableData",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "keyProp",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "labelProp",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "disabledProp",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "inputIcon",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
               "returns": null
             }
           ],
-          "actualName": "Switch",
+          "actualName": "TransferPanel",
           "props": {
-            "value": {
+            "data": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+                "raw": "PropType.array"
               },
               "required": false,
               "description": "",
               "defaultValue": {
-                "value": "true",
+                "value": "[]",
                 "computed": false
               }
             },
-            "offValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "onColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#13ce66'",
-                "computed": false
-              }
-            },
-            "offColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#c4c4c4'",
-                "computed": false
-              }
-            },
-            "onText": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'ON'",
-                "computed": false
-              }
-            },
-            "offText": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'OFF'",
-                "computed": false
-              }
-            },
-            "onFocus": {
+            "renderContent": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
@@ -6176,13 +6727,61 @@
               "required": false,
               "description": ""
             },
-            "onBlur": {
+            "placeholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "filterable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "footerFormat": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
+            },
+            "filterMethod": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
               },
               "required": false,
               "description": ""
+            },
+            "propsAlias": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
             },
             "onChange": {
               "type": {
@@ -6190,31 +6789,19 @@
                 "raw": "PropType.func"
               },
               "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
               "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "allowFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
             }
           }
         }

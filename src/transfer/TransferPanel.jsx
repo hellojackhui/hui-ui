@@ -24,7 +24,7 @@ export default class TransferPanel extends Component {
     })
   }
   clearQuery = () => {
-    if (this.inputIcon == 'times-circle') {
+    if (this.inputIcon === 'times-circle') {
       this.setState({
         query: '',
       })
@@ -43,11 +43,11 @@ export default class TransferPanel extends Component {
     })
   }
   contentRender = (item, renderContent, key, label) => {
-    if (typeof renderContent == 'function') {
+    if (typeof renderContent === 'function') {
       return renderContent(item)
     } else {
       return (
-        <span>{item[key] || item[label]}</span>
+        <span>{item[label] || item[key]}</span>
       )
     }
   }
@@ -98,7 +98,7 @@ export default class TransferPanel extends Component {
   }
   get hasNoMatch() {
     const {query} = this.state;
-    return query.length > 0 && this.filteredData.length == 0;
+    return query.length > 0 && this.filteredData.length === 0;
   }
   get checkableData() {
     return this.filteredData.filter(item => !item[this.disabledProp]);
@@ -152,6 +152,7 @@ export default class TransferPanel extends Component {
               className={this.classname('hui-transfer-panel__list', {
                 'is-filterable': filterable,
               })}
+              onChange={this.handleCheckedChange}
             >
               {
                 this.filteredData.map((item, index) => {

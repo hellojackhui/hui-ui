@@ -49,7 +49,7 @@ export default class Transfer extends Component {
     let currentValue = value.slice();
     leftChecked.forEach((item) => {
       const index = currentValue.indexOf(item);
-      if (index == -1) {
+      if (index === -1) {
         currentValue = currentValue.concat(item);
       }
     })
@@ -107,16 +107,17 @@ export default class Transfer extends Component {
             type={'primary'}
             size={'small'}
             onClick={this.addToLeft}
-            disabled={rightChecked.length == 0} 
+            disabled={rightChecked.length === 0} 
           >
             <i className="hui-icon hui-icon-chevron-left"></i>
             {buttonTexts[0] !== undefined && <span>{buttonTexts[0]}</span>}
           </Button>
+          <div style={{'height': '8px'}}></div>
           <Button
             type={'primary'}
             size={'small'}
             onClick={this.addToRight}
-            disabled={leftChecked.length == 0} 
+            disabled={leftChecked.length === 0} 
           >
             <i className="hui-icon hui-icon-chevron-right"></i>
             {buttonTexts[0] !== undefined && <span>{buttonTexts[0]}</span>}

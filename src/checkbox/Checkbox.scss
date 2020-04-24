@@ -16,17 +16,17 @@
         transform: rotate(45deg) scale(1);
       }
     }
-    &.is-indeterminate {
+    &.is-indeterminate .hui-checkbox__inner {
       background-color: #50bfff;
       border-color: #50bfff;
       &::after {
         transform: scale(1) !important;
       }
     }
-    &.is-indeterminate::after {
+    &.is-indeterminate .hui-checkbox__inner::after {
       content: '';
       position: absolute;
-      top: 7px;
+      top: 6px;
       width: 10px;
       height: 1px;
       left: 2px;
