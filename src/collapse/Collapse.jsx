@@ -56,3 +56,7 @@ Collapse.propTypes = {
   value: PropType.oneOfType([PropType.array, PropType.string]),
   onChange: PropType.func
 };
+
+Collapse.defaultProps = {
+  accordion: false,
+}

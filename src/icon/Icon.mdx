@@ -1,0 +1,81 @@
+---
+name: icon
+route: /icon
+---
+
+# Icon 图标
+
+import {Playground} from 'docz';
+import Icon from './index.js';
+import '../../style/css/font-awesome.css';
+
+## 按钮列表
+
+<Playground>
+  {
+    () => {
+      const [datas, setdatas] = React.useState([
+        'star',
+        'star-o',
+        'user',
+        'check',
+        'remove',
+        'search-plus',
+        'search-minus',
+        'trash-o',
+        'download',
+        'repeat',
+        'chevron-left',
+        'chevron-right',
+        'plus-circle',
+        'minus-circle',
+        'times-circle',
+        'check-circle',
+        'github',
+        'linkedin',
+        'smile',
+        'apple',
+        'android',
+      ])
+      const ulStyle = {
+        'position': 'relative',
+        'width': '1200px',
+        'left': '55px',
+        'overflow': 'hidden',
+        'list-style': 'none',
+        'color': '#8492a6',
+      }
+      const liStyle = {
+        'width': '200px',
+        'display': 'flex',
+        'flexDirection': 'column',
+        'alignItems': 'center',
+        'justifyContent': 'space-evenly',
+        'height': '100px',
+        'border': '1px solid #dddddd',
+        'float': 'left',
+      }
+      return (
+        <ul style={ulStyle}>
+          {
+            datas.map((data, index) => {
+              return (
+                <li key={index} style={liStyle}>
+                  <Icon name={data} style={{'fontSize': '28px'}}/>
+                  <p style={{'padding': '0', 'margin': '0'}}>{data}</p>
+                </li>
+              )
+            })
+          }
+        </ul>
+      )
+    }
+  }
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+name|按钮名称|String|/

@@ -1,0 +1,158 @@
+---
+name: Input
+route: /Input
+---
+
+import {Playground, Props} from 'docz';
+import Input from './index.js';
+import Button from '../button/index.js';
+import '../../style/css/font-awesome.css';
+
+# Input 输入框
+结合textarea和input的输入框组件
+
+## 基本使用
+
+### 普通输入框
+设置placeholder,value,onchange属性组成输入框的基本功能
+
+<Playground>
+  {
+    () => {
+      const [query, setquery] = React.useState('');
+      return (
+        <div style={{'margin': '15px'}}>
+          <Input placeholder="请输入内容" value={query} onChange={(val) => setquery(val) }/>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+### 输入禁用
+disabled属性禁用输入框
+
+<Playground>
+  <div style={{'margin': '15px'}}>
+    <Input value={123} disabled />
+  </div>
+</Playground>
+
+### 只读
+设置readOnly只读属性不允许输入
+
+<Playground>
+  {
+    () => {
+      const [query, setquery] = React.useState('');
+      return (
+        <div style={{'margin': '15px'}}>
+          <Input placeholder="请输入内容" value={query} onChange={(val) => setquery(val)} readOnly/>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+### 设置大小
+设置size属性配置输入框的尺寸大小
+
+<Playground>
+  <div style={{'margin': '15px'}}>
+    <Input value={123} size={'large'} />
+    <Input value={123} size={'small'} />
+    <Input value={123} size={'mini'} />
+  </div>
+</Playground>
+
+## 多文本输入
+使用textarea进行多长度内容输入
+
+<Playground>
+  {
+    () => {
+      const [query, setquery] = React.useState('');
+      return (
+        <div style={{'margin': '15px'}}>
+          <Input type="textarea" placeholder="请输入内容" value={query} onChange={(val) => setquery(val) }/>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 自适应高度
+设置autoSize属性自适应高度
+
+<Playground>
+  {
+    () => {
+      const [query, setquery] = React.useState('');
+      return (
+        <div style={{'margin': '15px'}}>
+          <Input type="textarea" autoSize value={query} onChange={(val) => setquery(val) }/>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 复合型输入框
+可以给输入框的前后设置内容，内容现支持文本，后续会做相应优化
+
+<Playground>
+  {
+    () => {
+      const [query1, setquery1] = React.useState('');
+      const [query2, setquery2] = React.useState('');
+      const [query3, setquery3] = React.useState('');
+      function prependNode() {
+        return (
+          <span>http://</span>
+        )
+      }
+      function appendNode() {
+        return (
+          <span>.com</span>
+        )
+      }
+      return (
+        <div style={{'margin': '15px'}}>
+            <Input value={query1} placeholder={'请输入内容'} size={'large'} prepend={prependNode()} onChange={(val) => setquery1(val)} style={{'width': '100%', 'marginTop': '10px'}} />
+            <Input value={query2} placeholder={'请输入内容'} size={'large'} append={appendNode()} onChange={(val) => setquery2(val)} style={{'width': '100%', 'marginTop': '10px'}}/>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 属性
+
+### 基础属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+type|输入框类型|['text', 'textarea']|text
+icon|输入框前部按钮|string|-
+disabled|输入框禁用|boolean|false
+placeholder|输入框placeholder|string|-
+readOnly|输入框只读|boolean|false
+autoFocus|输入框自动获取焦点|boolean|false
+maxLength|输入内容最大长度|number|-
+minLength|输入内容最小长度|number|-
+value|输入内容值|any|-
+trim|是否去除输入内容前缀空格|boolean|false
+size|输入框尺寸大小|['large', 'small', 'mini']|-
+autoSize|textarea适用，自适应内容尺寸|boolean|false
+prepend|输入框前部额外内容|node|-
+append|输入框后部额外内容|node|-
+
+### 事件回调
+属性名|名称|类型|默认值
+----|---|---|---
+onFocus|获取焦点回调|function|-
+onBlur|失去焦点回调|function|-
+onChange|输入值变化回调|function|-
+onIconClick|点击输入框前按钮回调|function|-
+onMouseEnter|鼠标进入输入框回调|function|-
+onMouseLeave|鼠标移除输入框回调|function|-

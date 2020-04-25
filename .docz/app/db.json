@@ -228,26 +228,6 @@
       }
     },
     {
-      "key": "src/card/Card.mdx",
-      "value": {
-        "name": "Card",
-        "route": "/Card",
-        "id": "8ea95e41a991c0c2aa1539b418d3a658",
-        "filepath": "src/card/Card.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
-        "slug": "src-card-card",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "card-卡片",
-            "depth": 1,
-            "value": "Card 卡片"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/button/Button.mdx",
       "value": {
         "name": "Button",
@@ -278,14 +258,34 @@
       }
     },
     {
-      "key": "src/checkbox/Checkbox.mdx",
+      "key": "src/card/Card.mdx",
+      "value": {
+        "name": "Card",
+        "route": "/Card",
+        "id": "8ea95e41a991c0c2aa1539b418d3a658",
+        "filepath": "src/card/Card.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
+        "slug": "src-card-card",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "card-卡片",
+            "depth": 1,
+            "value": "Card 卡片"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/checkbox/checkbox.mdx",
       "value": {
         "name": "Checkbox",
         "route": "/Checkbox",
-        "id": "ea646c7bdd3e88dec9f528cffda16d72",
-        "filepath": "src/checkbox/Checkbox.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/checkbox/Checkbox.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/checkbox/Checkbox.mdx",
+        "id": "d267daafcc699913c4983dcc5e64b42d",
+        "filepath": "src/checkbox/checkbox.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/checkbox/checkbox.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/checkbox/checkbox.mdx",
         "slug": "src-checkbox-checkbox",
         "menu": "",
         "headings": [
@@ -333,6 +333,41 @@
       }
     },
     {
+      "key": "src/collapse/Collapse.mdx",
+      "value": {
+        "name": "Collapse",
+        "route": "/Collapse",
+        "id": "9f64c87a72c6336f20ec0a488d065ab6",
+        "filepath": "src/collapse/Collapse.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
+        "slug": "src-collapse-collapse",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "collapse-折叠面板",
+            "depth": 1,
+            "value": "Collapse 折叠面板"
+          },
+          {
+            "slug": "基础使用",
+            "depth": 2,
+            "value": "基础使用"
+          },
+          {
+            "slug": "允许多个子面板同时展开",
+            "depth": 2,
+            "value": "允许多个子面板同时展开"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/i18n/i18n.mdx",
       "value": {
         "name": "i18n",
@@ -358,6 +393,111 @@
             "slug": "使用说明",
             "depth": 2,
             "value": "使用说明"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/input/Input.mdx",
+      "value": {
+        "name": "Input",
+        "route": "/Input",
+        "id": "ae3060a74838f694e3faf0b6c3bff959",
+        "filepath": "src/input/Input.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/input/Input.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/input/Input.mdx",
+        "slug": "src-input-input",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "input-输入框",
+            "depth": 1,
+            "value": "Input 输入框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "普通输入框",
+            "depth": 3,
+            "value": "普通输入框"
+          },
+          {
+            "slug": "输入禁用",
+            "depth": 3,
+            "value": "输入禁用"
+          },
+          {
+            "slug": "只读",
+            "depth": 3,
+            "value": "只读"
+          },
+          {
+            "slug": "设置大小",
+            "depth": 3,
+            "value": "设置大小"
+          },
+          {
+            "slug": "多文本输入",
+            "depth": 2,
+            "value": "多文本输入"
+          },
+          {
+            "slug": "自适应高度",
+            "depth": 2,
+            "value": "自适应高度"
+          },
+          {
+            "slug": "复合型输入框",
+            "depth": 2,
+            "value": "复合型输入框"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          },
+          {
+            "slug": "基础属性",
+            "depth": 3,
+            "value": "基础属性"
+          },
+          {
+            "slug": "事件回调",
+            "depth": 3,
+            "value": "事件回调"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/icon/Icon.mdx",
+      "value": {
+        "name": "icon",
+        "route": "/icon",
+        "id": "214290ada325a22eb66e78829e745ec9",
+        "filepath": "src/icon/Icon.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/icon/Icon.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/icon/Icon.mdx",
+        "slug": "src-icon-icon",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "icon-图标",
+            "depth": 1,
+            "value": "Icon 图标"
+          },
+          {
+            "slug": "按钮列表",
+            "depth": 2,
+            "value": "按钮列表"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -1340,35 +1480,6 @@
       ]
     },
     {
-      "key": "src/card/Card.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Card",
-          "methods": [],
-          "actualName": "Card",
-          "props": {
-            "header": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "bodyStyle": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/checkbox/CheckButton.jsx",
       "value": [
         {
@@ -1634,6 +1745,35 @@
       ]
     },
     {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/collapse/Collapse.jsx",
       "value": [
         {
@@ -1673,7 +1813,11 @@
                 "raw": "PropType.bool"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
             },
             "value": {
               "type": {
@@ -1701,7 +1845,20 @@
         {
           "description": "",
           "displayName": "CollapseItem",
-          "methods": [],
+          "methods": [
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
           "actualName": "CollapseItem",
           "props": {
             "isActive": {
@@ -1940,286 +2097,6 @@
               "type": {
                 "name": "custom",
                 "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/input/Input.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Input",
-          "methods": [
-            {
-              "name": "onfocus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onblur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "textChangeHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "trimHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "iconClickHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "calTextArea",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Input",
-          "props": {
-            "type": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'text'",
-                "computed": false
-              }
-            },
-            "icon": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "placeholder": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "readOnly": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "autoFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "maxLength": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "minLength": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false,
-              "description": ""
-            },
-            "trim": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "size": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['large', 'small', 'mini'])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "autoSize": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "prepend": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "append": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "rows": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "2",
-                "computed": false
-              }
-            },
-            "resize": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['none', 'both', 'horizontal', 'vertical'])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "autoComplete": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'off'",
-                "computed": false
-              }
-            },
-            "onFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onBlur": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onIconClick": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onMouseEnter": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onMouseLeave": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
               },
               "required": false,
               "description": ""
@@ -3003,6 +2880,131 @@
       ]
     },
     {
+      "key": "src/notification/NotificationItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "NotificationItem",
+          "methods": [
+            {
+              "name": "starttimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stoptimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "NotificationItem",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "type": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['success', 'info', 'warning', 'error'])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'success'",
+                "computed": false
+              }
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'提示'",
+                "computed": false
+              }
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "msg": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "top": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "16",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/modal/Modal.jsx",
       "value": [
         {
@@ -3194,131 +3196,6 @@
           "displayName": "ModalFooter",
           "methods": [],
           "actualName": "ModalFooter"
-        }
-      ]
-    },
-    {
-      "key": "src/notification/NotificationItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "NotificationItem",
-          "methods": [
-            {
-              "name": "starttimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "stoptimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onClick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onClose",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "getIcon",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "NotificationItem",
-          "props": {
-            "duration": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "3000",
-                "computed": false
-              }
-            },
-            "type": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['success', 'info', 'warning', 'error'])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'success'",
-                "computed": false
-              }
-            },
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'提示'",
-                "computed": false
-              }
-            },
-            "iconClass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "msg": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "top": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "16",
-                "computed": false
-              }
-            }
-          }
         }
       ]
     },
@@ -5220,6 +5097,287 @@
       ]
     },
     {
+      "key": "src/transfer/TransferPanel.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TransferPanel",
+          "methods": [
+            {
+              "name": "inputhover",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "inputBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "clearQuery",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleAllCheckedChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "ischecked",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleCheckedChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleInputChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "contentRender",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "renderContent",
+                  "type": null
+                },
+                {
+                  "name": "key",
+                  "type": null
+                },
+                {
+                  "name": "label",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "allChecked",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "filteredData",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "checkedSummary",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getindeterminate",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hasNoMatch",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "checkableData",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "keyProp",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "labelProp",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "disabledProp",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "inputIcon",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "TransferPanel",
+          "props": {
+            "data": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "renderContent": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "placeholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "filterable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "footerFormat": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
+            },
+            "filterMethod": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "propsAlias": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{}",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/tree/Tree.jsx",
       "value": [
         {
@@ -6527,202 +6685,101 @@
       ]
     },
     {
-      "key": "src/transfer/TransferPanel.jsx",
+      "key": "src/input/Input.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "TransferPanel",
+          "displayName": "Input",
           "methods": [
             {
-              "name": "inputhover",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "inputBlur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "clearQuery",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "handleAllCheckedChange",
+              "name": "onfocus",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "ischecked",
+                  "name": "e",
                   "type": null
                 }
               ],
               "returns": null
             },
             {
-              "name": "handleCheckedChange",
+              "name": "onblur",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "value",
+                  "name": "e",
                   "type": null
                 }
               ],
               "returns": null
             },
             {
-              "name": "handleInputChange",
+              "name": "textChangeHandler",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "value",
+                  "name": "e",
                   "type": null
                 }
               ],
               "returns": null
             },
             {
-              "name": "contentRender",
+              "name": "trimHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "iconClickHandler",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "item",
-                  "type": null
-                },
-                {
-                  "name": "renderContent",
-                  "type": null
-                },
-                {
-                  "name": "key",
-                  "type": null
-                },
-                {
-                  "name": "label",
+                  "name": "e",
                   "type": null
                 }
               ],
               "returns": null
             },
             {
-              "name": "allChecked",
+              "name": "calTextArea",
               "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "filteredData",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "checkedSummary",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getindeterminate",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "hasNoMatch",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "checkableData",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "keyProp",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "labelProp",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "disabledProp",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "inputIcon",
-              "docblock": null,
-              "modifiers": [
-                "get"
-              ],
+              "modifiers": [],
               "params": [],
               "returns": null
             }
           ],
-          "actualName": "TransferPanel",
+          "actualName": "Input",
           "props": {
-            "data": {
+            "type": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.array"
+                "raw": "PropType.string"
               },
               "required": false,
               "description": "",
               "defaultValue": {
-                "value": "[]",
+                "value": "'text'",
                 "computed": false
               }
             },
-            "renderContent": {
+            "icon": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.func"
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": ""
@@ -6735,15 +6792,7 @@
               "required": false,
               "description": ""
             },
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "filterable": {
+            "readOnly": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.bool"
@@ -6751,19 +6800,119 @@
               "required": false,
               "description": ""
             },
-            "footerFormat": {
+            "autoFocus": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.object"
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "maxLength": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "minLength": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false,
+              "description": ""
+            },
+            "trim": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": "",
               "defaultValue": {
-                "value": "{}",
+                "value": "false",
                 "computed": false
               }
             },
-            "filterMethod": {
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small', 'mini'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "autoSize": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "prepend": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "append": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "rows": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "2",
+                "computed": false
+              }
+            },
+            "resize": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['none', 'both', 'horizontal', 'vertical'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "autoComplete": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'off'",
+                "computed": false
+              }
+            },
+            "onFocus": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
@@ -6771,17 +6920,13 @@
               "required": false,
               "description": ""
             },
-            "propsAlias": {
+            "onBlur": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.object"
+                "raw": "PropType.func"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "{}",
-                "computed": false
-              }
+              "description": ""
             },
             "onChange": {
               "type": {
@@ -6789,16 +6934,28 @@
                 "raw": "PropType.func"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
+              "description": ""
             },
-            "checked": {
+            "onIconClick": {
               "type": {
                 "name": "custom",
-                "raw": "PropType.array"
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onMouseEnter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onMouseLeave": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
               },
               "required": false,
               "description": ""

@@ -1,3 +1,4 @@
+  
 exports.onCreateWebpackConfig = ({
     stage,
     loaders,
@@ -9,7 +10,14 @@ exports.onCreateWebpackConfig = ({
                 rules: [{
                     test: /bad-module/,
                     use: loaders.null(),
-                }, ],
+                }, {
+                    test: /\.(scss)$/,
+                    use: [
+                      loaders.style(),
+                      loaders.css(),
+                      "sass-loader"
+                    ]
+                }],
             },
         })
     }

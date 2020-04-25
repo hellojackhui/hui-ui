@@ -58,9 +58,9 @@ export default class Input extends Component {
       size && `hui-input__${size}`,
       {
         'is-disabled': disabled,
-        'hui-input__group': !!prepend || !!append,
-        'hui-input__group--prepend': !!prepend,
-        'hui-input__group--append': !!append
+        'hui-input-group': !!prepend || !!append,
+        'hui-input-group--prepend': !!prepend,
+        'hui-input-group--append': !!append
       }
     )
     delete otherprops.onIconClick;
@@ -87,7 +87,7 @@ export default class Input extends Component {
     } else {
       return (
         <div style={this.styles()} className={this.classname(commonClassName)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          {prepend && <div className="hui-input__prepend">{prepend}</div>}
+          {prepend && <div className="hui-input-group__prepend">{prepend}</div>}
           {icon && <i className={this.classnames('hui-input__icon', 'hui-icon', `hui-icon-${icon}`)} onClick={this.iconClickHandler}></i>}
           <input 
             {...otherprops}
@@ -99,7 +99,7 @@ export default class Input extends Component {
             onFocus={this.onfocus}
             onBlur={this.onblur}
           />
-          {append && <div className="hui-input__append">{append}</div>}
+          {append && <div className="hui-input-group__append">{append}</div>}
         </div>
       )
     }
