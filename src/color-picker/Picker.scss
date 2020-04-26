@@ -1,0 +1,150 @@
+.hui-picker {
+    position: absolute;
+    z-index: 10;
+    padding: 6px;
+    background-color: #fff;
+    border: 1px solid #d1dbe5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
+}
+.hui-picker-wrapper-panel {
+    margin-bottom: 6px;
+    width: 295px;
+}
+.hui-picker-wrapper-options {
+    margin-top: 6px;
+    text-align: right;
+}
+.hui-picker-value {
+    float: left;
+    line-height: 26px;
+    font-size: 12px;
+    color: #1f2d3d;
+}
+.hui-picker-link {
+    cursor: pointer;
+    color: #20a0ff;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+.hui-picker-btn {
+    border: 1px solid #dcdcdc;
+    color: #333;
+    line-height: 24px;
+    border-radius: 2px;
+    padding: 0 20px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: 0;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.hui-picker-alpha {
+    position: relative;
+    box-sizing: border-box;
+    width: 280px;
+    height: 12px;
+}
+
+.hui-picker-alpha__bar {
+    position: relative;
+    height: 100%;
+}
+
+.hui-picker-alpha__thumb {
+    position: absolute;
+    cursor: pointer;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 1px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hui-color-panel {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    display: inline-block;
+    &__white {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+    }
+    &__black {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, #000, rgba(0, 0, 0, 0));
+    }
+    &__cursor {
+        top: 0px;
+        left: 0px;
+        position: absolute;
+        div {
+            width: 4px;
+            height: 4px;
+            box-shadow: 0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0, 0, 0, 0.3), 0 0 1px 2px rgba(0, 0, 0, 0.4);
+            border-radius: 50%;
+            -ms-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+        }
+    }
+}
+
+.hui-hue-panel {
+    float: right;
+    position: relative;
+    box-sizing: border-box;
+    width: 280px;
+    height: 12px;
+    display: inline-block;
+    background-color: red;
+    padding: 0 2px;
+}
+
+.is-vertical {
+    width: 12px;
+    height: 180px;
+    padding: 0;
+}
+
+.is-vertical .hui-hue-panel__thumb {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.hui-hue-panel__bar {
+    position: relative;
+    height: 100%;
+    background: linear-gradient(to bottom, red 0, #ff0 17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, red 100%);
+}
+
+.hui-hue-panel__thumb {
+    position: absolute;
+    cursor: pointer;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: 1px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}

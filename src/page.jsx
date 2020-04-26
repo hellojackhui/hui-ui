@@ -25,6 +25,7 @@ import Tree from './tree';
 import Menu from './menu';
 import Collapse from './collapse';
 import Transfer from './transfer';
+import ColorPicker from './color-picker';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -157,6 +158,9 @@ export default class Page extends React.Component {
   }
   handleTranferChange = (value) => {
     this.setState({ transfervalue: value })
+  }
+  onChange = (res) => {
+    console.log(res);
   }
   render() {
     const fileList2 = [
@@ -400,6 +404,9 @@ export default class Page extends React.Component {
         </div>
         <div style={{'marginTop': '20px'}}>
           <Transfer value={this.state.transfervalue} filterable data={this.transferdata} onChange={this.handleTranferChange}/>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <ColorPicker value={""} onChange={this.onChange} showAlpha/>
         </div>
       </div>
       

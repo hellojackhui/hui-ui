@@ -1,0 +1,56 @@
+---
+name: color-picker
+route: /color-picker
+---
+
+import {Playground, Props} from 'docz';
+import ColorPicker from './index.js';
+import '../../style/css/font-awesome.css';
+
+# Color-Picker 颜色选择器
+适配多种颜色格式的颜色选择器
+
+## 基本使用
+
+颜色选择默认为rgb格式
+
+<Playground>
+  <ColorPicker 
+    value="#FF0000"
+    onChange={(val) => console.log(val)}
+  />
+</Playground>
+
+## 透明度
+
+配置showAlpha属性添加透明度，格式为rgba
+
+<Playground>
+  <ColorPicker 
+    value="#00FF00"
+    onChange={(val) => console.log(val)}
+    showAlpha
+  />
+</Playground>
+
+## 自定义输出格式
+
+配置format属性完成自定义输出
+
+<Playground>
+  <ColorPicker 
+    value=""
+    onChange={(val) => console.log(val)}
+    format={'hsl'}
+  />
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+value|选中颜色|string|''
+onChange|颜色改变回调|function|() {}
+format|颜色输出格式|['hex', 'rgb', 'rgba', 'hsl', 'hsv']|'hex'
+showAlpha|显示透明度配置|boolean|false
