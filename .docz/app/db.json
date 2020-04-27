@@ -25,9 +25,9 @@
         "menu": "",
         "headings": [
           {
-            "slug": "hui_ui",
+            "slug": "hui-ui",
             "depth": 1,
-            "value": "hui_ui"
+            "value": "hui-ui"
           },
           {
             "slug": "开发计划",
@@ -70,9 +70,9 @@
         "menu": "",
         "headings": [
           {
-            "slug": "hui_ui",
+            "slug": "hui-ui",
             "depth": 1,
-            "value": "hui_ui"
+            "value": "hui-ui"
           },
           {
             "slug": "开发计划",
