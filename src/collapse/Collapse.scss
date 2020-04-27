@@ -41,15 +41,15 @@
 
   }
   &--open {
-    animation-name: enter;
+    animation-name: collpase-enter;
   }
   &--close {
-    animation-name: leave;
+    animation-name: collpase-leave;
   }
 }
 
 
-@keyframes enter {
+@keyframes collpase-enter {
   0% {
     height: 0;
     opacity: 0;
@@ -60,7 +60,7 @@
   }
 }
 
-@keyframes leave {
+@keyframes collpase-leave {
   0% {
     height: 90px;
     opacity: 1;

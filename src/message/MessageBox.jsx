@@ -62,7 +62,7 @@ export default class MessageBox extends Component {
       <Animate visible={this.state.visible} enterClassName="hui-message--enter" leaveClassName="hui-message--leave" onEnd={this.onEnd}>
         {
           ({classNameType}) => (
-            <div style={this.styles()} className={this.classname('hui-message', classNameType)}>
+            <div style={this.styles()} className={this.classname('hui-message', classNameType)} onMouseEnter={this.stopTimer} onMouseLeave={this.startTimer}>
                 {!iconClass && <img className="hui-message__image" src={this.getIcon()} alt="icon"/>}
                 <div className="hui-message__title">
                     {iconClass && <i className={this.classname("hui-message__icon", "hui-icon", iconClass)}></i>}

@@ -1,0 +1,104 @@
+---
+name: Message
+route: /Message
+---
+
+import {Playground, Props} from 'docz';
+import Button from '../button/index';
+import Message from './index.js';
+import '../../style/css/font-awesome.css';
+
+# Message 消息
+提示不同类型内容的消息弹出框
+
+
+## 基本使用
+Message组件提供四种状态的消息提示类型
+
+<Playground>
+  {
+    () => {
+      function successMsg() {
+        return Message.success({
+          message: '成功提示',
+          duration: 3000,
+        })
+      }
+      function infoMsg() {
+        return Message.info({
+          message: '信息提示',
+          duration: 3000,
+        })
+      }
+      function warningMsg() {
+        return Message.warning({
+          message: '成功提示',
+          duration: 3000,
+        })
+      }
+      function errorMsg() {
+        return Message.error({
+          message: '成功提示',
+          duration: 3000,
+        })
+      }
+      return (
+        <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+          <Button type={"success"} onClick={() => successMsg()}>成功提示信息</Button>
+          <Button type={"info"} onClick={() => infoMsg()}>普通提示信息</Button>
+          <Button type={"warning"} onClick={() => warningMsg()}>警告提示信息</Button>
+          <Button type={"danger"} onClick={() => errorMsg()}>错误提示信息</Button>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 简单信息展示
+不需要设置延时，只传入需要展示的信息
+
+<Playground>
+  {
+    () => {
+      function successMsg() {
+        return Message.success('成功提示');
+      }
+      return (
+        <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+          <Button type={"success"} onClick={() => successMsg()}>成功提示信息</Button>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 自定义关闭
+可以设置关闭按钮
+
+<Playground>
+  {
+    () => {
+      function successMsg() {
+        return Message.success({
+          message: '成功提示',
+          duration: 3000,
+          showClose: true
+        })
+      }
+      return (
+        <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+          <Button type={"success"} onClick={() => successMsg()}>成功提示信息</Button>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+duration|提示显示时间|number|3000
+showClose|是否显示关闭按钮|boolean|false
+message|消息内容|string|-
+iconClass|自定义按钮|string|-

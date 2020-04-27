@@ -5,6 +5,7 @@
   left: 0;
   position: fixed;
   overflow: auto;
+  z-index: 10000;
   &__mask {
     position: fixed;
     top: 0;

@@ -1,0 +1,94 @@
+---
+name: Notification
+route: /Notification
+---
+
+import {Playground, Props} from 'docz';
+import Button from '../button/index';
+import Notification from './index.js';
+import '../../style/css/font-awesome.css';
+
+
+# Notification 通知
+对于需要提示的信息进行通知
+
+## 基本使用
+
+<Playground>
+  {
+    () => {
+      const [visible, setvisible] = React.useState(false);
+      function successNoticer() {
+        return Notification.success({
+          title: '成功提示',
+          msg: '这是一条成功提示',
+          duration: 3000,
+        })
+      }
+      function infoNoticer() {
+        return Notification.info({
+          title: '信息提示',
+          msg: '这是一条信息提示',
+          duration: 4000,
+        })
+      }
+      function warningNoticer() {
+        return Notification.warning({
+          title: '警告提示',
+          msg: '这是一条警告提示',
+          duration: 5000,
+        })
+      }
+      function errorNoticer() {
+        return Notification.error({
+          title: '错误提示',
+          msg: '这是一条错误提示',
+          duration: 6000,
+        })
+      }
+      return (
+        <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+          <Button type={"success"} onClick={() => successNoticer()}>成功通知</Button>
+          <Button type={"info"} onClick={() => infoNoticer()}>普通通知</Button>
+          <Button type={"warning"} onClick={() => warningNoticer()}>警告通知</Button>
+          <Button type={"danger"} onClick={() => errorNoticer()}>错误通知</Button>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 自定义高度
+设置top属性配置提示之间的距离
+
+<Playground>
+  {
+    () => {
+      const [visible, setvisible] = React.useState(false);
+      function successNoticer() {
+        return Notification.success({
+          title: '成功提示',
+          msg: '这是一条成功提示',
+          duration: 3000,
+          top: 30,
+        })
+      }
+      return (
+        <div style={{'marginBottom': '10px', 'marginTop': '10px', 'marginLeft': '10px'}}>
+          <Button type={"success"} onClick={() => successNoticer()}>成功通知</Button>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+duration|通知显示时间|number|3000
+type|通知信息类型|['success', 'info', 'warning', 'error']|'success'
+title|通知标题|string|'提示'
+msg|通知主体内容|string|-
+top|通知之间的距离|number|16
+iconClass|自定义图标|string|-

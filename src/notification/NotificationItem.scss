@@ -11,6 +11,7 @@
   animation-fill-mode: both;
   background-color: #ffffff;
   overflow: hidden;
+  z-index: 10000;
   &__enter {
     animation-name: no-enter;
   }

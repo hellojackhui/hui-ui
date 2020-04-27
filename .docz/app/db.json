@@ -103,36 +103,6 @@
       }
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
-      "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
-        "slug": "src-breadcrumb-bread-crumb",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "breadcrumb-面包屑",
-            "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/alert/Alert.mdx",
       "value": {
         "name": "Alert",
@@ -228,21 +198,31 @@
       }
     },
     {
-      "key": "src/card/Card.mdx",
+      "key": "src/breadcrumb/BreadCrumb.mdx",
       "value": {
-        "name": "Card",
-        "route": "/Card",
-        "id": "8ea95e41a991c0c2aa1539b418d3a658",
-        "filepath": "src/card/Card.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
-        "slug": "src-card-card",
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "slug": "src-breadcrumb-bread-crumb",
         "menu": "",
         "headings": [
           {
-            "slug": "card-卡片",
+            "slug": "breadcrumb-面包屑",
             "depth": 1,
-            "value": "Card 卡片"
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -328,6 +308,26 @@
             "slug": "checkboxgroup-相关属性",
             "depth": 3,
             "value": "CheckboxGroup 相关属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/card/Card.mdx",
+      "value": {
+        "name": "Card",
+        "route": "/Card",
+        "id": "8ea95e41a991c0c2aa1539b418d3a658",
+        "filepath": "src/card/Card.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
+        "slug": "src-card-card",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "card-卡片",
+            "depth": 1,
+            "value": "Card 卡片"
           }
         ]
       }
@@ -568,6 +568,81 @@
             "slug": "全屏加载",
             "depth": 2,
             "value": "全屏加载"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/message/Message.mdx",
+      "value": {
+        "name": "Message",
+        "route": "/Message",
+        "id": "6a65ee08639ae8fd9970c927b0ce8555",
+        "filepath": "src/message/Message.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/message/Message.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/message/Message.mdx",
+        "slug": "src-message-message",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "message-消息",
+            "depth": 1,
+            "value": "Message 消息"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "简单信息展示",
+            "depth": 2,
+            "value": "简单信息展示"
+          },
+          {
+            "slug": "自定义关闭",
+            "depth": 2,
+            "value": "自定义关闭"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/notification/Notification.mdx",
+      "value": {
+        "name": "Notification",
+        "route": "/Notification",
+        "id": "522aaca4a964bfa60b114a6d18ee9395",
+        "filepath": "src/notification/Notification.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/notification/Notification.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/notification/Notification.mdx",
+        "slug": "src-notification-notification",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "notification-通知",
+            "depth": 1,
+            "value": "Notification 通知"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "自定义高度",
+            "depth": 2,
+            "value": "自定义高度"
           },
           {
             "slug": "属性",
@@ -2050,6 +2125,79 @@
                 "raw": "PropType.any"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/color-picker/Picker.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Picker",
+          "methods": [],
+          "actualName": "Picker",
+          "props": {
+            "color": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object.isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showPicker": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showAlpha": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onPick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "onClear": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
             }
           }
         }
@@ -4022,330 +4170,6 @@
       ]
     },
     {
-      "key": "src/slider/Slider.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Slider",
-          "methods": [
-            {
-              "name": "setPosition",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "setPositionState",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "percent",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "getComputedPercent",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseDown",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseMove",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseUp",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseLeave",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Slider",
-          "props": {
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "showInput": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showInputControls": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "showStops": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "step": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "range": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.array"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "showTooltip": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "formatTooltip": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "min": {
-              "defaultValue": {
-                "value": "0",
-                "computed": false
-              },
-              "required": false
-            },
-            "max": {
-              "defaultValue": {
-                "value": "100",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/select/Option.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Option",
-          "methods": [
-            {
-              "name": "parent",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "currentSelected",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "currentLabel",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "itemSelected",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "hoverItem",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "selectOptionClick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "resetIndex",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Option",
-          "props": {
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any.isRequired"
-              },
-              "required": false,
-              "description": ""
-            },
-            "label": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "selected": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/select/OptionGroup.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "OptionGroup",
-          "methods": [],
-          "actualName": "OptionGroup",
-          "props": {
-            "label": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/rate/Rate.jsx",
       "value": [
         {
@@ -4707,6 +4531,483 @@
       ]
     },
     {
+      "key": "src/select/Option.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Option",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "currentSelected",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "currentLabel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "itemSelected",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hoverItem",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "selectOptionClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "resetIndex",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Option",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any.isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "selected": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/select/OptionGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "OptionGroup",
+          "methods": [],
+          "actualName": "OptionGroup",
+          "props": {
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/slider/Slider.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Slider",
+          "methods": [
+            {
+              "name": "setPosition",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "setPositionState",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "percent",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "getComputedPercent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseMove",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseUp",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Slider",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showInput": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showInputControls": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showStops": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "step": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "range": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showTooltip": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "formatTooltip": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "min": {
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              },
+              "required": false
+            },
+            "max": {
+              "defaultValue": {
+                "value": "100",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Step.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Step",
+          "methods": [],
+          "actualName": "Step",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "description": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Steps.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Steps",
+          "methods": [
+            {
+              "name": "calStatus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcProgress",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "status",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Steps",
+          "props": {
+            "space": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "direction": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'horizontal'",
+                "computed": false
+              }
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "processStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'process'",
+                "computed": false
+              }
+            },
+            "finishStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'finish'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/switch/Switch.jsx",
       "value": [
         {
@@ -4917,159 +5218,6 @@
                 "value": "false",
                 "computed": false
               }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/steps/Step.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Step",
-          "methods": [],
-          "actualName": "Step",
-          "props": {
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "description": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "icon": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/steps/Steps.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Steps",
-          "methods": [
-            {
-              "name": "calStatus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "index",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "calcProgress",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "status",
-                  "type": null
-                },
-                {
-                  "name": "index",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Steps",
-          "props": {
-            "space": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "direction": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'horizontal'",
-                "computed": false
-              }
-            },
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "0",
-                "computed": false
-              }
-            },
-            "processStatus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'process'",
-                "computed": false
-              }
-            },
-            "finishStatus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'finish'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
             }
           }
         }
@@ -7199,6 +7347,51 @@
       ]
     },
     {
+      "key": "src/color-picker/components/Color.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Color",
+          "methods": [
+            {
+              "name": "handleDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "update",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "newprops",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Color",
+          "context": {
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/color-picker/components/Hue.jsx",
       "value": [
         {
@@ -7252,124 +7445,6 @@
             }
           ],
           "actualName": "Hue",
-          "context": {
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/color-picker/Picker.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Picker",
-          "methods": [],
-          "actualName": "Picker",
-          "props": {
-            "color": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object.isRequired"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showPicker": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showAlpha": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onPick": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
-            },
-            "onClear": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/color-picker/components/Color.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Color",
-          "methods": [
-            {
-              "name": "handleDrag",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "update",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "newprops",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Color",
           "context": {
             "onChange": {
               "type": {

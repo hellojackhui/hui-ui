@@ -6,7 +6,7 @@ export default class ModalFooter extends Component {
     const {children} = this.props;
     return (
       <div style={this.styles()} className={this.classname('hui-modal__footer')}>
-        {children};
+        {children}
       </div>
     )
   }
