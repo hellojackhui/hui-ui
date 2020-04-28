@@ -1,0 +1,71 @@
+---
+name: Process
+route: /Process
+---
+
+import {Playground, Props} from 'docz';
+import Button from '../button/index';
+import Process from './index.js';
+import '../../style/css/font-awesome.css';
+
+# Process 进度条
+显示数据的进度加载
+
+## 基本使用
+进度条通过type属性设置条形加载条和环形加载条
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <Process type="line" percentage="25" />
+    <Process type="line" percentage="50" />
+    <Process type="line" percentage="75" />
+    <Process type="line" percentage="100" />
+  </div>
+  <div style={{'margin': '10px'}}>
+    <Process type="circle" percentage="25" />
+    <Process type="circle" percentage="50" />
+    <Process type="circle" percentage="75" />
+    <Process type="circle" percentage="100" />
+  </div>
+</Playground>
+
+## 颜色状态
+进度条通过status属性显示颜色进度
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <Process type="line" percentage="25" />
+    <Process type="line" percentage="75" status="exception" />
+    <Process type="line" percentage="100" status="success" />
+  </div>
+  <div style={{'margin': '10px'}}>
+    <Process type="circle" percentage="25" />
+    <Process type="circle" percentage="75" status="exception"/>
+    <Process type="circle" percentage="100" status="success" />
+  </div>
+</Playground>
+
+## 文本显示
+进度条通过showText属性显示额外文本
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <Process type="line" percentage="100" showText="100" />
+    <Process type="line" percentage="100" showText="100" strokeWidth="10" textInside />
+  </div>
+  <div style={{'margin': '10px'}}>
+    <Process type="circle" percentage="100" showText="100" />
+    <Process type="circle" percentage="100" showText="100" textInside />
+  </div>
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+percentage|进度条百分比|number|0
+type|进度条类型|['line', 'circle']|'line'
+strokeWidth|进度条高度|number|6
+textInside|文本是否显示在进度条内部(仅在横向进度条使用)|boolean|false
+showText|进度条是否显示文本|boolean|true
+status|进度条颜色状态|string|-
+width|进度条宽度|number|126

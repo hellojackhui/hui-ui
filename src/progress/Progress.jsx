@@ -3,7 +3,7 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-06 17:09:42 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-03-28 12:18:49
+ * @Last Modified time: 2020-04-28 19:51:42
  */
 
 import React from 'react';
@@ -135,7 +135,7 @@ class Progress extends Component {
          style={{'fontSize': `${this.getTextSize()}px`}}
        >
          {status ? (
-            <svg className="hui-progress-circle__icon" viewBox="0 0 1024 1024" width={`${width / 3 }px`}>
+            <svg className="hui-progress-circle__icon" viewBox="0 0 1024 1024" width={`${width / 4 }px`}>
              <path d={this.iconSvg()} fill={this.stroke()}/>
             </svg>
          ) : `${percentage}%`}

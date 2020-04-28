@@ -1,0 +1,82 @@
+---
+name: Tag
+route: /Tag
+---
+
+import {Playground, Props} from 'docz';
+import Button from '../button/index';
+import Tag from './index.js';
+import '../../style/css/font-awesome.css';
+
+# Tabs 标签
+展示不同类型的标签
+
+## 基本使用
+提供四种类型的标签提示
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <Tag type="info" style={{'marginRight': '10px'}}>标签1</Tag>
+    <Tag type="success" style={{'marginRight': '10px'}}>标签2</Tag>
+    <Tag type="warning" style={{'marginRight': '10px'}}>标签3</Tag>
+    <Tag type="gray" style={{'marginRight': '10px'}}>标签5</Tag>
+    <Tag type="primary" style={{'marginRight': '10px'}}>标签6</Tag>
+    <Tag type="danger">标签4</Tag>
+  </div>
+</Playground>
+
+## 可关闭
+设置closable属性实现标签可关闭
+<Playground>
+  {
+    () => {
+      const list = [
+        {
+          type: 'info',
+          value: '标签a',
+        },
+        {
+          type: 'success',
+          value: '标签b',
+        },
+        {
+          type: 'warning',
+          value: '标签c',
+        },
+        {
+          type: 'danger',
+          value: '标签d',
+        }
+      ]
+      const [datas, setdatas] = React.useState(list);
+      function closeHandler(index) {
+        return function() {
+          const _list = datas.slice();
+          _list.splice(index, 1);
+          setdatas(_list);
+        }
+      }
+      return (
+        <div style={{'margin': '10px'}}>
+          {
+            datas.map((data, index) => {
+              return (
+                <Tag type={data.type} closable onClose={closeHandler(index)} key={`${data.type}-${index}`} style={{'marginRight': '10px'}}>{data.value}</Tag>
+              )
+            })
+          }
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+type|进度条类型|['primary', 'gray' , 'info', 'success', 'warning', 'danger']|'primary'
+closable|是否有关闭功能|boolean|false
+hit|标签是否有描边|boolean|false
+color|标签颜色|string|-
+onClose|标签关闭回调|function|() {}

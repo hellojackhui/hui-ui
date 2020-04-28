@@ -129,13 +129,13 @@ class Rate extends Component {
   }
   classes = () => {
     const { currentValue } = this.state;
-    const { allowHalf, max } = this.props;
+    const { max } = this.props;
     let result = [];
     let i = 0;
     let threshold = currentValue;
-    if (allowHalf && currentValue !== Math.floor(currentValue)) {
-      threshold = threshold;
-    }
+    // if (allowHalf && currentValue !== Math.floor(currentValue)) {
+    //   threshold = threshold;
+    // }
     for (; i <= threshold; i++) {
       result.push(this.activeClass());
     }

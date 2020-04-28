@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, Animate, View} from '../../libs';
+import {Component, PropType, Animate} from '../../libs';
 import './Collapse.scss';
 
 export default class CollapseItem extends Component {

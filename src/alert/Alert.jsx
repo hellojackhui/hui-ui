@@ -37,6 +37,7 @@ export default class Alert extends Component {
         case 'warning': return 'hui-icon-exclamation-circle';
           case 'info': return 'hui-icon-info-circle';
             case 'error': return 'hui-icon-times-circle';
+      default: return 'hui-icon-check-circle';
     }
   }
 
