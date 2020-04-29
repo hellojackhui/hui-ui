@@ -1,0 +1,161 @@
+---
+name: Tabs
+route: /Tabs
+---
+
+import {Playground, Props} from 'docz';
+import Tabs from './index.js';
+import '../../style/css/font-awesome.css';
+
+# Tabs 标签栏
+多标签页切换多标签栏
+
+
+## 基本使用
+
+<Playground>
+  {
+    () => {
+      let id = 4;
+      const [tablist, settablist] = React.useState([
+        {
+          name: '标签1',
+          value: '1',
+        },
+        {
+          name: '标签2',
+          value: '2',
+        },
+        {
+          name: '标签3',
+          value: '3',
+        }
+      ])
+      return (
+        <div style={{'margin': '10px'}}>
+          <Tabs type="border-card" currentName="1">
+            {
+              tablist.map((item, index) => {
+                return (
+                  <Tabs.Pane key={index} label={`${item.name}`} name={`${index}`}>{item.name}</Tabs.Pane>
+                )
+              })
+            }
+          </Tabs>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+
+## 可添加
+设置addable属性实现标签的动态添加
+
+<Playground>
+  {
+    () => {
+      const [tabindex, settabindex] = React.useState(4);
+      const [tablist, settablist] = React.useState([
+        {
+          name: '标签1',
+          value: '1',
+        },
+        {
+          name: '标签2',
+          value: '2',
+        },
+        {
+          name: '标签3',
+          value: '3',
+        }
+      ])
+      function tabAdd() {
+        let _list = tablist.slice();
+        _list.push({
+          value: `${tabindex}`,
+          name: `标签${tabindex}`
+        })
+        let index = tabindex + 1;
+        settabindex(index);
+        settablist(_list);
+      }
+      return (
+        <div style={{'margin': '10px'}}>
+          <Tabs onTabAdd={tabAdd} type="border-card" currentName="1" addable>
+            {
+              tablist.map((item, index) => {
+                return (
+                  <Tabs.Pane key={index} label={`${item.name}`} name={`${index}`}>{item.name}</Tabs.Pane>
+                )
+              })
+            }
+          </Tabs>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 可关闭
+设置closable属性实现标签的动态添加
+
+<Playground>
+  {
+    () => {
+      const [tabindex, settabindex] = React.useState(4);
+      const [tablist, settablist] = React.useState([
+        {
+          name: '标签1',
+          value: '1',
+        },
+        {
+          name: '标签2',
+          value: '2',
+        },
+        {
+          name: '标签3',
+          value: '3',
+        }
+      ])
+      function tabAdd() {
+        let _list = tablist.slice();
+        _list.push({
+          value: `${tabindex}`,
+          name: `标签${tabindex}`
+        })
+        let index = tabindex + 1;
+        settabindex(index);
+        settablist(_list);
+      }
+      return (
+        <div style={{'margin': '10px'}}>
+          <Tabs onTabAdd={tabAdd} type="border-card" currentName="1" addable closable editable>
+            {
+              tablist.map((item, index) => {
+                return (
+                  <Tabs.Pane key={index} label={`${item.name}`} name={`${index}`}>{item.name}</Tabs.Pane>
+                )
+              })
+            }
+          </Tabs>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+type|标签类型|['card', 'border-card']|-
+closable|标签可关闭|boolean|false
+addable|标签可添加|boolean|false
+editable|标签可编辑｜boolean|false
+activeName|标签激活名称｜string|-
+value|标签激活值｜string|-
+onTabClick|标签点击回调|func|() {}
+onTabRemove|标签关闭回调|func|() {}
+onTabAdd|标签添加回调|func|() {}
+onTabEdit|标签编辑回调|func|() {}

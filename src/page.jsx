@@ -273,7 +273,7 @@ export default class Page extends React.Component {
           <InputNumber value={20} step={2} />
         </div>
         <div style={{'marginTop': '20px', 'width': '500px'}}>
-          <Tabs type="border-card" editable currentName="1" onTabAdd={this.tabAdd}>
+          <Tabs type="border-card" editable currentName="1" onTabAdd={this.tabAdd} addable>
             {
               this.state.tabarr.map((item, index) => {
                 return (

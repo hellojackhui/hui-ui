@@ -152,12 +152,12 @@ class Tabs extends Component {
   }
 
   scrollNext = () => {
-    const containerWidth = this.refs.nav.offsetWidth;
+    const navWidth = this.refs.nav.offsetWidth;
+    const containerWidth = this.refs.scroll.offsetWidth;
     const currentOffset = this.getCurrentScrollOffset();
-    if (!currentOffset) return;
-    let newOffset = currentOffset > containerWidth
-      ? currentOffset - containerWidth
-      : 0;
+    if (containerWidth + currentOffset >= navWidth) return;
+    let newOffset = navWidth - currentOffset > containerWidth * 2 ?
+        (containerWidth + currentOffset) : (navWidth - containerWidth);
     this.setOffset(newOffset);
   }
 
@@ -177,7 +177,7 @@ class Tabs extends Component {
   }
 
   tabclick = (item, e) => {
-    if (item.props.disabled) return false;
+    if (item.props.disabled) return;
     this.setState({
       currentName: item.props.name,
     }, () => {
