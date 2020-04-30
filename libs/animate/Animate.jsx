@@ -55,6 +55,32 @@ export default class Animate extends React.Component {
     });
   };
 
+  onTransformStart(event) {
+    if (this.$ele !== event.target) {
+      return;
+    }
+    let { onStart, visible: pVisible } = this.props;
+    this.setState({
+      visible: pVisible,
+      status: STATUS_ENTER
+    }, () => {
+      onStart && onStart(pVisible);
+    });
+  };
+
+  onTransformEnd(event) {
+    if (this.$ele !== event.target) {
+      return;
+    }
+    let { onEnd, visible: pVisible } = this.props;
+    this.setState({
+      visible: pVisible,
+      status: STATUS_NONE
+    }, () => {
+      onEnd && onEnd(pVisible);
+    });
+  };
+
   onMotionEnd(event) {
     if (this.$ele !== event.target) {
       return;
@@ -72,15 +98,15 @@ export default class Animate extends React.Component {
     if (!$ele) return;
     $ele.addEventListener(exportProperty.animationStartName, this.onMotionStart.bind(this));
     $ele.addEventListener(exportProperty.animationEndName, this.onMotionEnd.bind(this));
-    $ele.addEventListener(exportProperty.transitionStartName, this.onMotionStart.bind(this));
-    $ele.addEventListener(exportProperty.transitionEndName, this.onMotionEnd.bind(this));
+    $ele.addEventListener(exportProperty.transitionStartName, this.onTransformStart.bind(this));
+    $ele.addEventListener(exportProperty.transitionEndName, this.onTransformEnd.bind(this));
   };
   removeEventListener($ele) {
     if (!$ele) return;
     $ele.removeEventListener(exportProperty.animationStartName, this.onMotionStart.bind(this));
     $ele.removeEventListener(exportProperty.animationEndName, this.onMotionEnd.bind(this));
-    $ele.removeEventListener(exportProperty.transitionStartName, this.onMotionStart.bind(this));
-    $ele.removeEventListener(exportProperty.transitionEndName, this.onMotionEnd.bind(this));
+    $ele.removeEventListener(exportProperty.transitionStartName, this.onTransformStart.bind(this));
+    $ele.removeEventListener(exportProperty.transitionEndName, this.onTransformEnd.bind(this));
   };
 
   // 接收visible参数后，需要修改状态以及

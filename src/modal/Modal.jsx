@@ -7,15 +7,16 @@ export default class Modal extends Component {
     super(props);
     this.state = {
       visible: props.visible,
+      hideable: !props.visible,
       bodyOverflow: '',
     }
     this.setBodyOverflow();
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.state.visible !== nextProps.visible) {
+    if (this.props.visible !== nextProps.visible) {
       this.setState({
-        visible: nextProps.visible
+        visible: nextProps.visible,
       }, () => {
         this.setBodyOverflow();
       })
@@ -26,7 +27,6 @@ export default class Modal extends Component {
     const {visible} = this.state;
     const {lockScroll, mask} = this.props;
     const {bodyOverflow} = this.state;
-    console.log(visible, lockScroll)
     if (visible) {
       this.clearScrollBar();
       if (lockScroll && document && document.body.style) {
@@ -51,18 +51,34 @@ export default class Modal extends Component {
     })
   }
 
-  onEnd = () => {
-    if (!this.state.visible) {
-      this.props.onClose && this.props.onClose();
+  onEnd = (pvisible) => {
+    console.log('onend');
+    if (!pvisible) {
+      this.setState({
+        hideable: true
+      }, () => {
+        this.props.onClose && this.props.onClose();
+      })
     } else {
-      this.props.onOpen && this.props.onOpen();
+      this.setState({
+        hideable: false
+      }, () => {
+        this.props.onOpen && this.props.onOpen();
+      })
+      
     }
   }
 
-  closeModal = () => {
+  onStart = (pVisible) => {
+    console.log(pVisible);
     this.setState({
-      visible: false,
+      hideable: false
     })
+  }
+
+  closeModal = () => {
+    const {onClose} = this.props;
+    onClose && onClose();
   }
 
   clickOverflow = (e) => {
@@ -80,38 +96,34 @@ export default class Modal extends Component {
   }
 
   render() {
-    const {visible} = this.state;
+    const {visible, hideable} = this.state;
     const {title, size, mask, children, top} = this.props;
     return (
-        <Animate visible={visible} enterClassName="hui-modal--enter" leaveClassName="hui-modal--leave" onEnd={this.onEnd}>
+      <div style={this.styles({
+        'zIndex': !visible ? '-10000' : '10000'
+      })} className={this.classnames("hui-modal")} onClick={this.clickOverflow} onKeyDown={this.keyDown}>
+        <div 
+            className={this.classname('hui-modal__inner', size && `hui-modal--${size}`, {
+              'hui-modal--enter': visible,
+              'hui-modal--leave': !visible,
+            })}
+            style={this.styles({top: top})}
+          >
+            <div className="hui-modal__header">
+              <span className="hui-modal__title">{title}</span>
+              <i className="hui-modal__close hui-icon hui-icon-close" onClick={this.closeModal}></i>
+            </div>
+            {children}
+        </div>
         {
-          ({classNameType}) => {
-            return (
-              <div style={this.styles()} className="hui-modal" onClick={this.clickOverflow} onKeyDown={this.keyDown}>
-                <div 
-                  className={this.classname('hui-modal__inner', size && `hui-modal--${size}`, classNameType)}
-                  style={this.styles({top: top})}
-                >
-                  <div className="hui-modal__header">
-                    <span className="hui-modal__title">{title}</span>
-                    <i className="hui-modal__close hui-icon hui-icon-close" onClick={this.closeModal}></i>
-                  </div>
-                  {children}
-                </div>
-                {
-                  mask && (
-                    <View show={visible}>
-                      <div className="hui-modal__mask"></div>
-                    </View>
-                  )
-                }
-              </div>
-            )
-          }
+          mask && (
+            <View show={visible}>
+              <div className="hui-modal__mask"></div>
+            </View>
+          )
         }
-      </Animate>
-      
-    )
+      </div>
+        )
   }
 } 
 
@@ -130,7 +142,6 @@ Modal.propTypes = {
 
 Modal.defaultProps = {
   size: 'small',
-  top: '15%',
   mask: true,
   lockScroll: false,
   closeOnClickModal: true,

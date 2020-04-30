@@ -6,6 +6,9 @@
   position: fixed;
   overflow: auto;
   z-index: 10000;
+  &.is-disabled {
+    z-index: -10000;
+  }
   &__mask {
     position: fixed;
     top: 0;
@@ -18,21 +21,24 @@
   &__inner {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -200px;
     min-width: 400px;
     background-color: #ffffff;
     border: 1px solid #d1dbe5;
     border-radius: 4px;
-    animation-timing-function: linear;
-    animation-duration: .2s;
-    animation-fill-mode: both;
     z-index: 3004;
+    visibility: none;
+    top: 10%;
+    opacity: 0;
+    transition: all 0.3s linear;
   }
   &--enter {
-    animation-name: modal-enter;
+    top: 20%;
+    opacity: 1;
   }
   &--leave {
-    animation-name: modal-leave;
+    top: 10%;
+    opacity: 0;
   }
   &__header {
     position: relative;
@@ -64,27 +70,5 @@
     padding: 10px 20px 15px;
     text-align: right;
     box-sizing: border-box;
-  }
-}
-
-@keyframes modal-enter {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -20%);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0px);
-  }
-}
-
-@keyframes modal-leave {
-  from {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-  to {
-    opacity: 0;
-    transform: translate(-50%, -20%);
   }
 }

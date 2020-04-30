@@ -26,6 +26,7 @@ import Menu from './menu';
 import Collapse from './collapse';
 import Transfer from './transfer';
 import ColorPicker from './color-picker';
+import Modal from './modal';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -99,6 +100,7 @@ export default class Page extends React.Component {
         }
       ],
       transfervalue: [1,4],
+      visible: false,
     }
   }
   onClick = () => {
@@ -407,6 +409,17 @@ export default class Page extends React.Component {
         </div>
         <div style={{'marginTop': '20px'}}>
           <ColorPicker value={""} onChange={this.onChange} showAlpha/>
+        </div>
+        <div style={{'margin': '20px'}}>
+          <Button type="primary" size={'small'} onClick={() => this.setState({visible: true})}>打开</Button>
+          <Modal visible={this.state.visible} title={"模态框1"} lockScroll onClose={() => this.setState({visible: false})}> 
+            <Modal.Body>
+              <span>这是一个模态框2</span>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button type="primary" size={'small'} onClick={() => this.setState({visible: false})}>关闭</Button>
+            </Modal.Footer>
+          </Modal>
         </div>
       </div>
       

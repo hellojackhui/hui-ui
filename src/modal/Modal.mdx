@@ -1,0 +1,100 @@
+---
+name: Modal
+route: /Modal
+---
+
+import {Playground, Props} from 'docz';
+import Modal from './index.js';
+import Button from '../button';
+import '../../style/css/font-awesome.css';
+
+
+# Modal 模态框
+
+
+## 基本使用
+
+<Playground>
+  {
+    () => {
+      const [visible, setvisible] = React.useState(false);
+      return (
+        <div style={{'margin': '10px'}}>
+          <Button type="primary" size={'small'} onClick={() => setvisible(true)}>打开</Button>
+          <Modal visible={visible} title={"模态框1"} onClose={() => setvisible(false)}> 
+            <Modal.Body>
+              <span>这是一个模态框1</span>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button type="primary" size={'small'} onClick={() => setvisible(false)}>关闭</Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 锁定页面滚动
+设置lockScroll属性可以禁止模态框页面滚动
+
+<Playground>
+  {
+    () => {
+      const [visible, setvisible] = React.useState(false);
+      return (
+        <div style={{'margin': '10px'}}>
+          <Button type="primary" size={'small'} onClick={() => setvisible(true)}>打开</Button>
+          <Modal visible={visible} title={"模态框1"} lockScroll onClose={() => setvisible(false)}> 
+            <Modal.Body>
+              <span>这是一个模态框2</span>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button type="primary" size={'small'} onClick={() => setvisible(false)}>关闭</Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+## 设置阴影
+通过mask属性和closeOnClickModal属性设置是否有阴影和允许阴影点击关闭模态框
+
+<Playground>
+  {
+    () => {
+      const [visible, setvisible] = React.useState(false);
+      return (
+        <div style={{'margin': '10px'}}>
+          <Button type="primary" size={'small'} onClick={() => setvisible(true)}>打开</Button>
+          <Modal visible={visible} title={"模态框3"} mask closeOnClickModal={true} onClose={() => setvisible(false)}> 
+            <Modal.Body>
+              <span>这是一个模态框3</span>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button type="primary" size={'small'} onClick={() => setvisible(false)}>关闭</Button>
+            </Modal.Footer>
+          </Modal>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+visible|模态框是否显示|bool|false
+title|模态框标题|string|-
+size|模态框尺寸|string|‘small'
+mask|模态框是否有阴影|bool|true
+lockScroll|是否锁定滚动|bool|false
+customClass|自定义class|string|-
+closeOnClickModal|是否允许点击阴影关闭模态框|bool|true
+closeOnEsc|是否允许点击Esc关闭模态框|bool|true
+onOpen|打开时回调|func|() {}
+onClose|关闭时回调|func|() {}

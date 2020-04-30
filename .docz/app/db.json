@@ -203,36 +203,6 @@
       }
     },
     {
-      "key": "src/button/Button.mdx",
-      "value": {
-        "name": "Button",
-        "route": "/Button",
-        "id": "67a149a3adc4df5bff0c346fd826b652",
-        "filepath": "src/button/Button.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
-        "slug": "src-button-button",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "button-按钮",
-            "depth": 1,
-            "value": "Button 按钮"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/breadcrumb/BreadCrumb.mdx",
       "value": {
         "name": "BreadCrumb",
@@ -248,6 +218,36 @@
             "slug": "breadcrumb-面包屑",
             "depth": 1,
             "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/button/Button.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/Button",
+        "id": "67a149a3adc4df5bff0c346fd826b652",
+        "filepath": "src/button/Button.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
+        "slug": "src-button-button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button-按钮",
+            "depth": 1,
+            "value": "Button 按钮"
           },
           {
             "slug": "基本使用",
@@ -613,6 +613,46 @@
             "slug": "自定义关闭",
             "depth": 2,
             "value": "自定义关闭"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/modal/Modal.mdx",
+      "value": {
+        "name": "Modal",
+        "route": "/Modal",
+        "id": "63085b7aa55ad1ac672e92f757a4bd90",
+        "filepath": "src/modal/Modal.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
+        "slug": "src-modal-modal",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "modal-模态框",
+            "depth": 1,
+            "value": "Modal 模态框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "锁定页面滚动",
+            "depth": 2,
+            "value": "锁定页面滚动"
+          },
+          {
+            "slug": "设置阴影",
+            "depth": 2,
+            "value": "设置阴影"
           },
           {
             "slug": "属性",
@@ -1131,6 +1171,30 @@
           "methods": [
             {
               "name": "onMotionStart",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onTransformStart",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onTransformEnd",
               "docblock": null,
               "modifiers": [],
               "params": [
@@ -2812,101 +2876,6 @@
       ]
     },
     {
-      "key": "src/layout/Column.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Column",
-          "methods": [
-            {
-              "name": "getStyle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Column",
-          "props": {
-            "span": {
-              "defaultValue": {
-                "value": "24",
-                "computed": false
-              },
-              "required": false
-            },
-            "tag": {
-              "defaultValue": {
-                "value": "\"div\"",
-                "computed": false
-              },
-              "required": false
-            }
-          },
-          "context": {
-            "gutter": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/layout/Row.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Row",
-          "methods": [
-            {
-              "name": "getStyle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Row",
-          "props": {
-            "justify": {
-              "defaultValue": {
-                "value": "'start'",
-                "computed": false
-              },
-              "required": false
-            },
-            "align": {
-              "defaultValue": {
-                "value": "'top'",
-                "computed": false
-              },
-              "required": false
-            },
-            "tag": {
-              "defaultValue": {
-                "value": "'div'",
-                "computed": false
-              },
-              "required": false
-            }
-          },
-          "childContext": {
-            "gutter": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/input-number/InputNumber.jsx",
       "value": [
         {
@@ -3060,6 +3029,101 @@
       ]
     },
     {
+      "key": "src/layout/Column.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Column",
+          "methods": [
+            {
+              "name": "getStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Column",
+          "props": {
+            "span": {
+              "defaultValue": {
+                "value": "24",
+                "computed": false
+              },
+              "required": false
+            },
+            "tag": {
+              "defaultValue": {
+                "value": "\"div\"",
+                "computed": false
+              },
+              "required": false
+            }
+          },
+          "context": {
+            "gutter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/layout/Row.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Row",
+          "methods": [
+            {
+              "name": "getStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Row",
+          "props": {
+            "justify": {
+              "defaultValue": {
+                "value": "'start'",
+                "computed": false
+              },
+              "required": false
+            },
+            "align": {
+              "defaultValue": {
+                "value": "'top'",
+                "computed": false
+              },
+              "required": false
+            },
+            "tag": {
+              "defaultValue": {
+                "value": "'div'",
+                "computed": false
+              },
+              "required": false
+            }
+          },
+          "childContext": {
+            "gutter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/loading/Loading.jsx",
       "value": [
         {
@@ -3133,6 +3197,96 @@
                 "value": "false",
                 "computed": false
               }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/message/MessageBox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MessageBox",
+          "methods": [
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "startTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stopTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MessageBox",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "showClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "message": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }
@@ -3496,96 +3650,6 @@
       ]
     },
     {
-      "key": "src/message/MessageBox.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "MessageBox",
-          "methods": [
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onClose",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "startTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "stopTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getIcon",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "MessageBox",
-          "props": {
-            "duration": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "3000",
-                "computed": false
-              }
-            },
-            "showClose": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "message": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "iconClass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/modal/Modal.jsx",
       "value": [
         {
@@ -3610,7 +3674,24 @@
               "name": "onEnd",
               "docblock": null,
               "modifiers": [],
-              "params": [],
+              "params": [
+                {
+                  "name": "pvisible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onStart",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "pVisible",
+                  "type": null
+                }
+              ],
               "returns": null
             },
             {
@@ -3746,13 +3827,6 @@
               },
               "required": false,
               "description": ""
-            },
-            "top": {
-              "defaultValue": {
-                "value": "'15%'",
-                "computed": false
-              },
-              "required": false
             }
           }
         }
