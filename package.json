@@ -103,7 +103,8 @@
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0"
+    "enzyme-adapter-react-16": "^1.13.0",
+    "raf": "^3.4.1"
   },
   "eslintConfig": {
     "extends": "react-app",

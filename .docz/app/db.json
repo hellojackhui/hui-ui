@@ -108,6 +108,46 @@
       }
     },
     {
+      "key": "src/badge/Badge.mdx",
+      "value": {
+        "name": "Badge",
+        "route": "/Badge",
+        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
+        "filepath": "src/badge/Badge.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
+        "slug": "src-badge-badge",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "badge-标记",
+            "depth": 1,
+            "value": "Badge 标记"
+          },
+          {
+            "slug": "基本用法",
+            "depth": 2,
+            "value": "基本用法"
+          },
+          {
+            "slug": "自定义最大值",
+            "depth": 2,
+            "value": "自定义最大值"
+          },
+          {
+            "slug": "自定义标记类型",
+            "depth": 2,
+            "value": "自定义标记类型"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/alert/Alert.mdx",
       "value": {
         "name": "Alert",
@@ -163,36 +203,26 @@
       }
     },
     {
-      "key": "src/badge/Badge.mdx",
+      "key": "src/button/Button.mdx",
       "value": {
-        "name": "Badge",
-        "route": "/Badge",
-        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
-        "filepath": "src/badge/Badge.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
-        "slug": "src-badge-badge",
+        "name": "Button",
+        "route": "/Button",
+        "id": "67a149a3adc4df5bff0c346fd826b652",
+        "filepath": "src/button/Button.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
+        "slug": "src-button-button",
         "menu": "",
         "headings": [
           {
-            "slug": "badge-标记",
+            "slug": "button-按钮",
             "depth": 1,
-            "value": "Badge 标记"
+            "value": "Button 按钮"
           },
           {
-            "slug": "基本用法",
+            "slug": "基本使用",
             "depth": 2,
-            "value": "基本用法"
-          },
-          {
-            "slug": "自定义最大值",
-            "depth": 2,
-            "value": "自定义最大值"
-          },
-          {
-            "slug": "自定义标记类型",
-            "depth": 2,
-            "value": "自定义标记类型"
+            "value": "基本使用"
           },
           {
             "slug": "属性",
@@ -218,36 +248,6 @@
             "slug": "breadcrumb-面包屑",
             "depth": 1,
             "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/button/Button.mdx",
-      "value": {
-        "name": "Button",
-        "route": "/Button",
-        "id": "67a149a3adc4df5bff0c346fd826b652",
-        "filepath": "src/button/Button.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
-        "slug": "src-button-button",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "button-按钮",
-            "depth": 1,
-            "value": "Button 按钮"
           },
           {
             "slug": "基本使用",
@@ -583,46 +583,6 @@
       }
     },
     {
-      "key": "src/message/Message.mdx",
-      "value": {
-        "name": "Message",
-        "route": "/Message",
-        "id": "6a65ee08639ae8fd9970c927b0ce8555",
-        "filepath": "src/message/Message.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/message/Message.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/message/Message.mdx",
-        "slug": "src-message-message",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "message-消息",
-            "depth": 1,
-            "value": "Message 消息"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "简单信息展示",
-            "depth": 2,
-            "value": "简单信息展示"
-          },
-          {
-            "slug": "自定义关闭",
-            "depth": 2,
-            "value": "自定义关闭"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/modal/Modal.mdx",
       "value": {
         "name": "Modal",
@@ -663,6 +623,46 @@
       }
     },
     {
+      "key": "src/message/Message.mdx",
+      "value": {
+        "name": "Message",
+        "route": "/Message",
+        "id": "6a65ee08639ae8fd9970c927b0ce8555",
+        "filepath": "src/message/Message.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/message/Message.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/message/Message.mdx",
+        "slug": "src-message-message",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "message-消息",
+            "depth": 1,
+            "value": "Message 消息"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "简单信息展示",
+            "depth": 2,
+            "value": "简单信息展示"
+          },
+          {
+            "slug": "自定义关闭",
+            "depth": 2,
+            "value": "自定义关闭"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/notification/Notification.mdx",
       "value": {
         "name": "Notification",
@@ -688,6 +688,36 @@
             "slug": "自定义高度",
             "depth": 2,
             "value": "自定义高度"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/popover/PopOver.mdx",
+      "value": {
+        "name": "PopOver",
+        "route": "/PopOver",
+        "id": "c984d807f2a152177f0ed734b18c0c49",
+        "filepath": "src/popover/PopOver.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/popover/PopOver.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/popover/PopOver.mdx",
+        "slug": "src-popover-pop-over",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "popover-弹出框",
+            "depth": 1,
+            "value": "PopOver 弹出框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
           },
           {
             "slug": "属性",
@@ -1163,6 +1193,54 @@
       ]
     },
     {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
+        }
+      ]
+    },
+    {
       "key": "libs/animate/Animate.jsx",
       "value": [
         {
@@ -1247,193 +1325,124 @@
       ]
     },
     {
-      "key": "libs/component/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Component",
-          "methods": [
-            {
-              "name": "classnames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "classname",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "styles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "styles",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Component"
-        }
-      ]
-    },
-    {
       "key": "libs/transition/index.js",
       "value": [
         {
           "description": "",
           "displayName": "Transition",
-          "methods": [],
+          "methods": [
+            {
+              "name": "enhanceChildren",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "children",
+                  "type": null
+                },
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "transitionClass",
+              "docblock": null,
+              "modifiers": [
+                "get"
+              ],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "isViewComponent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "element",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "didEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "didLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "toggleVisible",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "toggleHidden",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
           "actualName": "Transition",
           "props": {
-            "timeout": {
+            "name": {
               "type": {
-                "name": "custom",
-                "raw": "PropType.number"
+                "name": "string"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "1000",
-                "computed": false
-              }
-            },
-            "tranclass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "''",
-                "computed": false
-              }
-            },
-            "inState": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
+              "description": ""
             },
             "onEnter": {
               "type": {
-                "name": "custom",
-                "raw": "PropType.func"
+                "name": "func"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
+              "description": ""
             },
-            "onEntering": {
+            "onAfterEnter": {
               "type": {
-                "name": "custom",
-                "raw": "PropType.func"
+                "name": "func"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
+              "description": ""
             },
-            "onEntered": {
+            "onLeave": {
               "type": {
-                "name": "custom",
-                "raw": "PropType.func"
+                "name": "func"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
+              "description": ""
             },
-            "onExit": {
+            "onAfterLeave": {
               "type": {
-                "name": "custom",
-                "raw": "PropType.func"
+                "name": "func"
               },
               "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
-            },
-            "onExiting": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
-            },
-            "onExited": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
-            },
-            "unmountOnExit": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "appear": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
+              "description": ""
             }
           }
         }
@@ -3203,96 +3212,6 @@
       ]
     },
     {
-      "key": "src/message/MessageBox.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "MessageBox",
-          "methods": [
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onClose",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "startTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "stopTimer",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getIcon",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "MessageBox",
-          "props": {
-            "duration": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "3000",
-                "computed": false
-              }
-            },
-            "showClose": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "message": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "iconClass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/menu/Menu.jsx",
       "value": [
         {
@@ -3650,6 +3569,96 @@
       ]
     },
     {
+      "key": "src/message/MessageBox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "MessageBox",
+          "methods": [
+            {
+              "name": "onEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClose",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "startTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "stopTimer",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "MessageBox",
+          "props": {
+            "duration": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "3000",
+                "computed": false
+              }
+            },
+            "showClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "message": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "iconClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/modal/Modal.jsx",
       "value": [
         {
@@ -3972,6 +3981,140 @@
               "description": "",
               "defaultValue": {
                 "value": "16",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/popover/PopOver.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "PopOver",
+          "methods": [
+            {
+              "name": "onEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onAfterLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleMouseEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleMouseLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "PopOver",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "content": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf([PropType.node, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "visible": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "popperclass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "transition": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'fade-in-linear'",
+                "computed": false
+              }
+            },
+            "width": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "150",
+                "computed": false
+              }
+            },
+            "trigger": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType(['click', 'hover', 'manual', 'focus'])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'click'",
+                "computed": false
+              }
+            },
+            "placement": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end', 'right', 'right-start', 'right-end'])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'bottom'",
+                "computed": false
+              }
+            },
+            "visibleArrow": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
                 "computed": false
               }
             }

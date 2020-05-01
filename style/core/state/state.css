@@ -4,3 +4,22 @@
 .is-visible {
   display: block;
 }
+.hui-fade-in-linear-enter-active, .hui-fade-in-linear-leave-active, .fade-in-linear-enter-active, .fade-in-linear-leave-active {
+  transition: opacity 0.2s linear;
+}
+
+.fade-in-linear-enter {
+  opacity: 0;
+}
+
+.fade-in-linear-enter-to {
+  opacity: 1;
+}
+
+.fade-in-linear-leave {
+  opacity: 1;
+}
+
+.fade-in-linear-leave-to {
+  opacity: 0;
+}

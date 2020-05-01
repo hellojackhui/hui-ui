@@ -1,0 +1,116 @@
+---
+name: PopOver
+route: /PopOver
+---
+
+import {Playground, Props} from 'docz';
+import PopOver from './index.js';
+import {Row, Column} from '../layout/index.js';
+import Button from '../button';
+import '../../style/css/font-awesome.css';
+
+# PopOver 弹出框
+
+## 基本使用
+
+<Playground>
+  {
+    () => {
+      const RowStyle = {
+        'height': '100px',
+      }
+      const ColumnStyle = {
+        'textAlign': 'center',
+        'top': '20px',
+        'position': 'relative',
+      }
+      return (
+        <div style={{'height': '400px'}}>
+          <Row gutter="20" style={RowStyle}>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="top-start" title="标题1" width="200" content="这是一段内容" trigger="hover">
+                <Button>hover-左上角 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="top" title="标题2" width="200" content="这是一段内容" trigger="click">
+                <Button>点击-正上方 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="top-end" title="标题3" width="200" content="这是一段内容" trigger="focus">
+                <Button>focus-右上角 激活</Button>
+              </PopOver>
+            </Column>
+          </Row>
+          <Row gutter="20" style={RowStyle}>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="bottom-start" title="标题4" width="200" content="这是一段内容" trigger="hover">
+                <Button>hover 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="bottom" title="标题5" width="200" content="这是一段内容" trigger="click">
+                <Button>点击 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="bottom-end" title="标题6" width="200" content="这是一段内容" trigger="focus">
+                <Button>focus 激活</Button>
+              </PopOver>
+            </Column>
+          </Row>
+          <Row gutter="20" style={RowStyle}>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="left-start" title="标题7" width="200" content="这是一段内容" trigger="hover">
+                <Button>hover 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="left" title="标题8" width="200" content="这是一段内容" trigger="click">
+                <Button>点击 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="left-end" title="标题9" width="200" content="这是一段内容" trigger="focus">
+                <Button>focus 激活</Button>
+              </PopOver>
+            </Column>
+          </Row>
+          <Row gutter="20" style={RowStyle}>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="right-start" title="标题10" width="200" content="这是一段内容" trigger="hover">
+                <Button>hover 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="right" title="标题11" width="200" content="这是一段内容" trigger="click">
+                <Button>点击 激活</Button>
+              </PopOver>
+            </Column>
+            <Column span="8" style={ColumnStyle}>
+              <PopOver placement="right-end" title="标题12" width="200" content="这是一段内容" trigger="focus">
+                <Button>focus 激活</Button>
+              </PopOver>
+            </Column>
+          </Row>
+        </div>
+      )
+    }
+  }
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+title|弹出框标题|string|-
+content|弹出框内容|[node, string]|-
+visible|是否显示弹出框|bool|false
+popperclass|弹出框自定义class|string|-
+transition|弹出框过度动画名|string|-
+width|弹出框宽度|[string, number]|150
+trigger|弹出框触发方式|['click', 'hover', 'manual', 'focus']|'click'
+placement|弹出框位置|['top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left', 'left-start', 'left-end', 'right', 'right-start', 'right-end']|'bottom'
+visibleArrow|是否显示弹出框箭头|bool|true

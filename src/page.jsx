@@ -27,6 +27,7 @@ import Collapse from './collapse';
 import Transfer from './transfer';
 import ColorPicker from './color-picker';
 import Modal from './modal';
+import PopOver from './popover';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -420,6 +421,11 @@ export default class Page extends React.Component {
               <Button type="primary" size={'small'} onClick={() => this.setState({visible: false})}>关闭</Button>
             </Modal.Footer>
           </Modal>
+        </div>
+        <div style={{'margin': '100px'}}>
+          <PopOver placement="bottom" title="标题" width="200" content="这是一段容,这是一段容,这是一段容,这是一段容。" trigger="focus">
+            <Button>hover 激活</Button>
+          </PopOver>
         </div>
       </div>
       
