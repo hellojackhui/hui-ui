@@ -70,6 +70,7 @@ export default class Modal extends Component {
   }
   
   onEnter = () => {
+    this.refs.modalWrap.style.zIndex = '10000';
     this.refs.modal.style.top = '';
   }
 
@@ -82,6 +83,7 @@ export default class Modal extends Component {
   }
 
   onAfterLeave = () => {
+    this.refs.modalWrap.style.zIndex = '-10000';
     this.refs.modal.style.top = '';
   }
 
@@ -90,8 +92,8 @@ export default class Modal extends Component {
     const {title, size, mask, children, top} = this.props;
     return (
       <div style={this.styles({
-        'zIndex': visible ? '10000' : '-10000'
-      })} className={this.classnames("hui-modal")} onClick={this.clickOverflow} onKeyDown={this.keyDown}>
+        'zIndex': '-10000',
+      })} className={this.classnames("hui-modal")} onClick={this.clickOverflow} onKeyDown={this.keyDown} ref={'modalWrap'}>
         <Transition name="slider" onEnter={this.onEnter} onAfterEnter={this.onAfterEnter} onLeave={this.onLeave} onAfterLeave={this.onAfterLeave}>
           <View show={visible}>
             <div 

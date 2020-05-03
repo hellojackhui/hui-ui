@@ -4810,159 +4810,6 @@
       ]
     },
     {
-      "key": "src/steps/Step.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Step",
-          "methods": [],
-          "actualName": "Step",
-          "props": {
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "description": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "icon": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/steps/Steps.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Steps",
-          "methods": [
-            {
-              "name": "calStatus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "index",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "calcProgress",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "status",
-                  "type": null
-                },
-                {
-                  "name": "index",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Steps",
-          "props": {
-            "space": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "direction": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'horizontal'",
-                "computed": false
-              }
-            },
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "0",
-                "computed": false
-              }
-            },
-            "processStatus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'process'",
-                "computed": false
-              }
-            },
-            "finishStatus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'finish'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/slider/Slider.jsx",
       "value": [
         {
@@ -5154,6 +5001,159 @@
               "defaultValue": {
                 "value": "100",
                 "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Step.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Step",
+          "methods": [],
+          "actualName": "Step",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "description": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Steps.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Steps",
+          "methods": [
+            {
+              "name": "calStatus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcProgress",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "status",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Steps",
+          "props": {
+            "space": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "direction": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'horizontal'",
+                "computed": false
+              }
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "processStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'process'",
+                "computed": false
+              }
+            },
+            "finishStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'finish'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
               },
               "required": false
             }
@@ -6561,6 +6561,107 @@
       ]
     },
     {
+      "key": "src/watermask/WaterMask.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "WaterMask",
+          "methods": [],
+          "actualName": "WaterMask",
+          "props": {
+            "container": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "width": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "height": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textAlign": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textBaseline": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "font": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "fillStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "content": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "globalAlpha": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "rotate": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "zIndex": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/upload/AjaxUpload.jsx",
       "value": [
         {
@@ -7318,107 +7419,6 @@
                 "raw": "PropType.func"
               },
               "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/watermask/WaterMask.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "WaterMask",
-          "methods": [],
-          "actualName": "WaterMask",
-          "props": {
-            "container": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "width": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "height": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "textAlign": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "textBaseline": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "font": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "fillStyle": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "content": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "globalAlpha": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "rotate": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "zIndex": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
             }
           }
         }
