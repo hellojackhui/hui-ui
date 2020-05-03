@@ -108,46 +108,6 @@
       }
     },
     {
-      "key": "src/badge/Badge.mdx",
-      "value": {
-        "name": "Badge",
-        "route": "/Badge",
-        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
-        "filepath": "src/badge/Badge.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
-        "slug": "src-badge-badge",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "badge-标记",
-            "depth": 1,
-            "value": "Badge 标记"
-          },
-          {
-            "slug": "基本用法",
-            "depth": 2,
-            "value": "基本用法"
-          },
-          {
-            "slug": "自定义最大值",
-            "depth": 2,
-            "value": "自定义最大值"
-          },
-          {
-            "slug": "自定义标记类型",
-            "depth": 2,
-            "value": "自定义标记类型"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/alert/Alert.mdx",
       "value": {
         "name": "Alert",
@@ -203,26 +163,36 @@
       }
     },
     {
-      "key": "src/button/Button.mdx",
+      "key": "src/badge/Badge.mdx",
       "value": {
-        "name": "Button",
-        "route": "/Button",
-        "id": "67a149a3adc4df5bff0c346fd826b652",
-        "filepath": "src/button/Button.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
-        "slug": "src-button-button",
+        "name": "Badge",
+        "route": "/Badge",
+        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
+        "filepath": "src/badge/Badge.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
+        "slug": "src-badge-badge",
         "menu": "",
         "headings": [
           {
-            "slug": "button-按钮",
+            "slug": "badge-标记",
             "depth": 1,
-            "value": "Button 按钮"
+            "value": "Badge 标记"
           },
           {
-            "slug": "基本使用",
+            "slug": "基本用法",
             "depth": 2,
-            "value": "基本使用"
+            "value": "基本用法"
+          },
+          {
+            "slug": "自定义最大值",
+            "depth": 2,
+            "value": "自定义最大值"
+          },
+          {
+            "slug": "自定义标记类型",
+            "depth": 2,
+            "value": "自定义标记类型"
           },
           {
             "slug": "属性",
@@ -248,6 +218,36 @@
             "slug": "breadcrumb-面包屑",
             "depth": 1,
             "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/button/Button.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/Button",
+        "id": "67a149a3adc4df5bff0c346fd826b652",
+        "filepath": "src/button/Button.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
+        "slug": "src-button-button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button-按钮",
+            "depth": 1,
+            "value": "Button 按钮"
           },
           {
             "slug": "基本使用",
@@ -583,46 +583,6 @@
       }
     },
     {
-      "key": "src/modal/Modal.mdx",
-      "value": {
-        "name": "Modal",
-        "route": "/Modal",
-        "id": "63085b7aa55ad1ac672e92f757a4bd90",
-        "filepath": "src/modal/Modal.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
-        "slug": "src-modal-modal",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "modal-模态框",
-            "depth": 1,
-            "value": "Modal 模态框"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "锁定页面滚动",
-            "depth": 2,
-            "value": "锁定页面滚动"
-          },
-          {
-            "slug": "设置阴影",
-            "depth": 2,
-            "value": "设置阴影"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/message/Message.mdx",
       "value": {
         "name": "Message",
@@ -653,6 +613,46 @@
             "slug": "自定义关闭",
             "depth": 2,
             "value": "自定义关闭"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/modal/Modal.mdx",
+      "value": {
+        "name": "Modal",
+        "route": "/Modal",
+        "id": "63085b7aa55ad1ac672e92f757a4bd90",
+        "filepath": "src/modal/Modal.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
+        "slug": "src-modal-modal",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "modal-模态框",
+            "depth": 1,
+            "value": "Modal 模态框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "锁定页面滚动",
+            "depth": 2,
+            "value": "锁定页面滚动"
+          },
+          {
+            "slug": "设置阴影",
+            "depth": 2,
+            "value": "设置阴影"
           },
           {
             "slug": "属性",
@@ -1193,54 +1193,6 @@
       ]
     },
     {
-      "key": "libs/component/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Component",
-          "methods": [
-            {
-              "name": "classnames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "classname",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "styles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "styles",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Component"
-        }
-      ]
-    },
-    {
       "key": "libs/animate/Animate.jsx",
       "value": [
         {
@@ -1321,6 +1273,54 @@
             }
           ],
           "actualName": "Animate"
+        }
+      ]
+    },
+    {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
         }
       ]
     },
@@ -3659,189 +3659,6 @@
       ]
     },
     {
-      "key": "src/modal/Modal.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Modal",
-          "methods": [
-            {
-              "name": "setBodyOverflow",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "clearScrollBar",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "pvisible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onStart",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "pVisible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "closeModal",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "clickOverflow",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "keyDown",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Modal",
-          "props": {
-            "visible": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "size": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'small'",
-                "computed": false
-              }
-            },
-            "mask": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "lockScroll": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "customClass": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "closeOnClickModal": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "closeOnEsc": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "onOpen": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onClose": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/modal/ModalBody.jsx",
       "value": [
         {
@@ -4993,6 +4810,159 @@
       ]
     },
     {
+      "key": "src/steps/Step.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Step",
+          "methods": [],
+          "actualName": "Step",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "description": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/steps/Steps.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Steps",
+          "methods": [
+            {
+              "name": "calStatus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcProgress",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "status",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Steps",
+          "props": {
+            "space": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "direction": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'horizontal'",
+                "computed": false
+              }
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "processStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'process'",
+                "computed": false
+              }
+            },
+            "finishStatus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'finish'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/slider/Slider.jsx",
       "value": [
         {
@@ -5184,159 +5154,6 @@
               "defaultValue": {
                 "value": "100",
                 "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/steps/Step.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Step",
-          "methods": [],
-          "actualName": "Step",
-          "props": {
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "description": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "icon": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/steps/Steps.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Steps",
-          "methods": [
-            {
-              "name": "calStatus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "index",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "calcProgress",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "status",
-                  "type": null
-                },
-                {
-                  "name": "index",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Steps",
-          "props": {
-            "space": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "direction": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'horizontal'",
-                "computed": false
-              }
-            },
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "0",
-                "computed": false
-              }
-            },
-            "processStatus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'process'",
-                "computed": false
-              }
-            },
-            "finishStatus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'finish'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
               },
               "required": false
             }
@@ -7789,6 +7606,193 @@
                 "raw": "PropType.func"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/modal/Modal.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Modal",
+          "methods": [
+            {
+              "name": "setBodyOverflow",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "clearScrollBar",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "closeModal",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "clickOverflow",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "keyDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onAfterEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onAfterLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Modal",
+          "props": {
+            "visible": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'small'",
+                "computed": false
+              }
+            },
+            "mask": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "lockScroll": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "customClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "closeOnClickModal": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "closeOnEsc": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "onOpen": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClose": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }

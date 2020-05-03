@@ -8,6 +8,10 @@
   transition: opacity 0.2s linear;
 }
 
+.hui-slider-enter-active, .hui-slider-leave-active, .slider-enter-active, .slider-leave-active {
+  transition: all .4s linear; 
+}
+
 .fade-in-linear-enter {
   opacity: 0;
 }
@@ -21,5 +25,23 @@
 }
 
 .fade-in-linear-leave-to {
+  opacity: 0;
+}
+
+.slider-enter {
+  top: 10%;
+}
+
+.slider-enter-to {
+  top: 20%;
+}
+
+.slider-leave {
+  top: 20%;
+  opacity: 1;
+}
+
+.slider-leave-to {
+  top: 10%;
   opacity: 0;
 }

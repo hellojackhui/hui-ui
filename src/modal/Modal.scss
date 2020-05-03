@@ -6,9 +6,6 @@
   position: fixed;
   overflow: auto;
   z-index: 10000;
-  &.is-disabled {
-    z-index: -10000;
-  }
   &__mask {
     position: fixed;
     top: 0;
@@ -27,18 +24,6 @@
     border: 1px solid #d1dbe5;
     border-radius: 4px;
     z-index: 3004;
-    visibility: none;
-    top: 10%;
-    opacity: 0;
-    transition: all 0.3s linear;
-  }
-  &--enter {
-    top: 20%;
-    opacity: 1;
-  }
-  &--leave {
-    top: 10%;
-    opacity: 0;
   }
   &__header {
     position: relative;

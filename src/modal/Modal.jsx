@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, Animate, View} from '../../libs/index';
+import {Component, PropType, Animate, View, Transition} from '../../libs/index';
 import './Modal.scss';
 
 export default class Modal extends Component {
@@ -7,7 +7,6 @@ export default class Modal extends Component {
     super(props);
     this.state = {
       visible: props.visible,
-      hideable: !props.visible,
       bodyOverflow: '',
     }
     this.setBodyOverflow();
@@ -51,31 +50,6 @@ export default class Modal extends Component {
     })
   }
 
-  onEnd = (pvisible) => {
-    console.log('onend');
-    if (!pvisible) {
-      this.setState({
-        hideable: true
-      }, () => {
-        this.props.onClose && this.props.onClose();
-      })
-    } else {
-      this.setState({
-        hideable: false
-      }, () => {
-        this.props.onOpen && this.props.onOpen();
-      })
-      
-    }
-  }
-
-  onStart = (pVisible) => {
-    console.log(pVisible);
-    this.setState({
-      hideable: false
-    })
-  }
-
   closeModal = () => {
     const {onClose} = this.props;
     onClose && onClose();
@@ -94,27 +68,44 @@ export default class Modal extends Component {
       this.closeModal();
     }
   }
+  
+  onEnter = () => {
+    this.refs.modal.style.top = '';
+  }
+
+  onAfterEnter = () => {
+    this.refs.modal.style.top = '20%';
+  }
+
+  onLeave = () => {
+    this.refs.modal.style.top = '';
+  }
+
+  onAfterLeave = () => {
+    this.refs.modal.style.top = '';
+  }
 
   render() {
-    const {visible, hideable} = this.state;
+    const {visible} = this.state;
     const {title, size, mask, children, top} = this.props;
     return (
       <div style={this.styles({
-        'zIndex': !visible ? '-10000' : '10000'
+        'zIndex': visible ? '10000' : '-10000'
       })} className={this.classnames("hui-modal")} onClick={this.clickOverflow} onKeyDown={this.keyDown}>
-        <div 
-            className={this.classname('hui-modal__inner', size && `hui-modal--${size}`, {
-              'hui-modal--enter': visible,
-              'hui-modal--leave': !visible,
-            })}
-            style={this.styles({top: top})}
-          >
-            <div className="hui-modal__header">
-              <span className="hui-modal__title">{title}</span>
-              <i className="hui-modal__close hui-icon hui-icon-close" onClick={this.closeModal}></i>
+        <Transition name="slider" onEnter={this.onEnter} onAfterEnter={this.onAfterEnter} onLeave={this.onLeave} onAfterLeave={this.onAfterLeave}>
+          <View show={visible}>
+            <div 
+                className={this.classname('hui-modal__inner', size && `hui-modal--${size}`)}
+                ref={'modal'}
+              >
+                <div className="hui-modal__header">
+                  <span className="hui-modal__title">{title}</span>
+                  <i className="hui-modal__close hui-icon hui-icon-close" onClick={this.closeModal}></i>
+                </div>
+                {children}
             </div>
-            {children}
-        </div>
+          </View>
+        </Transition>
         {
           mask && (
             <View show={visible}>
