@@ -1,0 +1,65 @@
+---
+name: InputNumber
+route: /InputNumber
+---
+
+import {Playground} from 'docz';
+import InputNumber from './index.js';
+import '../../style/index.css';
+
+# InputNumber 计数器
+可以进行加减计算的计数器
+
+## 基本使用
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <InputNumber value={20} max={30} min={15}/>
+  </div>
+</Playground>
+
+## 自定义配置
+
+### 尺寸配置
+设置size属性调整计数器的尺寸
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <InputNumber value={20} max={30} min={15} size={'large'} style={{'marginRight': '5px'}} />
+    <InputNumber value={20} max={30} min={15} size={'small'} style={{'marginRight': '5px'}} />
+    <InputNumber value={20} max={30} min={15} size={'mini'} />
+  </div>
+</Playground>
+
+
+### 设置计算的间隔
+设置step属性设置计算加减的间隔
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <InputNumber value={20} max={30} min={15} step={2} size={'large'} />
+  </div>
+</Playground>
+
+## 不可用
+设置disabled属性设置组件不可用
+
+<Playground>
+  <div style={{'margin': '10px'}}>
+    <InputNumber value={20} size={'large'} disabled/>
+  </div>
+</Playground>
+
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+defaultValue|默认值|number|-
+value|输入值|number|-
+disabled|输入框禁用|boolean|false
+min|输入/计算最小值|number|0
+max|输入/计算最大值|number|Number.MAX_SAFE_INTEGER
+step|计算间隔|number|1
+size|组件尺寸|['large', 'small', 'mini']|'large'
+onChange|数值变化回调|func|() {}

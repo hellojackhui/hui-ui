@@ -19,6 +19,12 @@
     .hui-input-number__decrease {
       pointer-events: none;
     }
+    &.is-focus {
+      border: 1px solid #d1dbe5;
+      &:hover {
+        border: 1px solid #d1dbe5;
+      }
+    }
   }
   &.is-focus {
     border: 1px solid #20a0ff;
@@ -34,11 +40,46 @@
   }
   &--small {
     font-size: 14px;
+    & .hui-input__inner {
+      height: 30px;
+    }
     .hui-input-number__increase {
       font-size: 20px;
+      height: 30px;
+      .hui-icon-plus {
+        position: relative;
+        top: -1px;
+      }
     }
     .hui-input-number__decrease {
       font-size: 20px;
+      height: 30px;
+      .hui-icon-minus {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+  &--mini {
+    font-size: 12px;
+    & .hui-input__inner {
+      height: 25px;
+    }
+    .hui-input-number__increase {
+      font-size: 15px;
+      height: 25px;
+      .hui-icon-plus {
+        position: relative;
+        top: -4px;
+      }
+    }
+    .hui-input-number__decrease {
+      font-size: 15px;
+      height: 25px;
+      .hui-icon-minus {
+        position: relative;
+        top: -4px;
+      }
     }
   }
   &:hover.is-focus {

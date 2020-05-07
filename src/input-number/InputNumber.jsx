@@ -83,7 +83,7 @@ export default class InputNumber extends Component {
       <div className={this.classname('hui-input-number', size && `hui-input-number--${size}`, {
         'is-disabled': disabled,
         'is-focus': focus,
-      })}>
+      })} style={this.styles()}>
         <div className="hui-input-number__inner">
             <Input
               disabled={disabled}
