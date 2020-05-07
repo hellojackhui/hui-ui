@@ -12,6 +12,11 @@
   transition: all .4s linear; 
 }
 
+.hui-zoom-in-top-enter-active, .hui-zoom-in-top-leave-active, .zoom-in-top-enter-active, .zoom-in-top-leave-active {
+  transition: all .4s linear; 
+  transform-origin: center top;
+}
+
 .fade-in-linear-enter {
   opacity: 0;
 }
@@ -43,5 +48,26 @@
 
 .slider-leave-to {
   top: 10%;
+  opacity: 0;
+}
+
+.zoom-in-top-enter {
+  transform: scaleY(0);
+  opacity: 0;
+
+}
+
+.zoom-in-top-enter-to {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.zoom-in-top-leave {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.zoom-in-top-leave-to {
+  transform: scale(0);
   opacity: 0;
 }

@@ -22,6 +22,16 @@
     padding: 4px;
     font-size: 12px;
   }
+  &--plain {
+    background-color: #ffffff;
+    border-color: #c4c4c4;
+    color: #1f2d3d;
+    &:hover {
+      color: #73ccff;
+      border-color: #73ccff;
+      background: #ffffff;
+    }
+  }
   &--primary {
     background-color: #50bfff;
     border-color: #50bfff;

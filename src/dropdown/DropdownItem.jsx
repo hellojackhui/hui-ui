@@ -1,8 +1,8 @@
 import React from 'react';
 import { Component, PropType } from '../../libs';
+import './Dropdown.scss';
 
-
-export default class DropdownItem extends Component {
+class DropdownItem extends Component {
   handleClick = () => {
     return this.context.component.handleMenuItemClick(this.props.command, this);
   }
@@ -27,7 +27,9 @@ DropdownItem.contextTypes = {
 }
 
 DropdownItem.propTypes = {
-  command: PropTypes.string,
-  disabled: PropTypes.bool,
-  divided: PropTypes.bool,
+  command: PropType.string,
+  disabled: PropType.bool,
+  divided: PropType.bool,
 };
+
+export default DropdownItem;

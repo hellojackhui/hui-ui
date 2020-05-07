@@ -41,5 +41,5 @@ Button.defaultProps = {
   plain: false,
   disabled: false,
   loading: false,
-  type: 'info',
+  type: 'plain',
 }

@@ -3,10 +3,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Popper from 'popper.js';
-import { Component, PropType, Animate, View } from '../../libs';
+import { Component, PropType, Transition, View } from '../../libs';
 
-export default class DropdownMenu extends Component {
-
+class DropdownMenu extends Component {
   constructor(props) {
     super(props);
 
@@ -21,45 +20,46 @@ export default class DropdownMenu extends Component {
     })
   }
 
-  onStart = () => {
-    const parent = ReactDOM.findDOMNode(this.parent());
-    this.popperJS = new Popper(parent, this.refs.popper, {
-        placement: this.placement(),
-        modifiers: {
-          computeStyle: {
-            gpuAcceleration: false
-          }
-        }
-      });
+  placement() {
+    return `bottom-${this.parent().props.menuAlign}`;
   }
 
-  onEnd = () =>  {
-    this.popperJS.destroy();
+  onEnter = () => {
+    const parent = ReactDOM.findDOMNode(this.parent());
+
+    this.popperJS = new Popper(parent, this.refs.popper, {
+      placement: this.placement(),
+      modifiers: {
+        computeStyle: {
+          gpuAcceleration: false
+        }
+      }
+    });
   }
 
   parent() {
     return this.context.component;
   }
 
-  placement() {
-    return `bottom-${this.parent().props.menuAlign}`;
+  onAfterLeave = () => {
+    this.popperJS.destroy();
   }
 
   render() {
     return (
-      <Animate visible={this.state.showPopper} onEnterName={'hui-dropdown__zoomin'} onLeaveName={'hui-dropdown__zoomout'} onStart={this.onStart} onEnd={this.onEnd}>
-        {
-          ({classNameType}) => {
-            <ul ref="popper" style={this.style()} className={this.className('hui-dropdown-menu', classNameType)}>
-              {this.props.children}
-            </ul>
-          }
-        }
-      </Animate>
+      <Transition name="zoom-in-top" onEnter={this.onEnter} onAfterLeave={this.onAfterLeave} onStart={this.onStart}>
+        <View show={this.state.showPopper}>
+          <ul ref="popper" style={this.styles()} className={this.classnames('hui-dropdown-menu')}>
+            {this.props.children}
+          </ul>
+        </View>
+      </Transition>
     )
   }
 }
 
 DropdownMenu.contextTypes = {
-  component: PropTypes.any
+  component: PropType.any
 };
+
+export default DropdownMenu;

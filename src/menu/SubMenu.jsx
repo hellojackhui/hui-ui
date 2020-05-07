@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Animate, View, PropType} from '../../libs/index';
+import {Transition, View, PropType} from '../../libs/index';
 import MixinComponent from './MixinComponent';
 import './Menu.scss';
 
@@ -69,11 +69,14 @@ export default class SubMenu extends MixinComponent {
         </div>
         {
           this.rootMenu().props.mode === 'horizontal' ? (
-            <View show={this.opened()}>
-              <ul className="hui-menu">
-                {this.props.children}
-              </ul>
-            </View>
+            <Transition name="hui-zoom-in-top">
+              <View show={this.opened()}>
+                <ul className="hui-menu">
+                  {this.props.children}
+                </ul>
+              </View>
+            </Transition>
+
           ) : (
             <View show={this.opened()}>
                 <ul className="hui-menu">{this.props.children}</ul>

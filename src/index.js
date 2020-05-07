@@ -1,5 +1,4 @@
 import React from 'react';
-import {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Page from './page';

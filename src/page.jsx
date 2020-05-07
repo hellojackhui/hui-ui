@@ -22,12 +22,13 @@ import Rate from './rate';
 import Steps from './steps';
 import Breadcrumb from './breadcrumb';
 import Tree from './tree';
-import Menu from './menu';
+// import Menu from './menu';
 import Collapse from './collapse';
 import Transfer from './transfer';
 import ColorPicker from './color-picker';
 import Modal from './modal';
 import PopOver from './popover';
+import Dropdown from './dropdown';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -176,15 +177,20 @@ export default class Page extends React.Component {
           <Alert title={'123123'} />
         </div>
         <div style={{'marginTop': '20px'}}>
-          <Badge value={'ad'}>
-            <Alert title={'123123'} />
+          {/* <Badge isDot>
+            <Alert title={'点类型'} />
+          </Badge> */}
+          <Badge value={100} max={99}>
+            <Alert title={'99+'} />
           </Badge>
         </div>
         <div style={{'marginTop': '20px'}}>
           <Tag type="warning">2323</Tag>
         </div>
         <div style={{'marginTop': '20px'}}>
-          <Button type="primary" size={'small'} onClick={this.onClick}>2323</Button>
+          <Button type="primary" onClick={this.onClick}>主要按钮</Button>
+          <Button onClick={this.onClick}>默认按钮</Button>
+          <Button type="text" onClick={this.onClick}>text</Button>
         </div>
         <div style={{'marginTop': '20px'}}>
           <Radio checked={true}>2323</Radio>
@@ -234,9 +240,9 @@ export default class Page extends React.Component {
           <Progress type="circle" percentage={50}  width={80} status="exception" />
         </div>
         {
-          Message.warning({
-            message: 'hello',
-            showClose: true,
+          Message.info({
+            message: 'msg',
+            showClose: true
           })
         }
         <div style={{'marginTop': '20px'}}>
@@ -408,6 +414,21 @@ export default class Page extends React.Component {
         <div style={{'marginTop': '20px'}}>
           <Transfer value={this.state.transfervalue} filterable data={this.transferdata} onChange={this.handleTranferChange}/>
         </div>
+        <div style={{'margin': '20px'}}>
+          <Dropdown trigger="click" menu={(
+            <Dropdown.Menu>
+              <Dropdown.Item>黄金糕</Dropdown.Item>
+              <Dropdown.Item>狮子头</Dropdown.Item>
+              <Dropdown.Item>螺蛳粉</Dropdown.Item>
+              <Dropdown.Item>双皮奶</Dropdown.Item>
+              <Dropdown.Item>蚵仔煎</Dropdown.Item>
+            </Dropdown.Menu>
+            )}>
+            <Button type="primary">
+              更多菜单<i className="el-icon-caret-bottom el-icon--right"></i>
+            </Button>
+          </Dropdown>
+        </div>
         <div style={{'marginTop': '20px'}}>
           <ColorPicker value={""} onChange={this.onChange} showAlpha/>
         </div>
@@ -427,6 +448,7 @@ export default class Page extends React.Component {
             <Button>hover 激活</Button>
           </PopOver>
         </div>
+        
       </div>
       
     )

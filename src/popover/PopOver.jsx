@@ -24,9 +24,9 @@ export default class PopOver extends Component {
     this.reference = ReactDOM.findDOMNode(this.refs.reference);
     this.element = ReactDOM.findDOMNode(this);
 
-    if (this.reference == null) return;
+    if (this.reference === null) return;
 
-    if (trigger == 'click') {
+    if (trigger === 'click') {
       this.reference.addEventListener('click', () => {
         this.setState({
           showPopper: !this.state.showPopper
@@ -38,7 +38,7 @@ export default class PopOver extends Component {
           showPopper: false,
         })
       })
-    } else if (trigger == 'hover') {
+    } else if (trigger === 'hover') {
       this.reference.addEventListener('mouseenter', this.handleMouseEnter.bind(this));
       this.reference.addEventListener('mouseleave', this.handleMouseLeave.bind(this));
 

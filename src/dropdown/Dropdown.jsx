@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ReactClickOutside from 'react-click-outside';
 import {Component, PropType} from '../../libs/index'
 import Button from '../button'
+require('./Dropdown.scss');
 
 class Dropdown extends Component {
   constructor(props) {
@@ -19,10 +20,10 @@ class Dropdown extends Component {
   }
 
   componentWillUpdate(props, state) {
-    if (state.visible != this.state.visible) {
+    if (state.visible !== this.state.visible) {
       this.refs.dropdown.onVisibleChange(state.visible);
 
-      if (this.props.onVisibleChange) {
+      if (props.onVisibleChange) {
         this.props.onVisibleChange(state.visible);
       }
     }
@@ -34,15 +35,29 @@ class Dropdown extends Component {
 
   initEvent = () => {
     const {trigger, splitButton} = this.props;
-    const dom = ReactDOM.findDOMNode(trigger ? this.refs.trigger : this.refs.default);
+    const dom = ReactDOM.findDOMNode(splitButton ? this.refs.trigger : this.refs.default);
     if (trigger === 'hover') {
       dom.addEventListener('mouseenter', this.show.bind(this));
       dom.addEventListener('mouseleave', this.hide.bind(this));
       let dropdownElm = ReactDOM.findDOMNode(this.refs.dropdown);
       dropdownElm.addEventListener('mouseenter', this.show.bind(this));
       dropdownElm.addEventListener('mouseleave', this.hide.bind(this));
-    } else if (trigger == 'click') {
+    } else if (trigger === 'click') {
       dom.addEventListener('click', this.handleClick.bind(this));
+    }
+  }
+
+  handleMenuItemClick = (command, instance) => {
+    if (this.props.hideOnClick) {
+      this.setState({
+        visible: false
+      });
+    }
+
+    if (this.props.onCommand) {
+      setTimeout(() => {
+        this.props.onCommand(command, instance);
+      });
     }
   }
 
@@ -63,20 +78,6 @@ class Dropdown extends Component {
   handleClickOutside() {
     if (this.state.visible) {
       this.setState({ visible: false });
-    }
-  }
-
-  handleMenuItemClick(command, instance) {
-    if (this.props.hideOnClick) {
-      this.setState({
-        visible: false
-      });
-    }
-
-    if (this.props.onCommand) {
-      setTimeout(() => {
-        this.props.onCommand(command, instance);
-      });
     }
   }
 
@@ -110,6 +111,17 @@ class Dropdown extends Component {
 
 Dropdown.childContextTypes = {
   component: PropType.any,
+}
+
+Dropdown.propTypes = {
+  menuAlign: PropType.oneOf(['start', 'end']),
+  hideOnClick: PropType.bool,
+}
+
+Dropdown.defaultProps = {
+  hideOnClick: true,
+  trigger: 'hover',
+  menuAlign: 'end'
 }
 
 export default ReactClickOutside(Dropdown);

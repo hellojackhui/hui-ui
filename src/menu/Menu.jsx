@@ -30,7 +30,7 @@ export default class Menu extends Component {
     }
   }
   openMenu(index, indexPath) {
-    const {openedMenus} = this.state;
+    let {openedMenus} = this.state;
     if (openedMenus.indexOf(index) !== -1) return;
     if (this.props.uniqueOpened) {
       openedMenus = openedMenus.filter(index => {

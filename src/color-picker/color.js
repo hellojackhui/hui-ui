@@ -130,6 +130,9 @@ const rgb2hsv = function (r, g, b) {
             case b:
                 h = (r - g) / d + 4;
                 break;
+            default:
+                h = (g - b) / d + (g < b ? 6 : 0);
+                break;
         }
         h /= 6;
     }

@@ -7,9 +7,9 @@ import './Picker.scss';
 
 
 class Picker extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
   render() {
     const {color, pickerIsShow, showAlpha, onClear, onPick} = this.props;
     const currentColor = color.value;
@@ -38,7 +38,7 @@ class Picker extends Component {
               onClick={() => onClear()}
             >清空</a>
             <button
-              class="hui-picker-btn"
+              className="hui-picker-btn"
               onClick={() => onPick()}
             >
               确定

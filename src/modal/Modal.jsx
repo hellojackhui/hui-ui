@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, Animate, View, Transition} from '../../libs/index';
+import {Component, PropType, View, Transition} from '../../libs/index';
 import './Modal.scss';
 
 export default class Modal extends Component {
@@ -89,7 +89,7 @@ export default class Modal extends Component {
 
   render() {
     const {visible} = this.state;
-    const {title, size, mask, children, top} = this.props;
+    const {title, size, mask, children} = this.props;
     return (
       <div style={this.styles({
         'zIndex': '-10000',
