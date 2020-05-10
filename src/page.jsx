@@ -174,7 +174,7 @@ export default class Page extends React.Component {
     return (
       <div>
         <div style={{'marginTop': '20px'}}>
-          <Alert title={'123123'} />
+          <Alert title={'123123'} closable/>
         </div>
         <div style={{'marginTop': '20px'}}>
           {/* <Badge isDot>
