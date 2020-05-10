@@ -1,0 +1,114 @@
+---
+name: Layout
+route: /Layout
+---
+
+import {Playground} from 'docz';
+import {Row, Column} from './index.js';
+import '../../style/index.css';
+
+# Layout 布局
+基于Bootstrap栅格系统完成页面布局
+
+## 基本使用
+
+<Playground>
+  <div style={{'margin': '10px','overflow': 'hidden'}}>
+      <Row style={{'marginBottom': '5px'}}>
+        <Column span="24" style={{"background": "#ea4c89", 'height': '40px'}}></Column>
+      </Row>
+      <Row style={{'margin': '5px 0px'}}>
+        <Column span="12" style={{"background": "#fdab03", 'height': '40px'}}></Column>
+        <Column span="12" style={{"background": "#44b4ae", 'height': '40px'}}></Column>
+      </Row>
+      <Row style={{'margin': '5px 0px'}}>
+        <Column span="8" style={{"background": "#fdab03", 'height': '40px'}}></Column>
+        <Column span="8" style={{"background": "#44b4ae", 'height': '40px'}}></Column>
+        <Column span="8" style={{"background": "#1890ff", 'height': '40px'}}></Column>
+      </Row>
+      <Row style={{'margin': '5px 0px'}}>
+        <Column span="6" style={{"background": "#fdab03", 'height': '40px'}}></Column>
+        <Column span="6" style={{"background": "#44b4ae", 'height': '40px'}}></Column>
+        <Column span="6" style={{"background": "#1890ff", 'height': '40px'}}></Column>
+        <Column span="6" style={{"background": "#9254de", 'height': '40px'}}></Column>
+      </Row>
+      <Row style={{'margin': '5px 0px'}}>
+        <Column span="4" style={{"background": "#fdab03", 'height': '40px'}}></Column>
+        <Column span="4" style={{"background": "#44b4ae", 'height': '40px'}} offset={"2"}></Column>
+        <Column span="4" style={{"background": "#1890ff", 'height': '40px'}}></Column>
+        <Column span="4" style={{"background": "#9254de", 'height': '40px'}}></Column>
+        <Column span="5" offset={"1"} style={{"background": "#9e9ea7", 'height': '40px'}}></Column>
+      </Row>
+  </div>
+</Playground>
+
+## Flex布局
+基于css **flex** 布局， Row行组件设置type为flex启动flex布局，而后align属性确定交叉轴方向内容显示，justify属性确定主轴方向内容显示。
+
+<Playground>
+  <div style={{'margin': '10px','overflow': 'hidden'}}>
+      <Row style={{'margin': '5px 0px'}} type="flex" justify={"center"} align={"center"}>
+        <Column span="12" style={{"background": "#ea4c89", 'height': '40px'}}></Column>
+      </Row>
+      <Row style={{'margin': '5px 0px'}} type="flex" justify={"space-between"}>
+        <Column span="8" style={{"background": "#fdab03", 'height': '40px'}}></Column>
+        <Column span="8" style={{"background": "#44b4ae", 'height': '40px'}}></Column>
+      </Row>
+      <Row style={{'margin': '5px 0px'}} type="flex" justify={"space-around"} align={"bottom"}>
+        <Column span="6" style={{"background": "#fdab03", 'height': '40px'}}></Column>
+        <Column span="6" style={{"background": "#44b4ae", 'height': '40px'}}></Column>
+        <Column span="6" style={{"background": "#1890ff", 'height': '40px'}}></Column>
+      </Row>
+  </div>
+</Playground>
+
+## 模块间距
+可以设置每个列内容之间的间距
+
+<Playground>
+  <div style={{'margin': '10px','overflow': 'hidden'}}>
+      <Row style={{'margin': '5px 0px'}} gutter={"20"}>
+        <Column span="8" style={{"background": "#fdab03", 'height': '40px'}}>文本一</Column>
+        <Column span="8" style={{"background": "#44b4ae", 'height': '40px'}}>文本二</Column>
+      </Row>
+  </div>
+</Playground>
+
+## 自适应
+Column组件设置**lg**，**md**， **sm**， **xs**，类比于bootstrap在不同分辨率的column占比进行显示配置
+
+<Playground>
+  <div style={{'margin': '10px','overflow': 'hidden'}}>
+      <Row style={{'margin': '5px 0px'}} gutter={"20"}>
+        <Column span="8" style={{"background": "#1890ff", 'height': '40px'}} lg="5" sm="5">文本三</Column>
+        <Column span="8" style={{"background": "#ea4c89", 'height': '40px'}} offset="2" lg="8" sm="3">文本四</Column>
+      </Row>
+  </div>
+</Playground>
+
+
+## 属性
+
+Row组件设置：
+
+属性名|名称|类型|默认值
+----|---|---|---
+gutter|组件内每个控件间距|string|-
+type|布局方式|string|-
+justify|主轴方向布局方式（适用于type为flex的布局）|'start', 'center', 'end', 'space-between', 'space-around'|-
+align|交叉轴方向布局方式（适用于type为flex的布局）|'middle', 'bottom', 'baselne', 'stretch'|-
+tag|row组件创建的标签类型|string|'div'
+
+Column组件设置：
+
+属性名|名称|类型|默认值
+----|---|---|---
+span|组件占据父级组件宽度比|string, number|-
+offset|组件相对于默认定位占据的偏移数|string, number|-
+push|组件相对于默认定位的左偏移数|string, number|-
+pull|组件相对于默认定位的右偏移数|string, number|-
+xs|在768px尺寸以下页面下组件所占row栅格数|string, number|-
+sm|在768px尺寸以上页面下组件所占row栅格数|string, number|-
+md|在992px尺寸以上页面下组件所占row栅格数|string, number|-
+lg|在1200px尺寸以上页面下组件所占row栅格数|string, number|-
+tag|Column组件创建的标签类型|string|'div'

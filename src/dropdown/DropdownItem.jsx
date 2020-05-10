@@ -15,6 +15,7 @@ class DropdownItem extends Component {
           'is-disabled': disabled,
           'hui-dropdown-item__divided': divided,
         })}
+        onClick={this.handleClick}
       >
         {this.props.children}
       </li>

@@ -54,20 +54,17 @@
 .zoom-in-top-enter {
   transform: scaleY(0);
   opacity: 0;
-
 }
 
 .zoom-in-top-enter-to {
-  transform: scaleY(1);
   opacity: 1;
 }
 
 .zoom-in-top-leave {
-  transform: scaleY(1);
-  /* opacity: 1; */
+  opacity: 1;
 }
 
 .zoom-in-top-leave-to {
   transform: scaleY(0);
-  /* opacity: 0; */
+  opacity: 0;
 }

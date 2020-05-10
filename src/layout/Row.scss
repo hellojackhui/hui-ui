@@ -1,5 +1,6 @@
 .yon-row {
   box-sizing: border-box;
+  overflow: auto;
   &::before, &::after {
     display: table;
   }
@@ -20,6 +21,12 @@
   }
   &--start {
     justify-content: start;
+  }
+  &--baselne {
+    align-items: baseline;
+  }
+  &--stretch {
+    align-items: stretch;
   }
   &--middle {
     align-items: center;

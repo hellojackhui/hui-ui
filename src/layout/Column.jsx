@@ -19,7 +19,6 @@ class Column extends Component {
     let classList = [];
     ['span', 'offset', 'push', 'pull'].forEach((action) => {
       if (this.props[action] >= 0) {
-        console.log(action);
         action !== 'span' ? classList.push(`yon-column-${action}-${this.props[action]}`) : classList.push(`yon-column-${this.props[action]}`)
       }
     });
@@ -36,7 +35,6 @@ class Column extends Component {
         classList.push(`hui-column-${size}-${Number(this.props[size])}`)
       }
     })
-    console.log(classList);
     return React.createElement(tag, {
       className: this.classname('yon-column', classList),
       style: this.styles(this.getStyle())
