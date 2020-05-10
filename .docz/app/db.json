@@ -163,6 +163,46 @@
       }
     },
     {
+      "key": "src/badge/Badge.mdx",
+      "value": {
+        "name": "Badge",
+        "route": "/Badge",
+        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
+        "filepath": "src/badge/Badge.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
+        "slug": "src-badge-badge",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "badge-标记",
+            "depth": 1,
+            "value": "Badge 标记"
+          },
+          {
+            "slug": "基本用法",
+            "depth": 2,
+            "value": "基本用法"
+          },
+          {
+            "slug": "自定义最大值",
+            "depth": 2,
+            "value": "自定义最大值"
+          },
+          {
+            "slug": "自定义标记类型",
+            "depth": 2,
+            "value": "自定义标记类型"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/breadcrumb/BreadCrumb.mdx",
       "value": {
         "name": "BreadCrumb",
@@ -188,6 +228,56 @@
             "slug": "属性",
             "depth": 2,
             "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/button/Button.mdx",
+      "value": {
+        "name": "Button",
+        "route": "/Button",
+        "id": "67a149a3adc4df5bff0c346fd826b652",
+        "filepath": "src/button/Button.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
+        "slug": "src-button-button",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "button-按钮",
+            "depth": 1,
+            "value": "Button 按钮"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/card/Card.mdx",
+      "value": {
+        "name": "Card",
+        "route": "/Card",
+        "id": "8ea95e41a991c0c2aa1539b418d3a658",
+        "filepath": "src/card/Card.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
+        "slug": "src-card-card",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "card-卡片",
+            "depth": 1,
+            "value": "Card 卡片"
           }
         ]
       }
@@ -248,36 +338,31 @@
       }
     },
     {
-      "key": "src/badge/Badge.mdx",
+      "key": "src/collapse/Collapse.mdx",
       "value": {
-        "name": "Badge",
-        "route": "/Badge",
-        "id": "f4fc8ed288f306528df2c4ab615d6cb2",
-        "filepath": "src/badge/Badge.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
-        "slug": "src-badge-badge",
+        "name": "Collapse",
+        "route": "/Collapse",
+        "id": "9f64c87a72c6336f20ec0a488d065ab6",
+        "filepath": "src/collapse/Collapse.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
+        "slug": "src-collapse-collapse",
         "menu": "",
         "headings": [
           {
-            "slug": "badge-标记",
+            "slug": "collapse-折叠面板",
             "depth": 1,
-            "value": "Badge 标记"
+            "value": "Collapse 折叠面板"
           },
           {
-            "slug": "基本用法",
+            "slug": "基础使用",
             "depth": 2,
-            "value": "基本用法"
+            "value": "基础使用"
           },
           {
-            "slug": "自定义最大值",
+            "slug": "允许多个子面板同时展开",
             "depth": 2,
-            "value": "自定义最大值"
-          },
-          {
-            "slug": "自定义标记类型",
-            "depth": 2,
-            "value": "自定义标记类型"
+            "value": "允许多个子面板同时展开"
           },
           {
             "slug": "属性",
@@ -328,21 +413,21 @@
       }
     },
     {
-      "key": "src/button/Button.mdx",
+      "key": "src/i18n/i18n.mdx",
       "value": {
-        "name": "Button",
-        "route": "/Button",
-        "id": "67a149a3adc4df5bff0c346fd826b652",
-        "filepath": "src/button/Button.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
-        "slug": "src-button-button",
+        "name": "i18n",
+        "route": "/i18n",
+        "id": "1482865d4c2cdaa14015455df3b2757c",
+        "filepath": "src/i18n/i18n.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/i18n/i18n.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/i18n/i18n.mdx",
+        "slug": "src-i18n-i18n",
         "menu": "",
         "headings": [
           {
-            "slug": "button-按钮",
+            "slug": "international-国际化",
             "depth": 1,
-            "value": "Button 按钮"
+            "value": "International 国际化"
           },
           {
             "slug": "基本使用",
@@ -350,64 +435,9 @@
             "value": "基本使用"
           },
           {
-            "slug": "属性",
+            "slug": "使用说明",
             "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/collapse/Collapse.mdx",
-      "value": {
-        "name": "Collapse",
-        "route": "/Collapse",
-        "id": "9f64c87a72c6336f20ec0a488d065ab6",
-        "filepath": "src/collapse/Collapse.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
-        "slug": "src-collapse-collapse",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "collapse-折叠面板",
-            "depth": 1,
-            "value": "Collapse 折叠面板"
-          },
-          {
-            "slug": "基础使用",
-            "depth": 2,
-            "value": "基础使用"
-          },
-          {
-            "slug": "允许多个子面板同时展开",
-            "depth": 2,
-            "value": "允许多个子面板同时展开"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/card/Card.mdx",
-      "value": {
-        "name": "Card",
-        "route": "/Card",
-        "id": "8ea95e41a991c0c2aa1539b418d3a658",
-        "filepath": "src/card/Card.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
-        "slug": "src-card-card",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "card-卡片",
-            "depth": 1,
-            "value": "Card 卡片"
+            "value": "使用说明"
           }
         ]
       }
@@ -568,36 +598,6 @@
       }
     },
     {
-      "key": "src/i18n/i18n.mdx",
-      "value": {
-        "name": "i18n",
-        "route": "/i18n",
-        "id": "1482865d4c2cdaa14015455df3b2757c",
-        "filepath": "src/i18n/i18n.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/i18n/i18n.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/i18n/i18n.mdx",
-        "slug": "src-i18n-i18n",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "international-国际化",
-            "depth": 1,
-            "value": "International 国际化"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "使用说明",
-            "depth": 2,
-            "value": "使用说明"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/layout/Layout.mdx",
       "value": {
         "name": "Layout",
@@ -718,6 +718,46 @@
       }
     },
     {
+      "key": "src/modal/Modal.mdx",
+      "value": {
+        "name": "Modal",
+        "route": "/Modal",
+        "id": "63085b7aa55ad1ac672e92f757a4bd90",
+        "filepath": "src/modal/Modal.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
+        "slug": "src-modal-modal",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "modal-模态框",
+            "depth": 1,
+            "value": "Modal 模态框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "锁定页面滚动",
+            "depth": 2,
+            "value": "锁定页面滚动"
+          },
+          {
+            "slug": "设置阴影",
+            "depth": 2,
+            "value": "设置阴影"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/notification/Notification.mdx",
       "value": {
         "name": "Notification",
@@ -743,6 +783,36 @@
             "slug": "自定义高度",
             "depth": 2,
             "value": "自定义高度"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/popover/PopOver.mdx",
+      "value": {
+        "name": "PopOver",
+        "route": "/PopOver",
+        "id": "c984d807f2a152177f0ed734b18c0c49",
+        "filepath": "src/popover/PopOver.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/popover/PopOver.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/popover/PopOver.mdx",
+        "slug": "src-popover-pop-over",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "popover-弹出框",
+            "depth": 1,
+            "value": "PopOver 弹出框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
           },
           {
             "slug": "属性",
@@ -854,76 +924,6 @@
       }
     },
     {
-      "key": "src/popover/PopOver.mdx",
-      "value": {
-        "name": "PopOver",
-        "route": "/PopOver",
-        "id": "c984d807f2a152177f0ed734b18c0c49",
-        "filepath": "src/popover/PopOver.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/popover/PopOver.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/popover/PopOver.mdx",
-        "slug": "src-popover-pop-over",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "popover-弹出框",
-            "depth": 1,
-            "value": "PopOver 弹出框"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/modal/Modal.mdx",
-      "value": {
-        "name": "Modal",
-        "route": "/Modal",
-        "id": "63085b7aa55ad1ac672e92f757a4bd90",
-        "filepath": "src/modal/Modal.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
-        "slug": "src-modal-modal",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "modal-模态框",
-            "depth": 1,
-            "value": "Modal 模态框"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "锁定页面滚动",
-            "depth": 2,
-            "value": "锁定页面滚动"
-          },
-          {
-            "slug": "设置阴影",
-            "depth": 2,
-            "value": "设置阴影"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/switch/Switch.mdx",
       "value": {
         "name": "Switch",
@@ -979,6 +979,46 @@
             "slug": "回调函数",
             "depth": 2,
             "value": "回调函数"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/tabs/Tabs.mdx",
+      "value": {
+        "name": "Tabs",
+        "route": "/Tabs",
+        "id": "71b9e443c989adc9f3fbfeb5d49081e6",
+        "filepath": "src/tabs/Tabs.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/tabs/Tabs.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/tabs/Tabs.mdx",
+        "slug": "src-tabs-tabs",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "tabs-标签栏",
+            "depth": 1,
+            "value": "Tabs 标签栏"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "可添加",
+            "depth": 2,
+            "value": "可添加"
+          },
+          {
+            "slug": "可关闭",
+            "depth": 2,
+            "value": "可关闭"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -1094,46 +1134,6 @@
             "slug": "基本使用",
             "depth": 2,
             "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/tabs/Tabs.mdx",
-      "value": {
-        "name": "Tabs",
-        "route": "/Tabs",
-        "id": "71b9e443c989adc9f3fbfeb5d49081e6",
-        "filepath": "src/tabs/Tabs.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/tabs/Tabs.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/tabs/Tabs.mdx",
-        "slug": "src-tabs-tabs",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "tabs-标签栏",
-            "depth": 1,
-            "value": "Tabs 标签栏"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "可添加",
-            "depth": 2,
-            "value": "可添加"
-          },
-          {
-            "slug": "可关闭",
-            "depth": 2,
-            "value": "可关闭"
           },
           {
             "slug": "属性",
@@ -1577,25 +1577,6 @@
           "methods": [
             {
               "name": "onClose",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onLeave",
               "docblock": null,
               "modifiers": [],
               "params": [],
@@ -3160,6 +3141,50 @@
               },
               "required": false,
               "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/layout/Column.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Column",
+          "methods": [
+            {
+              "name": "getStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Column",
+          "props": {
+            "span": {
+              "defaultValue": {
+                "value": "24",
+                "computed": false
+              },
+              "required": false
+            },
+            "tag": {
+              "defaultValue": {
+                "value": "\"div\"",
+                "computed": false
+              },
+              "required": false
+            }
+          },
+          "context": {
+            "gutter": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
+              },
+              "required": false
             }
           }
         }
@@ -7875,50 +7900,6 @@
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/layout/Column.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Column",
-          "methods": [
-            {
-              "name": "getStyle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Column",
-          "props": {
-            "span": {
-              "defaultValue": {
-                "value": "24",
-                "computed": false
-              },
-              "required": false
-            },
-            "tag": {
-              "defaultValue": {
-                "value": "\"div\"",
-                "computed": false
-              },
-              "required": false
-            }
-          },
-          "context": {
-            "gutter": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.number, PropType.string])"
               },
               "required": false
             }

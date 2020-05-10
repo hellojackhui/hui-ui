@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 /coverage
+/dist
 .pnp.js
 
 # testing
@@ -28,3 +29,4 @@ yarn-error.log*
 /.docz/node_modules/
 /.docz/dist/
 /.docz/public/
+/.docz/.cache/
