@@ -1,5 +1,5 @@
 {
-  "name": "hui-ui",
+  "name": "jackhui-ui",
   "version": "0.1.0",
   "license": "MIT",
   "private": false,
@@ -18,13 +18,13 @@
     "hellojackhui"
   ],
   "description": "A UI Design language and React Component implementation",
-  "homepage": "https://github.com/hellojackhui/hui-ui",
+  "homepage": "https://github.com/hellojackhui/jackhui-ui",
   "bugs": {
-    "url": "https://github.com/hellojackhui/hui-ui/issues"
+    "url": "https://github.com/hellojackhui/jackhui-ui/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hellojackhui/hui-ui.git"
+    "url": "git+https://github.com/hellojackhui/jackhui-ui.git"
   },
   "contributors": [
     "hellojackhui"

@@ -1,3 +1,6 @@
 .*
 test
 build
+.docz
+coverage
+dist

@@ -1,15 +1,15 @@
 <!-- 临时拿一个图标充数 -->
 
-<p align="center"><a href="https://www.baidu.com"><img alt="hui-ui logo" src="https://ftp.bmp.ovh/imgs/2020/03/0de4eeb164d6fedb.jpg"/></a></p>
+<p align="center"><a href="https://www.baidu.com"><img alt="jackhui-ui logo" src="https://ftp.bmp.ovh/imgs/2020/03/0de4eeb164d6fedb.jpg"/></a></p>
 <p align="center"></p>
 
-# hui-ui
+# jackhui-ui
 
-`hui-ui`是一款基于[React](https://reactjs.org/)开发的组件库,组件库提供了丰富的通用性组件，可以提升团队组件化开发的效率，提升用户体验。
+`jackhui-ui`是一款基于[React](https://reactjs.org/)开发的组件库,组件库提供了丰富的通用性组件，可以提升团队组件化开发的效率，提升用户体验。
 
 ## 组件库文档地址(持续更新中)
 
-[https://hui-ui.netlify.app](https://hui-ui.netlify.app)
+[https://jackhui-ui.netlify.app](https://jackhui-ui.netlify.app)
 
 ## 开发计划
 
@@ -33,8 +33,8 @@
 ## 参与贡献
 非常欢迎你的贡献，你可以通过以下方式共同建设组件库
 
-- 通过[issue](https://github.com/hellojackhui/hui-ui/issues)进行提问
-- 通过提交[request](https://github.com/hellojackhui/hui-ui/pulls)改进代码
+- 通过[issue](https://github.com/hellojackhui/jackhui-ui/issues)进行提问
+- 通过提交[request](https://github.com/hellojackhui/jackhui-ui/pulls)改进代码
 
 ## 文档更新进度
 
