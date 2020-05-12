@@ -1,0 +1,14 @@
+.hui-table-action {
+  .hui-button {
+    height: 26px;
+    line-height: 26px;
+    margin-top: 7px;
+    background: #505F79;
+    color: #fff;
+    padding: 0 12px;
+    font-size: 12px;
+    &:not(:last-of-type(1)) {
+      margin-right: 10px;
+    }
+  }
+}
