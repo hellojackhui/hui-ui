@@ -73,23 +73,23 @@ export default class Switch extends Component {
       <label style={this.styles()} className={this.classname('hui-switch')}>
         <input 
           type="checkbox" 
-          className={this.classname('hui-switch__input')}
+          className={this.classnames('hui-switch__input')}
           disabled={disabled}
           checked={checked}
           onChange={this.onChange}
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         />
-        <span className={this.classname('hui-switch-trunk', {
+        <span className={this.classnames('hui-switch-trunk', {
           'is-focus': focus,
           'is-disabled': disabled
         })} style={{
           'backgroundColor': this.currentBackground(),
           'width': this.currentWidth(),
         }}>
-          <span className={this.classname('hui-switch-thumb')} />
-          <span className={this.classname('hui-switch-title', 'hui-switch-title--prev')}>{this.switchTitle(true)}</span>
-          <span className={this.classname('hui-switch-title', 'hui-switch-title--next')}>{this.switchTitle(false)}</span>
+          <span className={this.classnames('hui-switch-thumb')} />
+          <span className={this.classnames('hui-switch-title', 'hui-switch-title--prev')}>{this.switchTitle(true)}</span>
+          <span className={this.classnames('hui-switch-title', 'hui-switch-title--next')}>{this.switchTitle(false)}</span>
         </span>
       </label>
     )

@@ -234,7 +234,7 @@ export default class Table extends Component {
                     const {title, key, disabled, checked, __w_index__: index} = item;
                     return (
                       <div key={key} className="hui-table-filter__list-item">
-                        <div className="item-left">
+                        <div className="item-left" title={title} onClick={e => {this.onCustomClickHandler(e, index)}}>
                           <Checkbox 
                             disabled={disabled}
                             checked={checked}
@@ -568,6 +568,11 @@ export default class Table extends Component {
   // onResize
   onResize = (index) => {
 
+  }
+
+  // 自定义表头点击事件
+  onCustomClickHandler = (e, index) => {
+    
   }
 
 
