@@ -19,7 +19,7 @@ export default class PopOver extends Component {
     }
   }
   componentDidMount() {
-    const {trigger} = this.props;
+    const {trigger, visibleChange} = this.props;
     let popper = this.refs.popper;
     this.reference = ReactDOM.findDOMNode(this.refs.reference);
     this.element = ReactDOM.findDOMNode(this);
@@ -30,6 +30,8 @@ export default class PopOver extends Component {
       this.reference.addEventListener('click', () => {
         this.setState({
           showPopper: !this.state.showPopper
+        }, () => {
+          visibleChange && visibleChange(this.state.showPopper)
         })
       })
       document.addEventListener('click', (e) => {
@@ -117,6 +119,7 @@ PopOver.propTypes = {
   title: PropType.string,
   content: PropType.oneOf([PropType.node, PropType.string]),
   visible: PropType.bool,
+  visibleChange: PropType.func,
   popperclass: PropType.string,
   transition: PropType.string,
   width: PropType.oneOf([PropType.string, PropType.number]),
