@@ -164,8 +164,6 @@ export default class Table extends Component {
   }
   /**
    * @description: 备份表格宽度相关数据
-   * @param {tableWidth, holdWidth}
-   * @return:
    */
   backupTableDatas = (tableWidth, holdWidth) => {
     let { backupTableOptions } = this;
@@ -291,7 +289,7 @@ export default class Table extends Component {
           columns.map(({item, index}) => {
             const {title, key, width, fixed, min = 100, checked} = item;
             if (!checked) return null;
-            const {wrapperClass, wrapperStyle, contentClass} = this.getHeaderColClass(item, columns, index);
+            const {wrapperClass, wrapperStyle, contentClass} = this.getTableColClass(item, columns, index);
             let content = (
               <div className={this.classnames(contentClass)} title={title}>
                 {title}
@@ -378,14 +376,117 @@ export default class Table extends Component {
                       this.onRowClickHandler(e, item);
                     }}
                   >
-                    'body'
+                    {
+                      columns.map((col, index) => {
+                        const {key, checked: colChecked, fixed, render} = col;
+                        if (!colChecked) {
+                          return;
+                        }
+                        let {wrapperClass, wrapperStyle, contentClass} = this.getTableColClass(col, columns, index);
+                        let content = (
+                          <span className={this.classnames(contentClass)} title={item[key]} >
+                            {item[key]}
+                          </span>
+                        )
+                        if (render && typeof render === 'function') {
+                          content = render(item, __w_index__);
+                          if (typeof content === 'string') {
+                            content = (
+                              <span className={this.classnames(contentClass)} title={content}>
+                                {content}
+                              </span>
+                            )
+                          } else {
+                            wrapperClass[`hui-table-cell-padding-none`] = true;
+                          }
+                        }
+                        if (key === 'checkbox' || key === 'radio') {
+                          content = (
+                            <span className={this.classnames(contentClass)}>
+                              <Checkbox checked={checked} disabled={disabled} />
+                            </span>
+                          )
+                        }
+                        if (key === EXPAND_CELL) {
+                          const iconClass = {
+                            ['fold_icon']: __expanded__
+                          };
+                          content = (
+                            <Button icon="unfold" className={this.classnames(iconClass)} onClick={(e) => this.toggleExpand(e, item) } />
+                          )
+                        }
+                        fixed && (wrapperStyle[fixed] = this.computeFixedLocation(fixed, columns, index));
+                        return (
+                          <div
+                            key={key}
+                            className={this.classnames(wrapperClass)}
+                            style={wrapperStyle}
+                          >
+                            { key !== HOLD_CELL_KEY && content}
+                          </div>
+                        )
+                      })
+                    }
+                    {__hover__ && this.renderBodyActions(item, __w_index__)}
                   </div>
+                  {__expanded__ && this.renderExpandRow(item, __w_index__)}
                 </React.Fragment>
               )
             })
           }
           
         </InfiniteScroll>
+      </div>
+    )
+  }
+
+  // 渲染行操作
+  renderBodyActions = (item, index) => {
+    const {actionBarOffset, isShowActions} = this.state;
+    const {hoverContent} = this.props.rowHover;
+    const {checked, __hover__} = item;
+    let classNames = {
+      'hui-table-hover-action-content': true,
+      'hide-content': !isShowActions
+    }
+    return (
+      <div
+        className={this.classnames('hui-table-hover-action', {
+          'row-selected': checked
+        })}
+        style={{
+          'transform': `translateX(-${actionBarOffset + 10}px)`,
+          'display': __hover__ ? 'block' : 'none' 
+        }}
+      >
+        <div className={this.classnames(classNames)}>
+          {
+            hoverContent(item, index)
+          }
+        </div>
+        <div className="hui-table-hover-action-fold">
+          <Button
+            onClick={this.onClickFoldHandler}
+            title={isShowActions ? '收起' : '展开'}
+          >
+            {
+              isShowActions ? '>>' : '<<'
+            }
+          </Button>
+        </div>
+      </div>
+    )
+  }
+
+  // 渲染扩展行
+  renderExpandRow = (item, index) => {
+    const { expandedRowRender } = this.props.expandable || {};
+    if (typeof expandedRowRender !== 'function') {
+      return null;
+    }
+    return (
+      <div className="hui-table-expand" expand-row-key={`${this.tableUniqueId}-expand`}>
+        {expandedRowRender(item, index)}
       </div>
     )
   }
@@ -475,7 +576,7 @@ export default class Table extends Component {
   }
 
   // 获取表头header的class
-  getHeaderColClass = (item, columns, index) => {
+  getTableColClass = (item, columns, index) => {
     const {width, style, align: textAlign, fixed, key} = item;
     let wrapperStyle = {
       width,
@@ -572,9 +673,88 @@ export default class Table extends Component {
 
   // 自定义表头点击事件
   onCustomClickHandler = (e, index) => {
-    
+    const {columns, dataSource} = this.state;
+    const { scrollLeft, clientWidth: scrollClientWidth } = this.scrollContainer.current;
+    let currentCol = columns[index];
+    let {checked, width: currentColWidth, disabled} = currentCol;
+    let tableContentWidth = 0;
+    let holdColIndex;
+    columns.forEach((column, index) => {
+      let {width, checked, key} = column;
+      if (key === HOLD_CELL_KEY) {
+        holdColIndex = index;
+      } else if (checked) {
+        tableContentWidth += width;
+      }
+    })
+    // 滚动条宽度
+    let scrollBarWidth = this.judgeParallelScroll(dataSource.length) ? this.scrollBarWidth : 0;
+    // 占位符宽度
+    let holdColWidth = columns[holdColIndex].width;
+    // 表体可视宽度（不含滚动条）
+    let tableClientWidth = this.tableClientWidth - scrollBarWidth;
+    let tableWidth = 0;
+    if (!checked) {
+      if (holdColWidth > currentColWidth) {
+        holdColWidth -= currentColWidth;
+        tableWidth = tableClientWidth;
+      } else {
+        holdColWidth = 0;
+        tableWidth = tableContentWidth + currentColWidth;
+      }
+    } else {
+      // 隐藏
+      if (holdColWidth === 0) {
+        if (tableContentWidth - tableClientWidth >= currentColWidth) {
+          holdColWidth = 0;
+          tableWidth = tableContentWidth - currentColWidth;
+        } else {
+          holdColWidth = tableClientWidth - (tableContentWidth - currentColWidth);
+          tableWidth = tableClientWidth;
+        }
+      } else {
+        holdColWidth += currentColWidth;
+        tableWidth = tableClientWidth;
+      }
+    }
+    columns[holdColIndex].width = holdColWidth;
+    currentCol.checked = !checked;
+    // 备份宽度
+    this.backupTableDatas(tableWidth, holdColWidth);
+    // 缓存表头信息
+    this.saveCustomColTable(columns);
+    this.setState({
+      columns,
+      tableWidth,
+      actionBarOffset: tableWidth - scrollClientWidth - scrollLeft,
+    });
+    stopBubble(e);
   }
 
+  /**
+   * @description: 缓存自定义表头列信息
+   */
+  saveCustomColTable = columns => {
+    if (!this.verifyCustomParam()) {
+      return;
+    }
+    columns = columns.filter(({key}) => key !== 'checkbox' && key !== 'radio' && key !== EXPAND_CELL && key !== HOLD_CELL_KEY);
+    let localJson = JSON.parse(localStorage.getItem(CUSTOM_TABLE_KEY) || '{}');
+    localJson[this.props.tableUniqueId] = {version: TABLE_VERSION, columns};
+    localStorage.setItem(CUSTOM_TABLE_KEY, JSON.stringify(localJson));
+  }
+
+  /**
+   * @description: 清除自定义表头列信息,避免localStorage一直缓存
+   */
+  clearCustomColTable = () => {
+    if (!this.verifyCustomParam()) {
+      return;
+    }
+    let localJson = JSON.parse(localStorage.getItem(CUSTOM_TABLE_KEY) || '{}');
+    delete localJson[this.props.tableUniqueId];
+    localStorage.setItem(CUSTOM_TABLE_KEY, JSON.stringify(localJson));
+  }
 
 
   render() {
