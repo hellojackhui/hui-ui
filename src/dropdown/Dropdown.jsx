@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import debounce from 'lodash/debounce';
 import ReactClickOutside from 'react-click-outside';
 import {Component, PropType} from '../../libs/index'
 import Button from '../button'
@@ -11,6 +12,10 @@ class Dropdown extends Component {
     this.state = {
       visible: false
     }
+    this.show = debounce(this.show, 200, {
+      leading: true,
+      trailing: false
+    });
   }
 
   getChildContext() {
@@ -69,7 +74,7 @@ class Dropdown extends Component {
 
   show() {
     clearTimeout(this.timeout);
-    this.timeout = setTimeout(() => this.setState({ visible: true }), 250);
+    this.timeout = setTimeout(() => this.setState({ visible: true }), 50);
   }
 
   hide() {

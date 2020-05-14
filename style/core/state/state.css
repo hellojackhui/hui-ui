@@ -13,8 +13,9 @@
 }
 
 .hui-zoom-in-top-enter-active, .zoom-in-top-enter-active, .hui-zoom-in-top-leave-active, .zoom-in-top-leave-active  {
-  transition: all .4s linear; 
   transform-origin: center top;
+  transition-property: opacity, transform;
+  transition-duration: .1s;
 }
 
 .fade-in-linear-enter {
@@ -58,6 +59,7 @@
 
 .zoom-in-top-enter-to {
   opacity: 1;
+  transition-timing-function: cubic-bezier(.08, .82, .17, 1);
 }
 
 .zoom-in-top-leave {
@@ -67,4 +69,5 @@
 .zoom-in-top-leave-to {
   transform: scaleY(0);
   opacity: 0;
+  transition-timing-function: cubic-bezier(.6, .04, .98, .34);
 }
