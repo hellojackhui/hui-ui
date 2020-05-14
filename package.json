@@ -121,6 +121,10 @@
       "jsx-a11y/anchor-is-valid": "off"
     }
   },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
   "browserslist": {
     "production": [
       ">0.2%",

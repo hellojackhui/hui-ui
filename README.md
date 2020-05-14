@@ -5,6 +5,33 @@
 
 # hui-ui
 
+<p align="center">
+
+  <a href="https://github.com/hellojackhui/hui-ui" rel="nofollow" target="_blank">
+    <img alt="NPM" src="https://img.shields.io/npm/l/hui-ui">
+  </a>
+
+  <a href="https://nodejs.org/en/" rel="nofollow" target="_blank">
+    <img alt="node-current" src="https://img.shields.io/node/v/v">
+  </a>
+
+  <a href="https://github.com/facebook/react" rel="nofollow" target="_blank">
+    <img alt="react-version" src="https://img.shields.io/badge/react-16.11.0-brightgreen">
+  </a>
+
+  <a href="https://github.com/webpack/webpack" rel="nofollow" target="_blank">
+    <img alt="webpack version" src="https://img.shields.io/badge/webpack-4.41.5-brightgreen">
+  </a>
+
+  <a href="https://github.com/hellojackhui/hui-ui" rel="nofollow" target="_blank">
+    <img alt="GitHub followers" src="https://img.shields.io/github/followers/hellojackhui?style=social">
+  </a>
+
+  <a href="https://github.com/hellojackhui/hui-ui" rel="nofollow" target="_blank">
+    <img alt="build passing" src="https://img.shields.io/badge/build-passing-brightgreen">
+  </a>
+  
+
 `hui-ui`是一款基于[React](https://reactjs.org/)开发的组件库,组件库提供了丰富的通用性组件，可以提升团队组件化开发的效率，提升用户体验。
 
 ## 组件库文档地址(持续更新中)
