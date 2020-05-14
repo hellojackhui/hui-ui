@@ -434,7 +434,8 @@
 .hui-icon-minus-circle:before {
   content: "\f056";
 }
-.hui-icon-times-circle:before {
+.hui-icon-times-circle:before
+.hui-icon-error-circle:before {
   content: "\f057";
 }
 .hui-icon-check-circle:before {
@@ -489,7 +490,8 @@
 .hui-icon-asterisk:before {
   content: "\f069";
 }
-.hui-icon-exclamation-circle:before {
+.hui-icon-exclamation-circle:before
+.hui-icon-info-circle:before {
   content: "\f06a";
 }
 .hui-icon-gift:before {

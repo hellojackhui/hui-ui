@@ -29,6 +29,7 @@ import ColorPicker from './color-picker';
 import Modal from './modal';
 import PopOver from './popover';
 import Dropdown from './dropdown';
+import Result from './Result';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -448,7 +449,19 @@ export default class Page extends React.Component {
             <Button>hover 激活</Button>
           </PopOver>
         </div>
-        
+        <div style={{'margin': '20px'}}>
+        <Result
+          status="smile"
+          title="Successfully Purchased Cloud Server ECS!"
+          subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+          extra={[
+            <Button type="primary" key="console">
+              Go Console
+            </Button>,
+            <Button key="buy">Buy Again</Button>,
+          ]}
+        />
+        </div>
       </div>
       
     )
