@@ -31,6 +31,12 @@ class Dropdown extends Component {
 
   componentDidMount() {
     this.initEvent();
+    // 处理dropdown因为overflow导致被覆盖的问题
+    this.setDropdownElement();
+  }
+
+  componentWillUnmount() {
+    this.removeDropdownElement();
   }
 
   initEvent = () => {
@@ -79,6 +85,16 @@ class Dropdown extends Component {
     if (this.state.visible) {
       this.setState({ visible: false });
     }
+  }
+
+  setDropdownElement = () => {
+    let ele = ReactDOM.findDOMNode(this.refs.dropdown);
+    document.body.appendChild(ele);
+  }
+
+  removeDropdownElement = () => {
+    let ele = ReactDOM.findDOMNode(this.refs.dropdown);
+    document.body.removeChild(ele);
   }
 
   render() {
