@@ -1,0 +1,66 @@
+---
+name: result
+route: /result
+---
+
+import {Playground} from 'docz';
+import Result from './index.js';
+import Button from '../button/index.js';
+import '../../style/index.css';
+
+# Result 结果显示
+对具体的业务操作返回不同状态的结果提示
+
+## 基本使用
+
+<Playground>
+  <Result 
+    status="success"
+    title="成功"
+    subTitle="您已经成功完成发票开具，请稍等"
+    extra={[
+      <Button type="primary" key="console">
+        返回主页
+      </Button>,
+      <Button key="buy">再次开具</Button>,
+    ]}
+  />
+</Playground>
+
+## 自定义设置
+可以根据需要的状态设置显示
+
+<Playground>
+  <Result 
+    status="error"
+    title="失败"
+    subTitle="发票开具失败了，请重试"
+    extra={[
+      <Button type="primary" key="console">
+        返回主页
+      </Button>,
+      <Button key="buy">再次开具</Button>,
+    ]}
+  />
+  <Result 
+    status="info"
+    title="提示"
+    subTitle="您是否继续该操作"
+    extra={[
+      <Button type="primary" key="console">
+        是
+      </Button>,
+      <Button key="buy">否</Button>,
+    ]}
+  />
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+title|标题|string|-
+subTitle|副标题|string|-
+status|状态|['success', 'info', 'warning', 'error']|-
+icon|自定义图标|string|-
+extra|底部拓展|node|-

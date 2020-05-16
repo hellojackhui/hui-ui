@@ -13,7 +13,44 @@ function getScrollbarWidth() {
   return scrollbarWidth; //返回滚动条宽度
 }
 
+function isSameJSON(json1, json2) {
+  if (json1 !== json2) {
+    if (Array.isArray(json1) && Array.isArray(json2)) {
+      if (json1.length != json2.length) {
+        return false;
+      }
+      for (let i = 0; i < json1.length; i++) {
+        if (!isSameJSON(json1[i], json2[i])) {
+          return false;
+        }
+      }
+    } else if (isObject(json1) && isObject(json2)) {
+      let keys = Object.keys(json1);
+      if (keys.length != Object.keys(json2).length) {
+        return false;
+      }
+      for (let i = 0; i < keys.length; i++) {
+        let key = keys[i];
+        if (!isSameJSON(json1[key], json2[key])) {
+          return false;
+        }
+      }
+    } else if(typeof json1 === 'function' && typeof json2 === 'function') {
+      let fnRe = /^(function)?\s*[\w$]*/;
+      return (json1.toString().replace(fnRe, '') === json2.toString().replace(fnRe, ''));
+    } else {
+      return false;
+    }
+  }
+  return true;
+}
+
+function createUniqueId() {
+  return String(Math.random()).replace('0.', 'id');
+}
 
 export {
   getScrollbarWidth,
+  isSameJSON,
+  createUniqueId,
 }

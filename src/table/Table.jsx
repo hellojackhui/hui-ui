@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, View} from '../../libs/index';
+import {Component, PropTypes} from '../../libs/index';
 import {Resizable} from 'react-resizable';
 import Checkbox from '../checkbox/index';
 import Input from '../input/index';
@@ -8,7 +8,11 @@ import Button from '../button/index';
 import Popover from '../popover/index';
 import InfiniteScroll from './infiniteScroll/index';
 import {isEqual, debounce, cloneDeep} from 'lodash';
-import {getScrollbarWidth} from './utils';
+import {getScrollbarWidth, isSameJSON, createUniqueId} from './utils';
+import 'react-resizable/css/styles.css';
+import Icon from '../icon';
+import i18n from '../i18n';
+import './Table.scss';
 
 const debounceOptions = {
   delay: 100,
@@ -18,7 +22,7 @@ const debounceOptions = {
   }
 }
 // 占位符
-const HOLD_CELL_PLACEHOLDER = 'cell_placeholder';
+const HOLD_CELL_KEY = 'cell_placeholder';
 const EXPAND_CELL = 'expand_cell';
 const CUSTOM_TABLE_KEY = `abc_custom_table_key`;
 const TABLE_VERSION = 'v1.0.0';
@@ -49,12 +53,12 @@ export default class Table extends Component {
       // 是否收起操作bar
       isShowActions: true,
       // 是否全选
-      isCheckAll: false
+      isCheckedAll: false
     }
     // 表格唯一id
-    this.tableUniqueId = props.tableUniqueId;
+    this.tableUniqueId = props.tableUniqueId || createUniqueId();
     // 缓存表头信息
-    this.cacheColumns = cloneDeep(props.columns);
+    this.columns = cloneDeep(props.columns);
     // 行高
     this.rowHeight = props.rowHeight;
     // 表格容器
@@ -81,14 +85,32 @@ export default class Table extends Component {
     }
     this.windowResizeHandler = debounce(this.windowResizeHandler, debounceOptions.delay, debounceOptions.options);
   }
-  componentWillReceiveProps(nextprops) {
+  componentWillReceiveProps(nextProps) {
     this.isReceiveProps = true;
+    let { columns, dataSource } = this.props;
+    let { columns: nextColumns, dataSource: nextDataSource } = nextProps;
+    if (!isEqual(dataSource, nextDataSource)) {
+      this.handleListKey(nextDataSource.slice());
+      this.resizeTableWidth(this.state.columns, nextDataSource.length);
+    }
+    if (!isSameJSON(columns, nextColumns)) {
+      // 备份表格列信息
+      this.columns = cloneDeep(nextColumns);
+      // 先读取缓存表头信息
+      nextColumns = this.getCustomColTable(cloneDeep(nextColumns));
+      // 初始化表格列信息
+      this.initTableColumn(cloneDeep(nextColumns), () => {
+        // 初始化检查固定列状态
+        this.initFixedColState();
+      });
+    }
   }
   shouldComponentUpdate(nextprops) {
     if (this.isReceiveProps) {
       this.isReceiveProps = false;
-      return isEqual(nextprops, this.props) || nextprops.forceRender;
+      return !isEqual(nextprops, this.props) || !!nextprops.forceRender;
     }
+    return true;
   }
   componentDidMount() {
     setTimeout(() => {
@@ -108,6 +130,104 @@ export default class Table extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', this.windowResizeHandler, false);
   }
+
+  initTableColumn = (columns, callback) => {
+    let {rowSelection, expandable, dataSource} = this.props;
+    rowSelection && (columns = this.addSelectCell(columns, rowSelection));
+    expandable && (columns = thia.addExpandCell(columns, expandable));
+    columns = this.addCellPlaceholder(columns);
+    let initTableWidth = 0;
+    const tableRealWidth = this.tableClientWidth - this.scrollBarWidth - 
+      (rowSelection ? columns.filter(({key}) => key === 'checkbox' || key === 'radio')[0].width : 0) - 
+      (expandable ? columns.filter(({key}) => key === EXPAND_CELL)[0].width : 0);
+    columns.forEach((col, index) => {
+      let {width = 150, checked} = col;
+      if (String(width).indexOf('%') !== -1) {
+        width = parseInt((parseFloat(width / 100) * tableRealWidth));
+      }
+      col.width = width;
+      col.__w_index__ = index;
+      checked === true && (initTableWidth += width);
+    });
+    let diffValue = 0;
+    // 表格宽度大于表头宽度，占位列补位
+    if (this.tableClientWidth > initTableWidth) {
+      let scrollBarWidth = this.judgeParallelScroll(dataSource.length) ? this.scrollBarWidth : 0;
+      diffValue = this.tableClientWidth - initTableWidth - scrollBarWidth;
+      let colPlaceholder = columns.filter(item => item.key === HOLD_CELL_KEY)[0];
+      colPlaceholder.width = diffValue;
+      initTableWidth = this.tableClientWidth - scrollBarWidth;
+    }
+    this.backupTableDatas(initTableWidth, diffValue);
+    this.setState({
+      tableWidth: initTableWidth,
+      columns,
+    }, () => {
+      callback()
+    })
+  }
+
+  // 初始化检查是否有横向滚动条
+  initFixedColState = () => {
+    let { scrollLeft, scrollWidth, clientWidth } = this.scrollContainer.current;
+    if (scrollLeft < scrollWidth - clientWidth) {
+      this.setState({
+        fixedRightFirst: true,
+        fixedLeftLast: false,
+        actionBarOffset: scrollWidth - clientWidth - scrollLeft
+      });
+    } else {
+      this.setState({
+        actionBarOffset: scrollWidth - clientWidth - scrollLeft
+      });
+    }
+  };
+
+  addSelectCell = (columns, rowSelection) => {
+    let {type = 'checkbox', fixed = true, width = 50} = rowSelection;
+    columns.unshift({
+      key: type,
+      width,
+      fixed: fixed === true ? 'left' : undefined,
+      checked: true,
+      disabled: true,
+    });
+    return columns;
+  }
+
+  addExpandCell = (columns, expandable) => {
+    let { width = 50, fixed = true } = expandable;
+    columns.unshift({
+      key: EXPAND_CELL,
+      width,
+      fixed: fixed === true ? 'left' : undefined,
+      checked: true,
+      disabled: true,
+    });
+    return columns;
+  }
+
+  addCellPlaceholder = (columns) => {
+    let cell_placeholder = {
+      key: HOLD_CELL_KEY,
+      width: 0,
+      checked: true,
+      disabled: true
+    };
+    for (let i = columns.length - 1; i >= 0; i--) {
+      let { fixed } = columns[i];
+      let { fixed: preFixed } = columns[i - 1] || {};
+      if (fixed !== 'right') {
+        columns.splice(i + 1, 0, cell_placeholder);
+        break;
+      } else if (fixed === 'right' && preFixed !== 'right') {
+        columns.splice(i, 0, cell_placeholder);
+        break;
+      }
+    }
+    return columns;
+  }
+
   windowResizeHandler = (e) => {
     let {current} = this.scrollContainer;
     if (!current) {
@@ -174,7 +294,7 @@ export default class Table extends Component {
    * 为数据添加自有属性
    */
   handleListKey = (nextdataSource) => {
-    const {dataSource, isCheckAll} = this.state;
+    const {dataSource, isCheckedAll} = this.state;
     const {scroll, rowHeight} = this.props;
     let needKeyList = nextdataSource.slice();
     needKeyList.forEach((data, index) => {
@@ -189,19 +309,26 @@ export default class Table extends Component {
     this.setState({
       dataSource: needKeyList,
       dataEnd: Math.ceil(scroll.y / rowHeight) + 15,
-      isCheckAll
+      isCheckedAll
     });
   }
 
   judgeAllChecked = (dataSource) => {
     if (!dataSource.length) return false;
-    return dataSource.every((data) => !item.disabled && item.checked);
+    return dataSource.every((item) => !item.disabled && item.checked);
   }
 
   // 过滤表头内容
   filterCustomSearch = (columns, customSearchKey) => {
     return columns.filter(({title = '', key}) => {
       return key !== 'checkbox' && key !== 'radio' && key !== EXPAND_CELL && key !== HOLD_CELL_KEY && title.indexOf(customSearchKey) !== -1;
+    })
+  }
+
+  // 自定义表头输入框
+  onCustomSearchChange = (value) => {
+    this.setState({
+      customSearchKey: value,
     })
   }
 
@@ -233,17 +360,19 @@ export default class Table extends Component {
                     return (
                       <div key={key} className="hui-table-filter__list-item">
                         <div className="item-left" title={title} onClick={e => {this.onCustomClickHandler(e, index)}}>
-                          <Checkbox 
-                            disabled={disabled}
-                            checked={checked}
-                          />
+                          <label>
+                            <Checkbox 
+                              disabled={disabled}
+                              checked={checked}
+                            />
+                          </label>
                           {title}
                         </div>
                         <div className="item-right"></div>
                       </div>
                     )
                   }) : (
-                    <div className="hui-table-filter__list-nodata">
+                    <div className="hui-table-filter__list-noData">
                       <p>暂无搜索结果～</p>
                     </div>
                   )
@@ -269,6 +398,18 @@ export default class Table extends Component {
     )
   }
 
+  // 恢复默认
+  onCustomResetHandler = () => {
+    let columns = cloneDeep(this.columns);
+    this.clearCustomColTable();
+    this.initTableColumn(columns, () => {
+      this.initFixedColState();
+    });
+    this.setState({
+      isPopoverVisible: false,
+    })
+  }
+
   // 自定义表头回调
   visibleChangeHandler = (visible) => {
     this.setState({
@@ -279,7 +420,7 @@ export default class Table extends Component {
 
   // 渲染表头
   renderHeader = (columns) => {
-    const {tableWidth, isCheckAll} = this.state;
+    const {tableWidth, isCheckedAll} = this.state;
     const {columnsDrag = true} = this.props;
     return (
       <div className="hui-table-header" style={{
@@ -305,7 +446,7 @@ export default class Table extends Component {
             if (key === 'checkbox') {
               content = (
                 <div className={this.classnames(wrapperClass)}>
-                  <Checkbox checked={isCheckAll} indeterminate={this.selectedRows.length > 0 && !isCheckedAll} onClick={this.onAllClickHandler}/>
+                  <Checkbox checked={isCheckedAll} indeterminate={this.selectedRows.length > 0 && !isCheckedAll} onClick={this.onAllClickHandler}/>
                 </div>
               )
             }
@@ -337,6 +478,19 @@ export default class Table extends Component {
         }
       </div>
     )
+  }
+
+  toggleExpand = (e, row) => {
+    const {__w_index__: index, __expanded__} = row;
+    const {dataSource} = this.state;
+    dataSource.forEach((item) => {
+      item.__expanded__ = false;
+    })
+    dataSource[index].__expanded__ = !__expanded__;
+    this.setState({
+      dataSource,
+    });
+    stopBubble(e);
   }
 
   // 渲染表体
@@ -440,6 +594,13 @@ export default class Table extends Component {
     )
   }
 
+  onClickFoldHandler = (e) => {
+    this.setState({
+      isShowActions: !this.state.isShowActions
+    });
+    stopBubble(e);
+  }
+
   // 渲染行操作
   renderBodyActions = (item, index) => {
     const {actionBarOffset, isShowActions} = this.state;
@@ -469,9 +630,7 @@ export default class Table extends Component {
             onClick={this.onClickFoldHandler}
             title={isShowActions ? '收起' : '展开'}
           >
-            {
-              isShowActions ? '>>' : '<<'
-            }
+            <Icon name={isShowActions ? 'angle-double-right' : 'angle-double-left'}/>
           </Button>
         </div>
       </div>
@@ -631,7 +790,6 @@ export default class Table extends Component {
   }
 
   // 计算固定列位置
-
   computeFixedLocation = (fixed, columns, index, type) => {
     if (fixed === 'left') {
       let filterFixed = columns.filter(({fixed}, colIndex) => {
@@ -662,13 +820,68 @@ export default class Table extends Component {
   }
 
   // resizestop
-  onResizeStop = (index) => {
-
+  onResizeStop = (index) => (e, {element, size, handle}) => {
+    let { columns, dataSource } = this.state;
+    let {scrollLeft, scrollWidth, clientWidth: scrollClientWidth} = this.scrollContainer.current;
+    let tableContentWidth = 0;
+    let holdColIndex;
+    columns.forEach(({width, checked, key}, index) => {
+      if (key === HOLD_CELL_KEY) {
+        holdColIndex = index;
+      } else if(checked) {
+        tableContentWidth += width;
+      }
+    });
+    // 滚动条宽度
+    let scrollBarWidth = this.judgeParallelScroll(dataSource.length) ? this.scrollBarWidth : 0;
+    // 当前列历史宽度
+    let hisColWidth = columns[index].width;
+    // 表格可视宽度（不含滚动条）
+    let tableClientWidth = this.tableClientWidth - scrollBarWidth;
+    // 当前列拖拽后宽度
+    let changedColWidth = Number(size.width.toFixed(2));
+    // 占位列宽度
+    let holdColWidth = columns[holdColIndex].width;
+    let tableWidth = 0;
+    let diffValue = hisColWidth - changedColWidth;
+    if (diffValue === 0) {
+      return;
+    }
+    if (diffValue > tableContentWidth - tableClientWidth) {
+      if (tableContentWidth < tableClientWidth) {
+        holdColWidth = holdColWidth - (changedColWidth - hisColWidth);
+      } else {
+        holdColWidth = tableClientWidth - (tableContentWidth - diffValue);
+      }
+    } else {
+      holdColWidth = 0;
+    }
+    tableWidth = tableContentWidth + holdColWidth + changedColWidth - hisColWidth;
+    columns[index].width = changedColWidth;
+    columns[holdColIndex].width = holdColWidth;
+    this.backupTableDatas(tableWidth, holdColWidth);
+    this.saveCustomColTable(columns);
+    this.setState({
+      columns,
+      tableWidth,
+      actionBarOffset: tableWidth - scrollClientWidth - scrollLeft,
+      fixedRightFirst: tableWidth - scrollClientWidth !== 0 && scrollLeft < tableWidth - scrollClientWidth,
+      dragging: false,
+    })
   }
 
-  // onResize
-  onResize = (index) => {
-
+  // resize事件
+  onResize = (index) =>  (e, { element, size, handle }) => {
+    const {columns} = this.state;
+    if ((columns[index].min || 100) === size.width) {
+      return;
+    }
+    let clientX = e.clientX;
+    let left = clientX - (document.documentElement.clientWidth - this.tableWrapper.current.client) / 2;
+    this.setState({
+      dragLineLeft: left,
+      dragging: true,
+    })
   }
 
   // 自定义表头点击事件
@@ -679,6 +892,7 @@ export default class Table extends Component {
     let {checked, width: currentColWidth, disabled} = currentCol;
     let tableContentWidth = 0;
     let holdColIndex;
+    if (disabled) { return; }
     columns.forEach((column, index) => {
       let {width, checked, key} = column;
       if (key === HOLD_CELL_KEY) {
@@ -756,6 +970,99 @@ export default class Table extends Component {
     localStorage.setItem(CUSTOM_TABLE_KEY, JSON.stringify(localJson));
   }
 
+  resizeTableWidth = (columns, len) => {
+    const {tableWidth} = this.state;
+    let isHasScroll = this.judgeParallelScroll(len);
+    if (isHasScroll && (tableWidth == this.tableClientWidth)) {
+      let cellPlaceholder = columns.filter(({key}) => key === HOLD_CELL_KEY)[0];
+      let {width} = cellPlaceholder;
+      let diffValue = width - this.scrollBarWidth;
+      if (diffValue >= 0) {
+        tableWidth = this.tableClientWidth - this.scrollBarWidth;
+      } else {
+        diffValue = 0;
+        tableWidth = this.tableClientWidth - width;
+      }
+      cellPlaceholder.width = diffValue;
+      // 备份宽度
+      this.backupTableDatas(tableWidth, diffValue);
+      this.setState({
+        columns,
+        tableWidth
+      });
+    }
+  }
+
+  // 获取自定义表头列信息
+  getCustomColTable = (propsColumns) => {
+    let localTableCustom = JSON.parse(localStorage.getItem(CUSTOM_TABLE_KEY) || '{}')[this.props.tableUniqueId] || {};
+    let { version, columns = [] } = localTableCustom;
+    if (!this.verifyCustomParam() || columns.length === 0 || version !== TABLE_VERSION) {
+      return propsColumns;
+    }
+    propsColumns.forEach((col, index) => {
+      if (index < propsColumns.length) {
+        Object.assign(col, columns[index]);
+      }
+    });
+    return propsColumns;
+  }
+
+  // 校验是否缓存表头信息
+  verifyCustomParam = () => {
+    let { tableUniqueId = false, columnsCache = true } = this.props;
+    if (!tableUniqueId || columnsCache !== true) {
+      return false;
+    }
+    return true;
+  }
+
+  onAllClickHandler = () => {
+    const {dataSource, isCheckedAll} = this.state;
+    const {onSelectAll} = this.props.rowSelection;
+    dataSource.forEach((item) => {
+      !item.disabled && (item.checked = !isCheckedAll)
+    })
+    this.selectedRows = !isCheckedAll ? cloneDeep(dataSource) : [];
+    this.setState({
+      isCheckedAll: !isCheckedAll,
+      dataSource,
+    }, () => {
+      onSelectAll && onSelectAll(~isCheckedAll, this.selectedRows);
+    })
+  }
+
+  // 无匹配数据渲染
+  renderNoData = () => {
+    const {loading} = this.props;
+    if (loading) {
+      return null;
+    }
+    return (
+      <div className="hui-table-nodata">
+        <img src={noDataImg}></img>
+        <p>{i18n.t('hui.table.emptyText')}</p>
+      </div>
+    )
+  }
+
+  // 分页渲染
+  renderPagination = () => {
+    const {dataSource, pagination = false} = this.props;
+    if (dataSource.length > 0 && pagination) {
+      const {position = 'bottomRight'} = pagination;
+      const placement = position.toLowerCase().replace(/top|bottom/, '');
+      return (
+        <div className="hui-table-pagination">
+          <Pagination
+            className={`${prefixCls}-pagination-content-${placement}`}
+            {...pagination}
+          />
+        </div>
+      )
+    }
+    return null;
+  }
 
   render() {
     const {columns, scrollHeight, fixedLeftLast, fixedRightFirst, dragLineLeft, dragging, dataSource, isScrollTop} = this.state;
@@ -781,7 +1088,7 @@ export default class Table extends Component {
     const bottomPos = pagination && (pagination.position || 'bottomRight').indexOf('bottom') !== -1;
     return (
       <Loading loading={loading} text="请求数据中">
-        {topPos && this.renderPagination()}
+        {/* {topPos && this.renderPagination()} */}
         <div className={this.classname(tableClassNames)} style={this.styles()} ref={this.tableWrapper}>
           {
             columnsFilter && <div className={this.classnames("hui-table-filter-column", {
@@ -807,8 +1114,10 @@ export default class Table extends Component {
                 this.renderHeader(columns)
               }
             </div>
-            <div className={this.classnames('hui-table-body')}
-              ref={this.bodyContainer}
+            <div 
+              className={this.classnames('hui-table-body')}
+              style={bodyStyle}
+              ref={this.scrollContainer}
             >
               {
                 this.renderBody(columns)
@@ -817,7 +1126,7 @@ export default class Table extends Component {
             {(dataSource.length === 0 && !loading) &&  this.renderNoData()}
           </div>
         </div>
-        {bottomPos && this.renderPagination()}
+        {/* {bottomPos && this.renderPagination()} */}
       </Loading>
     )
   }

@@ -203,36 +203,6 @@
       }
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
-      "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
-        "slug": "src-breadcrumb-bread-crumb",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "breadcrumb-面包屑",
-            "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/button/Button.mdx",
       "value": {
         "name": "Button",
@@ -263,6 +233,36 @@
       }
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "value": {
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "slug": "src-breadcrumb-bread-crumb",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "breadcrumb-面包屑",
+            "depth": 1,
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/card/Card.mdx",
       "value": {
         "name": "Card",
@@ -278,6 +278,41 @@
             "slug": "card-卡片",
             "depth": 1,
             "value": "Card 卡片"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/collapse/Collapse.mdx",
+      "value": {
+        "name": "Collapse",
+        "route": "/Collapse",
+        "id": "9f64c87a72c6336f20ec0a488d065ab6",
+        "filepath": "src/collapse/Collapse.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
+        "slug": "src-collapse-collapse",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "collapse-折叠面板",
+            "depth": 1,
+            "value": "Collapse 折叠面板"
+          },
+          {
+            "slug": "基础使用",
+            "depth": 2,
+            "value": "基础使用"
+          },
+          {
+            "slug": "允许多个子面板同时展开",
+            "depth": 2,
+            "value": "允许多个子面板同时展开"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -333,41 +368,6 @@
             "slug": "checkboxgroup-相关属性",
             "depth": 3,
             "value": "CheckboxGroup 相关属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/collapse/Collapse.mdx",
-      "value": {
-        "name": "Collapse",
-        "route": "/Collapse",
-        "id": "9f64c87a72c6336f20ec0a488d065ab6",
-        "filepath": "src/collapse/Collapse.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
-        "slug": "src-collapse-collapse",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "collapse-折叠面板",
-            "depth": 1,
-            "value": "Collapse 折叠面板"
-          },
-          {
-            "slug": "基础使用",
-            "depth": 2,
-            "value": "基础使用"
-          },
-          {
-            "slug": "允许多个子面板同时展开",
-            "depth": 2,
-            "value": "允许多个子面板同时展开"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
           }
         ]
       }
@@ -678,46 +678,6 @@
       }
     },
     {
-      "key": "src/modal/Modal.mdx",
-      "value": {
-        "name": "Modal",
-        "route": "/Modal",
-        "id": "63085b7aa55ad1ac672e92f757a4bd90",
-        "filepath": "src/modal/Modal.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
-        "slug": "src-modal-modal",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "modal-模态框",
-            "depth": 1,
-            "value": "Modal 模态框"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "锁定页面滚动",
-            "depth": 2,
-            "value": "锁定页面滚动"
-          },
-          {
-            "slug": "设置阴影",
-            "depth": 2,
-            "value": "设置阴影"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/message/Message.mdx",
       "value": {
         "name": "Message",
@@ -748,6 +708,46 @@
             "slug": "自定义关闭",
             "depth": 2,
             "value": "自定义关闭"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/modal/Modal.mdx",
+      "value": {
+        "name": "Modal",
+        "route": "/Modal",
+        "id": "63085b7aa55ad1ac672e92f757a4bd90",
+        "filepath": "src/modal/Modal.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
+        "slug": "src-modal-modal",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "modal-模态框",
+            "depth": 1,
+            "value": "Modal 模态框"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "锁定页面滚动",
+            "depth": 2,
+            "value": "锁定页面滚动"
+          },
+          {
+            "slug": "设置阴影",
+            "depth": 2,
+            "value": "设置阴影"
           },
           {
             "slug": "属性",
@@ -919,6 +919,41 @@
             "slug": "事件",
             "depth": 2,
             "value": "事件"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/result/Result.mdx",
+      "value": {
+        "name": "result",
+        "route": "/result",
+        "id": "c9119dbf36c4746d64dc95a832a17131",
+        "filepath": "src/result/Result.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/result/Result.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/result/Result.mdx",
+        "slug": "src-result-result",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "result-结果显示",
+            "depth": 1,
+            "value": "Result 结果显示"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "自定义设置",
+            "depth": 2,
+            "value": "自定义设置"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -5003,6 +5038,84 @@
       ]
     },
     {
+      "key": "src/result/Result.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Result",
+          "methods": [
+            {
+              "name": "statusToIcon",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "status",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcIconStyles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "status",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Result",
+          "props": {
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "subTitle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "status": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "extra": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/select/Option.jsx",
       "value": [
         {
@@ -5728,7 +5841,7 @@
             },
             {
               "name": "backupTableDatas",
-              "docblock": "@description: 备份表格宽度相关数据\n@param {tableWidth, holdWidth}\n@return:",
+              "docblock": "@description: 备份表格宽度相关数据",
               "modifiers": [],
               "params": [
                 {
@@ -5825,6 +5938,38 @@
               "returns": null
             },
             {
+              "name": "renderBodyActions",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderExpandRow",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
               "name": "onRowMouseHandler",
               "docblock": null,
               "modifiers": [],
@@ -5881,7 +6026,7 @@
               "returns": null
             },
             {
-              "name": "getHeaderColClass",
+              "name": "getTableColClass",
               "docblock": null,
               "modifiers": [],
               "params": [
@@ -5983,6 +6128,26 @@
                 }
               ],
               "returns": null
+            },
+            {
+              "name": "saveCustomColTable",
+              "docblock": "@description: 缓存自定义表头列信息",
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "columns"
+                }
+              ],
+              "returns": null,
+              "description": null
+            },
+            {
+              "name": "clearCustomColTable",
+              "docblock": "@description: 清除自定义表头列信息,避免localStorage一直缓存",
+              "modifiers": [],
+              "params": [],
+              "returns": null,
+              "description": null
             }
           ],
           "actualName": "Table",

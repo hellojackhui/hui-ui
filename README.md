@@ -31,6 +31,7 @@
     <img alt="build passing" src="https://img.shields.io/badge/build-passing-brightgreen" />
   </a>
   
+</p>
 
 `hui-ui`是一款基于[React](https://reactjs.org/)开发的组件库,组件库提供了丰富的通用性组件，可以提升团队组件化开发的效率，提升用户体验。
 
