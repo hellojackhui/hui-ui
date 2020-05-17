@@ -29,7 +29,7 @@ import ColorPicker from './color-picker';
 import Modal from './modal';
 import PopOver from './popover';
 import Dropdown from './dropdown';
-import Result from './Result';
+import Result from './result';
 export default class Page extends React.Component {
   constructor(props) {
     super(props);

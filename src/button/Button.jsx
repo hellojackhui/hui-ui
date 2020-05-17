@@ -11,7 +11,7 @@ export default class Button extends Component {
   render() {
     const {size, type, plain, loading, disabled, icon, nativeType, children} = this.props;
     return (
-      <button className={this.classname('h-button', size && `h-button--${size}`, type && `h-button--${type}`, {
+      <button className={this.classname('hui-button', size && `hui-button--${size}`, type && `hui-button--${type}`, {
         'is-plain': plain,
         'is-disabled': disabled,
         'is-loading': loading,
@@ -19,8 +19,8 @@ export default class Button extends Component {
         type={nativeType}
         onClick={this.handleClick}
       >
-        {loading && <i className={this.classname("h-button__icon", "hui-icon", 'hui-icon-repeat', 'h-button__loading')} />}
-        {!loading && icon && <i className={this.classname("h-button__icon", "hui-icon", `hui-icon-${icon}`)}></i>}
+        {loading && <i className={this.classname("hui-button__icon", "hui-icon", 'hui-icon-repeat', 'hui-button__loading')} />}
+        {!loading && icon && <i className={this.classname("hui-button__icon", "hui-icon", `hui-icon-${icon}`)}></i>}
         <span>{children}</span>
       </button>
     )

@@ -2,8 +2,8 @@ import React from 'react'
 import {expect} from 'chai';
 import {configure, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
-import Badge from './Badge';
-import Button from '../button/Button';
+import Badge from './index';
+import Button from '../button/index';
 
 configure({ adapter: new Adapter() })
 

@@ -16,7 +16,7 @@
       font-size: 13px;
       &__arrow {
         margin-right: 8px;
-        transition: transform .3s;
+        transition: transform 0.3s;
       }
     }
     &__content {
@@ -31,42 +31,14 @@
       overflow: hidden;
       box-sizing: border-box;
       border-bottom: 1px solid #dfe6ec;
-      animation-duration: 0.5s;
-      animation-timing-function: ease-out;
-      animation-fill-mode: both;
       &.is-disabled {
         display: none;
       }
     }
-
-  }
-  &--open {
-    animation-name: collpase-enter;
-  }
-  &--close {
-    animation-name: collpase-leave;
   }
 }
 
-
-@keyframes collpase-enter {
-  0% {
-    height: 0;
-    opacity: 0;
-  }
-  100% {
-    height: 70px;
-    opacity: 1;
-  }
-}
-
-@keyframes collpase-leave {
-  0% {
-    height: 90px;
-    opacity: 1;
-  }
-  100% {
-    height: 0px;
-    opacity: 0;
-  }
+.zoom-in-top-enter-active,
+.zoom-in-top-leave-active {
+  transition: transform .2s ease-in-out, opacity .2s ease-in-out;
 }
