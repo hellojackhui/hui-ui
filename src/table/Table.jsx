@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropTypes} from '../../libs/index';
+import {Component, PropType} from '../../libs/index';
 import {Resizable} from 'react-resizable';
 import Checkbox from '../checkbox/index';
 import Input from '../input/index';
@@ -12,6 +12,7 @@ import {getScrollbarWidth, isSameJSON, createUniqueId} from './utils';
 import 'react-resizable/css/styles.css';
 import Icon from '../icon';
 import i18n from '../i18n';
+// import noDataImg from '';
 import './Table.scss';
 
 const debounceOptions = {
@@ -40,7 +41,7 @@ export default class Table extends Component {
       scrollHeight: props.scroll.y,
       dataSource: [],
       dataStart: 0,
-      dataEnd: Math.ceil(scroll.y / props.rowHeight) + 15,
+      dataEnd: Math.ceil(props.scroll.y / props.rowHeight) + 15,
       tableWidth: '100%',
       dragLineLeft: 0,
       // 行操作栏偏移量
@@ -134,7 +135,7 @@ export default class Table extends Component {
   initTableColumn = (columns, callback) => {
     let {rowSelection, expandable, dataSource} = this.props;
     rowSelection && (columns = this.addSelectCell(columns, rowSelection));
-    expandable && (columns = thia.addExpandCell(columns, expandable));
+    expandable && (columns = this.addExpandCell(columns, expandable));
     columns = this.addCellPlaceholder(columns);
     let initTableWidth = 0;
     const tableRealWidth = this.tableClientWidth - this.scrollBarWidth - 
@@ -143,7 +144,7 @@ export default class Table extends Component {
     columns.forEach((col, index) => {
       let {width = 150, checked} = col;
       if (String(width).indexOf('%') !== -1) {
-        width = parseInt((parseFloat(width / 100) * tableRealWidth));
+        width = parseInt((parseFloat(width) / 100) * tableRealWidth);
       }
       col.width = width;
       col.__w_index__ = index;
@@ -234,7 +235,7 @@ export default class Table extends Component {
       return;
     }
     const {columns} = this.state;
-    const {clientWidth: changedClientWidth} = current;
+    let {clientWidth: changedClientWidth} = current;
     let scrollBarWidth = this.judgeParallelScroll(this.state.dataSource.length) ? this.scrollBarWidth : 0;
     // 处理纵向滚动条差值
     changedClientWidth += scrollBarWidth;
@@ -294,8 +295,8 @@ export default class Table extends Component {
    * 为数据添加自有属性
    */
   handleListKey = (nextdataSource) => {
-    const {dataSource, isCheckedAll} = this.state;
-    const {scroll, rowHeight} = this.props;
+    let {dataSource, isCheckedAll} = this.state;
+    let {scroll, rowHeight} = this.props;
     let needKeyList = nextdataSource.slice();
     needKeyList.forEach((data, index) => {
       data.__t_id__ = createUniqueId();
@@ -339,7 +340,7 @@ export default class Table extends Component {
     return (
       <Popover
         trigger="click"
-        placement="bottomRight"
+        placement="left-start"
         content={
           <div className="hui-table-filter">
             <div className="hui-table-filter__table">
@@ -349,8 +350,8 @@ export default class Table extends Component {
                     value={customSearchKey}
                     size="small"
                     onChange={this.onCustomSearchChange}
+                    append={<Icon name="search" />}
                   />
-                  <Button className="search-icn" icon="query" />
                 </div>
               </div>
               <div className="hui-table-filter__list">
@@ -365,8 +366,8 @@ export default class Table extends Component {
                               disabled={disabled}
                               checked={checked}
                             />
+                            {title}
                           </label>
-                          {title}
                         </div>
                         <div className="item-right"></div>
                       </div>
@@ -393,7 +394,9 @@ export default class Table extends Component {
         visible={isPopoverVisible}
         visibleChange={this.visibleChangeHandler}
       >
-        <Button style={{'padding': '0px'}} icon="more" />
+        <span className="hui-table-more">
+          <Icon name="ellipsis-h"/>
+        </span>
       </Popover>
     )
   }
@@ -423,18 +426,18 @@ export default class Table extends Component {
     const {tableWidth, isCheckedAll} = this.state;
     const {columnsDrag = true} = this.props;
     return (
-      <div className="hui-table-header" style={{
-        width: tableWidth + this.scrollBarWidth
+      <div style={{
+        'width': tableWidth + this.scrollBarWidth
       }}>
         {
-          columns.map(({item, index}) => {
+          columns.map((item, index) => {
             const {title, key, width, fixed, min = 100, checked} = item;
             if (!checked) return null;
             const {wrapperClass, wrapperStyle, contentClass} = this.getTableColClass(item, columns, index);
             let content = (
-              <div className={this.classnames(contentClass)} title={title}>
+              <span className={this.classnames(contentClass)} title={title}>
                 {title}
-              </div>
+              </span>
             );
             // 占位列
             if (key === HOLD_CELL_KEY) {
@@ -445,15 +448,15 @@ export default class Table extends Component {
             // 选择列
             if (key === 'checkbox') {
               content = (
-                <div className={this.classnames(wrapperClass)}>
+                <span className={this.classnames(contentClass)}>
                   <Checkbox checked={isCheckedAll} indeterminate={this.selectedRows.length > 0 && !isCheckedAll} onClick={this.onAllClickHandler}/>
-                </div>
+                </span>
               )
             }
             if (!columnsDrag || fixed) {
               fixed && (wrapperStyle[fixed] = this.computeFixedLocation(fixed, columns, index, 'header'))
               return (
-                <div key={key} className={this.classnames(contentClass)} style={wrapperStyle}>
+                <div key={key} className={this.classnames(wrapperClass)} style={wrapperStyle}>
                   { content }
                 </div>
               )
@@ -700,7 +703,7 @@ export default class Table extends Component {
       dataSource,
       isCheckedAll
     }, () => {
-      typeof onSelect === 'function' && onSelect(row, this.selectedRows, !checked, event);
+      typeof onSelect === 'function' && onSelect(item, this.selectedRows, !checked, event);
     });
   }
 
@@ -820,7 +823,8 @@ export default class Table extends Component {
   }
 
   // resizestop
-  onResizeStop = (index) => (e, {element, size, handle}) => {
+  onResizeStop = (index) => (event, {element, size, handle}) => {
+    console.log(size);
     let { columns, dataSource } = this.state;
     let {scrollLeft, scrollWidth, clientWidth: scrollClientWidth} = this.scrollContainer.current;
     let tableContentWidth = 0;
@@ -848,7 +852,7 @@ export default class Table extends Component {
       return;
     }
     if (diffValue > tableContentWidth - tableClientWidth) {
-      if (tableContentWidth < tableClientWidth) {
+      if (tableContentWidth - tableClientWidth < 0) {
         holdColWidth = holdColWidth - (changedColWidth - hisColWidth);
       } else {
         holdColWidth = tableClientWidth - (tableContentWidth - diffValue);
@@ -877,7 +881,7 @@ export default class Table extends Component {
       return;
     }
     let clientX = e.clientX;
-    let left = clientX - (document.documentElement.clientWidth - this.tableWrapper.current.client) / 2;
+    let left = clientX - (document.documentElement.clientWidth - this.tableWrapper.current.clientWidth) / 2;
     this.setState({
       dragLineLeft: left,
       dragging: true,
@@ -1040,7 +1044,8 @@ export default class Table extends Component {
     }
     return (
       <div className="hui-table-nodata">
-        <img src={noDataImg}></img>
+        {/* <img src={noDataImg}></img> */}
+        <Icon name="info" style={{'fontSize': '40px'}}/>
         <p>{i18n.t('hui.table.emptyText')}</p>
       </div>
     )
@@ -1054,10 +1059,10 @@ export default class Table extends Component {
       const placement = position.toLowerCase().replace(/top|bottom/, '');
       return (
         <div className="hui-table-pagination">
-          <Pagination
+          {/* <Pagination
             className={`${prefixCls}-pagination-content-${placement}`}
             {...pagination}
-          />
+          /> */}
         </div>
       )
     }
@@ -1133,39 +1138,39 @@ export default class Table extends Component {
 }
 
 Table.propTypes = {
-  prefixCls: PropTypes.string,
-  tableUniqueId: PropTypes.string,
-  columns: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string,
-    key: PropTypes.string,
-    width: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.number
+  prefixCls: PropType.string,
+  tableUniqueId: PropType.string,
+  columns: PropType.arrayOf(PropType.shape({
+    title: PropType.string,
+    key: PropType.string,
+    width: PropType.oneOfType([
+        PropType.string,
+        PropType.number
     ]),
-    checked: PropTypes.bool,
-    disabled: PropTypes.bool,
-    fixed: PropTypes.oneOf(['left', 'right']),
-    align: PropTypes.oneOf(['left', 'center', 'right']),
-    render: PropTypes.func
+    checked: PropType.bool,
+    disabled: PropType.bool,
+    fixed: PropType.oneOf(['left', 'right']),
+    align: PropType.oneOf(['left', 'center', 'right']),
+    render: PropType.func
   })),
-  dataSource: PropTypes.array,
-  loading: PropTypes.bool,
-  columnsFilter: PropTypes.bool,
-  columnsCache: PropTypes.bool,
-  columnsDrag: PropTypes.bool,
-  bordered: PropTypes.bool,
-  scroll: PropTypes.object,
-  rowHover: PropTypes.shape({
-    hoverContent: PropTypes.func,
-    onRowHover: PropTypes.func
+  dataSource: PropType.array,
+  loading: PropType.bool,
+  columnsFilter: PropType.bool,
+  columnsCache: PropType.bool,
+  columnsDrag: PropType.bool,
+  bordered: PropType.bool,
+  scroll: PropType.object,
+  rowHover: PropType.shape({
+    hoverContent: PropType.func,
+    onRowHover: PropType.func
   }),
-  rowSelection: PropTypes.shape({
-    type: PropTypes.oneOf(['checkbox', 'radio']),
-    onSelect: PropTypes.func,
-    onSelectAll: PropTypes.func,
-    fixed: PropTypes.bool
+  rowSelection: PropType.shape({
+    type: PropType.oneOf(['checkbox', 'radio']),
+    onSelect: PropType.func,
+    onSelectAll: PropType.func,
+    fixed: PropType.bool
   }),
-  pagination: PropTypes.object
+  pagination: PropType.object
 };
   
 

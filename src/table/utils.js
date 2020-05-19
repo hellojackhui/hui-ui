@@ -13,6 +13,10 @@ function getScrollbarWidth() {
   return scrollbarWidth; //返回滚动条宽度
 }
 
+function isObject(obj) {
+  return obj !== null && Object.prototype.toString.call(obj) === "[object Object]";
+}
+
 function isSameJSON(json1, json2) {
   if (json1 !== json2) {
     if (Array.isArray(json1) && Array.isArray(json2)) {

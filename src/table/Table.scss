@@ -12,8 +12,8 @@ $table-row-hover-background-color: #edf1f7;
 $table-row-checked-background-color: #edf1f7;
 $table-resizable-handle-color: #505766;
 /* 固定列 */
-$table-fixed-left-boxShadow: inset 10px 0 8px -8px rgba(0, 0, 0, .2);
-$table-fixed-right-boxShadow: inset -10px 0 8px -8px rgba(0, 0, 0, .2);
+$table-fixed-left-boxShadow: inset 10px 0 8px -8px rgba(0, 0, 0, 0.2);
+$table-fixed-right-boxShadow: inset -10px 0 8px -8px rgba(0, 0, 0, 0.2);
 /* 自定义列相关 */
 $table-filter-background-color: #fff;
 $table-filter-row-background-color: #fff;
@@ -22,299 +22,295 @@ $table-filter-recover-color: #588ce9;
 $table-filter-hover-recover-color: #91bcff;
 
 .hui-table {
-    width: 100%;
-    font-size: $table-font-size;
-    color: $table-text-color;
-    position: relative;
-    box-sizing: content-box;
-    background: $table-background-color;
-    border-radius: $table-radius;
+  width: 100%;
+  font-size: $table-font-size;
+  color: $table-text-color;
+  position: relative;
+  box-sizing: content-box;
+  background: $table-background-color;
+  border-radius: $table-radius;
+  border-top: 1px solid $table-top-border-color;
+
+  &-pagination {
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+      visibility: hidden;
+      height: 0;
+    }
+    &-content,
+    &-content-left {
+      margin: 10px 0;
+    }
+    &-content-center {
+      margin: 10px 0;
+      text-align: center;
+    }
+    &-content-right {
+      margin: 10px 20px 10px 0;
+      float: right;
+    }
+  }
+
+  &-expand {
+    max-height: 300px;
+    border-bottom: 1px solid $table-border-color;
+    background: #dfe1e6;
+  }
+
+  &--bordered {
+    border: 1px solid $table-border-color;
     border-top: 1px solid $table-top-border-color;
-  
-    &-pagination {
-      &:after {
-        display: block;
-        clear: both;
-        content: "";
-        visibility: hidden;
-        height: 0;
-      }
-      &-content,
-      &-content-left {
-        margin: 10px 0;
-      }
-      &-content-center {
-        margin: 10px 0;
-        text-align: center;
-      }
-      &-content-right {
-        margin: 10px 20px 10px 0;
-        float: right;
+  }
+
+  &-header,
+  &-row {
+    height: $table-row-height;
+    line-height: 18px;
+  }
+
+  &-scroll {
+    .hui-table-header-shadow {
+      z-index: 30;
+      background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent);
+      height: 6px;
+      position: absolute;
+      width: 100%;
+      top: 40px;
+    }
+
+    .hui-table-nodata {
+      width: 100%;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      text-align: center;
+      color: $table-noData-text-color;
+      img {
+        width: 80px;
       }
     }
-  
-    &-expand {
-      max-height: 300px;
-      border-bottom: 1px solid $table-border-color;
-      background: #DFE1E6;
+  }
+
+  &-header {
+    font-weight: 700;
+    overflow: hidden;
+    border-bottom: 1px solid $table-border-color;
+    background: $table-header-background-color;
+
+    div {
+      height: inherit;
     }
-  
-    &--bordered {
-      border: 1px solid $table-border-color;
-      border-top: 1px solid $table-top-border-color;
-    }
-  
-    &-header,
-    &-row {
-      height: $table-row-height;
-      line-height: 18px;
-    }
-  
-    &-scroll {
-      .hui-table-header-shadow {
-        z-index: 30;
-        background-image: linear-gradient(180deg,rgba(0,0,0,0.1),transparent);
-        height: 6px;
-        position: absolute;
-        width: 100%;
-        top: 40px;
-      }
-  
-      .hui-table-nodata {
-        width: 100%;
-        position: absolute;
-        top: 40%;
-        left: 0;
-        text-align: center;
-        color: $table-noData-text-color;
-        img {
-          width: 80px;
-        }
-      }
-    }
-  
-    &-header {
-      font-weight: 700;
-      overflow: hidden;
+
+    .hui-table-cell {
       border-bottom: 1px solid $table-border-color;
       background: $table-header-background-color;
-  
-      div {
-        height: inherit;
-      }
+    }
+    &.header-rolled {
+      border-bottom: none;
       .hui-table-cell {
-        border-bottom: 1px solid $table-border-color;
-        background: $table-header-background-color;
-      }
-      &.header-rolled {
         border-bottom: none;
-        .hui-table-cell {
-          border-bottom: none;
-        }
       }
     }
-  
-    &-body {
-      overflow: auto;
-  
-      .hui-table-row {
-        transition: .1s linear;
-        position: relative;
-  
+  }
+
+  &-body {
+    overflow: auto;
+
+    .hui-table-row {
+      transition: 0.1s linear;
+      position: relative;
+
+      .hui-table-cell {
+        border-bottom: 1px solid $table-border-color;
+        background: $table-row-background-color;
+      }
+
+      &.is-selected {
         .hui-table-cell {
-          border-bottom: 1px solid $table-border-color;
-          background: $table-row-background-color;
+          background: $table-row-checked-background-color;
         }
-  
-        &.is-selected {
+        &:hover {
           .hui-table-cell {
             background: $table-row-checked-background-color;
           }
-          &:hover {
-            .hui-table-cell {
-              background: $table-row-checked-background-color;
-            }
-          }
         }
-  
-        &:hover {
-          .hui-table-cell {
-            background: $table-row-hover-background-color;
-          }
+      }
+
+      &:hover {
+        .hui-table-cell {
+          background: $table-row-hover-background-color;
         }
-  
       }
     }
-  
-    &-cell {
-      /* display: inline-block; */
-      float: left;
-      height: inherit;
-      line-height: inherit;
-      text-align: left;
-      padding: 10px;
-      position: relative;
-  
-      &-content {
-        display: block;
-        height: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-  
-      &.hui-table-bordered {
-        border-left: 1px solid $table-border-color;
-        &:first-child {
-          border-left: none;
-        }
-      }
-  
-      &.hui-table-cell-padding-none {
-        padding: 0;
-      }
-  
-      span.hui-table-select-column {
-        width: 16px !important;
-        height: 16px !important;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        /* 复选单选框样式修改 */
-        .custom-checkbox,
-        .custom-radio {
-          display: block;
-          padding: 0;
-  
-        }
-      }
-  
-      &.hui-table-hold-cell {
-        padding: 0;
+  }
+
+  &-cell {
+    /* display: inline-block; */
+    float: left;
+    height: inherit;
+    line-height: inherit;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+
+    &-content {
+      display: block;
+      height: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &.hui-table-bordered {
+      border-left: 1px solid $table-border-color;
+      &:first-child {
         border-left: none;
       }
-  
-      &.hui-table-expand-cell {
-        padding: 0;;
-        .hui-icon {
-          padding: 0;
-          height: 20px;
-          line-height: 20px;
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          i {
-            margin: 0;
-            font-size: 18px;
-            transition: all 0.2s linear;
-          }
-          &.fold_icon {
-            i {
-              transform: rotate(180deg);
-            }
-  
-          }
-        }
+    }
+
+    &.hui-table-cell-padding-none {
+      padding: 0;
+    }
+
+    span.hui-table-select-column {
+      width: 16px !important;
+      height: 16px !important;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      /* 复选单选框样式修改 */
+      .custom-checkbox,
+      .custom-radio {
+        display: block;
+        padding: 0;
       }
-  
-      &.hui-table-cell-fixed-left {
-        position: sticky;
+    }
+
+    &.hui-table-hold-cell {
+      padding: 0;
+      border-left: none;
+    }
+
+    &.hui-table-expand-cell {
+      padding: 0;
+      .hui-icon {
+        padding: 0;
+        height: 20px;
+        line-height: 20px;
+        position: absolute;
         left: 0;
-        z-index: 2;
-        &.hui-table-cell-fixed-left-last {
-          &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: -1px;
-            width: 20px;
-            transform: translateX(100%);
-            pointer-events: none;
-            transition: box-shadow .3s;
-          }
-        }
-      }
-      &.hui-table-cell-fixed-right {
-        position: sticky;
         right: 0;
-        z-index: 2;
-        /* 兼容处理，浏览器会出现一像素黑色竖线 */
-        box-shadow: 1px 0px $table-row-background-color;
-        &.hui-table-cell-fixed-right-first {
-          &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: -1px;
-            width: 20px;
-            transform: translateX(-100%);
-            pointer-events: none;
-            transition: box-shadow .3s;
-          }
-        }
-      }
-  
-      .react-resizable-handle {
-        height: 100%;
-        width: 4px;
         top: 0;
         bottom: 0;
-        right: 0;
-        cursor: col-resize;
-        background: transparent;
-        transition: all 0.1s linear;
-  
-        &:hover,
-        &:focus {
-          background: $table-resizable-handle-color;
+        margin: auto;
+        i {
+          margin: 0;
+          font-size: 18px;
+          transition: all 0.2s linear;
         }
-      }
-  
-    }
-    &-ping-left {
-      .hui-table-cell-fixed-left {
-        &-last {
-          &.bordered {
-            border-right: 1px solid transparent;
-          }
-          &:after {
-            box-shadow: $table-fixed-left-boxShadow;
+        &.fold_icon {
+          i {
+            transform: rotate(180deg);
           }
         }
       }
     }
-    &-ping-right {
-      .hui-table-cell-fixed-right {
-        &-first {
-          &.bordered {
-            border-left: 1px solid transparent;
-  
-          }
-          &:after {
-            box-shadow: $table-fixed-right-boxShadow;
-          }
+
+    &.hui-table-cell-fixed-left {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      &.hui-table-cell-fixed-left-last {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: -1px;
+          width: 20px;
+          transform: translateX(100%);
+          pointer-events: none;
+          transition: box-shadow 0.3s;
         }
       }
     }
-    &-filter-column {
-      position: absolute;
+    &.hui-table-cell-fixed-right {
+      position: sticky;
       right: 0;
-      background: $table-header-background-color;
-      border-bottom: 1px solid $table-border-color;
-      height:  $table-row-height;
-      top: 0;
-      z-index: 10;
-      &.header-rolled {
-        border-bottom: none;
+      z-index: 2;
+      /* 兼容处理，浏览器会出现一像素黑色竖线 */
+      box-shadow: 1px 0px $table-row-background-color;
+      &.hui-table-cell-fixed-right-first {
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: -1px;
+          width: 20px;
+          transform: translateX(-100%);
+          pointer-events: none;
+          transition: box-shadow 0.3s;
+        }
       }
+    }
+
+    .react-resizable-handle {
+      height: 100%;
+      width: 4px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      cursor: col-resize;
+      background: transparent;
+      transition: all 0.1s linear;
+
+      &:hover,
+      &:focus {
+        background: $table-resizable-handle-color;
+      }
+    }
+  }
+  &-ping-left {
+    .hui-table-cell-fixed-left {
+      &-last {
+        &.bordered {
+          border-right: 1px solid transparent;
+        }
+        &:after {
+          box-shadow: $table-fixed-left-boxShadow;
+        }
+      }
+    }
+  }
+  &-ping-right {
+    .hui-table-cell-fixed-right {
+      &-first {
+        &.bordered {
+          border-left: 1px solid transparent;
+        }
+        &:after {
+          box-shadow: $table-fixed-right-boxShadow;
+        }
+      }
+    }
+  }
+  &-filter-column {
+    position: absolute;
+    right: 0;
+    background: $table-header-background-color;
+    border-bottom: 1px solid $table-border-color;
+    height: $table-row-height;
+    top: 0;
+    z-index: 10;
+    &.header-rolled {
+      border-bottom: none;
+    }
     //   .yon-tooltip-child {
     //     .react-btn {
     //       height: $table-row-height;
@@ -325,43 +321,42 @@ $table-filter-hover-recover-color: #91bcff;
     //       }
     //     }
     //   }
+  }
+  /* 行操作区域 */
+  &-hover-action {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    right: 0;
+    height: 39px;
+    background: $table-row-hover-background-color;
+    padding: 0 5px;
+    float: left;
+
+    &.row-selected {
+      background: $table-row-checked-background-color;
     }
-    /* 行操作区域 */
-    &-hover-action {
-      position: absolute;
-      top: 0;
-      z-index: 10;
-      right: 0;
-      height: 39px;
-      background: $table-row-hover-background-color;
-      padding: 0 5px;
+
+    &-content {
+      height: inherit;
       float: left;
-  
-      &.row-selected {
-        background: $table-row-checked-background-color;
+
+      &.hide-content {
+        display: none;
       }
-  
-      &-content {
+    }
+    &-fold {
+      height: inherit;
+      float: right;
+
+      button {
         height: inherit;
-        float: left;
-  
-        &.hide-content {
-          display: none;
-        }
-      }
-      &-fold {
-        height: inherit;
-        float: right;
-  
-        button {
-          height: inherit;
-          line-height: inherit;
-          padding: 0;
-        }
+        line-height: inherit;
+        padding: 0;
       }
     }
   }
-  .hui-table-drag-line {
+  &-drag-line {
     position: absolute;
     top: 0;
     left: 0;
@@ -387,9 +382,9 @@ $table-filter-hover-recover-color: #91bcff;
     &__table {
       max-height: 259px;
       min-height: auto;
-      overflow-y: hidden;  
+      overflow-y: hidden;
     }
-    &__serach {
+    &__search {
       display: inline-block;
       width: 100%;
       margin-top: 5px;
@@ -405,7 +400,7 @@ $table-filter-hover-recover-color: #91bcff;
           padding: 0;
           height: 32px;
           line-height: 32px;
-  
+
           i {
             font-size: 16px;
             width: 16px;
@@ -424,10 +419,10 @@ $table-filter-hover-recover-color: #91bcff;
         height: 32px !important;
         line-height: 32px !important;
         padding: 0 15px;
-        transition: .3s linear;
+        transition: 0.3s linear;
         background: $table-filter-row-background-color;
         .item-left {
-          float: left;
+          float: left !important;
           width: 180px;
           label {
             width: 100%;
@@ -440,8 +435,11 @@ $table-filter-hover-recover-color: #91bcff;
             float: left;
             cursor: pointer;
           }
+          .hui-checkbox {
+            width: 28px;
+          }
         }
-        .item-left {
+        .item-right {
           float: right;
         }
         &:hover {
@@ -449,7 +447,7 @@ $table-filter-hover-recover-color: #91bcff;
         }
       }
       &-noData {
-        span{
+        span {
           display: block;
           margin-top: 30px;
           margin-left: 18px;
@@ -461,7 +459,7 @@ $table-filter-hover-recover-color: #91bcff;
     &__btns {
       border-top: 1px solid $table-border-color;
       height: 43px;
-  
+
       &-recover-default {
         float: right;
         line-height: 20px;
@@ -469,11 +467,18 @@ $table-filter-hover-recover-color: #91bcff;
         margin: 10px 10px 0 0;
         color: $table-filter-recover-color;
         cursor: pointer;
-  
+
         &:hover {
           color: $table-filter-hover-recover-color;
         }
       }
     }
   }
-  
+  &-more {
+    padding: 0px 5px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    background: #f8f9fd;
+  }
+}

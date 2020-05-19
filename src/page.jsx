@@ -30,6 +30,31 @@ import Modal from './modal';
 import PopOver from './popover';
 import Dropdown from './dropdown';
 import Result from './result';
+import Table from './table';
+import TableAction from './table/tableAction';
+
+let defaultDataSource = [];
+for (let i = 0; i < 5000; i++) {
+  defaultDataSource.push({
+    name: `name${i + 1}`,
+    name2: `固定-${i + 1}`,
+    name3: `name3---${i}`,
+    name4: `name3名称长name2名称长name2名称长${i}`,
+    name5: `name5---${i}`,
+    name6: `name6---${i}`,
+    name7: `固定---${i}`,
+    name8: `固定---${i}`,
+    name9: `固定---${i}`,
+    name10: `固定---${i}`,
+    name11: `行内输入${i}`,
+    name12: `内容${i}`,
+    name13: `内容${i}`,
+    name14: `内容${i}`,
+    name15: `输入框输入的值${i}`,
+    disabled: i == 5,
+    checked: i == 5
+  });
+}
 export default class Page extends React.Component {
   constructor(props) {
     super(props);
@@ -104,6 +129,11 @@ export default class Page extends React.Component {
       ],
       transfervalue: [1,4],
       visible: false,
+      loading: false,
+      dataSource: [],
+      pageNum: 1,
+      pageSize: 10,
+      total: 0
     }
   }
   onClick = () => {
@@ -167,11 +197,140 @@ export default class Page extends React.Component {
   onChange = (res) => {
     console.log(res);
   }
+
+  // table
+  componentWillMount() {
+    let { clientHeight } = document.documentElement;
+    console.log(clientHeight)
+    this.tableHeight = clientHeight - 250 - 50;
+  }
+  componentDidMount() {
+    this.initQuery(this.state.pageNum, this.state.pageSize);
+  }
+  initQuery = (pageNum, pageSize) => {
+    // return
+    this.setState({
+      loading: true,
+      // dataSource: []
+    });
+    setTimeout(() => {
+      this.setState({
+        dataSource: defaultDataSource.slice((pageNum-1)*pageSize, pageNum*pageSize),
+        loading: false,
+        pageNum,
+        pageSize,
+        total: defaultDataSource.length
+      });
+    }, 1000);
+  };
+  query = () => {
+    this.initQuery(1, 15);
+  };
+
+  load = () => {
+    this.setState({ loading: false });
+  };
+
+  indicator = () => {
+    return <span>啊啊啊</span>;
+  };
+
+  _del = (item, index) => {
+    console.log(item, index);
+    Message.success(`当前选择数据为第 ${index + 1} 条`);
+  };
+
+  getHoverContent = (record, index) => {
+    return (
+      <TableAction
+        actions={[
+          {
+            title: "查看",
+            visible: record.name !== "name5",
+            onClick: () => this._del(record, index)
+          },
+          {
+            title: "编辑",
+            onClick: () => this._del(record, index)
+          },
+          {
+            title: "删除",
+            onClick: () => this._del(record, index)
+          },
+        ]}
+      />
+    );
+  };
+  expandedRowRender = (record, index) => {
+    const columns = [
+      { title: 'Date',key: 'date',checked: true, width: '20%' },
+      { title: 'Name', key: 'name',checked: true,width: '20%' },
+      {
+        title: 'Status',
+        key: 'state',
+        checked: true,
+        width: '20%'
+
+      },
+      { title: 'Upgrade Status',  key: 'upgradeNum', checked: true,width: '20%' },
+      {
+        title: 'Action',
+        dataIndex: 'operation',
+        key: 'operation',
+        checked: true,
+        width: '20%'
+      },
+    ];
+
+    const data = [];
+    let { name3 } = record;
+    for (let i = 0; i < 30; ++i) {
+      data.push({
+        key: i,
+        date: '2014-12-24 23:12:00',
+        name: 'This is production name',
+        upgradeNum: `Upgraded: ${i}`,
+        state: `${name3}--${i}`,
+        operation: 'delete'
+      });
+    }
+    return (
+      <div style={{padding: '12px'}}>
+        <Table columnsDrag={false} columnsFilter={false} columns={columns} dataSource={data} scroll={{y: 150}} forceRender />
+      </div>
+    );
+  }
+  // onPaginationChange = (pageNum, pageSize) => {
+  //   this.initQuery(pageNum, pageSize);
+  // }
+  // onShowSizeChange = (pageNum, pageSize) => {
+  //   this.initQuery(pageNum, pageSize);
+  // }
+  onSelect = (record, selected, selectedRows) => {
+    console.log(record, selected, selectedRows);
+  };
+  onSelectAll = (selected, selectedRows) => {
+    console.log(selected, selectedRows);
+  };
+
   render() {
     const fileList2 = [
       {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}
     ];
-    const { dialogImageUrl, dialogVisible, treedata } = this.state;
+    const { dialogImageUrl, dialogVisible, treedata, dataSource, loading } = this.state;
+    let rowSelection = {
+      // type: 'radio',
+      onSelect: this.onSelect,
+      onSelectAll: this.onSelectAll,
+      // fixed: false
+    };
+    let rowHover = {
+      hoverContent: this.getHoverContent,
+      onRowHover: () => {}
+    };
+    let expandable = {
+      expandedRowRender: this.expandedRowRender
+    }
     return (
       <div>
         <div style={{'marginTop': '20px'}}>
@@ -461,6 +620,139 @@ export default class Page extends React.Component {
             <Button key="buy">Buy Again</Button>,
           ]}
         />
+        </div>
+        <div>
+          <Table
+              tableUniqueId={"xxx"}
+              scroll={{ y: document.documentElement.clientHeight - 250 - 50}}
+              dataSource={dataSource}
+              loading={loading}
+              bordered
+              columns={[
+                {
+                  title: "组织左固定2",
+                  key: "name2",
+                  // width: 100,
+                  width: "14.28%",
+                  fixed: "left",
+                  checked: true,
+                  disabled: false
+                },
+                {
+                  title: "组织组织3",
+                  key: "name3",
+                  // align: "center",
+                  // width: 300,
+                  width: "14.28%",
+                  min: 200,
+                  checked: true,
+                  disabled: false,
+                  // fixed: "left"
+                },
+                {
+                  title: "组织组织4",
+                  key: "name4",
+                  width: 300,
+                  checked: false,
+                  disabled: true
+                },
+                {
+                  title: "组织组织5",
+                  key: "name5",
+                  // width: 111,
+                  width: "14.28%",
+                  checked: true,
+                  disabled: false,
+                  // fixed: 'left'
+                },
+                {
+                  title: "组织组织6",
+                  key: "name6",
+                  // width: 200,
+                  width: "14.28%",
+                  checked: true,
+                  disabled: false
+                },
+                {
+                  title: "组织右固定7",
+                  key: "name7",
+                  // width: 200,
+                  width: "14.28%",
+                  checked: true,
+                  disabled: false
+                },
+                {
+                  title: "组织右固定8",
+                  key: "name8",
+                  // width: 100,
+                  width: "14.28%",
+                  checked: true,
+                  disabled: false
+                },
+                {
+                  title: "组织右固定9",
+                  key: "name9",
+                  // width: 100,
+                  width: "14.32%",
+                  checked: true,
+                  disabled: false
+                },
+                {
+                  title: "组织右固定10",
+                  key: "name10",
+                  width: 100,
+                  checked: false,
+                  disabled: false,
+                  render: (item, index) => {
+                    return item.name10;
+                  }
+                },
+                {
+                  title: "组织右固定11",
+                  key: "name11",
+                  width: 130,
+                  checked: false,
+                  disabled: false,
+                  render: (item, index) => {
+                    return <Input value={item.name15} onChange={() => {}} />;
+                  }
+                },
+                {
+                  title: "组织右固定12",
+                  key: "name12",
+                  width: 104,
+                  checked: false,
+                  disabled: false
+                },
+                {
+                  title: "组织右固定13",
+                  key: "name13",
+                  width: 200,
+                  checked: false,
+                  disabled: false,
+                  // fixed: "right"
+                },
+                {
+                  title: "组织右固定14",
+                  key: "name14",
+                  width: 160,
+                  checked: false,
+                  disabled: false,
+                  // fixed: "right"
+                },
+                {
+                  title: "组织右固定15",
+                  key: "name15",
+                  width: 120,
+                  fixed: "right",
+                  checked: false,
+                  disabled: false
+                }
+              ]}
+              // rowHover={rowHover}
+              // rowSelection={rowSelection}
+              // expandable={expandable}
+            />
         </div>
       </div>
       
