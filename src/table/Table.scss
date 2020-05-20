@@ -308,6 +308,12 @@ $table-filter-hover-recover-color: #91bcff;
     height: $table-row-height;
     top: 0;
     z-index: 10;
+    width: 20px;
+    transition: color 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    cursor: pointer;
+    &:hover {
+      color: #50bfff;
+    }
     &.header-rolled {
       border-bottom: none;
     }
@@ -348,11 +354,14 @@ $table-filter-hover-recover-color: #91bcff;
     &-fold {
       height: inherit;
       float: right;
-
-      button {
-        height: inherit;
-        line-height: inherit;
-        padding: 0;
+      .hui-table-action {
+        cursor: pointer;
+        line-height: 26px;
+        margin-top: 7px;
+        color: #505F79;
+        background-color: #edf1f7;
+        padding: 0 5px 0 10px;
+        font-size: 16px;
       }
     }
   }
@@ -424,6 +433,7 @@ $table-filter-hover-recover-color: #91bcff;
         .item-left {
           float: left !important;
           width: 180px;
+          height: 32px;
           label {
             width: 100%;
             height: inherit;

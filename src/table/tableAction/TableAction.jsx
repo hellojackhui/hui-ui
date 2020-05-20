@@ -5,9 +5,6 @@ import isEqual from 'lodash/isEqual';
 import './TableAction.scss';
 
 export default class TableAction extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentWillReceiveProps(nextProps) {
     this.isReceiveProps = true;

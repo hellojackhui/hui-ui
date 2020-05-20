@@ -33,6 +33,10 @@ const stopBubble = (e) => {
   e.nativeEvent.stopImmediatePropagation();
 }
 
+const stopPrevent = (e) => {
+  e.preventDefault();
+}
+
 export default class Table extends Component {
   constructor(props) {
     super(props);
@@ -360,7 +364,7 @@ export default class Table extends Component {
                     const {title, key, disabled, checked, __w_index__: index} = item;
                     return (
                       <div key={key} className="hui-table-filter__list-item">
-                        <div className="item-left" title={title} onClick={e => {this.onCustomClickHandler(e, index)}}>
+                        <div className="item-left" title={title} onClick={this.onCustomClickHandler(index)}>
                           <label>
                             <Checkbox 
                               disabled={disabled}
@@ -483,7 +487,7 @@ export default class Table extends Component {
     )
   }
 
-  toggleExpand = (e, row) => {
+  toggleExpand = (row) => e => {
     const {__w_index__: index, __expanded__} = row;
     const {dataSource} = this.state;
     dataSource.forEach((item) => {
@@ -493,6 +497,7 @@ export default class Table extends Component {
     this.setState({
       dataSource,
     });
+    stopPrevent(e);
     stopBubble(e);
   }
 
@@ -569,7 +574,7 @@ export default class Table extends Component {
                             ['fold_icon']: __expanded__
                           };
                           content = (
-                            <Button icon="unfold" className={this.classnames(iconClass)} onClick={(e) => this.toggleExpand(e, item) } />
+                            <Button icon="unfold" className={this.classnames(iconClass)} onClick={ this.toggleExpand(item) } />
                           )
                         }
                         fixed && (wrapperStyle[fixed] = this.computeFixedLocation(fixed, columns, index));
@@ -601,7 +606,6 @@ export default class Table extends Component {
     this.setState({
       isShowActions: !this.state.isShowActions
     });
-    stopBubble(e);
   }
 
   // 渲染行操作
@@ -629,12 +633,9 @@ export default class Table extends Component {
           }
         </div>
         <div className="hui-table-hover-action-fold">
-          <Button
-            onClick={this.onClickFoldHandler}
-            title={isShowActions ? '收起' : '展开'}
-          >
+          <div className="hui-table-action" title={isShowActions ? '收起' : '展开'} onClick={this.onClickFoldHandler}>
             <Icon name={isShowActions ? 'angle-double-right' : 'angle-double-left'}/>
-          </Button>
+          </div>
         </div>
       </div>
     )
@@ -889,7 +890,7 @@ export default class Table extends Component {
   }
 
   // 自定义表头点击事件
-  onCustomClickHandler = (e, index) => {
+  onCustomClickHandler = (index) => e => {
     const {columns, dataSource} = this.state;
     const { scrollLeft, clientWidth: scrollClientWidth } = this.scrollContainer.current;
     let currentCol = columns[index];
@@ -946,6 +947,7 @@ export default class Table extends Component {
       tableWidth,
       actionBarOffset: tableWidth - scrollClientWidth - scrollLeft,
     });
+    stopPrevent(e);
     stopBubble(e);
   }
 

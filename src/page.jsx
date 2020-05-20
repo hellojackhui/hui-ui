@@ -729,7 +729,7 @@ export default class Page extends React.Component {
                   key: "name13",
                   width: 200,
                   checked: false,
-                  disabled: false,
+                  disabled: true,
                   // fixed: "right"
                 },
                 {
@@ -749,7 +749,7 @@ export default class Page extends React.Component {
                   disabled: false
                 }
               ]}
-              // rowHover={rowHover}
+              rowHover={rowHover}
               // rowSelection={rowSelection}
               // expandable={expandable}
             />
