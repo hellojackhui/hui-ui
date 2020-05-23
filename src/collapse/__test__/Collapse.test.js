@@ -3,7 +3,7 @@ import {expect} from 'chai';
 import {configure, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
-import Collapse from './index';
+import Collapse from '../index';
 
 configure({ adapter: new Adapter() })
 

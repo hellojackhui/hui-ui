@@ -3,8 +3,8 @@ import {expect} from 'chai';
 import {configure, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
 import sinon from 'sinon';
-import Button from './index';
-import ButtonGroup from './ButtonGroup';
+import Button from '../index';
+import ButtonGroup from '../ButtonGroup';
 
 configure({adapter: new Adapter()});
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Adapter from 'enzyme-adapter-react-16';
 import {configure, mount} from 'enzyme';
-import Switch from './index';
+import Switch from '../index';
 import {expect} from 'chai';
 import sinon from 'sinon';
 

@@ -142,7 +142,7 @@
       "<rootDir>/src"
     ],
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
+      "src/**/__test__/*.{js,jsx,ts,tsx}",
       "!src/**/*.d.ts"
     ],
     "setupFiles": [

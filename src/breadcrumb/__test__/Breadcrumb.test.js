@@ -2,7 +2,7 @@ import React from 'react'
 import {expect} from 'chai';
 import {configure, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
-import BreadCrumb from './index';
+import BreadCrumb from '../index';
 
 configure({adapter: new Adapter()});
 

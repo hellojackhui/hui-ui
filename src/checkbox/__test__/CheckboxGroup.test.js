@@ -3,8 +3,8 @@ import {expect} from 'chai';
 import {configure, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16'
 import sinon from 'sinon';
-import CheckboxGroup from './CheckboxGroup';
-import Checkbox from './index';
+import CheckboxGroup from '../CheckboxGroup';
+import Checkbox from '../index';
 
 configure({adapter: new Adapter()});
 

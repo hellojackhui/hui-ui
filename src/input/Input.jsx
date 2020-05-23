@@ -22,7 +22,10 @@ export default class Input extends Component {
     if (onBlur) onBlur(e)
   }
   textChangeHandler = (e) => {
+    const {maxLength, minLength} = this.props;
     let val = e.target.value;
+    if (maxLength && `${val}`.trim().length > maxLength) return;
+    if (minLength && `${val}`.trim().length < minLength) return;
     if (this.props.onChange) {
       this.props.onChange(val);
     }
