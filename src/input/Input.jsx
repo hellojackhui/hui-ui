@@ -19,6 +19,7 @@ export default class Input extends Component {
   }
   onblur = (e) => {
     const { onBlur } = this.props;
+    if (this.props.trim) this.trimHandler();
     if (onBlur) onBlur(e)
   }
   textChangeHandler = (e) => {
@@ -55,7 +56,7 @@ export default class Input extends Component {
 
   }
   render() {
-    const { type, size, disabled, prepend, append, icon, autoComplete, rows, onMouseEnter, onMouseLeave, trim, ...otherprops } = this.props;
+    const { type, size, disabled, prepend, append, icon, autoComplete, rows, onMouseEnter, onMouseLeave, trim, maxRows, minRows, ...otherprops } = this.props;
     const commonClassName = this.classname(
       type === 'textarea' ? 'hui-textarea' : 'hui-input',
       size && `hui-input__${size}`,
@@ -125,6 +126,8 @@ Input.propTypes = {
   autoSize: PropType.bool,
   prepend: PropType.node,
   append: PropType.node,
+  minRows: PropType.number,
+  maxRows: PropType.number,
 
   // autocomplete attrs
   rows: PropType.number,

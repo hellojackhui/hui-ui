@@ -57,8 +57,16 @@ export default class InputNumber extends Component {
     })
   }
   onChange = (val) => {
+    const {max, min} = this.props;
+    let value = val;
+    if (max && Number(val) <= Number(max)) {
+      value = max;
+    }
+    if (min && Number(val) < Number(min)) {
+      value = min;
+    }
     this.setState({
-      value: val
+      value
     }, () => {
       clearTimeout(this.timeout);
       this.timeout = setTimeout(() => {
@@ -114,7 +122,6 @@ InputNumber.propTypes = {
   step: PropType.number,
   size: PropType.oneOf(['large', 'small']),
   disabled: PropType.bool,
-  controls: PropType.boolean,
   onChange: PropType.func,
 }
 
@@ -122,6 +129,5 @@ InputNumber.defaultProps = {
   min: 0,
   max: Number.MAX_SAFE_INTEGER,
   step: 1,
-  disabled: false,
-  controls: true,
+  disabled: false
 }

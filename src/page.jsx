@@ -439,7 +439,7 @@ export default class Page extends React.Component {
           <Slider value={20} formatTooltip={(val) => val / 100} showStops showInput/>
         </div>
         <div style={{'marginTop': '20px'}}>
-          <InputNumber value={20} step={2} />
+          <InputNumber value={3} max={4} min={2} />
         </div>
         <div style={{'marginTop': '20px', 'width': '500px'}}>
           <Tabs type="border-card" editable currentName="1" onTabAdd={this.tabAdd} addable>
