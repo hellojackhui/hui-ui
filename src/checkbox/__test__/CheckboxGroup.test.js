@@ -11,7 +11,7 @@ configure({adapter: new Adapter()});
 describe('test checkboxgroup component', () => {
   it('should load element when initing component', () => {
       const dom = mount(
-        <CheckboxGroup value="1">
+        <CheckboxGroup value={["1"]}>
           <Checkbox label="1">1</Checkbox>
           <Checkbox label="2">2</Checkbox>
         </CheckboxGroup>
