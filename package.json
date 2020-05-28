@@ -22,6 +22,7 @@
   "bugs": {
     "url": "https://github.com/hellojackhui/hui-ui/issues"
   },
+  "main": "./index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hellojackhui/hui-ui.git"
@@ -32,6 +33,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "tsc": "tsc",
     "test": "node scripts/test.js",
     "jest": "jest --coverage",
     "docz-dev": "docz dev",
@@ -113,7 +115,11 @@
     "node-sass": "^4.13.1",
     "react-resizable": "^1.10.1",
     "react-transition-group": "^4.3.0",
-    "sinon": "^9.0.2"
+    "sinon": "^9.0.2",
+    "typescript": "^3.7.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.14.0"
   },
   "eslintConfig": {
     "extends": "react-app",

@@ -4,5 +4,3 @@ import './index.css';
 import Page from './page';
 
 ReactDOM.render(<Page />, document.getElementById('root'));
-
-
