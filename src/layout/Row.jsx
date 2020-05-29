@@ -20,8 +20,8 @@ class Row extends Component {
   render() {
     const {tag, justify, align, type, children} = this.props;
     return React.createElement(tag, {
-      className: this.classname('yon-row', justify !== 'start' && `yon-row--${justify}`, align !== 'top' && `yon-row--${align}`, {
-        'yon-row--flex': type === 'flex'
+      className: this.classname('hui-row', justify !== 'start' && `hui-row--${justify}`, align !== 'top' && `hui-row--${align}`, {
+        'hui-row--flex': type === 'flex'
       }),
       style: this.styles(this.getStyle())
     }, children)

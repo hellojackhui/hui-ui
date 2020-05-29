@@ -19,7 +19,7 @@ class Column extends Component {
     let classList = [];
     ['span', 'offset', 'push', 'pull'].forEach((action) => {
       if (this.props[action] >= 0) {
-        action !== 'span' ? classList.push(`yon-column-${action}-${this.props[action]}`) : classList.push(`yon-column-${this.props[action]}`)
+        action !== 'span' ? classList.push(`hui-column-${action}-${this.props[action]}`) : classList.push(`hui-column-${this.props[action]}`)
       }
     });
 
@@ -28,7 +28,7 @@ class Column extends Component {
         let detail = this.props[size];
         Object.keys(detail).forEach((key) => {
           classList.push(
-            key !== 'span' ? `yon-column-${size}-${key}-${detail[key]}` : `yon-column-${size}-${detail[key]}`
+            key !== 'span' ? `hui-column-${size}-${key}-${detail[key]}` : `hui-column-${size}-${detail[key]}`
           )
         })
       } else if (this.props[size] >= 0){
@@ -36,7 +36,7 @@ class Column extends Component {
       }
     })
     return React.createElement(tag, {
-      className: this.classname('yon-column', classList),
+      className: this.classname('hui-column', classList),
       style: this.styles(this.getStyle())
     }, children)
   }

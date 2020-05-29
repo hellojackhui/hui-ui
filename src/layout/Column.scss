@@ -1,4 +1,4 @@
-.yon-column {
+.hui-column {
   border-radius: 4px;
   @for $i from 1 through 24 {
     &-#{$i} {
@@ -19,7 +19,7 @@
 }
 
 @media (min-width: 1200px) {
-  .yon-column {
+  .hui-column {
     @for $j from 1 to 24 {
       &-lg-#{$j} {
         width: 4.16667% * $j;
@@ -32,7 +32,7 @@
 }
 
 @media (min-width: 992px) {
-  .yon-column {
+  .hui-column {
     @for $k from 1 to 24 {
       &-md-#{$k} {
         width: 4.16667% * $k;
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: 768px) {
-  .yon-column {
+  .hui-column {
     @for $l from 1 to 24 {
       &-sm-#{$l} {
         width: 4.16667% * $l;
@@ -58,7 +58,7 @@
 }
 
 @media (max-width: 768px) {
-  .yon-column {
+  .hui-column {
     @for $m from 1 to 24 {
       &-xs-#{$m} {
         width: 4.16667% * $m;
