@@ -32,6 +32,7 @@ import Dropdown from './dropdown';
 import Result from './result';
 import Table from './table';
 import TableAction from './table/tableAction';
+import Skeleton from './skeleton/index';
 
 let defaultDataSource = [];
 for (let i = 0; i < 5000; i++) {
@@ -621,7 +622,7 @@ export default class Page extends React.Component {
           ]}
         />
         </div>
-        <div>
+        {/* <div>
           <Table
               tableUniqueId={"xxx"}
               scroll={{ y: document.documentElement.clientHeight - 250 - 50}}
@@ -753,6 +754,18 @@ export default class Page extends React.Component {
               // rowSelection={rowSelection}
               // expandable={expandable}
             />
+        </div> */}
+        <div style={{'margin': '20px'}}>
+            <Skeleton avatar active loading={false}>
+            <div>
+              <h4>Ant Design, a design language</h4>
+              <p>
+                We supply a series of design principles, practical patterns and high quality design
+                resources (Sketch and Axure), to help people create their product prototypes
+                beautifully and efficiently.
+              </p>
+            </div>
+            </Skeleton>
         </div>
       </div>
       
