@@ -61,7 +61,6 @@ it("should load Group dom when initing RadioGroup component", () => {
         <RadioButton value={"1"}></RadioButton>
       </RadioGroup>
     )
-    const domInput = dom.find(".hui-radio-group").childAt(0).find('.hui-radio-button__input');
     expect(dom.find('.hui-radio-group')).to.have.lengthOf(1);
     expect(dom.find(".hui-radio-group").childAt(0).state().checked).to.equal(false);
     expect(dom.find(".hui-radio-group").childAt(1).state().checked).to.equal(true);
@@ -70,7 +69,10 @@ it("should load Group dom when initing RadioGroup component", () => {
     expect(dom.find(".hui-radio-group").childAt(1).state().checked).to.equal(false);
     expect(dom2.find(".hui-radio-group").children()).to.have.lengthOf(0);
     expect(dom3.find(".hui-radio-group").children()).to.have.lengthOf(1);
-    domInput.simulate('change', {target: {checked: false}});
-    expect(func1).to.have.property('callCount', 0);
+    const Input = document.createElement('input');
+    Input.checked = true;
+    dom3.find(".hui-radio-group").childAt(0).find('input[type="radio"]').simulate('change', {target: Input});
+    dom.find(".hui-radio-group").childAt(0).find('input[type="radio"]').simulate('change', {target: Input});
+    expect(func1).to.have.property('callCount', 1);
   })
 })
