@@ -3,7 +3,7 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-15 20:46:23 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-03-21 21:25:54
+ * @Last Modified time: 2020-06-04 07:14:52
  */
 
 import React from 'react';
@@ -125,15 +125,8 @@ export default class Slider extends Component {
           </div>
         </div>
         {
-          showInputControls && (
-            <div className="hui-slider__control">
-              TODO...
-            </div>
-          )
-        }
-        {
           showInput && (
-            <InputNumber value={value} onChange={(value) => this.setState({value}, () => this.setPosition(this.state.value))} min={range[0]} max={range[1]} />
+            <InputNumber value={value} onChange={(value) => this.setState({value}, () => this.setPosition(this.state.value))} min={range[0]} max={range[1]} showInputControls={showInputControls} />
           )
         }
       </div>
@@ -157,7 +150,7 @@ Slider.defaultProps = {
   min: 0,
   max: 100,
   disabled: false,
-  showInputControls: false,
+  showInputControls: true,
   showStops: false,
   showTooltip: true,
   range: false,

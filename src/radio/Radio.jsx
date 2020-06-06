@@ -99,4 +99,5 @@ Radio.propTypes = {
   value: PropType.oneOfType([PropType.string, PropType.number, PropType.bool]),
   disabled: PropType.bool,
   name: PropType.string,
+  onChange: PropType.func
 }

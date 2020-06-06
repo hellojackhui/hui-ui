@@ -10,7 +10,6 @@ export default class RadioGroup extends Component {
   }
 
   handleChange = (val) => {
-    console.log(val);
     if (this.props.onChange) {
       this.props.onChange(val);
     }

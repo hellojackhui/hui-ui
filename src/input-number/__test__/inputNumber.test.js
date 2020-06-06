@@ -62,6 +62,12 @@ describe('test input-number component', () => {
     dom.find('.hui-input-number__inner input').simulate('blur');
     expect(dom.state().focus).to.equal(false);
   })
+it("should disabled inputControls when setting showInputControls prop", () => {
+    const dom = mount(<InputNumber showInputControls={false} />);
+    expect(dom.find('.hui-input-number__increase')).to.have.lengthOf(0);
+    dom.setProps({'showInputControls': true});
+    expect(dom.find('.hui-input-number__increase')).to.have.lengthOf(1);
+  })
   
 })
 

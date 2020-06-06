@@ -86,7 +86,7 @@ export default class InputNumber extends Component {
   }
   render() {
     const {value, focus} = this.state;
-    const {size, disabled, max, min} = this.props;
+    const {size, disabled, max, min, showInputControls} = this.props;
     return (
       <div className={this.classname('hui-input-number', size && `hui-input-number--${size}`, {
         'is-disabled': disabled,
@@ -103,12 +103,22 @@ export default class InputNumber extends Component {
               autoComplete={'off'}
             />
         </div>
-        <div className={this.classname("hui-input-number__increase", {
-          'is-hide': value >= max
-        })} onClick={this.onIncrease}><i className="hui-icon hui-icon-plus"/></div>
-        <div className={this.classname("hui-input-number__decrease", {
-          'is-hide': value <= min
-        })} onClick={this.onDecrease}><i className="hui-icon hui-icon-minus"/></div>
+        {
+          showInputControls && (
+            <React.Fragment>
+              <div className={this.classname("hui-input-number__increase", {
+                'is-hide': value >= max
+              })} onClick={this.onIncrease}>
+                <i className="hui-icon hui-icon-plus"/>
+              </div>
+              <div className={this.classname("hui-input-number__decrease", {
+                'is-hide': value <= min
+              })} onClick={this.onDecrease}>
+                <i className="hui-icon hui-icon-minus"/>
+              </div>
+            </React.Fragment>
+          )
+        }
       </div>
     )
   }
@@ -121,6 +131,7 @@ InputNumber.propTypes = {
   max: PropType.number,
   step: PropType.number,
   size: PropType.oneOf(['large', 'small']),
+  showInputControls: PropType.bool,
   disabled: PropType.bool,
   onChange: PropType.func,
 }
@@ -129,5 +140,6 @@ InputNumber.defaultProps = {
   min: 0,
   max: Number.MAX_SAFE_INTEGER,
   step: 1,
-  disabled: false
+  disabled: false,
+  showInputControls: true,
 }

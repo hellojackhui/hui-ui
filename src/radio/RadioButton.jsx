@@ -35,14 +35,13 @@ export default class RadioButton extends Component {
   }
   onChange = (e) => {
     let checked = e.target.checked;
-    console.log(e);
     if (checked) {
       if (this.props.onChange) {
         this.props.onChange(this.props.value);
       }
     }
     this.setState({
-      checked: true,
+      checked,
     })
   }
   onfocus = () => {
