@@ -56,7 +56,7 @@ export default class Input extends Component {
 
   }
   render() {
-    const { type, size, disabled, prepend, append, icon, autoComplete, rows, onMouseEnter, onMouseLeave, trim, maxRows, minRows, ...otherprops } = this.props;
+    const { type, size, disabled, prepend, append, icon, autoComplete, rows, onMouseEnter, onMouseLeave, trim, maxRows, minRows, ...otherProps } = this.props;
     const commonClassName = this.classname(
       type === 'textarea' ? 'hui-textarea' : 'hui-input',
       size && `hui-input__${size}`,
@@ -67,17 +67,17 @@ export default class Input extends Component {
         'hui-input-group--append': !!append
       }
     )
-    delete otherprops.onIconClick;
-    delete otherprops.style;
-    delete otherprops.resize;
-    delete otherprops.autoSize;
+    delete otherProps.onIconClick;
+    delete otherProps.style;
+    delete otherProps.resize;
+    delete otherProps.autoSize;
 
 
     if (type === 'textarea') {
       return (
         <div style={this.styles()} className={this.classname(commonClassName)}>
           <textarea 
-            {...otherprops}
+            {...otherProps}
             ref="textarea"
             rows={rows}
             style={this.state.textareaStyle}
@@ -94,7 +94,7 @@ export default class Input extends Component {
           {prepend && <div className="hui-input-group__prepend">{prepend}</div>}
           {icon && <i className={this.classnames('hui-input__icon', 'hui-icon', `hui-icon-${icon}`)} onClick={this.iconClickHandler}></i>}
           <input 
-            {...otherprops}
+            {...otherProps}
             ref="input"
             type={type}
             className="hui-input__inner"

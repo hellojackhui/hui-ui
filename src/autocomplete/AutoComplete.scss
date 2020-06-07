@@ -1,0 +1,44 @@
+.hui-autocomplete {
+    display: inline-block;
+    position: relative;
+    .hui-input {
+      margin: 0;
+    }
+    .hui-popper[x-placement^='bottom'] {
+      margin-top: 5px;
+    }
+    &-suggestion {
+      margin: 5px 0;
+      padding: 0;
+      box-shadow: 0 0 6px 0 rgba(0,0,0,.04), 0 2px 4px 0 rgba(0,0,0,.12);
+      &__list {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        max-height: 280px;
+        background-color: #fff;
+        padding: 6px 0;
+        border-radius: 2px;
+        z-index: 100;
+        li {
+          list-style: none;
+          line-height: 36px;
+          padding: 0 10px;
+          margin: 0;
+          cursor: pointer;
+          color: #48576a;
+          font-size: 14px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          &:hover {
+            background-color: #e4e8f1;
+          }
+          &.is-selected {
+            background-color: #50bfff;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+}

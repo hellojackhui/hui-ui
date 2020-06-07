@@ -33,6 +33,7 @@ import Result from './result';
 import Table from './table';
 import TableAction from './table/tableAction';
 import Skeleton from './skeleton/index';
+import AutoComplete from './autocomplete';
 
 let defaultDataSource = [];
 for (let i = 0; i < 5000; i++) {
@@ -134,7 +135,22 @@ export default class Page extends React.Component {
       dataSource: [],
       pageNum: 1,
       pageSize: 10,
-      total: 0
+      total: 0,
+      countries: [
+        {value: '中国', name: '中国'},
+        {value: '中国2', name: '中国2'},
+        {value: '中国3', name: '中国3'},
+        {value: '美国', name: '美国'},
+        {value: '法国', name: '法国'},
+        {value: '英国', name: '英国'},
+        {value: '德国', name: '德国'},
+        {value: '意大利', name: '意大利'},
+        {value: '日本', name: '日本'},
+        {value: '俄罗斯', name: '俄罗斯'},
+        {value: '朝鲜', name: '朝鲜'},
+        {value: '加拿大', name: '加拿大'},
+      ],
+      selectCountry: '',
     }
   }
   onClick = () => {
@@ -314,6 +330,24 @@ export default class Page extends React.Component {
     console.log(selected, selectedRows);
   };
 
+  querySearch(queryString, cb) {
+    const { countries } = this.state;
+    const results = queryString ? countries.filter(this.createFilter(queryString)) : countries;
+    console.log(results);
+    // 调用 callback 返回建议列表的数据
+    cb(results);
+  }
+
+  createFilter(queryString) {
+    return (countries) => {
+      return (countries.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
+    };
+  }
+  
+  handleSelect(item) {
+    console.log(item);
+  }
+
   render() {
     const fileList2 = [
       {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}
@@ -408,6 +442,21 @@ export default class Page extends React.Component {
         }
         <div style={{'marginTop': '20px'}}>
           <Input type="textarea" autoSize={false}/>
+        </div>
+        <div style={{'margin': '20px'}}>
+          <Row>
+            <Column span="8">
+              <AutoComplete
+                placeholder="请输入内容"
+                value={this.state.selectCountry}
+                onFocus={e=>console.log('onFocus')}
+                onBlur={e=>console.log('onblur')}
+                fetchSuggestions={this.querySearch.bind(this)}
+                onSelect={this.handleSelect.bind(this)}
+                triggerOnFocus={true}
+              ></AutoComplete>
+            </Column>
+          </Row>
         </div>
         <div style={{'marginTop': '20px'}}>
           {/* <Checkbox indeterminate={false} checked={true}>123</Checkbox> */}
@@ -768,7 +817,6 @@ export default class Page extends React.Component {
             </Skeleton>
         </div>
       </div>
-      
     )
   }
 }

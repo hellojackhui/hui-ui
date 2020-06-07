@@ -1,0 +1,67 @@
+---
+name: AutoComplete
+route: /AutoComplete
+--- 
+
+import {Playground, Props} from 'docz';
+import AutoComplete from './index';
+import {Row, Column} from '../layout/index.js';
+import '../../style/css/font-awesome.css';
+
+# AutoComplete 输入提示
+根据内容输入返回相关信息提示
+
+## 基础用法
+设置相关数据信息，提供过滤后的信息。
+
+<Playground>
+  {
+    () => {
+      const [countries, setcountries] = React.useState([
+        {value: '中国', name: '中国'},
+        {value: '中国2', name: '中国2'},
+        {value: '中国3', name: '中国3'},
+        {value: '美国', name: '美国'},
+        {value: '法国', name: '法国'},
+        {value: '英国', name: '英国'},
+        {value: '德国', name: '德国'},
+        {value: '意大利', name: '意大利'},
+        {value: '日本', name: '日本'},
+        {value: '俄罗斯', name: '俄罗斯'},
+        {value: '朝鲜', name: '朝鲜'},
+        {value: '加拿大', name: '加拿大'},
+      ]);
+      const [selectCountry, setselectCountry] = React.useState('');
+      function querySearch(queryString, cb) {
+        const results = queryString ? countries.filter(this.createFilter(queryString)) : countries;
+        // 调用 callback 返回建议列表的数据
+        cb(results);
+      }
+      function createFilter(queryString) {
+        return (country) => {
+          return (country.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
+        };
+      }
+      function handleSelect(item) {
+        console.log(item);
+      }
+      return (
+        <div style={{'margin': '20px'}}>
+          <Row>
+            <Column span="8">
+              <AutoComplete
+                placeholder="请输入内容"
+                value={selectCountry}
+                onFocus={e=>console.log('onFocus')}
+                onBlur={e=>console.log('onblur')}
+                fetchSuggestions={querySearch.bind(this)}
+                onSelect={handleSelect.bind(this)}
+                triggerOnFocus={true}
+              ></AutoComplete>
+            </Column>
+          </Row>
+        </div>
+      )
+    }
+  }
+</Playground>

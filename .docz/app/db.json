@@ -19,6 +19,7 @@
         "filepath": "README.md",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/README.md",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/README.md",
+        "hidden": false,
         "slug": "readme",
         "route": "/readme",
         "name": "Readme",
@@ -71,6 +72,7 @@
         "filepath": "src/index.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/index.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/index.mdx",
+        "hidden": false,
         "slug": "src-index",
         "menu": "",
         "headings": [
@@ -116,6 +118,7 @@
         "filepath": "src/alert/Alert.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/alert/Alert.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/alert/Alert.mdx",
+        "hidden": false,
         "slug": "src-alert-alert",
         "menu": "",
         "headings": [
@@ -163,6 +166,32 @@
       }
     },
     {
+      "key": "src/autocomplete/Autocomplete.mdx",
+      "value": {
+        "name": "AutoComplete",
+        "route": "/AutoComplete",
+        "id": "b808e5bfe236a4b0ba1967cb62826f85",
+        "filepath": "src/autocomplete/Autocomplete.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/autocomplete/Autocomplete.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/autocomplete/Autocomplete.mdx",
+        "hidden": false,
+        "slug": "src-autocomplete-autocomplete",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "autocomplete-输入提示",
+            "depth": 1,
+            "value": "AutoComplete 输入提示"
+          },
+          {
+            "slug": "基础用法",
+            "depth": 2,
+            "value": "基础用法"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/badge/Badge.mdx",
       "value": {
         "name": "Badge",
@@ -171,6 +200,7 @@
         "filepath": "src/badge/Badge.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/badge/Badge.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/badge/Badge.mdx",
+        "hidden": false,
         "slug": "src-badge-badge",
         "menu": "",
         "headings": [
@@ -203,36 +233,6 @@
       }
     },
     {
-      "key": "src/button/Button.mdx",
-      "value": {
-        "name": "Button",
-        "route": "/Button",
-        "id": "67a149a3adc4df5bff0c346fd826b652",
-        "filepath": "src/button/Button.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
-        "slug": "src-button-button",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "button-按钮",
-            "depth": 1,
-            "value": "Button 按钮"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/breadcrumb/BreadCrumb.mdx",
       "value": {
         "name": "BreadCrumb",
@@ -241,6 +241,7 @@
         "filepath": "src/breadcrumb/BreadCrumb.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "hidden": false,
         "slug": "src-breadcrumb-bread-crumb",
         "menu": "",
         "headings": [
@@ -271,6 +272,7 @@
         "filepath": "src/card/Card.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
+        "hidden": false,
         "slug": "src-card-card",
         "menu": "",
         "headings": [
@@ -283,31 +285,27 @@
       }
     },
     {
-      "key": "src/collapse/Collapse.mdx",
+      "key": "src/button/Button.mdx",
       "value": {
-        "name": "Collapse",
-        "route": "/Collapse",
-        "id": "9f64c87a72c6336f20ec0a488d065ab6",
-        "filepath": "src/collapse/Collapse.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
-        "slug": "src-collapse-collapse",
+        "name": "Button",
+        "route": "/Button",
+        "id": "67a149a3adc4df5bff0c346fd826b652",
+        "filepath": "src/button/Button.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/button/Button.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/button/Button.mdx",
+        "hidden": false,
+        "slug": "src-button-button",
         "menu": "",
         "headings": [
           {
-            "slug": "collapse-折叠面板",
+            "slug": "button-按钮",
             "depth": 1,
-            "value": "Collapse 折叠面板"
+            "value": "Button 按钮"
           },
           {
-            "slug": "基础使用",
+            "slug": "基本使用",
             "depth": 2,
-            "value": "基础使用"
-          },
-          {
-            "slug": "允许多个子面板同时展开",
-            "depth": 2,
-            "value": "允许多个子面板同时展开"
+            "value": "基本使用"
           },
           {
             "slug": "属性",
@@ -326,6 +324,7 @@
         "filepath": "src/checkbox/checkbox.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/checkbox/checkbox.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/checkbox/checkbox.mdx",
+        "hidden": false,
         "slug": "src-checkbox-checkbox",
         "menu": "",
         "headings": [
@@ -373,6 +372,42 @@
       }
     },
     {
+      "key": "src/collapse/Collapse.mdx",
+      "value": {
+        "name": "Collapse",
+        "route": "/Collapse",
+        "id": "9f64c87a72c6336f20ec0a488d065ab6",
+        "filepath": "src/collapse/Collapse.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/collapse/Collapse.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/collapse/Collapse.mdx",
+        "hidden": false,
+        "slug": "src-collapse-collapse",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "collapse-折叠面板",
+            "depth": 1,
+            "value": "Collapse 折叠面板"
+          },
+          {
+            "slug": "基础使用",
+            "depth": 2,
+            "value": "基础使用"
+          },
+          {
+            "slug": "允许多个子面板同时展开",
+            "depth": 2,
+            "value": "允许多个子面板同时展开"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/color-picker/ColorPicker.mdx",
       "value": {
         "name": "color-picker",
@@ -381,6 +416,7 @@
         "filepath": "src/color-picker/ColorPicker.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/color-picker/ColorPicker.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/color-picker/ColorPicker.mdx",
+        "hidden": false,
         "slug": "src-color-picker-color-picker",
         "menu": "",
         "headings": [
@@ -421,6 +457,7 @@
         "filepath": "src/i18n/i18n.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/i18n/i18n.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/i18n/i18n.mdx",
+        "hidden": false,
         "slug": "src-i18n-i18n",
         "menu": "",
         "headings": [
@@ -451,6 +488,7 @@
         "filepath": "src/icon/Icon.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/icon/Icon.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/icon/Icon.mdx",
+        "hidden": false,
         "slug": "src-icon-icon",
         "menu": "",
         "headings": [
@@ -481,6 +519,7 @@
         "filepath": "src/input/Input.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/input/Input.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/input/Input.mdx",
+        "hidden": false,
         "slug": "src-input-input",
         "menu": "",
         "headings": [
@@ -556,6 +595,7 @@
         "filepath": "src/input-number/InputNumber.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/input-number/InputNumber.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/input-number/InputNumber.mdx",
+        "hidden": false,
         "slug": "src-input-number-input-number",
         "menu": "",
         "headings": [
@@ -606,6 +646,7 @@
         "filepath": "src/layout/Layout.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/layout/Layout.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/layout/Layout.mdx",
+        "hidden": false,
         "slug": "src-layout-layout",
         "menu": "",
         "headings": [
@@ -651,6 +692,7 @@
         "filepath": "src/loading/Loading.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/loading/Loading.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/loading/Loading.mdx",
+        "hidden": false,
         "slug": "src-loading-loading",
         "menu": "",
         "headings": [
@@ -686,6 +728,7 @@
         "filepath": "src/message/Message.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/message/Message.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/message/Message.mdx",
+        "hidden": false,
         "slug": "src-message-message",
         "menu": "",
         "headings": [
@@ -726,6 +769,7 @@
         "filepath": "src/modal/Modal.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/modal/Modal.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/modal/Modal.mdx",
+        "hidden": false,
         "slug": "src-modal-modal",
         "menu": "",
         "headings": [
@@ -766,6 +810,7 @@
         "filepath": "src/notification/Notification.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/notification/Notification.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/notification/Notification.mdx",
+        "hidden": false,
         "slug": "src-notification-notification",
         "menu": "",
         "headings": [
@@ -801,6 +846,7 @@
         "filepath": "src/popover/PopOver.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/popover/PopOver.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/popover/PopOver.mdx",
+        "hidden": false,
         "slug": "src-popover-pop-over",
         "menu": "",
         "headings": [
@@ -831,6 +877,7 @@
         "filepath": "src/progress/Process.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/progress/Process.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/progress/Process.mdx",
+        "hidden": false,
         "slug": "src-progress-process",
         "menu": "",
         "headings": [
@@ -871,6 +918,7 @@
         "filepath": "src/rate/Rate.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/rate/Rate.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/rate/Rate.mdx",
+        "hidden": false,
         "slug": "src-rate-rate",
         "name": "Rate",
         "menu": "",
@@ -932,6 +980,7 @@
         "filepath": "src/result/Result.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/result/Result.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/result/Result.mdx",
+        "hidden": false,
         "slug": "src-result-result",
         "menu": "",
         "headings": [
@@ -967,6 +1016,7 @@
         "filepath": "src/switch/Switch.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/switch/Switch.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/switch/Switch.mdx",
+        "hidden": false,
         "slug": "src-switch-switch",
         "menu": "",
         "headings": [
@@ -1027,6 +1077,7 @@
         "filepath": "src/tabs/Tabs.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/tabs/Tabs.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/tabs/Tabs.mdx",
+        "hidden": false,
         "slug": "src-tabs-tabs",
         "menu": "",
         "headings": [
@@ -1067,6 +1118,7 @@
         "filepath": "src/tag/Tag.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/tag/Tag.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/tag/Tag.mdx",
+        "hidden": false,
         "slug": "src-tag-tag",
         "menu": "",
         "headings": [
@@ -1102,6 +1154,7 @@
         "filepath": "src/transfer/Transfer.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/transfer/Transfer.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/transfer/Transfer.mdx",
+        "hidden": false,
         "slug": "src-transfer-transfer",
         "menu": "",
         "headings": [
@@ -1157,6 +1210,7 @@
         "filepath": "src/watermask/WaterMask.mdx",
         "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/watermask/WaterMask.mdx",
         "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/watermask/WaterMask.mdx",
+        "hidden": false,
         "slug": "src-watermask-water-mask",
         "menu": "",
         "headings": [
@@ -1312,6 +1366,167 @@
               "params": [
                 {
                   "name": "res",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "initQuery",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "pageNum",
+                  "type": null
+                },
+                {
+                  "name": "pageSize",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "query",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "load",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "indicator",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "_del",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "getHoverContent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "record",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "expandedRowRender",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "record",
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "record",
+                  "type": null
+                },
+                {
+                  "name": "selected",
+                  "type": null
+                },
+                {
+                  "name": "selectedRows",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onSelectAll",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "selected",
+                  "type": null
+                },
+                {
+                  "name": "selectedRows",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "querySearch",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "queryString",
+                  "type": null
+                },
+                {
+                  "name": "cb",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "createFilter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "queryString",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
                   "type": null
                 }
               ],
@@ -1691,6 +1906,378 @@
                 "value": "false",
                 "computed": false
               }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/autocomplete/AutoComplete.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "AutoComplete",
+          "methods": [
+            {
+              "name": "suggestionVisible",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getData",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "queryString",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "changeHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "focusHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "changeSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "newIndex",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "keyDownHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "keyEnterHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "index",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "select",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "setAutoCompleteElement",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "removeCompleteElement",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "AutoComplete",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "fetchSuggestions": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onSelect": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "triggerOnFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "placeholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "\"请输入内容\"",
+                "computed": false
+              }
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "icon": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "prepend": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "append": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onIconClick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "popperClass": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onBlur": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/autocomplete/Suggestion.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Suggestion",
+          "methods": [
+            {
+              "name": "onVisibleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "inputWidth",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onSelect",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onAfterLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "isOverFlow",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Suggestion",
+          "props": {
+            "suggestions": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
             }
           }
         }
@@ -2276,20 +2863,7 @@
         {
           "description": "",
           "displayName": "CollapseItem",
-          "methods": [
-            {
-              "name": "onEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
+          "methods": [],
           "actualName": "CollapseItem",
           "props": {
             "isActive": {
@@ -2342,6 +2916,7 @@
               "params": [
                 {
                   "name": "color",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -2528,10 +3103,12 @@
               "params": [
                 {
                   "name": "command",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "instance",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -2694,6 +3271,7 @@
               "params": [
                 {
                   "name": "visible",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -2958,6 +3536,22 @@
               "required": false,
               "description": ""
             },
+            "minRows": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "maxRows": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
             "rows": {
               "type": {
                 "name": "custom",
@@ -3159,6 +3753,18 @@
               "required": false,
               "description": ""
             },
+            "showInputControls": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
             "disabled": {
               "type": {
                 "name": "custom",
@@ -3168,18 +3774,6 @@
               "description": "",
               "defaultValue": {
                 "value": "false",
-                "computed": false
-              }
-            },
-            "controls": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.boolean"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
                 "computed": false
               }
             },
@@ -4521,6 +5115,14 @@
               },
               "required": false,
               "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
             }
           },
           "context": {
@@ -4690,10 +5292,12 @@
               "params": [
                 {
                   "name": "target",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "classname",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -4706,10 +5310,12 @@
               "params": [
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "index",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -4729,6 +5335,7 @@
               "params": [
                 {
                   "name": "item",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -4748,10 +5355,12 @@
               "params": [
                 {
                   "name": "value",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "map",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -4778,6 +5387,7 @@
               "params": [
                 {
                   "name": "index",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -4811,6 +5421,7 @@
               "params": [
                 {
                   "name": "value",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -5241,6 +5852,159 @@
       ]
     },
     {
+      "key": "src/skeleton/Skeleton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Skeleton",
+          "methods": [
+            {
+              "name": "renderSkeletonPage",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderSkeletonHeader",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderSkeletonBody",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "active",
+                  "type": null
+                },
+                {
+                  "name": "paragraph",
+                  "type": null
+                },
+                {
+                  "name": "title",
+                  "type": null
+                },
+                {
+                  "name": "avatar",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderSkeletonParagraph",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "paragraph",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Skeleton",
+          "props": {
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "loading": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "avatar": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.any])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "paragraph": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{\n  row: 3,\n}",
+                "computed": false
+              }
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/SkeletonButton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkeletonButton",
+          "methods": [],
+          "actualName": "SkeletonButton"
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/SkeletonCircle.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkeletonCircle",
+          "methods": [],
+          "actualName": "SkeletonCircle"
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/SkeletonInput.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkeletonInput",
+          "methods": [],
+          "actualName": "SkeletonInput"
+        }
+      ]
+    },
+    {
       "key": "src/slider/Slider.jsx",
       "value": [
         {
@@ -5365,7 +6129,7 @@
               "required": false,
               "description": "",
               "defaultValue": {
-                "value": "false",
+                "value": "true",
                 "computed": false
               }
             },
@@ -5499,6 +6263,7 @@
               "params": [
                 {
                   "name": "index",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -5511,10 +6276,12 @@
               "params": [
                 {
                   "name": "status",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "index",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -5816,6 +6583,73 @@
           "displayName": "Table",
           "methods": [
             {
+              "name": "initTableColumn",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "columns",
+                  "type": null
+                },
+                {
+                  "name": "callback",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "initFixedColState",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "addSelectCell",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "columns",
+                  "type": null
+                },
+                {
+                  "name": "rowSelection",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "addExpandCell",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "columns",
+                  "type": null
+                },
+                {
+                  "name": "expandable",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "addCellPlaceholder",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "columns",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
               "name": "windowResizeHandler",
               "docblock": null,
               "modifiers": [],
@@ -5895,7 +6729,26 @@
               "returns": null
             },
             {
+              "name": "onCustomSearchChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
               "name": "renderCustomHeader",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onCustomResetHandler",
               "docblock": null,
               "modifiers": [],
               "params": [],
@@ -5926,12 +6779,36 @@
               "returns": null
             },
             {
+              "name": "toggleExpand",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "row",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
               "name": "renderBody",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
                   "name": "columns",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClickFoldHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
                   "type": null
                 }
               ],
@@ -6119,10 +6996,6 @@
               "modifiers": [],
               "params": [
                 {
-                  "name": "e",
-                  "type": null
-                },
-                {
                   "name": "index",
                   "type": null
                 }
@@ -6148,6 +7021,62 @@
               "params": [],
               "returns": null,
               "description": null
+            },
+            {
+              "name": "resizeTableWidth",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "columns",
+                  "type": null
+                },
+                {
+                  "name": "len",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "getCustomColTable",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "propsColumns",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "verifyCustomParam",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onAllClickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderNoData",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderPagination",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
             }
           ],
           "actualName": "Table",
@@ -6155,7 +7084,7 @@
             "prefixCls": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.string"
+                "raw": "PropType.string"
               },
               "required": false,
               "description": ""
@@ -6163,7 +7092,7 @@
             "tableUniqueId": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.string"
+                "raw": "PropType.string"
               },
               "required": false,
               "description": ""
@@ -6171,7 +7100,7 @@
             "columns": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.arrayOf(PropTypes.shape({\n  title: PropTypes.string,\n  key: PropTypes.string,\n  width: PropTypes.oneOfType([\n      PropTypes.string,\n      PropTypes.number\n  ]),\n  checked: PropTypes.bool,\n  disabled: PropTypes.bool,\n  fixed: PropTypes.oneOf(['left', 'right']),\n  align: PropTypes.oneOf(['left', 'center', 'right']),\n  render: PropTypes.func\n}))"
+                "raw": "PropType.arrayOf(PropType.shape({\n  title: PropType.string,\n  key: PropType.string,\n  width: PropType.oneOfType([\n      PropType.string,\n      PropType.number\n  ]),\n  checked: PropType.bool,\n  disabled: PropType.bool,\n  fixed: PropType.oneOf(['left', 'right']),\n  align: PropType.oneOf(['left', 'center', 'right']),\n  render: PropType.func\n}))"
               },
               "required": false,
               "description": "",
@@ -6183,7 +7112,7 @@
             "dataSource": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.array"
+                "raw": "PropType.array"
               },
               "required": false,
               "description": "",
@@ -6195,7 +7124,7 @@
             "loading": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.bool"
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": ""
@@ -6203,7 +7132,7 @@
             "columnsFilter": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.bool"
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": ""
@@ -6211,7 +7140,7 @@
             "columnsCache": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.bool"
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": ""
@@ -6219,7 +7148,7 @@
             "columnsDrag": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.bool"
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": ""
@@ -6227,7 +7156,7 @@
             "bordered": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.bool"
+                "raw": "PropType.bool"
               },
               "required": false,
               "description": ""
@@ -6235,7 +7164,7 @@
             "scroll": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.object"
+                "raw": "PropType.object"
               },
               "required": false,
               "description": "",
@@ -6247,7 +7176,7 @@
             "rowHover": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.shape({\n  hoverContent: PropTypes.func,\n  onRowHover: PropTypes.func\n})"
+                "raw": "PropType.shape({\n  hoverContent: PropType.func,\n  onRowHover: PropType.func\n})"
               },
               "required": false,
               "description": ""
@@ -6255,7 +7184,7 @@
             "rowSelection": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.shape({\n  type: PropTypes.oneOf(['checkbox', 'radio']),\n  onSelect: PropTypes.func,\n  onSelectAll: PropTypes.func,\n  fixed: PropTypes.bool\n})"
+                "raw": "PropType.shape({\n  type: PropType.oneOf(['checkbox', 'radio']),\n  onSelect: PropType.func,\n  onSelectAll: PropType.func,\n  fixed: PropType.bool\n})"
               },
               "required": false,
               "description": ""
@@ -6263,7 +7192,7 @@
             "pagination": {
               "type": {
                 "name": "custom",
-                "raw": "PropTypes.object"
+                "raw": "PropType.object"
               },
               "required": false,
               "description": ""
@@ -6334,14 +7263,17 @@
               "params": [
                 {
                   "name": "tab",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "index",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -6382,6 +7314,7 @@
               "params": [
                 {
                   "name": "value",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -6394,10 +7327,12 @@
               "params": [
                 {
                   "name": "item",
+                  "optional": false,
                   "type": null
                 },
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -6410,6 +7345,7 @@
               "params": [
                 {
                   "name": "firstRendering",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -8340,6 +9276,7 @@
               "params": [
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -8352,6 +9289,7 @@
               "params": [
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -8416,6 +9354,7 @@
               "params": [
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -8428,6 +9367,7 @@
               "params": [
                 {
                   "name": "newprops",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -8461,6 +9401,7 @@
               "params": [
                 {
                   "name": "e",
+                  "optional": false,
                   "type": null
                 }
               ],
@@ -8494,6 +9435,7 @@
               "params": [
                 {
                   "name": "event",
+                  "optional": false,
                   "type": null
                 }
               ],

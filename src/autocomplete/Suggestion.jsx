@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Component, PropType, View, Transition} from '../../libs/index';
 import Popper from 'popper.js';
+import './AutoComplete.scss';
 
-export default class Suggestion extends Component {
+class Suggestion extends Component {
   constructor(props) {
     super(props);
     this.state = {
       showPopper: false,
       dropdownWidth: ''
     }
+    this.popperJS = null;
   }
   onVisibleChange = (visible, inputWidth) => {
     this.setState({
@@ -18,27 +20,33 @@ export default class Suggestion extends Component {
     })
   }
   parent() {
-    return this.context.Component;
+    return this.context.component;
   }
   onSelect = (item) => {
     this.parent().select(item);
   }
   onEnter = () => {
-    const reference = ReactDOM.findDOMNode(his.parent().inputNode);
+    const reference = ReactDOM.findDOMNode(this.parent().inputRef);
     this.popperJS = new Popper(reference, this.refs.popper, {
-      modifiers: {
-        computeStyle: {
-          gpuAcceleration: false
+      modifiers: [
+        {
+          computeStyle: {
+            gpuAcceleration: false
+          }
         }
-      }
+      ]
     });
   }
-  onAfterLeave() {
+  onAfterLeave = () => {
     this.popperJS.destroy();
+  }
+  isOverFlow = () => {
+    const {suggestions} = this.props;
+    return suggestions.length > 7
   }
   render() {
     const { customItem } = this.parent().props;
-    const { loading, highlightedIndex } = this.parent().state;
+    const { loading, selectIndex } = this.parent().state;
     const { suggestions } = this.props;
     const { showPopper, dropdownWidth } = this.state;
     return (
@@ -46,7 +54,7 @@ export default class Suggestion extends Component {
         <View show={showPopper}>
           <div
             ref="popper"
-            className={this.classNames('hui-autocomplete-suggestion', 'hui-popper', {
+            className={this.classnames('hui-autocomplete-suggestion', 'hui-popper', {
               'is-loading': loading
             })}
             style={{
@@ -54,7 +62,9 @@ export default class Suggestion extends Component {
               zIndex: 1
             }}
           >
-            <ul className="hui-autocomplete-suggestion__list">
+            <ul className="hui-autocomplete-suggestion__list" style={{
+              'overflowY': this.isOverFlow() ? 'scroll' : 'auto'
+            }}>
               {
                 loading ? (
                   <li><i className="hui-icon-loading"></i></li>
@@ -62,7 +72,8 @@ export default class Suggestion extends Component {
                   return (
                     <li
                       key={index}
-                      className={this.classNames({'highlighted': highlightedIndex === index})}
+                      className={this.classnames({'is-selected': selectIndex === index})}
+                      title={item.value}
                       onClick={this.onSelect.bind(this, item)}>
                       {
                         !customItem ? item.value : React.createElement(customItem, {
@@ -82,7 +93,12 @@ export default class Suggestion extends Component {
   }
 }
 
+Suggestion.propTypes = {
+  suggestions: PropType.array,
+}
+
 Suggestion.contextTypes = {
   component: PropType.any
 };
   
+export default Suggestion;

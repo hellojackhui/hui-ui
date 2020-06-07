@@ -14,6 +14,7 @@
 
 .hui-zoom-in-top-enter-active, .zoom-in-top-enter-active, .hui-zoom-in-top-leave-active, .zoom-in-top-leave-active  {
   transform-origin: center top;
+  animation-fill-mode: both;
   transition-property: opacity, transform;
   transition-duration: .1s;
 }
@@ -53,8 +54,8 @@
 }
 
 .zoom-in-top-enter {
-  transform: scaleY(0);
   opacity: 0;
+  transform: scaleY(0.4);
 }
 
 .zoom-in-top-enter-to {
@@ -67,7 +68,7 @@
 }
 
 .zoom-in-top-leave-to {
-  transform: scaleY(0);
+  transform: scaleY(0.4);
   opacity: 0;
   transition-timing-function: cubic-bezier(.6, .04, .98, .34);
 }

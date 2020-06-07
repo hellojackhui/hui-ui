@@ -71,7 +71,7 @@ export default class Transition extends Component {
   }
 
   isViewComponent(element) {
-    return element && element.type.name === 'View';
+    return element && (element.type.name === 'View' || element.type._typeName === 'View');
   }
 
   didEnter(e) {
