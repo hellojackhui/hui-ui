@@ -34,6 +34,8 @@ import Table from './table';
 import TableAction from './table/tableAction';
 import Skeleton from './skeleton/index';
 import AutoComplete from './autocomplete';
+import BackTop from './backTop';
+import Icon from './icon';
 
 let defaultDataSource = [];
 for (let i = 0; i < 5000; i++) {
@@ -816,6 +818,9 @@ export default class Page extends React.Component {
             </div>
             </Skeleton>
         </div>
+        <BackTop>
+          <div>UP</div>
+        </BackTop>
       </div>
     )
   }
