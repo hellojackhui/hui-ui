@@ -184,7 +184,7 @@ class Tabs extends Component {
       const { onTabClick } = this.props;
       this.calcBarStyle();
       this.scrollToActiveTab();
-      onTabClick && onTabClick(e);
+      onTabClick && onTabClick(item, e);
     })
   }
 
@@ -324,6 +324,7 @@ Tabs.PropType = {
 }
 
 Tabs.defaultProps = {
+  type: 'card',
   closable: false,
   addable: false,
   editable: false,
