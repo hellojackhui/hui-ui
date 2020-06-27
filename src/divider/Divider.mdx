@@ -1,0 +1,78 @@
+---
+name: Divider
+route: /Divider
+---
+
+# Divider 分割线
+分割线组件
+
+import {Playground, Props} from 'docz';
+import Divider from './index.js';
+import '../../style/css/font-awesome.css';
+
+## 基本使用
+使用分割线组件可以分割内容区域
+<Playground>
+  <div>
+    <div>
+      <p>这是内容区1</p>
+      <Divider />
+      <p>这是内容区2</p>
+    </div>
+    <div>
+      <span>这是内容区1</span>
+      <Divider type={"vertical"} />
+      <span>这是内容区2</span>
+    </div>
+    <div>
+      <span>这是内容区1</span>
+      <Divider dashed />
+      <span>这是内容区2</span>
+    </div>
+  </div>
+</Playground>
+
+## 添加文本
+可以在组件中添加分割文本
+<Playground>
+  <div>
+    <p>这是内容区1</p>
+    <Divider>text</Divider>
+    <p>这是内容区2</p>
+  </div>
+</Playground>
+
+可以设置分割文本的位置
+<Playground>
+  <div>
+    <div>
+      <p>这是内容区1</p>
+      <Divider orientation={"center"}>居中文本</Divider>
+      <p>这是内容区2</p>
+    </div>
+    <div>
+      <p>这是内容区1</p>
+      <Divider orientation={"left"}>居左文本</Divider>
+      <p>这是内容区2</p>
+    </div>
+    <div>
+      <p>这是内容区1</p>
+      <Divider orientation={"right"}>居右文本</Divider>
+      <p>这是内容区2</p>
+    </div>
+    <div>
+      <p>这是内容区1</p>
+      <Divider plain>设置正文格式</Divider>
+      <p>这是内容区2</p>
+    </div>
+  </div>
+</Playground>
+
+## 属性
+
+属性名|名称|类型|默认值
+----|---|---|---
+dashed|是否为虚线|Boolean|false
+orientation|分割文本位置|String|['left', 'right', 'center']
+type|虚线定位|String|['horizontal', 'vertical']
+plain|分割文本是否为正文格式|Boolean|false

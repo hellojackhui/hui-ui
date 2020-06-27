@@ -36,6 +36,7 @@ import Skeleton from './skeleton/index';
 import AutoComplete from './autocomplete';
 import BackTop from './backTop';
 import Icon from './icon';
+import Divider from './divider';
 
 let defaultDataSource = [];
 for (let i = 0; i < 5000; i++) {
@@ -821,6 +822,11 @@ export default class Page extends React.Component {
         <BackTop>
           <div>UP</div>
         </BackTop>
+        <div style={{'padding': '20px'}}>
+          <p>123123123123123</p>
+          <Divider type="vertical"></Divider>
+          <p>312312312312312</p>
+        </div>
       </div>
     )
   }
