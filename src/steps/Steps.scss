@@ -6,6 +6,12 @@
     &:last-child .hui-step__line {
         display: none;
     }
+    &.is-vertical {
+      display: block;
+      .hui-step__main {
+        padding-left: 25px;
+      }
+    }
     &__head {
         width: 28px;
         height: 28px;
@@ -67,9 +73,9 @@
         &.is-vertical {
             width: 2px;
             box-sizing: border-box;
-            top: 32px;
+            top: 28px;
             bottom: 0;
-            left: 15px;
+            left: 13px;
         }
     }
     &__inner {
@@ -84,7 +90,7 @@
     }
     &__icon {
         display: block;
-        line-height: 28px;
+        line-height: 26px;
         text-align: center;
     }
     &__main {
@@ -122,11 +128,5 @@
         &.is-wait {
             color: #bfcbd9;
         }
-    }
-    &.is-vertical {
-      display: inline-block;
-      .hui-step__main {
-        padding-left: 10px;
-      }
     }
 }

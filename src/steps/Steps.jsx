@@ -1,7 +1,6 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index'; 
 
-
 class Steps extends Component {
   // eslint-disable-next-line
   constructor(props) {
