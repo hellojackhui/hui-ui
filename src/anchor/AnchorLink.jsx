@@ -6,9 +6,6 @@ import './Anchor.scss';
 class AnchorLink extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      
-    }
   }
 
   parent() {
