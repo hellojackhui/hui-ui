@@ -657,7 +657,7 @@ export default class Page extends React.Component {
           </Modal>
         </div>
         <div style={{'margin': '100px'}}>
-          <PopOver placement="bottom" title="标题" width="200" content="这是一段容,这是一段容,这是一段容,这是一段容。" trigger="focus">
+          <PopOver placement="bottom" title="标题" width="200" content="这是一段容,这是一段容,这是一段容,这是一段容。" trigger="hover">
             <Button>hover 激活</Button>
           </PopOver>
         </div>
