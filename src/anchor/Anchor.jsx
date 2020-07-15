@@ -1,5 +1,7 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
+import getScroll from '../../libs/utils/getScroll';
+import scrollTo from '../../libs/utils/scrollTo';
 import './Anchor.scss';
 
 const sharpMatcherRegx = /#(\S+)$/;
@@ -15,7 +17,6 @@ class Anchor extends Component {
     this.links = [];
     this.scrollEvent = null;
     this.animating = false;
-
   }
 
   getDefaultContainer = () => {
@@ -36,11 +37,12 @@ class Anchor extends Component {
   }
 
   getContainer = () => {
-    const {getContainer} = this.props;
-    const getfunc = getContainer || this.getDefaultContainer;
+    const {getContainerFunc} = this.props;
+    const getfunc = getContainerFunc || this.getDefaultContainer;
     return getfunc();
   }
 
+  // 相对于视口的高度
   getOffsetTop = (element, container) => {
     if (!element.getClientRects().length) {
       return 0;
@@ -58,7 +60,7 @@ class Anchor extends Component {
 
   componentDidMount() {
     this.scrollContainer = this.getContainer();
-    this.scrollEvent = addEventListener(this.scrollContainer, 'scroll', this.handleScroll);
+    this.scrollEvent = this.scrollContainer.addEventListener('scroll', this.handleScroll, false);
     this.handleScroll();
   }
 
@@ -68,7 +70,7 @@ class Anchor extends Component {
       if (this.scrollContainer !== currentContainer) {
         this.scrollContainer = currentContainer;
         this.scrollEvent.remove();
-        this.scrollEvent = addEventListener(this.scrollContainer, 'scroll', this.handleScroll);
+        this.scrollEvent = this.scrollContainer.addEventListener('scroll', this.handleScroll, false);
         this.handleScroll();
       }
     }
@@ -77,7 +79,7 @@ class Anchor extends Component {
 
   componentWillUnmount() {
     if (this.scrollEvent) {
-      this.scrollEvent.remove();
+      this.scrollEvent.removeEventListener('scroll', this.handleScroll, false);
     }
   }
 
@@ -111,12 +113,25 @@ class Anchor extends Component {
   }
 
   // 处理锚点滚动
-  handleScrollTo = (link) => {
+  scrollToHandler = (link) => {
     const {offsetTop, targetOffset} = this.props;
     this.setCurrentActiveLink(link);
     const container = this.getContainer();
     const scrollTop = getScroll(container, true);
-    const 
+    const sharpLinkMatch = sharpMatcherRegx.exec(link);
+    if (!sharpLinkMatch) return;
+    const targetElement = document.getElementById(sharpLinkMatch[1]);
+    if (!targetElement) return;
+    const eleOffsetTop = getOffsetTop(targetElement, container);
+    let y = scrollTop + eleOffsetTop;
+    y -= targetOffset !== undefined ? targetOffset : offsetTop || 0;
+    this.animating = true;
+    scrollTo(y, {
+      callback: () => {
+        this.animating = false;
+      },
+      getContainer: this.getContainer,
+    });
   }
 
   // 保存锚点
@@ -204,11 +219,19 @@ class Anchor extends Component {
 }
 
 Anchor.propTypes = {
-  
+  direction: PropType.string,
+  offsetTop: PropType.number,
+  showInkInFixed: PropType.bool,
+  getContainerFunc: PropType.func,
+  getCurrentAnchor: PropType.func,
+  targetOffset: PropType.number,
+  bounds: PropType.number,
 }
 
 Anchor.defaultProps = {
-  
+  direction: 'rtl',
+  offsetTop: 0,
+  bounds: 5,
 }
 
 Anchor.childContextTypes = {

@@ -2,7 +2,6 @@ import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import './Anchor.scss';
 
-
 class AnchorLink extends Component {
   constructor(props) {
     super(props);
@@ -30,12 +29,11 @@ class AnchorLink extends Component {
 
   clickHandler = (e) => {
     const {href, title} = this.props;
-    const {scrollTo} = this.parent().state;
     const {onClick} = this.parent();
     if (onClick) {
       onClick(e, {href, title})
     }
-    scrollTo(href);
+    this.parent().scrollToHandler(href);
   }
 
 
