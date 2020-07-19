@@ -611,7 +611,7 @@ export default class Page extends React.Component {
           </PopOver>
         </div>
         <div style={{'margin': '20px'}}>
-        <Result
+        {/* <Result
           status="smile"
           title="Successfully Purchased Cloud Server ECS!"
           subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
@@ -621,7 +621,7 @@ export default class Page extends React.Component {
             </Button>,
             <Button key="buy">Buy Again</Button>,
           ]}
-        />
+        /> */}
         </div>
         <div style={{'margin': '20px'}}>
             <Skeleton avatar active loading={false}>
