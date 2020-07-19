@@ -578,20 +578,6 @@ export default class Page extends React.Component {
       <Breadcrumb.Item>活动详情</Breadcrumb.Item>
     </Breadcrumb>
         </div>
-        <div style={{'marginTop': '20px'}}>
-          <Tree
-            data={treedata}
-            multiple={true}
-            clearAll={false}
-            defaultExpandAll={true}
-            expandOnClickNode={true}
-            selectItems={[]}
-            showQuery={true}
-            onSelect={this.handleSelect}
-            onClear={this.handleClear}
-            onItemChecked={this.handleItemChecked}
-          />
-        </div>
         {/* <div style={{'marginTop': '30px'}}>
         <Menu theme="dark" defaultActive="1" className="el-menu-demo" mode="horizontal" menuTrigger="click">
           <Menu.Item index="1">处理中心</Menu.Item>
@@ -826,6 +812,9 @@ export default class Page extends React.Component {
           <p>123123123123123</p>
           <Divider type="vertical"></Divider>
           <p>312312312312312</p>
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Tree />
         </div>
       </div>
     )

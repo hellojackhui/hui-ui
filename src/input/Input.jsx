@@ -92,7 +92,7 @@ export default class Input extends Component {
       return (
         <div style={this.styles()} className={this.classname(commonClassName)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           {prepend && <div className="hui-input-group__prepend">{prepend}</div>}
-          {icon && <i className={this.classnames('hui-input__icon', 'hui-icon', `hui-icon-${icon}`)} onClick={this.iconClickHandler}></i>}
+          {icon &&  <span className="hui-input__icon" onClick={this.iconClickHandler}><i className={this.classnames('hui-icon', `hui-icon-${icon}`)}></i></span>}
           <input 
             {...otherProps}
             ref="input"
@@ -146,6 +146,7 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   autoSize: false,
+  size: 'default',
   trim: false,
   rows: 2,
   autoComplete: 'off',
