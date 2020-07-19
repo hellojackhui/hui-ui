@@ -5,6 +5,7 @@ cache:
     directories: 
         - node_modules
 before_script:
+    cd /home/travis/build/hellojackhui/hui-ui/
     npm install
 script:
     npm run start
