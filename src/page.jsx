@@ -814,7 +814,20 @@ export default class Page extends React.Component {
           <p>312312312312312</p>
         </div>
         <div style={{'marginTop': '20px'}}>
-          <Tree />
+          <Tree 
+            defaultCheckedKeys={[5]}
+            isShowCheckbox={false}
+            defaultExpandAll={false}
+            defaultExpandedKeys={[6, 9]}
+            renderContent={() => {return (
+              <span>
+                <span style={{float: 'right'}}>
+                  <Button size="mini" onClick={ () => {} }>Append</Button>
+                  <Button size="mini" onClick={ () => {} }>Delete</Button>
+                </span>
+              </span>
+            )}}
+          />
         </div>
       </div>
     )

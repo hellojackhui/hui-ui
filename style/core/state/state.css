@@ -72,3 +72,11 @@
   opacity: 0;
   transition-timing-function: cubic-bezier(.6, .04, .98, .34);
 }
+
+.is-expanded {
+  transform: rotate(0deg);
+}
+
+.not-expanded {
+  transform: rotate(-90deg);
+}

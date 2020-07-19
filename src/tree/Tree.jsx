@@ -1,8 +1,9 @@
 import React from 'react';
 import cloneDeep from 'lodash/cloneDeep';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType, Transition} from '../../libs/index';
 import Input from '../input/index';
 import Checkbox from '../checkbox/index';
+import Icon from '../icon/index';
 import {matchKey} from './utils.js';
 import './Tree.scss';
 import {demoData} from './mockdata';
@@ -24,14 +25,13 @@ export default class Tree extends Component {
 
   initTreeData = () => {
     let sourceTreeData = this.initialTreeData(demoData);
+    let list = this.initListdata(sourceTreeData)
+    this.setDefaultExpand(list, sourceTreeData);
+    console.log(sourceTreeData);
     this.setState({
       sourceTreeData,
+      sourceListData: list,
       treeData: cloneDeep(sourceTreeData)
-    }, () => {
-      let list = this.initListdata()
-      this.setState({
-        sourceListData: list,
-      })
     })
   }
 
@@ -51,14 +51,38 @@ export default class Tree extends Component {
 
   // 为数据添加初始化属性
   insertNodeParams = (node, index, parent, level) => {
+    const {defaultCheckedKeys, defaultExpandAll} = this.props;
+    let checked = defaultCheckedKeys.includes(node.id) || false;
+    let expanded = defaultExpandAll || false;
     return {
       ...node,
       key: parent ? `${parent.key}-${index + 1}`: `node-${index + 1}`,
-      checked: false,
+      checked,
       level,
       parent: parent ? `${parent.key}` : null,
-      expanded: false,
+      expanded,
     }
+  }
+
+  // 设置默认展开项
+  setDefaultExpand = (list, sourceData) => {
+    let {defaultExpandedKeys} = this.props;
+    let keysFromIds = list.filter((item) => defaultExpandedKeys.includes(item.id));
+    let keys = keysFromIds.map((item) => item.key);
+    function traverse(data = sourceData) {
+      if (!data) return;
+      for (let i = 0; i < data.length; i++) {
+        let node = data[i];
+        if (keys.some((key) => key.indexOf(node.key) > -1)) {
+          node.expanded = true;
+        }
+        if (node.children) {
+          traverse(node.children)
+        }
+      } 
+      return;
+    }
+    traverse(sourceData)
   }
 
   initListdata = (data = this.state.sourceTreeData, source = []) => {
@@ -94,23 +118,38 @@ export default class Tree extends Component {
 
   renderTreeNode = (node) => {
     const {checked, expanded, level, key, label, children, disabled} = node;
-    const {renderContent} = this.props;
+    const {renderContent, isShowCheckbox} = this.props;
+    const isExpandClass = {
+      'is-expanded': expanded,
+      'not-expanded': !expanded
+    }
     return (
       <React.Fragment>
         <div className="hui-tree-node" key={key} style={this.styles({
-          'paddingLeft': `${20 * level}px`
+          'paddingLeft': `${20 * (level + 1)}px`
         })}>
-          <Checkbox 
-            checked={checked}
-            disabled={disabled}
-          />
+          {
+            children && (
+              <Icon name={"caret-down"} className={isExpandClass} />
+            )
+          }
+          {
+            isShowCheckbox && (
+              <Checkbox 
+                checked={checked}
+                disabled={disabled}
+              />
+            )
+          }
           <span className="hui-tree-node__title">{label}</span>
           <div className="hui-tree-node__extend">
-            123
+            {
+              renderContent()
+            }
           </div>
         </div>
         {
-           children && this.renderTreeData(node.children)
+           children && expanded && this.renderTreeData(node.children)
         }
       </React.Fragment>
     )
@@ -189,9 +228,14 @@ Tree.propTypes = {
   nodeKey: PropType.string, // 树唯一节点
   load: PropType.func,  // 加载子树数据方法
   renderContent: PropType.func, // 渲染树节点内容区
-  defaultExpandAll: PropType.bool   // 是否默认显示全部
+  defaultExpandAll: PropType.bool,   // 是否默认显示全部
+  defaultCheckedKeys: PropType.array, // 默认选中项
+  defaultExpandedKeys: PropType.array, // 默认展开项
+  isShowCheckbox: PropType.bool,  // 是否显示选择框
 }
 
 Tree.defaultProps = {
   withquery: true,
+  isShowCheckbox: true,
+  defaultExpandAll: false,
 }
