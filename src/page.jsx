@@ -16,8 +16,6 @@ import Tabs from './tabs';
 import Card from './card';
 import WaterMask from './watermask';
 import {Row, Column} from './layout/index';
-import Upload from './upload/index';
-import { View } from '../libs';
 import Rate from './rate';
 import Steps from './steps';
 import Breadcrumb from './breadcrumb';
@@ -525,41 +523,6 @@ export default class Page extends React.Component {
             <Column span="5"><div style={{'height': '50px', 'background': 'red'}}></div></Column>
           </Row>
         </div>
-        <Upload
-          className="upload-demo"
-          action="//jsonplaceholder.typicode.com/posts/"
-          onPreview={file => this.handlePreview(file)}
-          onRemove={(file, fileList) => this.handleRemove(file, fileList)}
-          fileList={fileList2}
-          listType="picture"
-            tip={<div className="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>}
-          >
-            <Button size="small" type="primary">点击上传</Button>
-        </Upload>
-        <Upload
-          className="upload-demo"
-          drag
-          action="//jsonplaceholder.typicode.com/posts/"
-          onPreview={file => this.handlePreview(file)}
-          onRemove={(file, fileList) => this.handleRemove(file, fileList)}
-          fileList={fileList2}
-          listType="picture"
-            tip={<div className="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>}
-          >
-        </Upload>
-        <div>
-          <Upload
-            action="//jsonplaceholder.typicode.com/posts/"
-            listType="picture-card"
-            onPreview={file => this.handlePictureCardPreview(file)}
-            onRemove={(file, fileList) => this.handleRemove(file, fileList)}
-          >
-            <i className="hui-icon hui-icon-plus"></i>
-          </Upload>
-          <View show={dialogVisible}>
-            <img width="100%" src={dialogImageUrl} alt="" />
-          </View>
-        </div>
         <div>
           <Rate colors={['#99A9BF', '#F7BA2A', '#FF9900']} />
           <Rate allowHalf={true} onChange={(val) => console.log(val)} />
@@ -660,139 +623,6 @@ export default class Page extends React.Component {
           ]}
         />
         </div>
-        {/* <div>
-          <Table
-              tableUniqueId={"xxx"}
-              scroll={{ y: document.documentElement.clientHeight - 250 - 50}}
-              dataSource={dataSource}
-              loading={loading}
-              bordered
-              columns={[
-                {
-                  title: "组织左固定2",
-                  key: "name2",
-                  // width: 100,
-                  width: "14.28%",
-                  fixed: "left",
-                  checked: true,
-                  disabled: false
-                },
-                {
-                  title: "组织组织3",
-                  key: "name3",
-                  // align: "center",
-                  // width: 300,
-                  width: "14.28%",
-                  min: 200,
-                  checked: true,
-                  disabled: false,
-                  // fixed: "left"
-                },
-                {
-                  title: "组织组织4",
-                  key: "name4",
-                  width: 300,
-                  checked: false,
-                  disabled: true
-                },
-                {
-                  title: "组织组织5",
-                  key: "name5",
-                  // width: 111,
-                  width: "14.28%",
-                  checked: true,
-                  disabled: false,
-                  // fixed: 'left'
-                },
-                {
-                  title: "组织组织6",
-                  key: "name6",
-                  // width: 200,
-                  width: "14.28%",
-                  checked: true,
-                  disabled: false
-                },
-                {
-                  title: "组织右固定7",
-                  key: "name7",
-                  // width: 200,
-                  width: "14.28%",
-                  checked: true,
-                  disabled: false
-                },
-                {
-                  title: "组织右固定8",
-                  key: "name8",
-                  // width: 100,
-                  width: "14.28%",
-                  checked: true,
-                  disabled: false
-                },
-                {
-                  title: "组织右固定9",
-                  key: "name9",
-                  // width: 100,
-                  width: "14.32%",
-                  checked: true,
-                  disabled: false
-                },
-                {
-                  title: "组织右固定10",
-                  key: "name10",
-                  width: 100,
-                  checked: false,
-                  disabled: false,
-                  render: (item, index) => {
-                    return item.name10;
-                  }
-                },
-                {
-                  title: "组织右固定11",
-                  key: "name11",
-                  width: 130,
-                  checked: false,
-                  disabled: false,
-                  render: (item, index) => {
-                    return <Input value={item.name15} onChange={() => {}} />;
-                  }
-                },
-                {
-                  title: "组织右固定12",
-                  key: "name12",
-                  width: 104,
-                  checked: false,
-                  disabled: false
-                },
-                {
-                  title: "组织右固定13",
-                  key: "name13",
-                  width: 200,
-                  checked: false,
-                  disabled: true,
-                  // fixed: "right"
-                },
-                {
-                  title: "组织右固定14",
-                  key: "name14",
-                  width: 160,
-                  checked: false,
-                  disabled: false,
-                  // fixed: "right"
-                },
-                {
-                  title: "组织右固定15",
-                  key: "name15",
-                  width: 120,
-                  fixed: "right",
-                  checked: false,
-                  disabled: false
-                }
-              ]}
-              rowHover={rowHover}
-              // rowSelection={rowSelection}
-              // expandable={expandable}
-            />
-        </div> */}
         <div style={{'margin': '20px'}}>
             <Skeleton avatar active loading={false}>
             <div>
