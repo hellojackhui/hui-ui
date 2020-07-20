@@ -689,7 +689,7 @@ export default class Page extends React.Component {
           <Tree 
             data={this.state.demodata}
             defaultCheckedKeys={[9]}
-            isShowCheckbox={false}
+            isShowCheckbox={true}
             defaultExpandAll={false}
             defaultExpandedKeys={[6, 9]}
             renderContent={(store, data) => {return (

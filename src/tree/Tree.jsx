@@ -69,6 +69,7 @@ export default class Tree extends Component {
       key: parent ? `${parent.key}-${index + 1}`: `node-${index + 1}`,
       checked,
       active: false,
+      indeterminate: false,
       level,
       parent: parent ? `${parent.key}` : null,
       expanded,
@@ -129,7 +130,7 @@ export default class Tree extends Component {
   }
 
   renderTreeNode = (node) => {
-    const {checked, expanded, level, key, label, children, disabled, active} = node;
+    const {checked, expanded, level, key, label, children, disabled, active, indeterminate} = node;
     const {renderContent, isShowCheckbox} = this.props;
     const isExpandClass = {
       'is-expanded': expanded,
@@ -166,10 +167,10 @@ export default class Tree extends Component {
       <React.Fragment>
         <div className={treeNodeClass} key={key} style={this.styles({
           'paddingLeft': `${20 * (level + 1)}px`
-        })} onClick={(e) => this.toogleActiveNode(e, node, level)}>
+        })}>
           {
             (children && children.length) ? (
-              <Icon name={"caret-down"} className={isExpandClass} />
+              <Icon name={"caret-down"} className={isExpandClass}  onClick={(e) => this.toogleActiveNode(e, node, level)}/>
             ) : null
           }
           {
@@ -177,6 +178,8 @@ export default class Tree extends Component {
               <Checkbox 
                 checked={checked}
                 disabled={disabled}
+                indeterminate={indeterminate}
+                onChange={(val, e) => this.toggleNodeCheckHandler(e, node, val)}
               />
             )
           }
@@ -187,8 +190,8 @@ export default class Tree extends Component {
             }
           </div>
         </div>
-        <Transition name="zoom-in-top">
-          <View show={(children && children.length) && expanded}>
+        <Transition name="zoom-in-top" key={`${key}-transition`}>
+          <View show={!!((children && children.length) && expanded)}>
             <div>
               {
                 this.renderTreeData(children)
@@ -200,9 +203,56 @@ export default class Tree extends Component {
     )
   }
 
+  // 选中节点checkbox执行函数
+  toggleNodeCheckHandler = (e, node, val) => {
+    // e.persist()
+    e.stopPropagation();
+    const {onCheckChange} = this.props;
+    node.checked = val;
+    this.traverseNodeCheckSink(node, val);
+    this.traverseNodeCheckPop(node, val);
+    this.setState({}, () => {
+      onCheckChange && onCheckChange(node, val)
+    })
+  }
+
+  traverseNodeCheckSink = (node, val) => {
+    node.checked = val;
+    if (node.children && node.children.length) {
+      for (let item of node.children) {
+        this.traverseNodeCheckSink(item, val)
+      }
+    } else {
+      return;
+    }
+  }
+
+  // 由节点向上进行遍历，设置节点中间态
+  traverseNodeCheckPop = (node, val) => {
+    if (node.children && node.children.length) {
+      if (this.allChecked(node)) {
+        node.checked = true;
+        node.indeterminate = false;
+      } else {
+        node.checked = false;
+        node.indeterminate = true;
+      }
+    }
+    if (node.parent) {
+      this.traverseNodeCheckPop(node.$parent);
+    }
+  }
+
+  // 判断字节点是否全部选中
+  allChecked = (node) => {
+    if (!node.children || !node.children.length) return false;
+    let existUnchecked = node.children.some((item) => item.checked === false);
+    if (!!existUnchecked) return false;
+    return true;
+  }
+
   // 控制节点展开/关闭
   toogleActiveNode = (event, node, level) => {
-    event.preventDefault();
     // 控制展开
     if (node.expanded != undefined) {
       node.expanded = !node.expanded;
@@ -283,7 +333,7 @@ export default class Tree extends Component {
 
 Tree.propTypes = {
   data: PropType.object,    // 来源数据
-  withquery: PropType.bool,
+  withquery: PropType.bool, // 是否带搜索框
   emptyText: PropType.string,   // 内容为空展示信息
   nodeKey: PropType.string, // 树唯一节点
   load: PropType.func,  // 加载子树数据方法
@@ -292,6 +342,7 @@ Tree.propTypes = {
   defaultCheckedKeys: PropType.array, // 默认选中项
   defaultExpandedKeys: PropType.array, // 默认展开项
   isShowCheckbox: PropType.bool,  // 是否显示选择框
+  onCheckChange: PropType.func, // 选中后回调
 }
 
 Tree.defaultProps = {

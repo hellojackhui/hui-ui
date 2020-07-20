@@ -64,7 +64,7 @@ export default class Checkbox extends Component {
       label: newlabel,
     }, () => {
       if (onChange) {
-        onChange(val);
+        onChange(val, e);
       }
     })
   }

@@ -11,7 +11,7 @@ $active-color: #edf7ff;
     text-align: center;
     border: 1px solid $primary-color;
     border-radius: 8px;
-    padding: 4px 5px;
+    padding: 10px 5px;
   }
   &-input {
     width: 95%;
@@ -20,6 +20,7 @@ $active-color: #edf7ff;
     width: 95%;
     display: inline-block;
     margin-top: 10px;
+    min-height: 500px;
     border: 1px solid $primary-color;
     border-radius: 8px;
   }
