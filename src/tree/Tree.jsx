@@ -1,13 +1,14 @@
 import React from 'react';
 import cloneDeep from 'lodash/cloneDeep';
-import {Component, PropType, Transition} from '../../libs/index';
+import isEqual from 'lodash/isEqual';
+import {Component, PropType, Transition, View} from '../../libs/index';
 import Input from '../input/index';
 import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';
-import {matchKey} from './utils.js';
+import {matchKey, dipatchParent} from './utils.js';
 import './Tree.scss';
 import {demoData} from './mockdata';
-
+import { clone } from 'lodash';
 
 export default class Tree extends Component {
   constructor(props) {
@@ -16,22 +17,31 @@ export default class Tree extends Component {
       sourceTreeData: [],
       sourceListData: [],
       treeData: [],
+      listData: [],
     }
+    this.activeNode = null;
   }
 
   componentDidMount() {
-    this.initTreeData()
+    this.initTreeData(this.props.data)
   }
 
-  initTreeData = () => {
-    let sourceTreeData = this.initialTreeData(demoData);
+  componentWillReceiveProps(nextProps, nextState) {
+    const {data} = this.props;
+    if (!isEqual(data, nextProps.data)) {
+      this.initTreeData(nextProps.data)
+    }
+  }
+
+  initTreeData = (sourcedata) => {
+    let sourceTreeData = this.initialTreeData(sourcedata);
     let list = this.initListdata(sourceTreeData)
     this.setDefaultExpand(list, sourceTreeData);
-    console.log(sourceTreeData);
     this.setState({
       sourceTreeData,
       sourceListData: list,
-      treeData: cloneDeep(sourceTreeData)
+      treeData: cloneDeep(sourceTreeData),
+      listData: clone(list)
     })
   }
 
@@ -58,9 +68,11 @@ export default class Tree extends Component {
       ...node,
       key: parent ? `${parent.key}-${index + 1}`: `node-${index + 1}`,
       checked,
+      active: false,
       level,
       parent: parent ? `${parent.key}` : null,
       expanded,
+      '$parent': parent,
     }
   }
 
@@ -110,28 +122,55 @@ export default class Tree extends Component {
   }
 
   // 渲染树节点
-  renderTreeData = (listData) => {
+  renderTreeData = (listData = []) => {
     return listData.map((node) => {
-       return this.renderTreeNode(node);
+      return this.renderTreeNode(node);
     })
   }
 
   renderTreeNode = (node) => {
-    const {checked, expanded, level, key, label, children, disabled} = node;
+    const {checked, expanded, level, key, label, children, disabled, active} = node;
     const {renderContent, isShowCheckbox} = this.props;
     const isExpandClass = {
       'is-expanded': expanded,
       'not-expanded': !expanded
     }
+    const treeNodeClass = this.classnames({
+      "hui-tree-node": true,
+      "is-active": active
+    })
+    const store = {
+      'append': (target, data) => {
+        if (!data.children) {
+          data.children = [];
+        }
+        let newItem = this.insertNodeParams(target, (data.children.length) || 0, data, level + 1);
+        let insertIndex = data.children.findIndex((node) => node.key === data.key);
+        data.children.splice(insertIndex + 1, 0, newItem)
+        this.setState({})
+      },
+      'remove': (data) => {
+        let nodeIndex;
+        let target = dipatchParent(data, 1) || this.state.treeData;
+        if (data.parent) {
+          nodeIndex = target.children.findIndex((item) => item.key === data.key);
+          target.children.splice(nodeIndex, 1);
+        } else {
+          nodeIndex = target.findIndex((item) => item.key === data.key);
+          target.splice(nodeIndex, 1);
+        }
+        this.setState({})
+      }
+    }
     return (
       <React.Fragment>
-        <div className="hui-tree-node" key={key} style={this.styles({
+        <div className={treeNodeClass} key={key} style={this.styles({
           'paddingLeft': `${20 * (level + 1)}px`
-        })}>
+        })} onClick={(e) => this.toogleActiveNode(e, node, level)}>
           {
-            children && (
+            (children && children.length) ? (
               <Icon name={"caret-down"} className={isExpandClass} />
-            )
+            ) : null
           }
           {
             isShowCheckbox && (
@@ -144,17 +183,39 @@ export default class Tree extends Component {
           <span className="hui-tree-node__title">{label}</span>
           <div className="hui-tree-node__extend">
             {
-              renderContent()
+              renderContent(store, node)
             }
           </div>
         </div>
-        {
-           children && expanded && this.renderTreeData(node.children)
-        }
+        <Transition name="zoom-in-top">
+          <View show={(children && children.length) && expanded}>
+            <div>
+              {
+                this.renderTreeData(children)
+              }
+            </div>
+          </View>
+        </Transition>
       </React.Fragment>
     )
   }
 
+  // 控制节点展开/关闭
+  toogleActiveNode = (event, node, level) => {
+    event.preventDefault();
+    // 控制展开
+    if (node.expanded != undefined) {
+      node.expanded = !node.expanded;
+    }
+    node.active = true;
+    if (!this.activeNode) {
+      this.activeNode = node;
+    } else {
+      this.activeNode.active = false;
+      this.activeNode = node;
+    }
+    this.setState({});
+  }
 
   loadData = () => {
     return new Promise((resolve, reject) => {
@@ -175,7 +236,6 @@ export default class Tree extends Component {
   genFilterTree = (filterList) => {
     const {sourceTreeData} = this.state;
     const keyList = filterList.map((item) => item.key);
-    console.log(keyList);
     function traverseTree(data = sourceTreeData) {
       if (!data) return data;
       for (let i = 0; i < data.length; i++) {

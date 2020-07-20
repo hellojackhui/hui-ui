@@ -32,6 +32,7 @@ import Skeleton from './skeleton/index';
 import AutoComplete from './autocomplete';
 import BackTop from './backTop';
 import Divider from './divider';
+// import {demoData} from './tree/mockdata';
 
 let defaultDataSource = [];
 for (let i = 0; i < 5000; i++) {
@@ -149,7 +150,43 @@ export default class Page extends React.Component {
         {value: '加拿大', name: '加拿大'},
       ],
       selectCountry: '',
+      demodata: [{
+        id: 1,
+        label: '一级 1',
+        children: [{
+            id: 4,
+            label: '二级 1-1',
+            children: [{
+                id: 9,
+                label: '三级 1-1-1'
+            }, {
+                id: 10,
+                label: '三级 1-1-2'
+            }]
+        }]
+    }, {
+        id: 2,
+        label: '一级 2',
+        children: [{
+            id: 5,
+            label: '二级 2-1'
+        }, {
+            id: 6,
+            label: '二级 2-2'
+        }]
+    }, {
+        id: 3,
+        label: '一级 3',
+        children: [{
+            id: 7,
+            label: '二级 3-1'
+        }, {
+            id: 8,
+            label: '二级 3-2'
+        }]
+    }]
     }
+    this.id = 100;
   }
   onClick = () => {
     window.alert('clicked');
@@ -344,6 +381,14 @@ export default class Page extends React.Component {
   
   handleSelect(item) {
     console.log(item);
+  }
+
+  append = (store, data) => {
+    store.append({ id: this.id++, label: `testtest_${this.id}`, children: [] }, data);
+  }
+  
+  remove = (store, data) => {
+    store.remove(data);
   }
 
   render() {
@@ -642,15 +687,16 @@ export default class Page extends React.Component {
         </div>
         <div style={{'marginTop': '20px'}}>
           <Tree 
-            defaultCheckedKeys={[5]}
+            data={this.state.demodata}
+            defaultCheckedKeys={[9]}
             isShowCheckbox={false}
             defaultExpandAll={false}
             defaultExpandedKeys={[6, 9]}
-            renderContent={() => {return (
+            renderContent={(store, data) => {return (
               <span>
                 <span style={{float: 'right'}}>
-                  <Button size="mini" onClick={ () => {} }>Append</Button>
-                  <Button size="mini" onClick={ () => {} }>Delete</Button>
+                  <Button size="mini" onClick={ () => this.append(store, data) }>Append</Button>
+                  <Button size="mini" onClick={ () => this.remove(store, data) }>Delete</Button>
                 </span>
               </span>
             )}}

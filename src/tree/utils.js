@@ -10,3 +10,9 @@ export const matchKey = (key = '', keylist = [], accurate = false) => {
   let blurMatch = keylist.some((itemkey) => itemkey.indexOf(key) > -1);
   return accurate ? accurateMatch : (accurateMatch || blurMatch)
 }
+
+
+export const dipatchParent = (obj, level = 1) => {
+  if (level === 0) return obj;
+  return dipatchParent(obj.$parent, --level);
+} 
