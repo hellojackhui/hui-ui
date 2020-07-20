@@ -16,3 +16,19 @@ export const dipatchParent = (obj, level = 1) => {
   if (level === 0) return obj;
   return dipatchParent(obj.$parent, --level);
 } 
+
+// 判断子节点是否全部选中
+export const allChecked = (node) => {
+  if (!node.children || !node.children.length) return false;
+  let existUnchecked = node.children.some((item) => item.checked === false);
+  if (!!existUnchecked) return false;
+  return true;
+}
+
+// 判断子节点是否全部不被选中
+export const allNotChecked = (node) => {
+  if (!node.children || !node.children.length) return true;
+  let existChecked = node.children.some((item) => item.checked === true || item.indeterminate === true);
+  if (!!existChecked) return false;
+  return true;
+}

@@ -187,6 +187,7 @@ export default class Page extends React.Component {
     }]
     }
     this.id = 100;
+    this.treeRef = null;
   }
   onClick = () => {
     window.alert('clicked');
@@ -687,8 +688,9 @@ export default class Page extends React.Component {
         </div>
         <div style={{'marginTop': '20px'}}>
           <Tree 
+            ref={(el) => this.treeRef = el}
             data={this.state.demodata}
-            defaultCheckedKeys={[9]}
+            defaultCheckedKeys={[5, 9]}
             isShowCheckbox={true}
             defaultExpandAll={false}
             defaultExpandedKeys={[6, 9]}
@@ -697,6 +699,7 @@ export default class Page extends React.Component {
                 <span style={{float: 'right'}}>
                   <Button size="mini" onClick={ () => this.append(store, data) }>Append</Button>
                   <Button size="mini" onClick={ () => this.remove(store, data) }>Delete</Button>
+                  <Button size="mini" onClick={ () => console.log(this.treeRef.getCheckedNodes()) }>Treenode</Button>
                 </span>
               </span>
             )}}

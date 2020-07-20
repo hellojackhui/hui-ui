@@ -5,7 +5,7 @@ import {Component, PropType, Transition, View} from '../../libs/index';
 import Input from '../input/index';
 import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';
-import {matchKey, dipatchParent} from './utils.js';
+import {matchKey, dipatchParent, allChecked, allNotChecked} from './utils.js';
 import './Tree.scss';
 import {demoData} from './mockdata';
 import { clone } from 'lodash';
@@ -41,7 +41,7 @@ export default class Tree extends Component {
       sourceTreeData,
       sourceListData: list,
       treeData: cloneDeep(sourceTreeData),
-      listData: clone(list)
+      listData: cloneDeep(list)
     })
   }
 
@@ -53,7 +53,7 @@ export default class Tree extends Component {
       let node = this.insertNodeParams(target[i], i, parent, level);
       target[i] = node;
       if (node.children) {
-        node.children = this.initialTreeData(node.children, node, level + 1)
+        node.children = this.initialTreeData(node.children, node, level + 1);
       }
     }
     return target;
@@ -132,6 +132,7 @@ export default class Tree extends Component {
   renderTreeNode = (node) => {
     const {checked, expanded, level, key, label, children, disabled, active, indeterminate} = node;
     const {renderContent, isShowCheckbox} = this.props;
+    const hasChildren = (children && children.length);
     const isExpandClass = {
       'is-expanded': expanded,
       'not-expanded': !expanded
@@ -140,6 +141,7 @@ export default class Tree extends Component {
       "hui-tree-node": true,
       "is-active": active
     })
+    // 工厂方法
     const store = {
       'append': (target, data) => {
         if (!data.children) {
@@ -166,11 +168,11 @@ export default class Tree extends Component {
     return (
       <React.Fragment>
         <div className={treeNodeClass} key={key} style={this.styles({
-          'paddingLeft': `${20 * (level + 1)}px`
-        })}>
+          'paddingLeft': `${(hasChildren ? 20 : 25) * (level + 1)}px`
+        })} onClick={(e) => this.setClickHandler(e, node, level)}>
           {
-            (children && children.length) ? (
-              <Icon name={"caret-down"} className={isExpandClass}  onClick={(e) => this.toogleActiveNode(e, node, level)}/>
+            hasChildren ? (
+              <Icon name={"caret-down"} className={isExpandClass} />
             ) : null
           }
           {
@@ -191,7 +193,7 @@ export default class Tree extends Component {
           </div>
         </div>
         <Transition name="zoom-in-top" key={`${key}-transition`}>
-          <View show={!!((children && children.length) && expanded)}>
+          <View show={!!(hasChildren && expanded)}>
             <div>
               {
                 this.renderTreeData(children)
@@ -201,6 +203,12 @@ export default class Tree extends Component {
         </Transition>
       </React.Fragment>
     )
+  }
+
+  setClickHandler = (e, node, level) => {
+    let target = e.target;
+    let isRow = target.classList[0] === 'hui-tree-node' || target.classList[0] === 'hui-icon';
+    return isRow ? this.toogleActiveNode(e, node, level) : () => {}
   }
 
   // 选中节点checkbox执行函数
@@ -216,7 +224,11 @@ export default class Tree extends Component {
     })
   }
 
+  // 由节点向下进行遍历，设置节点中间态
   traverseNodeCheckSink = (node, val) => {
+    if (val) {
+      node.indeterminate = false;
+    }
     node.checked = val;
     if (node.children && node.children.length) {
       for (let item of node.children) {
@@ -230,8 +242,11 @@ export default class Tree extends Component {
   // 由节点向上进行遍历，设置节点中间态
   traverseNodeCheckPop = (node, val) => {
     if (node.children && node.children.length) {
-      if (this.allChecked(node)) {
+      if (allChecked(node)) {
         node.checked = true;
+        node.indeterminate = false;
+      } else if (allNotChecked(node)) {
+        node.checked = false;
         node.indeterminate = false;
       } else {
         node.checked = false;
@@ -243,16 +258,10 @@ export default class Tree extends Component {
     }
   }
 
-  // 判断字节点是否全部选中
-  allChecked = (node) => {
-    if (!node.children || !node.children.length) return false;
-    let existUnchecked = node.children.some((item) => item.checked === false);
-    if (!!existUnchecked) return false;
-    return true;
-  }
-
   // 控制节点展开/关闭
   toogleActiveNode = (event, node, level) => {
+    console.log(event.target);
+    if (event.target)
     // 控制展开
     if (node.expanded != undefined) {
       node.expanded = !node.expanded;
@@ -303,6 +312,28 @@ export default class Tree extends Component {
     this.setState({
       treeData
     })
+  }
+
+  // 暴露于实例的方法
+  // 获取选中的列表节点
+  getCheckedNodes = () => {
+    const {treeData} = this.state;
+    let list = this.initListdata(cloneDeep(treeData));
+    let checked = list.filter((item) => item.checked === true);
+    return checked;
+  }
+
+  // 获取选中的key
+  getCheckedKeys = () => {
+    const {treeData} = this.state;
+    let list = this.initListdata(cloneDeep(treeData));
+    let keys = list.filter((item) => item.checked === true).map((item) => item.key);
+    return keys;
+  }
+
+  //设置选中节点
+  setCheckedNodes = () => {
+
   }
   
 
