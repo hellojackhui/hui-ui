@@ -188,6 +188,7 @@ export default class Page extends React.Component {
     }
     this.id = 100;
     this.treeRef = null;
+    this.count = 1;
   }
   onClick = () => {
     window.alert('clicked');
@@ -390,6 +391,23 @@ export default class Page extends React.Component {
   
   remove = (store, data) => {
     store.remove(data);
+  }
+
+  loadData = (node, resolve) => {
+    var hasChild = node.children && node.children.length;
+    setTimeout(() => {
+      var data;
+      if (hasChild) {
+        data = [{
+          label: 'zone' + this.count++
+        }, {
+          label: 'zone' + this.count++
+        }];
+      } else {
+        data = [];
+      }
+      resolve(data);
+    }, 2000);
   }
 
   render() {
@@ -691,6 +709,8 @@ export default class Page extends React.Component {
             ref={(el) => this.treeRef = el}
             data={this.state.demodata}
             defaultCheckedKeys={[5, 9]}
+            lazy={true}
+            load={this.loadData}
             isShowCheckbox={true}
             defaultExpandAll={false}
             defaultExpandedKeys={[6, 9]}
@@ -699,7 +719,7 @@ export default class Page extends React.Component {
                 <span style={{float: 'right'}}>
                   <Button size="mini" onClick={ () => this.append(store, data) }>Append</Button>
                   <Button size="mini" onClick={ () => this.remove(store, data) }>Delete</Button>
-                  <Button size="mini" onClick={ () => console.log(this.treeRef.getCheckedNodes()) }>Treenode</Button>
+                  <Button size="mini" onClick={ () => console.log(this.treeRef.resetChecked()) }>Treenode</Button>
                 </span>
               </span>
             )}}

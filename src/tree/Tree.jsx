@@ -7,8 +7,7 @@ import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';
 import {matchKey, dipatchParent, allChecked, allNotChecked} from './utils.js';
 import './Tree.scss';
-import {demoData} from './mockdata';
-import { clone } from 'lodash';
+import resolve from 'resolve';
 
 export default class Tree extends Component {
   constructor(props) {
@@ -25,6 +24,7 @@ export default class Tree extends Component {
   componentDidMount() {
     this.initTreeData(this.props.data)
   }
+  
 
   componentWillReceiveProps(nextProps, nextState) {
     const {data} = this.props;
@@ -46,12 +46,18 @@ export default class Tree extends Component {
   }
 
   // 初始化树数据
-  initialTreeData = (source = [], parent = null, level = 0) => {
+  initialTreeData = (source = [], parent = null, level = 0, append = false) => {
     if (!source) return source;
-    let target = cloneDeep(source);
-    for (let i = 0; i < target.length; i++) {
-      let node = this.insertNodeParams(target[i], i, parent, level);
-      target[i] = node;
+    let target = source;
+    let start = 0;
+    let end = target.length;
+    if (append) {
+      start = target.length;
+      end = target.length + source.length;
+    }
+    for (let i = start; i < end; i++) {
+      let node = this.insertNodeParams(append ? target[i - start] : target[i], i, parent, level);
+      append ? (target[i - start] = node) : (target[i] = node);
       if (node.children) {
         node.children = this.initialTreeData(node.children, node, level + 1);
       }
@@ -62,9 +68,9 @@ export default class Tree extends Component {
   // 为数据添加初始化属性
   insertNodeParams = (node, index, parent, level) => {
     const {defaultCheckedKeys, defaultExpandAll} = this.props;
-    let checked = defaultCheckedKeys.includes(node.id) || false;
+    let checked = defaultCheckedKeys.includes(node?.id) || false;
     let expanded = defaultExpandAll || false;
-    return {
+    let newnode = {
       ...node,
       key: parent ? `${parent.key}-${index + 1}`: `node-${index + 1}`,
       checked,
@@ -75,6 +81,9 @@ export default class Tree extends Component {
       expanded,
       '$parent': parent,
     }
+    this.traverseNodeCheckSink(newnode, checked);
+    this.traverseNodeCheckPop(newnode, checked);
+    return newnode;
   }
 
   // 设置默认展开项
@@ -129,9 +138,28 @@ export default class Tree extends Component {
     })
   }
 
+  // 动态获取内容
+  lazyLoadNode = (e, node, val) => {
+    node['childrending'] = true;
+    this.setState({})
+    return new Promise((resolve, reject) => {
+      return this.props.load(node, resolve)
+    }).then((data) => {
+      let newTree = this.initialTreeData(data, node, node.level + 1, true);
+      if (newTree.length) {
+        node['children'] = cloneDeep(newTree);
+        (node['expanded'] == undefined) && (node['expanded'] = true);
+      }
+      delete node['childrending'];
+      this.setState({}, () => {
+        return Promise.resolve(1);
+      });
+    })
+  }
+
   renderTreeNode = (node) => {
-    const {checked, expanded, level, key, label, children, disabled, active, indeterminate} = node;
-    const {renderContent, isShowCheckbox} = this.props;
+    const {checked, expanded, level, key, label, children, disabled, active, indeterminate, childrending = false} = node;
+    const {renderContent, isShowCheckbox, lazy} = this.props;
     const hasChildren = (children && children.length);
     const isExpandClass = {
       'is-expanded': expanded,
@@ -176,6 +204,11 @@ export default class Tree extends Component {
             ) : null
           }
           {
+            lazy && childrending && (
+              <Icon name={"circle-o-notch"} className="hui-tree-loading" />
+            )
+          }
+          {
             isShowCheckbox && (
               <Checkbox 
                 checked={checked}
@@ -205,10 +238,22 @@ export default class Tree extends Component {
     )
   }
 
+  // 根据点击元素进行不同事件处理
   setClickHandler = (e, node, level) => {
+    const {lazy} = this.props;
     let target = e.target;
     let isRow = target.classList[0] === 'hui-tree-node' || target.classList[0] === 'hui-icon';
-    return isRow ? this.toogleActiveNode(e, node, level) : () => {}
+    if (isRow) {
+      if (lazy && (!node.children || !node.children.length) && node.expanded === false) {
+        return this.lazyLoadNode(e, node, level).then(() => {
+          return this.toogleActiveNode(e, node, level);
+        });
+      } else {
+        return this.toogleActiveNode(e, node, level);
+      }
+    } else {
+      return () => {}
+    }
   }
 
   // 选中节点checkbox执行函数
@@ -223,6 +268,7 @@ export default class Tree extends Component {
       onCheckChange && onCheckChange(node, val)
     })
   }
+
 
   // 由节点向下进行遍历，设置节点中间态
   traverseNodeCheckSink = (node, val) => {
@@ -260,8 +306,6 @@ export default class Tree extends Component {
 
   // 控制节点展开/关闭
   toogleActiveNode = (event, node, level) => {
-    console.log(event.target);
-    if (event.target)
     // 控制展开
     if (node.expanded != undefined) {
       node.expanded = !node.expanded;
@@ -274,14 +318,6 @@ export default class Tree extends Component {
       this.activeNode = node;
     }
     this.setState({});
-  }
-
-  loadData = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(demoData)
-      }, 1000);
-    })
   }
   
   // 树节点搜索
@@ -331,18 +367,45 @@ export default class Tree extends Component {
     return keys;
   }
 
-  //设置选中节点
-  setCheckedNodes = () => {
-
+  //通过节点对象选中节点
+  setCheckedNodes = (data) => {
+    const {treeData} = this.state;
+    let list = this.initListdata(treeData);
+    list.forEach((item) => {
+      item.checked = false;
+      item.indeterminate = false;
+    })
+    let ids = data.map((item) => item.id ?? item);
+    for (let id of ids) {
+      let index = list.findIndex((item) => item.id === id);
+      this.traverseNodeCheckSink(list[index], true);
+      this.traverseNodeCheckPop(list[index], true);
+    }
+    this.setState({})
   }
   
+  // 通过key设置选中
+  setCheckedKeys = (data) => {
+    return this.setCheckedNodes(data);
+  }
+
+  // 清空树选中
+  resetChecked = () => {
+    const {treeData} = this.state;
+    let list = this.initListdata(treeData);
+    list.forEach((item) => {
+      item.checked = false;
+      item.indeterminate = false;
+    })
+    this.setState({})
+  }
 
   render() {
-    const {withquery, value} = this.props;
+    const {withquery, isShowCheckbox, value} = this.props;
     return (
       <div style={this.styles()} className={this.classname('hui-tree-container')}>
         {
-          withquery && (
+          (withquery && !isShowCheckbox) && (
             <Input 
                 type={"text"}
                 className={'hui-tree-input'}
@@ -368,6 +431,7 @@ Tree.propTypes = {
   emptyText: PropType.string,   // 内容为空展示信息
   nodeKey: PropType.string, // 树唯一节点
   load: PropType.func,  // 加载子树数据方法
+  lazy: PropType.bool,  // 是否异步加载
   renderContent: PropType.func, // 渲染树节点内容区
   defaultExpandAll: PropType.bool,   // 是否默认显示全部
   defaultCheckedKeys: PropType.array, // 默认选中项
@@ -378,6 +442,7 @@ Tree.propTypes = {
 
 Tree.defaultProps = {
   withquery: true,
-  isShowCheckbox: true,
+  lazy: false,
+  isShowCheckbox: false,
   defaultExpandAll: false,
 }

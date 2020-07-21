@@ -1,6 +1,7 @@
 $primary-color: #bfcbd9;
 $background-color: #e4e8f1;
 $active-color: #edf7ff;
+$base-color: #50bfff;
 
 .hui-tree {
   display: inline-block;
@@ -51,5 +52,16 @@ $active-color: #edf7ff;
       right: 15px;
       display: inline-block;
     }
+  }
+  &-loading {
+    color: $base-color;
+    margin-right: 5px;
+    font-size: 12px;
+    vertical-align: middle;
+    animation-name: rotating;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 }
