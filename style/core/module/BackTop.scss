@@ -1,8 +1,10 @@
+@import '../theme/theme.scss';
+
 .hui-backtop {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0,0,0,.65);
+  color: $bold-text;
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 1.5715;
@@ -19,9 +21,9 @@
     height: 40px;
     line-height: 40px;
     overflow: hidden;
-    color: #fff;
+    color: $white-color;
     text-align: center;
-    background-color: rgba(0,0,0,.45);
+    background-color: $primary-color;
     border-radius: 20px;
   }
 }

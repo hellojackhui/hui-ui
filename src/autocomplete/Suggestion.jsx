@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Component, PropType, View, Transition} from '../../libs/index';
 import Popper from 'popper.js';
-import './AutoComplete.scss';
 
 class Suggestion extends Component {
   constructor(props) {

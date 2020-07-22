@@ -1,3 +1,5 @@
+@import '../theme/theme.scss';
+
 .hui-alert {
   width: 100%;
   padding: 8px 16px;
@@ -10,16 +12,16 @@
   color: #fff;
   display: table;
   &--success {
-    background-color: #13ce66;
+    background-color: $success-color;
   }
   &--info {
-    background-color: #50bfff;
+    background-color: $primary-color;
   }
   &--warning {
-    background-color: #f7ba2a;
+    background-color: $warning-color;
   }
   &--error {
-    background-color: #ff4949;
+    background-color: $error-color;
   }
   &__icon {
     font-size: 16px;

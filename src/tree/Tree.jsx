@@ -6,7 +6,6 @@ import Input from '../input/index';
 import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';
 import {matchKey, dipatchParent, allChecked, allNotChecked} from './utils.js';
-import './Tree.scss';
 import NoDataImg from '../../assets/no-data.png';
 
 export default class Tree extends Component {
@@ -250,10 +249,15 @@ export default class Tree extends Component {
   renderLabel = (label) => {
     const {inputValue} = this.state
     const {withquery} = this.props;
-    if (!withquery || inputValue === '') return (
+    if (!withquery || inputValue === undefined) return (
       <span className="hui-tree-node__title">{label}</span>
     )
     let strIndex = label.indexOf(inputValue);
+    if (strIndex < 0) {
+      return (
+        <span className="hui-tree-node__title">{label}</span>
+      )
+    }
     let strObj = [
       {
         name: 'normal',
@@ -261,11 +265,11 @@ export default class Tree extends Component {
       },
       {
         name: 'highlight',
-        label: label.charAt(strIndex)
+        label: `${inputValue}`
       },
       {
         name: 'normal',
-        label: label.substr(strIndex + 1)
+        label: label.substr(strIndex + inputValue.length)
       }
     ]
     return (
@@ -286,7 +290,9 @@ export default class Tree extends Component {
   setClickHandler = (e, node, level) => {
     const {lazy} = this.props;
     let target = e.target;
-    let isRow = target.classList[0] === 'hui-tree-node' || target.classList[0] === 'hui-icon';
+    let isRow = target.classList[0] === 'hui-tree-node' 
+    || target.classList[0] === 'hui-icon'
+    || target.classList[0] === 'hui-tree-node__title';
     if (isRow) {
       if (lazy && (!node.children || !node.children.length) && node.expanded === false) {
         return this.lazyLoadNode(e, node, level).then(() => {

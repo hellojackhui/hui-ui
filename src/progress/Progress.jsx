@@ -3,12 +3,11 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-06 17:09:42 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-04-28 19:51:42
+ * @Last Modified time: 2020-07-22 23:58:59
  */
 
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
-import './Progress.scss';
 
 class Progress extends Component {
   static defaultProps = {

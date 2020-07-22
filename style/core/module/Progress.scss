@@ -1,3 +1,5 @@
+@import '../theme/theme.scss';
+
 .hui-progress {
   position: relative;
   line-height: 1;
@@ -12,7 +14,7 @@
       &__outer {
         height: 6px;
         border-radius: 100px;
-        background-color: #e4e8f1;
+        background-color: $fifth-primary-color;
         overflow: hidden;
         position: relative;
         vertical-align: middle;
@@ -22,7 +24,7 @@
         left: 0;
         top: 0;
         height: 100%;
-        background-color: #00b390;
+        background-color: $third-success-color;
         text-align: right;
         border-radius: 100px;
         line-height: 1;
@@ -35,16 +37,17 @@
         .hui-progress-bar__text {
           position: absolute;
           left: 50%;
+          top: 3px;
           display: inline-block;
           vertical-align: middle;
-          color: #fff;
+          color: $white-color;
           font-size: 12px;
           margin: 0 5px;
         }
       }
     }
     .hui-progress-text {
-      color: #48576a;
+      color: $assist-text;
       display: inline-block;
       vertical-align: middle;
       margin-left: 10px;
@@ -65,9 +68,9 @@
     transform: translate(0, -50%);
   }
   &.is-success .hui-progress-bar__inner {
-    background-color: #13ce66;
+    background-color: $second-success-color;
   }
   &.is-exception .hui-progress-bar__inner {
-    background-color: #ff4949;
+    background-color: $error-color;
   }
 }

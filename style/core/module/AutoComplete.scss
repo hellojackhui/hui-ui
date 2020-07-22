@@ -1,3 +1,5 @@
+@import '../theme/theme.scss';
+
 .hui-autocomplete {
     display: inline-block;
     position: relative;
@@ -10,13 +12,13 @@
     &-suggestion {
       margin: 5px 0;
       padding: 0;
-      box-shadow: 0 0 6px 0 rgba(0,0,0,.04), 0 2px 4px 0 rgba(0,0,0,.12);
+      box-shadow: 0 0 6px 0 $box-shadow-shallow, 0 2px 4px 0 $box-shadow-deep;
       &__list {
         margin: 0;
         padding: 0;
         position: relative;
         max-height: 280px;
-        background-color: #fff;
+        background-color: $white-color;
         padding: 6px 0;
         border-radius: 2px;
         z-index: 100;
@@ -32,11 +34,11 @@
           overflow: hidden;
           text-overflow: ellipsis;
           &:hover {
-            background-color: #e4e8f1;
+            background-color: $fifth-primary-color;
           }
           &.is-selected {
-            background-color: #50bfff;
-            color: #ffffff;
+            background-color: $primary-color;
+            color: $white-color;
           }
         }
       }

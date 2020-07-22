@@ -1,6 +1,5 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
-import './BreadCrumb.scss';
 
 export default class BreadCrumbItem extends Component {
   render() {

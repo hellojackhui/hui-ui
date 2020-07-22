@@ -1,3 +1,5 @@
+@import '../theme/theme.scss';
+
 .hui-badge {
   display: inline-block;
   position: relative;
@@ -11,8 +13,8 @@
     display: inline-block;
     outline: none;
     border-radius: 10px;
-    color: white;
-    background-color: #ff4949;
+    color: $white-color;
+    background-color: $error-color;
     font-size: 12px;
     height: 18px;
     line-height: 16px;

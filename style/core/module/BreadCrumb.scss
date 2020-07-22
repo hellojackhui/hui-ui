@@ -1,3 +1,5 @@
+@import '../theme/theme.scss';
+
 .hui-breadcrumb {
   line-height: 1;
   &::after {
@@ -11,9 +13,9 @@
     cursor: pointer;
     &__wrap {
         transition: color .15s linear;
-        color: #48576a;
+        color: $assist-text;
         &:hover {
-          color: #73ccff;
+          color: $primary-color;
         }
     }
     &__seperator {
@@ -21,7 +23,7 @@
         color: #bfcbd9;
     }
     &.is-highlight &__wrap{
-      color: #50bfff;
+      color: $primary-color;
     }
     &:nth-last-of-type(1) &__seperator {
       display: none;

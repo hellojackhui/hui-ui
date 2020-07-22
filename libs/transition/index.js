@@ -122,7 +122,7 @@ export default class Transition extends Component {
       }
       dom.style.display = '';
       dom.classList.add(enter, enterActive);
-
+      console.log(dom.classList);
       onEnter && onEnter();
 
       requestAnimationFrame(() => {
