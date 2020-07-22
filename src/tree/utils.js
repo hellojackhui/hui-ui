@@ -20,7 +20,7 @@ export const dipatchParent = (obj, level = 1) => {
 // 判断子节点是否全部选中
 export const allChecked = (node) => {
   if (!node.children || !node.children.length) return false;
-  let existUnchecked = node.children.some((item) => item.checked === false);
+  let existUnchecked = node.children.some((item) => (item.checked === false));
   if (!!existUnchecked) return false;
   return true;
 }

@@ -156,6 +156,7 @@ export default class Page extends React.Component {
         children: [{
             id: 4,
             label: '二级 1-1',
+            disabled: true,
             children: [{
                 id: 9,
                 label: '三级 1-1-1'
@@ -708,12 +709,13 @@ export default class Page extends React.Component {
           <Tree 
             ref={(el) => this.treeRef = el}
             data={this.state.demodata}
-            defaultCheckedKeys={[5, 9]}
+            withquery={true}
+            // defaultCheckedKeys={[4, 5, 9]}
             lazy={true}
             load={this.loadData}
-            isShowCheckbox={true}
-            defaultExpandAll={false}
-            defaultExpandedKeys={[6, 9]}
+            // isShowCheckbox={true}
+            defaultExpandAll={true}
+            // defaultExpandedKeys={[6, 9]}
             renderContent={(store, data) => {return (
               <span>
                 <span style={{float: 'right'}}>

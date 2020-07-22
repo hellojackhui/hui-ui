@@ -7,25 +7,25 @@ import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';
 import {matchKey, dipatchParent, allChecked, allNotChecked} from './utils.js';
 import './Tree.scss';
-import resolve from 'resolve';
+import NoDataImg from '../../assets/no-data.png';
 
 export default class Tree extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      sourceTreeData: [],
-      sourceListData: [],
-      treeData: [],
-      listData: [],
+      sourceTreeData: [], // 源树数据（列表展示专用）
+      sourceListData: [], // 源列表数据（列表展示专用）
+      treeData: [], // 实时树数据
+      listData: [], // 实时列表数据（列表展示专用）
+      inputValue: props.value,  // 输入框数据
     }
-    this.activeNode = null;
+    this.activeNode = null; // 当前激活项
   }
 
   componentDidMount() {
     this.initTreeData(this.props.data)
   }
   
-
   componentWillReceiveProps(nextProps, nextState) {
     const {data} = this.props;
     if (!isEqual(data, nextProps.data)) {
@@ -68,7 +68,7 @@ export default class Tree extends Component {
   // 为数据添加初始化属性
   insertNodeParams = (node, index, parent, level) => {
     const {defaultCheckedKeys, defaultExpandAll} = this.props;
-    let checked = defaultCheckedKeys.includes(node?.id) || false;
+    let checked = (defaultCheckedKeys && defaultCheckedKeys.includes(node?.id)) || false;
     let expanded = defaultExpandAll || false;
     let newnode = {
       ...node,
@@ -77,6 +77,7 @@ export default class Tree extends Component {
       active: false,
       indeterminate: false,
       level,
+      disabled: node.disabled || false,
       parent: parent ? `${parent.key}` : null,
       expanded,
       '$parent': parent,
@@ -89,6 +90,9 @@ export default class Tree extends Component {
   // 设置默认展开项
   setDefaultExpand = (list, sourceData) => {
     let {defaultExpandedKeys} = this.props;
+    if (!defaultExpandedKeys) {
+      return;
+    }
     let keysFromIds = list.filter((item) => defaultExpandedKeys.includes(item.id));
     let keys = keysFromIds.map((item) => item.key);
     function traverse(data = sourceData) {
@@ -145,10 +149,12 @@ export default class Tree extends Component {
     return new Promise((resolve, reject) => {
       return this.props.load(node, resolve)
     }).then((data) => {
-      let newTree = this.initialTreeData(data, node, node.level + 1, true);
-      if (newTree.length) {
-        node['children'] = cloneDeep(newTree);
-        (node['expanded'] == undefined) && (node['expanded'] = true);
+      if (data && data.length) {
+        let newTree = this.initialTreeData(data, node, node.level + 1, true);
+        if (newTree.length) {
+          node['children'] = cloneDeep(newTree);
+          (node['expanded'] === undefined) && (node['expanded'] = true);
+        }
       }
       delete node['childrending'];
       this.setState({}, () => {
@@ -218,7 +224,9 @@ export default class Tree extends Component {
               />
             )
           }
-          <span className="hui-tree-node__title">{label}</span>
+          {
+            this.renderLabel(label)
+          }
           <div className="hui-tree-node__extend">
             {
               renderContent(store, node)
@@ -235,6 +243,42 @@ export default class Tree extends Component {
           </View>
         </Transition>
       </React.Fragment>
+    )
+  }
+
+  // 自定义渲染显示
+  renderLabel = (label) => {
+    const {inputValue} = this.state
+    const {withquery} = this.props;
+    if (!withquery || inputValue === '') return (
+      <span className="hui-tree-node__title">{label}</span>
+    )
+    let strIndex = label.indexOf(inputValue);
+    let strObj = [
+      {
+        name: 'normal',
+        label: label.substring(0, strIndex)
+      },
+      {
+        name: 'highlight',
+        label: label.charAt(strIndex)
+      },
+      {
+        name: 'normal',
+        label: label.substr(strIndex + 1)
+      }
+    ]
+    return (
+      <span className="hui-tree-node__title">
+        {
+          strObj.map((item) => {
+            if (item.name === 'normal') return item.label;
+            if (item.name === 'highlight') return (
+              <span className="highLight">{item.label}</span>
+            )
+          })
+        }
+      </span>
     )
   }
 
@@ -287,7 +331,7 @@ export default class Tree extends Component {
 
   // 由节点向上进行遍历，设置节点中间态
   traverseNodeCheckPop = (node, val) => {
-    if (node.children && node.children.length) {
+    if (node.children && node.children.length && node.disabled === false) {
       if (allChecked(node)) {
         node.checked = true;
         node.indeterminate = false;
@@ -302,12 +346,13 @@ export default class Tree extends Component {
     if (node.parent) {
       this.traverseNodeCheckPop(node.$parent);
     }
+    return;
   }
 
   // 控制节点展开/关闭
   toogleActiveNode = (event, node, level) => {
     // 控制展开
-    if (node.expanded != undefined) {
+    if (node.expanded !== undefined) {
       node.expanded = !node.expanded;
     }
     node.active = true;
@@ -322,6 +367,7 @@ export default class Tree extends Component {
   
   // 树节点搜索
   treeNodeSearch = (val) => {
+    this.setState({inputValue: val})
     const {sourceListData} = this.state;
     let filterList = sourceListData.filter((item) => `${item.label}`.indexOf(`${val}`.trim()) > -1);
     return this.genFilterTree(filterList);
@@ -401,7 +447,8 @@ export default class Tree extends Component {
   }
 
   render() {
-    const {withquery, isShowCheckbox, value} = this.props;
+    const {withquery, isShowCheckbox} = this.props;
+    const {inputValue, treeData} = this.state;
     return (
       <div style={this.styles()} className={this.classname('hui-tree-container')}>
         {
@@ -411,7 +458,7 @@ export default class Tree extends Component {
                 className={'hui-tree-input'}
                 icon={'search'}
                 placeholder={"输入关键字进行过滤"}
-                value={value}
+                value={inputValue}
                 onChange={this.treeNodeSearch}
                 onIconClick={this.treeNodeSearch}
             />
@@ -419,6 +466,14 @@ export default class Tree extends Component {
         }
         {
           this.renderTree()
+        }
+        {
+          !treeData.length && (
+            <div className="hui-tree__empty">
+              <img src={NoDataImg} alt="no-data-image"/>
+              搜索不到数据哦～
+            </div>
+          )
         }
       </div>
     )
