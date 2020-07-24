@@ -165,7 +165,7 @@ $table-filter-hover-recover-color: #91bcff;
 
     &.hui-table-bordered {
       border-left: 1px solid $table-border-color;
-      &:first-child {
+      &:first-of-type(1) {
         border-left: none;
       }
     }

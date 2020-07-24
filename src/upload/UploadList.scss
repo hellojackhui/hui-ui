@@ -21,7 +21,7 @@
         display: none;
       }
     }
-    &:first-child {
+    &:first-of-type(1) {
       margin-top: 10px;
     }
     &-name {

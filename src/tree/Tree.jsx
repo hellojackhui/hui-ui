@@ -7,6 +7,7 @@ import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';
 import {matchKey, dipatchParent, allChecked, allNotChecked} from './utils.js';
 import NoDataImg from '../../assets/no-data.png';
+import './Tree.scss';
 
 export default class Tree extends Component {
   constructor(props) {

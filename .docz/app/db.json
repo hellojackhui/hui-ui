@@ -192,6 +192,37 @@
       }
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "value": {
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "hidden": false,
+        "slug": "src-breadcrumb-bread-crumb",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "breadcrumb-面包屑",
+            "depth": 1,
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/badge/Badge.mdx",
       "value": {
         "name": "Badge",
@@ -223,37 +254,6 @@
             "slug": "自定义标记类型",
             "depth": 2,
             "value": "自定义标记类型"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
-      "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
-        "hidden": false,
-        "slug": "src-breadcrumb-bread-crumb",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "breadcrumb-面包屑",
-            "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
           },
           {
             "slug": "属性",
@@ -516,6 +516,37 @@
       }
     },
     {
+      "key": "src/icon/Icon.mdx",
+      "value": {
+        "name": "icon",
+        "route": "/icon",
+        "id": "214290ada325a22eb66e78829e745ec9",
+        "filepath": "src/icon/Icon.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/icon/Icon.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/icon/Icon.mdx",
+        "hidden": false,
+        "slug": "src-icon-icon",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "icon-图标",
+            "depth": 1,
+            "value": "Icon 图标"
+          },
+          {
+            "slug": "按钮列表",
+            "depth": 2,
+            "value": "按钮列表"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/input/Input.mdx",
       "value": {
         "name": "Input",
@@ -592,27 +623,42 @@
       }
     },
     {
-      "key": "src/icon/Icon.mdx",
+      "key": "src/layout/Layout.mdx",
       "value": {
-        "name": "icon",
-        "route": "/icon",
-        "id": "214290ada325a22eb66e78829e745ec9",
-        "filepath": "src/icon/Icon.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/icon/Icon.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/icon/Icon.mdx",
+        "name": "Layout",
+        "route": "/Layout",
+        "id": "2cc688feefc7173ed50ed5c5e1fae83c",
+        "filepath": "src/layout/Layout.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/layout/Layout.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/layout/Layout.mdx",
         "hidden": false,
-        "slug": "src-icon-icon",
+        "slug": "src-layout-layout",
         "menu": "",
         "headings": [
           {
-            "slug": "icon-图标",
+            "slug": "layout-布局",
             "depth": 1,
-            "value": "Icon 图标"
+            "value": "Layout 布局"
           },
           {
-            "slug": "按钮列表",
+            "slug": "基本使用",
             "depth": 2,
-            "value": "按钮列表"
+            "value": "基本使用"
+          },
+          {
+            "slug": "flex布局",
+            "depth": 2,
+            "value": "Flex布局"
+          },
+          {
+            "slug": "模块间距",
+            "depth": 2,
+            "value": "模块间距"
+          },
+          {
+            "slug": "自适应",
+            "depth": 2,
+            "value": "自适应"
           },
           {
             "slug": "属性",
@@ -664,52 +710,6 @@
             "slug": "不可用",
             "depth": 2,
             "value": "不可用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/layout/Layout.mdx",
-      "value": {
-        "name": "Layout",
-        "route": "/Layout",
-        "id": "2cc688feefc7173ed50ed5c5e1fae83c",
-        "filepath": "src/layout/Layout.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/layout/Layout.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/layout/Layout.mdx",
-        "hidden": false,
-        "slug": "src-layout-layout",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "layout-布局",
-            "depth": 1,
-            "value": "Layout 布局"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "flex布局",
-            "depth": 2,
-            "value": "Flex布局"
-          },
-          {
-            "slug": "模块间距",
-            "depth": 2,
-            "value": "模块间距"
-          },
-          {
-            "slug": "自适应",
-            "depth": 2,
-            "value": "自适应"
           },
           {
             "slug": "属性",
@@ -797,6 +797,42 @@
       }
     },
     {
+      "key": "src/notification/Notification.mdx",
+      "value": {
+        "name": "Notification",
+        "route": "/Notification",
+        "id": "522aaca4a964bfa60b114a6d18ee9395",
+        "filepath": "src/notification/Notification.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/notification/Notification.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/notification/Notification.mdx",
+        "hidden": false,
+        "slug": "src-notification-notification",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "notification-通知",
+            "depth": 1,
+            "value": "Notification 通知"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "自定义高度",
+            "depth": 2,
+            "value": "自定义高度"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/modal/Modal.mdx",
       "value": {
         "name": "Modal",
@@ -828,42 +864,6 @@
             "slug": "设置阴影",
             "depth": 2,
             "value": "设置阴影"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/notification/Notification.mdx",
-      "value": {
-        "name": "Notification",
-        "route": "/Notification",
-        "id": "522aaca4a964bfa60b114a6d18ee9395",
-        "filepath": "src/notification/Notification.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/notification/Notification.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/notification/Notification.mdx",
-        "hidden": false,
-        "slug": "src-notification-notification",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "notification-通知",
-            "depth": 1,
-            "value": "Notification 通知"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "自定义高度",
-            "depth": 2,
-            "value": "自定义高度"
           },
           {
             "slug": "属性",
@@ -1563,6 +1563,54 @@
               "params": [
                 {
                   "name": "item",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "append",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "store",
+                  "type": null
+                },
+                {
+                  "name": "data",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "remove",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "store",
+                  "type": null
+                },
+                {
+                  "name": "data",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "loadData",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "resolve",
                   "type": null
                 }
               ],
@@ -2921,117 +2969,6 @@
       ]
     },
     {
-      "key": "src/collapse/Collapse.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Collapse",
-          "methods": [
-            {
-              "name": "setActiveNames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "activeNames",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "clickHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "name",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Collapse",
-          "props": {
-            "accordion": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.array, PropType.string])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/collapse/CollapseItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CollapseItem",
-          "methods": [],
-          "actualName": "CollapseItem",
-          "props": {
-            "isActive": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "name": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onClick": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/color-picker/ColorPicker.jsx",
       "value": [
         {
@@ -3212,6 +3149,117 @@
       ]
     },
     {
+      "key": "src/collapse/Collapse.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Collapse",
+          "methods": [
+            {
+              "name": "setActiveNames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "activeNames",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "name",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Collapse",
+          "props": {
+            "accordion": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.array, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/collapse/CollapseItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CollapseItem",
+          "methods": [],
+          "actualName": "CollapseItem",
+          "props": {
+            "isActive": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/divider/Divider.jsx",
       "value": [
         {
@@ -3257,6 +3305,25 @@
               "description": ""
             }
           }
+        }
+      ]
+    },
+    {
+      "key": "src/draggable/Draggable.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Draggable",
+          "methods": [
+            {
+              "name": "findDOMNode",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Draggable"
         }
       ]
     },
@@ -6542,6 +6609,222 @@
       ]
     },
     {
+      "key": "src/switch/Switch.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Switch",
+          "methods": [
+            {
+              "name": "getChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentWidth",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "switchTitle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "type",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "currentBackground",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Switch",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "offValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "onColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#13ce66'",
+                "computed": false
+              }
+            },
+            "offColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'#c4c4c4'",
+                "computed": false
+              }
+            },
+            "onText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'ON'",
+                "computed": false
+              }
+            },
+            "offText": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'OFF'",
+                "computed": false
+              }
+            },
+            "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onBlur": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "allowFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/table/Table.jsx",
       "value": [
         {
@@ -7169,222 +7452,6 @@
                 "computed": false
               },
               "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/switch/Switch.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Switch",
-          "methods": [
-            {
-              "name": "getChecked",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "props",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "currentWidth",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "switchTitle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "type",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "currentBackground",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onFocus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onBlur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Switch",
-          "props": {
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "offValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "onColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#13ce66'",
-                "computed": false
-              }
-            },
-            "offColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'#c4c4c4'",
-                "computed": false
-              }
-            },
-            "onText": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'ON'",
-                "computed": false
-              }
-            },
-            "offText": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'OFF'",
-                "computed": false
-              }
-            },
-            "onFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onBlur": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "allowFocus": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
             }
           }
         }
@@ -8155,7 +8222,12 @@
               "name": "initTreeData",
               "docblock": null,
               "modifiers": [],
-              "params": [],
+              "params": [
+                {
+                  "name": "sourcedata",
+                  "type": null
+                }
+              ],
               "returns": null
             },
             {
@@ -8173,6 +8245,10 @@
                 },
                 {
                   "name": "level",
+                  "type": null
+                },
+                {
+                  "name": "append",
                   "type": null
                 }
               ],
@@ -8254,6 +8330,26 @@
               "returns": null
             },
             {
+              "name": "lazyLoadNode",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
               "name": "renderTreeNode",
               "docblock": null,
               "modifiers": [],
@@ -8266,10 +8362,107 @@
               "returns": null
             },
             {
-              "name": "loadData",
+              "name": "renderLabel",
               "docblock": null,
               "modifiers": [],
-              "params": [],
+              "params": [
+                {
+                  "name": "label",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "setClickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "level",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "toggleNodeCheckHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "traverseNodeCheckSink",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "traverseNodeCheckPop",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "toogleActiveNode",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "event",
+                  "type": null
+                },
+                {
+                  "name": "node",
+                  "type": null
+                },
+                {
+                  "name": "level",
+                  "type": null
+                }
+              ],
               "returns": null
             },
             {
@@ -8294,6 +8487,51 @@
                   "type": null
                 }
               ],
+              "returns": null
+            },
+            {
+              "name": "getCheckedNodes",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getCheckedKeys",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "setCheckedNodes",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "setCheckedKeys",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "data",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "resetChecked",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
               "returns": null
             }
           ],
@@ -8343,6 +8581,18 @@
               "required": false,
               "description": ""
             },
+            "lazy": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
             "renderContent": {
               "type": {
                 "name": "custom",
@@ -8387,9 +8637,17 @@
               "required": false,
               "description": "",
               "defaultValue": {
-                "value": "true",
+                "value": "false",
                 "computed": false
               }
+            },
+            "onCheckChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }

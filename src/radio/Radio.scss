@@ -116,7 +116,7 @@
     z-index: -1;
     left: -999px;
   }
-  &:first-child .hui-radio-button__wrap {
+  &:first-of-type(1) .hui-radio-button__wrap {
     border-left: 1px solid #bfcbd9;
     border-radius: 4px 0px 0px 4px;
   }

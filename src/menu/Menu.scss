@@ -37,7 +37,7 @@
     &.is-active {
       color: #20a0ff;
     }
-    &:first-child {
+    &:first-of-type(1) {
       margin-left: 0;
     }
     .hui-submenu__title {
