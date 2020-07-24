@@ -32,6 +32,7 @@ import Skeleton from './skeleton/index';
 import AutoComplete from './autocomplete';
 import BackTop from './backTop';
 import Divider from './divider';
+import Draggable from './draggable';
 // import {demoData} from './tree/mockdata';
 
 let defaultDataSource = [];
@@ -726,6 +727,11 @@ export default class Page extends React.Component {
               </span>
             )}}
           />
+        </div>
+        <div style={{'marginTop': '20px'}}>
+          <Draggable>
+            <div style={{'width': '100px', 'height': '100px', 'background': '#c8deff'}}></div>
+          </Draggable>
         </div>
       </div>
     )
