@@ -34,12 +34,14 @@ export default class PopOver extends Component {
           visibleChange && visibleChange(this.state.showPopper)
         })
       })
-      document.addEventListener('click', (e) => {
-        if (!this.element || this.element.contains(e.target) || !this.reference || this.reference.contains(e.target) || !popper || popper.contains(e.target)) return;
-        this.setState({
-          showPopper: false,
+      if (typeof window !== `undefined`) {
+        document.addEventListener('click', (e) => {
+          if (!this.element || this.element.contains(e.target) || !this.reference || this.reference.contains(e.target) || !popper || popper.contains(e.target)) return;
+          this.setState({
+            showPopper: false,
+          })
         })
-      })
+      }
     } else if (trigger === 'hover') {
       this.reference.addEventListener('mouseenter', this.handleMouseEnter.bind(this));
       this.reference.addEventListener('mouseleave', this.handleMouseLeave.bind(this));

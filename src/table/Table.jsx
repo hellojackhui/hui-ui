@@ -118,19 +118,21 @@ export default class Table extends Component {
     return true;
   }
   componentDidMount() {
-    setTimeout(() => {
-      let {clientWidth} = this.scrollContainer.current;
-      this.tableClientWidth = clientWidth;
-      let columns = this.getCustomColTable(this.props.columns);
-      // 初始化表格宽度
-      this.initTableColumn(cloneDeep(columns), () => {
-        // 初始化检查固定列状态
-        this.initFixedColState();
-        // 添加key
-        this.handleListKey(this.props.dataSource.slice());
-      })
-      window.addEventListener('resize', this.windowResizeHandler, false);
-    }, 50);
+    if (typeof window !== `undefined`) {
+      setTimeout(() => {
+        let {clientWidth} = this.scrollContainer.current;
+        this.tableClientWidth = clientWidth;
+        let columns = this.getCustomColTable(this.props.columns);
+        // 初始化表格宽度
+        this.initTableColumn(cloneDeep(columns), () => {
+          // 初始化检查固定列状态
+          this.initFixedColState();
+          // 添加key
+          this.handleListKey(this.props.dataSource.slice());
+        })
+        window.addEventListener('resize', this.windowResizeHandler, false);
+      }, 50);
+    }
   }
   componentWillUnmount() {
     window.removeEventListener('resize', this.windowResizeHandler, false);

@@ -27,7 +27,7 @@ const getBody = function(xhr = new XMLHttpRequest()) {
 }
 
 export default function upload(options) {
-  if (!window.XMLHttpRequest) return;
+  if (typeof window !== `undefined` && !window.XMLHttpRequest) return;
   let xhr = new XMLHttpRequest();
   let action = options.action;
   //  xhr上传的进度监听

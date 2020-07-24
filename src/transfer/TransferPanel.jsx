@@ -69,7 +69,6 @@ export default class TransferPanel extends Component {
     })
   }
   get checkedSummary() {
-    console.log(123)
     let checkedLength = this.props.checked.length;
     let dataLength = this.props.data.length;
     const { noChecked, hasChecked } = this.props.footerFormat;

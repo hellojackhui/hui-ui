@@ -45,7 +45,7 @@ export function waterMask(options) {
   if (!__wm) {
     container.appendChild(waterMaskDiv); // 添加元素
   }
-  const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+  const MutationObserver = window ? (window.MutationObserver || window.WebKitMutationObserver) : null;
   // 检查浏览器是否支持这个API
   if (MutationObserver) {
     const args = arguments[0];

@@ -43,9 +43,11 @@ import '../../style/css/font-awesome.min.scss';
       const [isfullscreen, setisfullscreen] = React.useState(false);
       function togglesecondloading() {
         setisfullscreen(!isfullscreen)
-        window.setTimeout(() => {
+        if (typeof window !== `undefined`) {
+          window.setTimeout(() => {
             setisfullscreen(false)
-        }, 2000)
+          }, 2000)
+        }
       }
       return (
         <div>

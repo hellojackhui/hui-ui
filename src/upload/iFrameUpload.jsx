@@ -17,19 +17,21 @@ export default class IFrameUpload extends Component {
   componentDidMount() {
     const {action, onSuccess, onError} = this.props;
     const { file } = this.state;
-    window.addEventListener(
-      'message', (event) => {
-        const { origin } = new URL(action);
-        if (event.origin !== origin) return false;
-        const response = event.data;
-        if (response.result === 'success') {
-          onSuccess(response, file);
-        } else if (response.result === 'failed') {
-          onError(response, file);
-        }
-      },
-      false,
-    )
+    if (typeof window !== `undefined`) {
+      window.addEventListener(
+        'message', (event) => {
+          const { origin } = new URL(action);
+          if (event.origin !== origin) return false;
+          const response = event.data;
+          if (response.result === 'success') {
+            onSuccess(response, file);
+          } else if (response.result === 'failed') {
+            onError(response, file);
+          }
+        },
+        false,
+      )
+    }
   }
 
   onload() {
@@ -117,7 +119,11 @@ export default class IFrameUpload extends Component {
             onChange={e => this.handleChange(e)}
             accept={accept}
           />
-          <input type="hidden" name="documentDomain" value={document.domain} />
+          {
+            document !== undefined && (
+              <input type="hidden" name="documentDomain" value={document.domain} />
+            )
+          }
           <span ref="data" />
         </form>
         {drag

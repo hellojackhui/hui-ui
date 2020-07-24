@@ -37,11 +37,11 @@ class Dropdown extends Component {
   componentDidMount() {
     this.initEvent();
     // 处理dropdown因为overflow导致被覆盖的问题
-    this.setDropdownElement();
+    // this.setDropdownElement();
   }
 
   componentWillUnmount() {
-    this.removeDropdownElement();
+    // this.removeDropdownElement();
   }
 
   initEvent = () => {

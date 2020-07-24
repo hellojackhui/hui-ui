@@ -9,7 +9,9 @@ export default class Modal extends Component {
       visible: props.visible,
       bodyOverflow: '',
     }
-    this.setBodyOverflow();
+    if (typeof window !== `undefined`) {
+      this.setBodyOverflow();
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -17,7 +19,9 @@ export default class Modal extends Component {
       this.setState({
         visible: nextProps.visible,
       }, () => {
-        this.setBodyOverflow();
+        if (typeof window !== `undefined`) {
+          this.setBodyOverflow();
+        }
       })
     }
   }

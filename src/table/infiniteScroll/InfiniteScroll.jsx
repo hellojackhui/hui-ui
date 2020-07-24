@@ -28,7 +28,9 @@ export default class InfiniteScroll extends Component {
   componentDidMount() {
     let { wrapper } = this.props;
     // 增加滚动监听
-    this.addScrollListenerHandler(wrapper);
+    if (typeof window !== `undefined`) {
+      this.addScrollListenerHandler(wrapper);
+    }
   }
 
   componentWillReceiveProps(nextProps) {
