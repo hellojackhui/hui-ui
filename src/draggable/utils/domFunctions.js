@@ -96,7 +96,7 @@ export function getBoundPosition(draggable, x, y) {
     }
     const nodeStyle = ownerWindow.getComputedStyle(node);
     const boundNodeStyle = ownerWindow.getComputedStyle(boundNode);
-    // Compute bounds. This is a pain with padding and offsets but this gets it exactly right.
+
     bounds = {
       left: -node.offsetLeft + int(boundNodeStyle.paddingLeft) + int(nodeStyle.marginLeft),
       top: -node.offsetTop + int(boundNodeStyle.paddingTop) + int(nodeStyle.marginTop),
@@ -161,4 +161,12 @@ export function outerWidth(node) {
   width += int(computedStyle.borderLeftWidth);
   width += int(computedStyle.borderRightWidth);
   return width;
+}
+
+export function canDragX(draggable) {
+  return draggable.props.axis === 'both' || draggable.props.axis === 'x';
+}
+
+export function canDragY(draggable) {
+  return draggable.props.axis === 'both' || draggable.props.axis === 'y';
 }

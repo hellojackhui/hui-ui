@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Component, PropType} from '../../libs/index';
 import {addEvent, removeEvent} from '../../libs/utils/addEvents';
-import {getTouchIdentifier, getControlPosition, createCoreData, createDraggableData, getBoundPosition} from './utils/domFunctions';
+import {getTouchIdentifier, getControlPosition, createCoreData, createDraggableData, getBoundPosition, canDragX, canDragY} from './utils/domFunctions';
+import './Draggable.scss';
 
 const eventsFor = {
   touch: {
@@ -23,7 +24,6 @@ let dragEventFor = eventsFor.mouse;
 export default class Draggable extends Component {
   constructor(props) {
     super(props);
-    console.log(props.position);
     this.state = {
       dragged: false,
       dragging: false,
@@ -31,8 +31,8 @@ export default class Draggable extends Component {
       y: props.position.y ? props.position.y : props.defaultPosition.y,
       slackX: 0,
       slackY: 0,
-      lastx: 0,
-      lasty: 0,
+      lastX: 0,
+      lastY: 0,
       isElementSVG: false,
       touchIdentifier: null,
     }
@@ -49,7 +49,7 @@ export default class Draggable extends Component {
   onMouseDown = (e) => {
     this.props.onMouseDown && this.props.onMouseDown(e);
     // 只允许左键触发
-    if (!this.props.allClick && typeof e.button === 'number' && e.button !== 0) return false;
+    if (!this.props.allowClick && typeof e.button === 'number' && e.button !== 0) return false;
 
     // 保证元素在这个window下
     const node = this.findDOMNode();
@@ -58,7 +58,6 @@ export default class Draggable extends Component {
       return;
     }
     if (e.type === 'touchstart') e.preventDefault();
-
     const touchIdentifier = getTouchIdentifier(e);
     this.setState({touchIdentifier});
 
@@ -80,14 +79,14 @@ export default class Draggable extends Component {
   }
 
   onMouseDrag = (e) => {
+    this.props.onMouseMove && this.props.onMouseMove(e);
     const position = getControlPosition(e, this.state.touchIdentifier, this);
     if (position == null) return;
     let {x, y} = position;
-    console.log(x, y);
     const coreEvent = createCoreData(this, x, y);
-    const shouldUpdate = this.onDrag(coreEvent);
-    if (shouldUpdate === false || this.mounted === false) { 
-      this.handleDragStop(new MouseEvent('mouseup'));
+    this.onDrag(coreEvent);
+    if (this.mounted === false) { 
+      this.onMouseDragStop(new MouseEvent('mouseup'));
       return;
     }
     this.setState({
@@ -126,6 +125,7 @@ export default class Draggable extends Component {
 
   onMouseDragStop = (e) => {
     if (!this.state.dragging) return;
+    this.props.onMousUp && this.props.onMousUp(e);
     const position = getControlPosition(e, this.state.touchIdentifier, this);
     if (position == null) return;
     const {x, y} = position;
@@ -158,8 +158,8 @@ export default class Draggable extends Component {
       const {ownerDocument} = node;
       removeEvent(ownerDocument, eventsFor.mouse.move, this.handleDrag);
       removeEvent(ownerDocument, eventsFor.touch.move, this.handleDrag);
-      removeEvent(ownerDocument, eventsFor.mouse.stop, this.handleDragStop);
-      removeEvent(ownerDocument, eventsFor.touch.stop, this.handleDragStop);
+      removeEvent(ownerDocument, eventsFor.mouse.stop, this.onMouseDragStop);
+      removeEvent(ownerDocument, eventsFor.touch.stop, this.onMouseDragStop);
       removeEvent(node, eventsFor.touch.start, this.onTouchStart, {passive: false});
       // if (this.props.enableUserSelectHack) removeUserSelectStyles(ownerDocument);
     }
@@ -171,23 +171,36 @@ export default class Draggable extends Component {
   }
 
   render() {
-    const {axis} = this.props;
-    const {isDragging, lastx, lasty} = this.state;
+    const {axis, children, position, defaultPosition, controlled, disabled} = this.props;
+    const {isDragging, x, y} = this.state;
     const draggableStateClass = {
       'hui-draggable': true,
       'hui-draggable-dragging': isDragging,
       'react-draggable-dragged': false,
+      'hui-draggable-disabled': disabled
     }
     const draggbleStatusClass = {
       'cursor-x': axis === 'x',
       'cursor-y': axis === 'y',
     }
+    const draggable = !controlled || this.state.dragging;
+    const validPosition = position || defaultPosition;
+    const transformOpt = {
+      x: (canDragX(this) && draggable) ?
+        x : validPosition.x,
+      y: (canDragY(this) && draggable) ?
+        y : validPosition.y
+    } 
 
-    return React.cloneElement(React.Children.only(this.props.children), {
+    return React.cloneElement(React.Children.only(children), {
       'className': this.classname(draggableStateClass, draggbleStatusClass),
       'onMouseDown': this.onMouseDown,
       'onMouseUp': this.onMouseUp,
-      'onTouchEnd': this.onTouchEnd
+      'onTouchEnd': this.onTouchEnd,
+      'style': {
+        ...children.props.style,
+        'transform': `translate(${transformOpt.x}px,${transformOpt.y}px)`
+      }
     })
   }
 }
@@ -195,14 +208,17 @@ export default class Draggable extends Component {
 Draggable.propType = {
   axis: PropType.oneOf(['both', 'x', 'y', 'none']),
   bounds: PropType.oneOfType([PropType.string, PropType.bool]),
+  disabled: PropType.bool,
   scale: PropType.number,
   defaultPosition: PropType.object,
-  allClick: PropType.bool,
+  allowClick: PropType.bool,
   position: PropType.shape({
     x: PropType.number,
     y: PropType.number
   }),
   onMouseDown: PropType.func,
+  onMouseMove: PropType.func,
+  onMousUp: PropType.func,
 }
 
 Draggable.defaultProps = {

@@ -1,0 +1,9 @@
+.hui-draggable {
+  cursor: move;
+  &.cursor-x {
+      cursor: ew-resize;
+  }
+  &.cursor-y {
+      cursor: ns-resize;
+  }
+}

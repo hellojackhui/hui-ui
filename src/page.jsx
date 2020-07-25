@@ -33,6 +33,7 @@ import AutoComplete from './autocomplete';
 import BackTop from './backTop';
 import Divider from './divider';
 import Draggable from './draggable';
+import {Component} from '../libs/index';
 // import {demoData} from './tree/mockdata';
 
 let defaultDataSource = [];
@@ -57,7 +58,7 @@ for (let i = 0; i < 5000; i++) {
     checked: i == 5
   });
 }
-export default class Page extends React.Component {
+export default class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -728,10 +729,16 @@ export default class Page extends React.Component {
             )}}
           />
         </div>
-        <div style={{'marginTop': '20px'}}>
-          <Draggable>
-            <div style={{'width': '100px', 'height': '100px', 'background': '#c8deff'}}></div>
-          </Draggable>
+        <div style={{'height': '300px', 'border': '1px solid black', 'marginTop': '20px', 'overflow': 'scroll'}}>
+          <div style={{'height': '3000px'}}>
+            <Draggable>
+              <div style={this.styles({
+                'width': '100px', 
+                'height': '100px', 
+                'background': '#c8deff'
+              })} ></div>
+            </Draggable>
+          </div>
         </div>
       </div>
     )
