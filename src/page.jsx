@@ -730,15 +730,13 @@ export default class Page extends Component {
           />
         </div>
         <div style={{'height': '300px', 'border': '1px solid black', 'marginTop': '20px', 'overflow': 'scroll'}}>
-          <div style={{'height': '3000px'}}>
-            <Draggable>
-              <div style={this.styles({
-                'width': '100px', 
-                'height': '100px', 
-                'background': '#c8deff'
-              })} ></div>
-            </Draggable>
-          </div>
+          <Draggable bounds={{'bottom': 100, 'right': 600}}>
+            <div style={this.styles({
+              'width': '100px', 
+              'height': '100px', 
+              'background': '#c8deff'
+            })} ></div>
+          </Draggable>
         </div>
       </div>
     )

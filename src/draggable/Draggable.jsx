@@ -182,6 +182,7 @@ export default class Draggable extends Component {
     const draggbleStatusClass = {
       'cursor-x': axis === 'x',
       'cursor-y': axis === 'y',
+      'cursor-disable': axis === 'none'
     }
     const draggable = !controlled || this.state.dragging;
     const validPosition = position || defaultPosition;

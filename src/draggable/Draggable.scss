@@ -6,4 +6,7 @@
   &.cursor-y {
       cursor: ns-resize;
   }
+  &.cursor-none {
+      cursor: not-allowed;
+  }
 }
