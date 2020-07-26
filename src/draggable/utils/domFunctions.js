@@ -41,7 +41,6 @@ export function createCoreData(draggable, x, y) {
   const node = findDOMNode(draggable);
 
   if (isStart) {
-    // If this is our first move, use the x and y as last coords.
     return {
       node,
       deltaX: 0, deltaY: 0,
@@ -49,7 +48,6 @@ export function createCoreData(draggable, x, y) {
       x, y,
     };
   } else {
-    // Otherwise calculate proper values.
     return {
       node,
       deltaX: x - state.lastX, deltaY: y - state.lastY,
@@ -74,10 +72,8 @@ export function createDraggableData(draggable, coreData) {
 
 
 export function getBoundPosition(draggable, x, y) {
-  // If no bounds, short-circuit and move on
   if (!draggable.props.bounds) return [x, y];
 
-  // Clone new bounds
   let {bounds} = draggable.props;
   bounds = typeof bounds === 'string' ? bounds : cloneBounds(bounds);
   const node = findDOMNode(draggable);
@@ -107,11 +103,9 @@ export function getBoundPosition(draggable, x, y) {
     };
   }
 
-  // Keep x and y below right and bottom limits...
   if (isNum(bounds.right)) x = Math.min(x, bounds.right);
   if (isNum(bounds.bottom)) y = Math.min(y, bounds.bottom);
 
-  // But above left and top limits.
   if (isNum(bounds.left)) x = Math.max(x, bounds.left);
   if (isNum(bounds.top)) y = Math.max(y, bounds.top);
 
@@ -154,8 +148,7 @@ export function outerHeight(node) {
 }
 
 export function outerWidth(node) {
-  // This is deliberately excluding margin for our calculations, since we are using
-  // offsetLeft which is including margin. See getBoundPosition
+
   let width = node.clientWidth;
   const computedStyle = node.ownerDocument.defaultView.getComputedStyle(node);
   width += int(computedStyle.borderLeftWidth);

@@ -128,8 +128,6 @@ export default class Draggable extends Component {
     this.props.onMousUp && this.props.onMousUp(e);
     const position = getControlPosition(e, this.state.touchIdentifier, this);
     if (position == null) return;
-    const {x, y} = position;
-    const coreEvent = createCoreData(this, x, y);
     const thisNode = this.findDOMNode();
     this.setState({
       dragging: false,
