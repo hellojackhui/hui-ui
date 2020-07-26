@@ -233,32 +233,22 @@
       }
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "key": "src/card/Card.mdx",
       "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "name": "Card",
+        "route": "/Card",
+        "id": "8ea95e41a991c0c2aa1539b418d3a658",
+        "filepath": "src/card/Card.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
         "hidden": false,
-        "slug": "src-breadcrumb-bread-crumb",
+        "slug": "src-card-card",
         "menu": "",
         "headings": [
           {
-            "slug": "breadcrumb-面包屑",
+            "slug": "card-卡片",
             "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
+            "value": "Card 卡片"
           }
         ]
       }
@@ -295,22 +285,32 @@
       }
     },
     {
-      "key": "src/card/Card.mdx",
+      "key": "src/breadcrumb/BreadCrumb.mdx",
       "value": {
-        "name": "Card",
-        "route": "/Card",
-        "id": "8ea95e41a991c0c2aa1539b418d3a658",
-        "filepath": "src/card/Card.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
         "hidden": false,
-        "slug": "src-card-card",
+        "slug": "src-breadcrumb-bread-crumb",
         "menu": "",
         "headings": [
           {
-            "slug": "card-卡片",
+            "slug": "breadcrumb-面包屑",
             "depth": 1,
-            "value": "Card 卡片"
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -449,42 +449,6 @@
       }
     },
     {
-      "key": "src/divider/Divider.mdx",
-      "value": {
-        "name": "Divider",
-        "route": "/Divider",
-        "id": "1b37b2cee61d547c5ff07e2e96d7ce5a",
-        "filepath": "src/divider/Divider.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/divider/Divider.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/divider/Divider.mdx",
-        "hidden": false,
-        "slug": "src-divider-divider",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "divider-分割线",
-            "depth": 1,
-            "value": "Divider 分割线"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "添加文本",
-            "depth": 2,
-            "value": "添加文本"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/draggable/Draggable.mdx",
       "value": {
         "name": "Draggable",
@@ -521,6 +485,42 @@
             "slug": "拖拽事件回调",
             "depth": 2,
             "value": "拖拽事件回调"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/divider/Divider.mdx",
+      "value": {
+        "name": "Divider",
+        "route": "/Divider",
+        "id": "1b37b2cee61d547c5ff07e2e96d7ce5a",
+        "filepath": "src/divider/Divider.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/divider/Divider.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/divider/Divider.mdx",
+        "hidden": false,
+        "slug": "src-divider-divider",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "divider-分割线",
+            "depth": 1,
+            "value": "Divider 分割线"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "添加文本",
+            "depth": 2,
+            "value": "添加文本"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -1663,54 +1663,6 @@
       ]
     },
     {
-      "key": "libs/component/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Component",
-          "methods": [
-            {
-              "name": "classnames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "classname",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "styles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "styles",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Component"
-        }
-      ]
-    },
-    {
       "key": "libs/animate/Animate.jsx",
       "value": [
         {
@@ -1791,6 +1743,79 @@
             }
           ],
           "actualName": "Animate"
+        }
+      ]
+    },
+    {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
+        }
+      ]
+    },
+    {
+      "key": "libs/view/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "View",
+          "methods": [],
+          "actualName": "View",
+          "props": {
+            "show": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            }
+          }
         }
       ]
     },
@@ -1913,31 +1938,6 @@
               },
               "required": false,
               "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "libs/view/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "View",
-          "methods": [],
-          "actualName": "View",
-          "props": {
-            "show": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
             }
           }
         }
@@ -2551,6 +2551,67 @@
       ]
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumb",
+          "methods": [],
+          "actualName": "BreadCrumb",
+          "props": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'/'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/breadcrumb/BreadCrumbItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumbItem",
+          "methods": [],
+          "actualName": "BreadCrumbItem",
+          "context": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/button/Button.jsx",
       "value": [
         {
@@ -2651,96 +2712,6 @@
           "displayName": "ButtonGroup",
           "methods": [],
           "actualName": "ButtonGroup"
-        }
-      ]
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumb.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumb",
-          "methods": [],
-          "actualName": "BreadCrumb",
-          "props": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'/'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumbItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumbItem",
-          "methods": [],
-          "actualName": "BreadCrumbItem",
-          "context": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            },
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/card/Card.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Card",
-          "methods": [],
-          "actualName": "Card",
-          "props": {
-            "header": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "bodyStyle": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
         }
       ]
     },
@@ -3004,6 +2975,35 @@
                 "raw": "PropType.any"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }
