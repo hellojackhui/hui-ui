@@ -485,6 +485,47 @@
       }
     },
     {
+      "key": "src/draggable/Draggable.mdx",
+      "value": {
+        "name": "Draggable",
+        "route": "/Draggable",
+        "id": "2cca4612ed2b9d809da2743312de3d1c",
+        "filepath": "src/draggable/Draggable.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/draggable/Draggable.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/draggable/Draggable.mdx",
+        "hidden": false,
+        "slug": "src-draggable-draggable",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "draggable-拖拽",
+            "depth": 1,
+            "value": "Draggable 拖拽"
+          },
+          {
+            "slug": "基本用法",
+            "depth": 2,
+            "value": "基本用法"
+          },
+          {
+            "slug": "自定义拖拽方向",
+            "depth": 2,
+            "value": "自定义拖拽方向"
+          },
+          {
+            "slug": "拖拽范围限制",
+            "depth": 2,
+            "value": "拖拽范围限制"
+          },
+          {
+            "slug": "拖拽事件回调",
+            "depth": 2,
+            "value": "拖拽事件回调"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/i18n/i18n.mdx",
       "value": {
         "name": "i18n",
@@ -1622,6 +1663,54 @@
       ]
     },
     {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
+        }
+      ]
+    },
+    {
       "key": "libs/animate/Animate.jsx",
       "value": [
         {
@@ -1826,54 +1915,6 @@
               "description": ""
             }
           }
-        }
-      ]
-    },
-    {
-      "key": "libs/component/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Component",
-          "methods": [
-            {
-              "name": "classnames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "classname",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "styles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "styles",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Component"
         }
       ]
     },
@@ -2461,67 +2502,6 @@
       ]
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumb",
-          "methods": [],
-          "actualName": "BreadCrumb",
-          "props": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'/'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumbItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumbItem",
-          "methods": [],
-          "actualName": "BreadCrumbItem",
-          "context": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            },
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/badge/Badge.jsx",
       "value": [
         {
@@ -2675,6 +2655,67 @@
       ]
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumb",
+          "methods": [],
+          "actualName": "BreadCrumb",
+          "props": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'/'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/breadcrumb/BreadCrumbItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumbItem",
+          "methods": [],
+          "actualName": "BreadCrumbItem",
+          "context": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/card/Card.jsx",
       "value": [
         {
@@ -2695,117 +2736,6 @@
               "type": {
                 "name": "custom",
                 "raw": "PropType.object"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/collapse/Collapse.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Collapse",
-          "methods": [
-            {
-              "name": "setActiveNames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "activeNames",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "clickHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "name",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Collapse",
-          "props": {
-            "accordion": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.array, PropType.string])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/collapse/CollapseItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CollapseItem",
-          "methods": [],
-          "actualName": "CollapseItem",
-          "props": {
-            "isActive": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.node"
-              },
-              "required": false,
-              "description": ""
-            },
-            "name": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onClick": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
               },
               "required": false,
               "description": ""
@@ -3080,6 +3010,117 @@
       ]
     },
     {
+      "key": "src/collapse/Collapse.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Collapse",
+          "methods": [
+            {
+              "name": "setActiveNames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "activeNames",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "name",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Collapse",
+          "props": {
+            "accordion": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.array, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/collapse/CollapseItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CollapseItem",
+          "methods": [],
+          "actualName": "CollapseItem",
+          "props": {
+            "isActive": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.node"
+              },
+              "required": false,
+              "description": ""
+            },
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onClick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/color-picker/ColorPicker.jsx",
       "value": [
         {
@@ -3316,6 +3357,78 @@
           "displayName": "Draggable",
           "methods": [
             {
+              "name": "onMouseDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "coreEvent",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDragStop",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseUp",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onTouchEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
               "name": "findDOMNode",
               "docblock": null,
               "modifiers": [],
@@ -3323,7 +3436,37 @@
               "returns": null
             }
           ],
-          "actualName": "Draggable"
+          "actualName": "Draggable",
+          "props": {
+            "axis": {
+              "defaultValue": {
+                "value": "'both'",
+                "computed": false
+              },
+              "required": false
+            },
+            "scale": {
+              "defaultValue": {
+                "value": "1",
+                "computed": false
+              },
+              "required": false
+            },
+            "defaultPosition": {
+              "defaultValue": {
+                "value": "{\n  x: 0,\n  y: 0\n}",
+                "computed": false
+              },
+              "required": false
+            },
+            "position": {
+              "defaultValue": {
+                "value": "{\n  x: 0,\n  y: 0\n}",
+                "computed": false
+              },
+              "required": false
+            }
+          }
         }
       ]
     },
@@ -8800,166 +8943,6 @@
       ]
     },
     {
-      "key": "src/upload/IFrameUpload.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "IFrameUpload",
-          "methods": [
-            {
-              "name": "onload",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onDrop",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "handleChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "uploadFiles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "file",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "handleClick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "handleDragover",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "handleDragleave",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "IFrameUpload",
-          "props": {
-            "drag": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "data": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
-              },
-              "required": false,
-              "description": ""
-            },
-            "action": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string.isRequired"
-              },
-              "required": false,
-              "description": ""
-            },
-            "name": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "accept": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onStart": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onSuccess": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onError": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            },
-            "listType": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/upload/Upload.jsx",
       "value": [
         {
@@ -9411,6 +9394,166 @@
                 "raw": "PropType.func"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/upload/iFrameUpload.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "IFrameUpload",
+          "methods": [
+            {
+              "name": "onload",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onDrop",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "uploadFiles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "file",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleDragover",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleDragleave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "IFrameUpload",
+          "props": {
+            "drag": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "data": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            },
+            "action": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string.isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "name": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "accept": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onStart": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onSuccess": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onError": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "listType": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }

@@ -1,0 +1,127 @@
+---
+name: Draggable
+route: /Draggable
+---
+
+import {Playground, Props} from 'docz';
+import Draggable from './index';
+import '../../style/css/font-awesome.min.scss';
+
+# Draggable 拖拽
+将dom拖拽到对应位置
+
+## 基本用法
+为dom容器提供全视口的拖拽能力.
+
+<Playground>
+  <div style={{'height': '200px'}}>
+    <Draggable>
+      <div style={{
+        'width': '100px', 
+        'height': '100px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'lineHeight': '100px',
+        'textAlign': 'center'
+      }}>123</div>
+    </Draggable>
+  </div>
+</Playground>
+
+## 自定义拖拽方向
+设置axis属性配置拖拽能力
+
+<Playground>
+  <div style={{'height': '400px'}}>
+    <Draggable axis={"x"}>
+      <div style={{
+        'width': '100px', 
+        'height': '100px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'lineHeight': '100px',
+        'textAlign': 'center'
+      }}>axis-x</div>
+    </Draggable>
+    <Draggable axis={"y"}>
+      <div style={{
+        'width': '100px', 
+        'height': '100px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'lineHeight': '100px',
+        'textAlign': 'center'
+      }}>axis-y</div>
+    </Draggable>
+    <Draggable axis={'none'}>
+      <div style={{
+        'width': '100px', 
+        'height': '100px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'lineHeight': '100px',
+        'textAlign': 'center'
+      }}>disabled</div>
+    </Draggable>
+  </div>
+</Playground>
+
+## 拖拽范围限制
+通过设置bounds属性限制拖拽范围
+bounds传入对象/字符串/布尔值
+
+<Playground>
+  <div style={{'height': '200px', 'overflow': 'hidden', 'position': 'relative'}}>
+    <div style={{
+      'width': '700px',
+      'height': '159px',
+      'marginLeft': '10px',
+      'marginTop': '10px',
+      'position': 'absolute',
+      'border': '1px solid red'
+    }}></div>
+    <Draggable bounds={{'top': 0, 'left': 0, 'bottom': 60, 'right': 600}}>
+      
+      <div style={{
+        'width': '100px', 
+        'height': '100px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'lineHeight': '100px',
+        'textAlign': 'center'
+      }}>bounds</div>
+    </Draggable>
+  </div>
+</Playground>
+
+## 拖拽事件回调
+通过设置回调函数，根据拖拽信息进行处理
+<Playground>
+  <div style={{'height': '200px'}}>
+    <Draggable 
+        onMouseDown={(e) => console.log('onMouseDown', e)}
+        onMouseMove={(e) => console.log('onMouseMove', e)}
+        onMousUp={(e) => console.log('onMousUp', e)}
+    >
+      <div style={{
+        'width': '100px', 
+        'height': '100px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'lineHeight': '100px',
+        'textAlign': 'center'
+      }}>drop</div>
+    </Draggable>
+  </div>
+</Playground>
+
+属性名|名称|类型|默认值
+----|---|---|---
+axis|允许拖拽的方向|['both', 'x', 'y', 'none']|'none'
+disabled|不允许拖拽|boolean|false
+defaultPosition|默认位置|object|{x: 0, y: 0}
+allowClick|允许点击|boolean|true
+position|元素位置设置|object|{x: 0, y: 0}
+onMouseDown|拖拽开始回调|function|-
+onMouseMove|拖拽回调|function|-
+onMousUp|拖拽结束回调|function|-
