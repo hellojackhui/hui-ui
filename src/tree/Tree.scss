@@ -21,6 +21,7 @@
     min-height: 500px;
     border: 1px solid $input-border-color;
     border-radius: 8px;
+    overflow: auto;
   }
   &-node {
     line-height: 36px;

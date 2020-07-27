@@ -6,9 +6,24 @@
  * @param {boolean} accurate 是否精确匹配
  */
 export const matchKey = (key = '', keylist = [], accurate = false) => {
-  let accurateMatch = keylist.includes(key);
+  let accurateMatch = exitAccurateKey(key, keylist);
   let blurMatch = keylist.some((itemkey) => itemkey.indexOf(key) > -1);
   return accurate ? accurateMatch : (accurateMatch || blurMatch)
+}
+
+const exitAccurateKey = (key, keylist) => {
+  if (key === '') return true;
+  for (let i = 0; i < keylist.length; i++) {
+    let item = keylist[i];
+    let splitKeys = item.split('-');
+    for (let i = 2; i <= splitKeys.length; i++) {
+      let curKeys = splitKeys.slice(0, i).join('-');
+      if (curKeys === key) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 

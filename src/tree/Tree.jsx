@@ -20,6 +20,9 @@ export default class Tree extends Component {
       inputValue: props.value,  // 输入框数据
     }
     this.activeNode = null; // 当前激活项
+    this.childrenName = props.defaultChildrenName;
+    this.defaultKeyName = props.defaultKeyName;
+    this.defaultLabelName = Array.isArray(props.defaultLabelName) ? props.defaultLabelName : [props.defaultLabelName];
   }
 
   componentDidMount() {
@@ -58,8 +61,8 @@ export default class Tree extends Component {
     for (let i = start; i < end; i++) {
       let node = this.insertNodeParams(append ? target[i - start] : target[i], i, parent, level);
       append ? (target[i - start] = node) : (target[i] = node);
-      if (node.children) {
-        node.children = this.initialTreeData(node.children, node, level + 1);
+      if (node[this.childrenName]) {
+        node[this.childrenName] = this.initialTreeData(node[this.childrenName], node, level + 1);
       }
     }
     return target;
@@ -68,7 +71,7 @@ export default class Tree extends Component {
   // 为数据添加初始化属性
   insertNodeParams = (node, index, parent, level) => {
     const {defaultCheckedKeys, defaultExpandAll} = this.props;
-    let checked = (defaultCheckedKeys && defaultCheckedKeys.includes(node?.id)) || false;
+    let checked = (defaultCheckedKeys && (node ? defaultCheckedKeys.includes(node[this.defaultKeyName]) : false));
     let expanded = defaultExpandAll || false;
     let newnode = {
       ...node,
@@ -93,7 +96,7 @@ export default class Tree extends Component {
     if (!defaultExpandedKeys) {
       return;
     }
-    let keysFromIds = list.filter((item) => defaultExpandedKeys.includes(item.id));
+    let keysFromIds = list.filter((item) => defaultExpandedKeys.includes(item[this.defaultKeyName]));
     let keys = keysFromIds.map((item) => item.key);
     function traverse(data = sourceData) {
       if (!data) return;
@@ -102,8 +105,8 @@ export default class Tree extends Component {
         if (keys.some((key) => key.indexOf(node.key) > -1)) {
           node.expanded = true;
         }
-        if (node.children) {
-          traverse(node.children)
+        if (node[this.childrenName]) {
+          traverse(node[this.childrenName])
         }
       } 
       return;
@@ -116,8 +119,8 @@ export default class Tree extends Component {
     for (let i = 0; i < data.length; i++) {
       let node = data[i];
       source.push(node);
-      if (node.children != null) {
-        this.initListdata(node.children, source);
+      if (node[this.childrenName] != null) {
+        this.initListdata(node[this.childrenName], source);
       }
     }
     return source;
@@ -164,9 +167,9 @@ export default class Tree extends Component {
   }
 
   renderTreeNode = (node) => {
-    const {checked, expanded, level, key, label, children, disabled, active, indeterminate, childrending = false} = node;
+    const {checked, expanded, level, key, disabled, active, indeterminate, childrending = false} = node;
     const {renderContent, isShowCheckbox, lazy} = this.props;
-    const hasChildren = (children && children.length);
+    const hasChildren = (node[this.childrenName] && node[this.childrenName].length);
     const isExpandClass = {
       'is-expanded': expanded,
       'not-expanded': !expanded
@@ -175,23 +178,24 @@ export default class Tree extends Component {
       "hui-tree-node": true,
       "is-active": active
     })
+    const label = this.defaultLabelName.filter((item) => node[item] !== undefined)[0];
     // 工厂方法
     const store = {
       'append': (target, data) => {
-        if (!data.children) {
-          data.children = [];
+        if (!data[this.childrenName]) {
+          data[this.childrenName] = [];
         }
-        let newItem = this.insertNodeParams(target, (data.children.length) || 0, data, level + 1);
-        let insertIndex = data.children.findIndex((node) => node.key === data.key);
-        data.children.splice(insertIndex + 1, 0, newItem)
+        let newItem = this.insertNodeParams(target, (data[this.childrenName].length) || 0, data, level + 1);
+        let insertIndex = data[this.childrenName].findIndex((node) => node.key === data.key);
+        data[this.childrenName].splice(insertIndex + 1, 0, newItem)
         this.setState({})
       },
       'remove': (data) => {
         let nodeIndex;
         let target = dipatchParent(data, 1) || this.state.treeData;
         if (data.parent) {
-          nodeIndex = target.children.findIndex((item) => item.key === data.key);
-          target.children.splice(nodeIndex, 1);
+          nodeIndex = target[this.childrenName].findIndex((item) => item.key === data.key);
+          target[this.childrenName].splice(nodeIndex, 1);
         } else {
           nodeIndex = target.findIndex((item) => item.key === data.key);
           target.splice(nodeIndex, 1);
@@ -225,19 +229,23 @@ export default class Tree extends Component {
             )
           }
           {
-            this.renderLabel(label)
+            this.renderLabel(node[label])
           }
-          <div className="hui-tree-node__extend">
-            {
-              renderContent(store, node)
-            }
-          </div>
+          {
+            renderContent && (
+              <div className="hui-tree-node__extend">
+                {
+                  renderContent(store, node)
+                }
+              </div>
+            )
+          }
         </div>
         <Transition name="zoom-in-top" key={`${key}-transition`}>
           <View show={!!(hasChildren && expanded)}>
             <div>
               {
-                this.renderTreeData(children)
+                this.renderTreeData(node[this.childrenName])
               }
             </div>
           </View>
@@ -295,7 +303,7 @@ export default class Tree extends Component {
     || target.classList[0] === 'hui-icon'
     || target.classList[0] === 'hui-tree-node__title';
     if (isRow) {
-      if (lazy && (!node.children || !node.children.length) && node.expanded === false) {
+      if (lazy && (!node[this.childrenName] || !node[this.childrenName].length) && node.expanded === false) {
         return this.lazyLoadNode(e, node, level).then(() => {
           return this.toogleActiveNode(e, node, level);
         });
@@ -327,8 +335,8 @@ export default class Tree extends Component {
       node.indeterminate = false;
     }
     node.checked = val;
-    if (node.children && node.children.length) {
-      for (let item of node.children) {
+    if (node[this.childrenName] && node[this.childrenName].length) {
+      for (let item of node[this.childrenName]) {
         this.traverseNodeCheckSink(item, val)
       }
     } else {
@@ -338,7 +346,7 @@ export default class Tree extends Component {
 
   // 由节点向上进行遍历，设置节点中间态
   traverseNodeCheckPop = (node, val) => {
-    if (node.children && node.children.length && node.disabled === false) {
+    if (node[this.childrenName] && node[this.childrenName].length && node.disabled === false) {
       if (allChecked(node)) {
         node.checked = true;
         node.indeterminate = false;
@@ -376,7 +384,11 @@ export default class Tree extends Component {
   treeNodeSearch = (val) => {
     this.setState({inputValue: val})
     const {sourceListData} = this.state;
-    let filterList = sourceListData.filter((item) => `${item.label}`.indexOf(`${val}`.trim()) > -1);
+    let filterList = val !== '' ? sourceListData.filter((item) => {
+      let targetName = `${this.defaultLabelName.filter((label) => item[label] !== undefined)[0]}`;
+      let target = item[targetName];
+      return target.indexOf(`${val}`.trim()) > -1;
+    }) : [];
     return this.genFilterTree(filterList);
   }
 
@@ -388,11 +400,18 @@ export default class Tree extends Component {
       if (!data) return data;
       for (let i = 0; i < data.length; i++) {
         let node = data[i];
-        if (!matchKey(node.key, keyList, false)) {
+        if (!matchKey(node.key, keyList, true)) {
             data.splice(i, 1);
             i--;
-        } else if (node.children) {
-          node.children = traverseTree(node.children)
+        } else {
+          if (matchKey(node.key, keyList, true)) {
+            node.expanded = true;
+          } else {
+            node.expanded = false;
+          }
+          if (node[this.childrenName]) {
+            node[this.childrenName] = traverseTree(node[this.childrenName])
+          }
         }
       }
       return data;
@@ -428,9 +447,9 @@ export default class Tree extends Component {
       item.checked = false;
       item.indeterminate = false;
     })
-    let ids = data.map((item) => item.id ?? item);
+    let ids = data.map((item) => item[this.defaultKeyName] ?? item);
     for (let id of ids) {
-      let index = list.findIndex((item) => item.id === id);
+      let index = list.findIndex((item) => item[this.defaultKeyName] === id);
       this.traverseNodeCheckSink(list[index], true);
       this.traverseNodeCheckPop(list[index], true);
     }
@@ -495,6 +514,9 @@ Tree.propTypes = {
   load: PropType.func,  // 加载子树数据方法
   lazy: PropType.bool,  // 是否异步加载
   renderContent: PropType.func, // 渲染树节点内容区
+  defaultKeyName: PropType.string, // 默认key名称设置
+  defaultLabelName: PropType.string, // 默认label名称设置
+  defaultChildrenName: PropType.string, // 默认子节点名称设置
   defaultExpandAll: PropType.bool,   // 是否默认显示全部
   defaultCheckedKeys: PropType.array, // 默认选中项
   defaultExpandedKeys: PropType.array, // 默认展开项
@@ -507,4 +529,7 @@ Tree.defaultProps = {
   lazy: false,
   isShowCheckbox: false,
   defaultExpandAll: false,
+  defaultKeyName: 'id',
+  defaultLabelName: 'label',
+  defaultChildrenName: 'children'
 }
