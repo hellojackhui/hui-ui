@@ -66,6 +66,34 @@ import '../../style/css/font-awesome.min.scss';
   </div>
 </Playground>
 
+## 自定义拖拽控制
+通过设置handle属性将拖拽控制权交由handle指向的dom
+
+<Playground>
+  <div style={{'height': '400px'}}>
+    <Draggable handle="strong">
+      <div style={{
+        'width': '150px', 
+        'height': '150px', 
+        'background': '#c8deff',
+        'margin': '10px',
+        'fontSize': '15px',
+        'textAlign': 'center'
+      }}>
+        <strong style={{
+          'padding': '5px 10px',
+          'border': '1px solid #666666',
+          'display': 'block',
+          'marginBottom': '10px',
+          'font-size': '12px'
+        }}>Drag here</strong>
+        this place cannot drag anywhere
+      </div>
+    </Draggable>
+  </div>
+</Playground>
+
+
 ## 拖拽范围限制
 通过设置bounds属性限制拖拽范围
 bounds传入对象/字符串/布尔值
@@ -122,6 +150,7 @@ disabled|不允许拖拽|boolean|false
 defaultPosition|默认位置|object|{x: 0, y: 0}
 allowClick|允许点击|boolean|true
 position|元素位置设置|object|{x: 0, y: 0}
+handle|自定义dom拖拽控制|string|-
 onMouseDown|拖拽开始回调|function|-
 onMouseMove|拖拽回调|function|-
 onMousUp|拖拽结束回调|function|-

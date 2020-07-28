@@ -513,6 +513,11 @@
             "value": "自定义拖拽方向"
           },
           {
+            "slug": "自定义拖拽控制",
+            "depth": 2,
+            "value": "自定义拖拽控制"
+          },
+          {
             "slug": "拖拽范围限制",
             "depth": 2,
             "value": "拖拽范围限制"
@@ -1656,57 +1661,25 @@
                 }
               ],
               "returns": null
-            }
-          ],
-          "actualName": "Page"
-        }
-      ]
-    },
-    {
-      "key": "libs/component/index.js",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Component",
-          "methods": [
-            {
-              "name": "classnames",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "...classes",
-                  "type": null
-                }
-              ],
-              "returns": null
             },
             {
-              "name": "classname",
+              "name": "handleDrag",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "...classes",
+                  "name": "e",
                   "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "styles",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
+                },
                 {
-                  "name": "styles",
+                  "name": "ui",
                   "type": null
                 }
               ],
               "returns": null
             }
           ],
-          "actualName": "Component"
+          "actualName": "Page"
         }
       ]
     },
@@ -1791,6 +1764,54 @@
             }
           ],
           "actualName": "Animate"
+        }
+      ]
+    },
+    {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
         }
       ]
     },
@@ -2551,6 +2572,67 @@
       ]
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumb",
+          "methods": [],
+          "actualName": "BreadCrumb",
+          "props": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'/'",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/breadcrumb/BreadCrumbItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "BreadCrumbItem",
+          "methods": [],
+          "actualName": "BreadCrumbItem",
+          "context": {
+            "seperator": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false
+            },
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/button/Button.jsx",
       "value": [
         {
@@ -2651,67 +2733,6 @@
           "displayName": "ButtonGroup",
           "methods": [],
           "actualName": "ButtonGroup"
-        }
-      ]
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumb.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumb",
-          "methods": [],
-          "actualName": "BreadCrumb",
-          "props": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'/'",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/breadcrumb/BreadCrumbItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "BreadCrumbItem",
-          "methods": [],
-          "actualName": "BreadCrumbItem",
-          "context": {
-            "seperator": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false
-            },
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false
-            }
-          }
         }
       ]
     },
@@ -3350,127 +3371,6 @@
       ]
     },
     {
-      "key": "src/draggable/Draggable.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Draggable",
-          "methods": [
-            {
-              "name": "onMouseDown",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseDrag",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onDrag",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "coreEvent",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseDragStop",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseUp",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onTouchEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "findDOMNode",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Draggable",
-          "props": {
-            "axis": {
-              "defaultValue": {
-                "value": "'both'",
-                "computed": false
-              },
-              "required": false
-            },
-            "scale": {
-              "defaultValue": {
-                "value": "1",
-                "computed": false
-              },
-              "required": false
-            },
-            "defaultPosition": {
-              "defaultValue": {
-                "value": "{\n  x: 0,\n  y: 0\n}",
-                "computed": false
-              },
-              "required": false
-            },
-            "position": {
-              "defaultValue": {
-                "value": "{\n  x: 0,\n  y: 0\n}",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/dropdown/Dropdown.jsx",
       "value": [
         {
@@ -4029,159 +3929,6 @@
       ]
     },
     {
-      "key": "src/input-number/InputNumber.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "InputNumber",
-          "methods": [
-            {
-              "name": "onIncrease",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onDecrease",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onStopInput",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "val",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onFocus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onBlur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "InputNumber",
-          "props": {
-            "defaultValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "min": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "0",
-                "computed": false
-              }
-            },
-            "max": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "Number.MAX_SAFE_INTEGER",
-                "computed": true
-              }
-            },
-            "step": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "1",
-                "computed": false
-              }
-            },
-            "size": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['large', 'small'])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showInputControls": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/layout/Column.jsx",
       "value": [
         {
@@ -4707,6 +4454,159 @@
                 "raw": "PropType.any"
               },
               "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/input-number/InputNumber.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "InputNumber",
+          "methods": [
+            {
+              "name": "onIncrease",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onDecrease",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onStopInput",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "InputNumber",
+          "props": {
+            "defaultValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "min": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "Number.MAX_SAFE_INTEGER",
+                "computed": true
+              }
+            },
+            "step": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "1",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showInputControls": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
             }
           }
         }
@@ -7601,184 +7501,6 @@
       ]
     },
     {
-      "key": "src/tabs/Pane.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Pane",
-          "methods": [],
-          "actualName": "Pane",
-          "props": {
-            "disabled": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "closable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/tabs/Tabs.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Tabs",
-          "methods": [
-            {
-              "name": "update",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "tabAdd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "tabRemove",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "tab",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "index",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "e",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "scrollToActiveTab",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "scrollPrev",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "scrollNext",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getCurrentScrollOffset",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "setOffset",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "value",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "tabclick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "item",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "e",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "calcBarStyle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "firstRendering",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Tabs",
-          "props": {
-            "type": {
-              "defaultValue": {
-                "value": "'card'",
-                "computed": false
-              },
-              "required": false
-            },
-            "closable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "addable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "editable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/tag/Tag.jsx",
       "value": [
         {
@@ -8355,6 +8077,184 @@
       ]
     },
     {
+      "key": "src/tabs/Pane.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Pane",
+          "methods": [],
+          "actualName": "Pane",
+          "props": {
+            "disabled": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "closable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/tabs/Tabs.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tabs",
+          "methods": [
+            {
+              "name": "update",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "tabAdd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "tabRemove",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "tab",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "scrollToActiveTab",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "scrollPrev",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "scrollNext",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getCurrentScrollOffset",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "setOffset",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "tabclick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcBarStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "firstRendering",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Tabs",
+          "props": {
+            "type": {
+              "defaultValue": {
+                "value": "'card'",
+                "computed": false
+              },
+              "required": false
+            },
+            "closable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "addable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "editable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/tree/Tree.jsx",
       "value": [
         {
@@ -8706,7 +8606,11 @@
                 "raw": "PropType.string"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "'搜索不到数据哦～'",
+                "computed": false
+              }
             },
             "nodeKey": {
               "type": {
@@ -9854,6 +9758,58 @@
       ]
     },
     {
+      "key": "src/table/tableAction/TableAction.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "TableAction",
+          "methods": [
+            {
+              "name": "actionsFilters",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "actions",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "onClick",
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderButtonLists",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "actions",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "TableAction"
+        }
+      ]
+    },
+    {
       "key": "src/table/infiniteScroll/InfiniteScroll.jsx",
       "value": [
         {
@@ -9983,33 +9939,17 @@
       ]
     },
     {
-      "key": "src/table/tableAction/TableAction.jsx",
+      "key": "src/draggable/Draggable.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "TableAction",
+          "displayName": "Draggable",
           "methods": [
             {
-              "name": "actionsFilters",
+              "name": "onMouseDown",
               "docblock": null,
               "modifiers": [],
               "params": [
-                {
-                  "name": "actions",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "clickHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "onClick",
-                  "type": null
-                },
                 {
                   "name": "e",
                   "type": null
@@ -10018,19 +9958,108 @@
               "returns": null
             },
             {
-              "name": "renderButtonLists",
+              "name": "onMouseDrag",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "actions",
+                  "name": "e",
                   "type": null
                 }
               ],
               "returns": null
+            },
+            {
+              "name": "onDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "coreEvent",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDragStop",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseUp",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onTouchEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "findDOMNode",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
             }
           ],
-          "actualName": "TableAction"
+          "actualName": "Draggable",
+          "props": {
+            "axis": {
+              "defaultValue": {
+                "value": "'both'",
+                "computed": false
+              },
+              "required": false
+            },
+            "scale": {
+              "defaultValue": {
+                "value": "1",
+                "computed": false
+              },
+              "required": false
+            },
+            "defaultPosition": {
+              "defaultValue": {
+                "value": "{\n  x: 0,\n  y: 0\n}",
+                "computed": false
+              },
+              "required": false
+            },
+            "position": {
+              "defaultValue": {
+                "value": "{\n  x: 0,\n  y: 0\n}",
+                "computed": false
+              },
+              "required": false
+            }
+          }
         }
       ]
     }

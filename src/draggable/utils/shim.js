@@ -10,3 +10,7 @@ export function isNum(num) {
 export function int(a) {
   return parseInt(a, 10);
 }
+
+export function isFunction(func) {
+  return typeof func === 'function' || Object.prototype.toString.call(func) === '[object Function]';
+}

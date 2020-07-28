@@ -152,6 +152,9 @@ export default class Page extends Component {
         {value: '加拿大', name: '加拿大'},
       ],
       selectCountry: '',
+      deltaPosition: {
+        x: 0, y: 0
+      },
       demodata: [{
         id: 1,
         label: '一级 1',
@@ -187,11 +190,12 @@ export default class Page extends Component {
             id: 8,
             label: '二级 3-2'
         }]
-    }]
+      }],
     }
     this.id = 100;
     this.treeRef = null;
     this.count = 1;
+    this.draggable = React.createRef();
   }
   onClick = () => {
     window.alert('clicked');
@@ -413,6 +417,16 @@ export default class Page extends Component {
     }, 2000);
   }
 
+  handleDrag = (e, ui) => {
+    const {x, y} = this.state.deltaPosition;
+    this.setState({
+      deltaPosition: {
+        x: x + ui.deltaX,
+        y: y + ui.deltaY,
+      }
+    });
+  };
+
   render() {
     const fileList2 = [
       {name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg'}
@@ -431,6 +445,7 @@ export default class Page extends Component {
     let expandable = {
       expandedRowRender: this.expandedRowRender
     }
+    const {deltaPosition} = this.state;
     return (
       <div>
         <div style={{'marginTop': '20px'}}>
@@ -499,12 +514,6 @@ export default class Page extends Component {
           <Progress type="circle" percentage={100}  width={80} status="success" />
           <Progress type="circle" percentage={50}  width={80} status="exception" />
         </div>
-        {
-          Message.info({
-            message: 'msg',
-            showClose: true
-          })
-        }
         <div style={{'marginTop': '20px'}}>
           <Input type="textarea" autoSize={false}/>
         </div>
@@ -730,12 +739,18 @@ export default class Page extends Component {
           />
         </div>
         <div style={{'height': '300px', 'border': '1px solid black', 'marginTop': '20px', 'overflow': 'scroll'}}>
-          <Draggable bounds={{'bottom': 100, 'right': 600}}>
+          <Draggable
+            onDrag={this.handleDrag}
+            handle="strong"
+            >
             <div style={this.styles({
               'width': '100px', 
               'height': '100px', 
               'background': '#c8deff'
-            })} ></div>
+            })} >
+              <strong>can drag here</strong>
+              {`x: ${deltaPosition.x.toFixed(0)}, y: ${deltaPosition.y.toFixed(0)}`}
+            </div>
           </Draggable>
         </div>
       </div>
