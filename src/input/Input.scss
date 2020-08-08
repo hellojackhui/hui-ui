@@ -40,9 +40,9 @@
     font-size: 16px;
     line-height: 36px;
     cursor: pointer;
-    & + input {
-      padding-left: 30px;
-    }
+    // & + input {
+    //   padding-left: 30px;
+    // }
   }
 
   &-group__prepend {

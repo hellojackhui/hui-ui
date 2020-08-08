@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PopperJS from 'popper.js';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType, View} from '../../libs/index';
 import ClickOutside from 'react-click-outside';
+import CascaderMenu from './CascaderMenu';
 import Input from '../input/index';
 import './Cascader.scss';
 
@@ -11,14 +12,14 @@ class Cascader extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        inputhover: false,
-        inputValue: '',
-        visible: false,
-        flatOptions: this.flattenOptions(props.options),
-        currentValue: props.value
+        inputhover: false,  // 是否悬浮
+        inputValue: '', // 输入框值
+        visible: false, // 是否显示明细
+        menu: null, // 菜单list
+        flatOptions: this.flattenOptions(props.options),  // 铺平option，便于查询
+        currentValue: props.value   // 当前值
       }
-      this.menu = null;
-      this.input = null;
+      this.input = null;  // 输入框dom
     }
     getChildContext() {
       return {
@@ -33,7 +34,7 @@ class Cascader extends Component {
         currentValue: nextprops.value,
         flatOptions: this.flattenOptions(nextprops.options)
       })
-      this.menu.setState({
+      this.state.menu.setState({
         options: nextprops.options
       })
     }
@@ -70,17 +71,58 @@ class Cascader extends Component {
       }
     }
 
+    showSubMenu = () => {
+      this.state.menu.setState({
+        visible: true,
+        value: this.state.currentValue.slice(0),
+        options: this.props.options,
+        inputWidth: this.input.offsetWidth - 2
+      })
+    }
+
+    initMenu = (menu) => {
+      this.state.menu = menu;
+    }
+
+    hideSubMenu = () => {
+      this.setState({
+        value: ''
+      })
+      this.state.menu.setState({
+        visible: false,
+      })
+    }
+
+    updatePopper() {
+      if (this.popperJS) {
+        this.popperJS.update();
+      }
+    }
+
+    handleActiveItemChange(value) {
+      this.updatePopper();
+  
+      if (this.props.activeItemChange) {
+        this.props.activeItemChange(value);
+      }
+    }
+
     // 铺平数据
-    flattenOptions = (options) => {
+    flattenOptions(options, ancestor = []) {
       let flatOptions = [];
-      if (!options.length) return flatOptions;
-      options.reduce((prev, next) => {
-        if (!next[this.getChildren()]) {
-          return [...prev, next]
+  
+      options.forEach((option) => {
+        const optionsStack = ancestor.concat(option);
+        if (!option[this.getChildren()]) {
+          flatOptions.push(optionsStack);
         } else {
-          return [...prev, ...this.flattenOptions(next[this.getChildren()])];
+          if (this.changeOnSelect) {
+            flatOptions.push(optionsStack);
+          }
+          flatOptions = flatOptions.concat(this.flattenOptions(option[this.getChildren()], optionsStack));
         }
-      }, [])
+      });
+  
       return flatOptions;
     }
 
@@ -93,6 +135,7 @@ class Cascader extends Component {
     // 选中后
     pickHandler = (value = [], close = false) => {
       this.setState({
+        inputValue: '',
         currentValue: value,
       })
       if (close) {
@@ -123,7 +166,7 @@ class Cascader extends Component {
 
     // 获取配置的children
     getChildren = () => {
-      return this.props.props.chilren || 'chilren';
+      return this.props.props.chilren || 'children';
     }
 
     // 根据当前输入值，获取对应的查询结果
@@ -132,10 +175,10 @@ class Cascader extends Component {
       let labels = [];
       let {currentValue} = this.state;
       currentValue.forEach((val) => {
-        let item = options && options.filter((option) => option[this.getKey()] === val)[0];
+        let item = options && options.filter((option) => option[this.valueKey()] === val)[0];
         if (item) {
           labels.push(item[this.getKey()]);
-          options = options[this.getChildren()];
+          options = item[this.getChildren()];
         }
       })
       return labels;
@@ -147,9 +190,61 @@ class Cascader extends Component {
       }
     }
 
+    // inputChangeHandler
+    inputChangeHandler = (value) => {
+      if (!this.state.visible) return;
+      const options = this.state.flatOptions;
+      if (!value) {
+        this.state.menu.setState({
+          options: this.props.options
+        })
+        return;
+      }
+      let filterOptions = options.filter((option) => {
+        return option.some((item) => {
+          new RegExp(value, 'i').test(item[this.getKey()])
+        })
+      })
+      if (filterOptions.length) {
+        filterOptions = filterOptions.map((option) => {
+          return {
+            __IS_FLAT: true,
+            value: option.map((item) => item[this.valueKey()]),
+            label: this.renderFilterLabel(value, option)
+          }
+        })
+      } else {
+        return {
+          __IS_FLAT: true,
+          label: '未匹配',
+          value: '',
+          disabled: true,
+        }
+      }
+      this.state.menu.setState({
+        options: filterOptions
+      })
+    }
+
+    renderFilterLabel = (value, option) => {
+      return option.map((item, index) => {
+        const label = item[this.getKey()];
+        const keywordIndex = label.toLowerCase().indexOf(value.toLowerCase());
+        const labelPart = label.slice(keywordIndex, value.length + keywordIndex);
+        const node = keywordIndex > -1 ? this.highLight(label, labelPart) : label;
+        return index === 0 ? node : [' / ', node];
+      })
+    }
+
+    highLight(label, keyword) {
+      return label.split(keyword).map((node, index) => index === 0 ? node : [
+        (<span className="hui-cascader-menu__item__keyword">{keyword}</span>),
+        node
+      ]);
+    }
 
     render() {
-      const {disabled, placeholder, clearable, size, showAllLevels} = this.props;
+      const {disabled, placeholder, clearable, size, showAllLevels, filterable} = this.props;
       const {visible, inputValue, inputHover} = this.state;
       const currentValue = this.getCurrentLabels();
       return (
@@ -168,11 +263,12 @@ class Cascader extends Component {
           >
             <Input 
               ref={"input"}
-              readOnly={true}
               value={inputValue}
+              readOnly={!filterable}
               size={size}
               disabled={disabled}
-              onChange={(val) => this.setState({inputValue: val})}
+              onChange={value => { this.setState({ inputValue: value }) }}
+              onKeyUp={this.inputChangeHandler}
               placeholder={placeholder}
               icon={
                 (clearable && inputHover && currentValue.length) ? 'close' : visible ? 'caret-up' : 'caret-down'
@@ -187,7 +283,7 @@ class Cascader extends Component {
                   showAllLevels ? currentValue.map((label, index) => {
                     return (
                       <label key={index}>
-                        <span>{label}</span>
+                        <span title={label}>{label}</span>
                         {
                           index < currentValue.length - 1 && <span> / </span>
                         }
@@ -199,6 +295,7 @@ class Cascader extends Component {
             </View>
           </span>
           {/* menu组件 */}
+          <CascaderMenu ref="menu" />
         </div>
       )
     }
@@ -206,7 +303,7 @@ class Cascader extends Component {
 
 Cascader.propTypes = {
   options: PropType.arrayOf(PropType.shape({
-      value: PropType.string
+    value: PropType.string
   })).isRequired,
   props: PropType.object,
   value: PropType.array,
@@ -215,16 +312,18 @@ Cascader.propTypes = {
   clearable: PropType.bool,
   size: PropType.string,
   expandTrigger: PropType.string,
-  filterable: PropTypes.bool,
-  showAllLevels: PropTypes.bool,
-  activeItemChange: PropTypes.func,
-  onChange: PropTypes.func
+  filterable: PropType.bool,
+  showAllLevels: PropType.bool,
+  activeItemChange: PropType.func,
+  onChange: PropType.func
 }
 
 Cascader.defaultProps = {
   value: [],
   clearable: false,
+  showAllLevels: true,
   expandTrigger: 'click',
+  filterable: false,
   props: {
     children: 'children',
     label: 'label',
