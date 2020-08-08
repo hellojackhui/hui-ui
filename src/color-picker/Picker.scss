@@ -5,12 +5,16 @@
     background-color: #fff;
     border: 1px solid #d1dbe5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 0 6px rgba(0, 0, 0, 0.12);
+    &-options {
+      margin-top: 5px;
+    }
 }
 .hui-picker-wrapper-panel {
     margin-bottom: 6px;
     width: 295px;
 }
 .hui-picker-wrapper-options {
+    position: relative;
     margin-top: 6px;
     text-align: right;
 }
@@ -22,13 +26,15 @@
 }
 .hui-picker-link {
     cursor: pointer;
+    float: right;
     color: #20a0ff;
     text-decoration: none;
-    padding: 15px;
+    padding: 5px 15px;
     font-size: 12px;
     vertical-align: middle;
 }
 .hui-picker-btn {
+    float: right;
     border: 1px solid #dcdcdc;
     color: #333;
     line-height: 24px;

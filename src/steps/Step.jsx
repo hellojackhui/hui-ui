@@ -14,7 +14,6 @@ class Step extends Component {
       lineStyle,
       stepNumber,
     } = this.props;
-    console.log(status);
     const directionClass = `is-${direction}`;
     const statusClass = `is-${status}`;
     const iconNode = icon ? <i className={`hui-icon hui-icon-${icon}`} /> : <div>{stepNumber}</div>;

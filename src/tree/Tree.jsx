@@ -473,7 +473,7 @@ export default class Tree extends Component {
   }
 
   render() {
-    const {withquery, isShowCheckbox} = this.props;
+    const {withquery, isShowCheckbox, emptyText} = this.props;
     const {inputValue, treeData} = this.state;
     return (
       <div style={this.styles()} className={this.classname('hui-tree-container')}>
@@ -497,7 +497,7 @@ export default class Tree extends Component {
           !treeData.length && (
             <div className="hui-tree__empty">
               <img src={NoDataImg} alt="no-data-image"/>
-              搜索不到数据哦～
+              {emptyText}
             </div>
           )
         }
@@ -527,6 +527,7 @@ Tree.propTypes = {
 Tree.defaultProps = {
   withquery: true,
   lazy: false,
+  emptyText: '搜索不到数据哦～',
   isShowCheckbox: false,
   defaultExpandAll: false,
   defaultKeyName: 'id',

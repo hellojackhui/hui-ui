@@ -1,4 +1,4 @@
-import {findInArray, isNum, int} from './shim';
+import {findInArray, isNum, int, isFunction} from './shim';
 
 export function getTouchIdentifier(e) {
   if (e.targetTouches && e.targetTouches[0]) return e.targetTouches[0].identifier;
@@ -14,7 +14,7 @@ export function getControlPosition(e, touchIdentifier, draggableCore) {
   const touchObj = typeof touchIdentifier === 'number' ? getTouch(e, touchIdentifier) : null;
   if (typeof touchIdentifier === 'number' && !touchObj) return null; // not the right touch
   const node = findDOMNode(draggableCore);
-  // User can provide an offsetParent if desired.
+
   const offsetParent = draggableCore.props.offsetParent || node.offsetParent || node.ownerDocument.body;
   return offsetXYFromParent(touchObj || e, offsetParent, draggableCore.props.scale);
 }
@@ -162,4 +162,33 @@ export function canDragX(draggable) {
 
 export function canDragY(draggable) {
   return draggable.props.axis === 'both' || draggable.props.axis === 'y';
+}
+
+
+export function matchSelect(event, selector, basenode) {
+  let node = event;
+  do {
+    if (matchSelector(node, selector)) return true;
+    if (node === basenode) return false;
+    node = node.parentNode;
+  } while(node)
+}
+
+let matchesSelectorFunc = '';
+
+function matchSelector(el, selector) {
+  if (!matchesSelectorFunc) {
+    matchesSelectorFunc = findInArray([
+      'matches',
+      'webkitMatchesSelector',
+      'mozMatchesSelector',
+      'msMatchesSelector',
+      'oMatchesSelector'
+    ], function(method){
+      return isFunction(el[method]);
+    });
+  }
+
+  if (!isFunction(el[matchesSelectorFunc])) return false;
+  return el[matchesSelectorFunc](selector);
 }

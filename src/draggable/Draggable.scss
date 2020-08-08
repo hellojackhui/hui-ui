@@ -1,12 +1,15 @@
 .hui-draggable {
   cursor: move;
   &.cursor-x {
-      cursor: ew-resize;
+    cursor: ew-resize;
   }
   &.cursor-y {
-      cursor: ns-resize;
+    cursor: ns-resize;
   }
   &.cursor-none {
-      cursor: not-allowed;
+    cursor: not-allowed;
+  }
+  &.hui-draggable-disabled {
+    cursor: not-allowed;
   }
 }

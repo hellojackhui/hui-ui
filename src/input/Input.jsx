@@ -136,6 +136,7 @@ Input.propTypes = {
 
   // input events
   onFocus: PropType.func,
+  onKeyUp: PropType.func,
   onBlur: PropType.func,
   onChange: PropType.func,
   onIconClick: PropType.func,

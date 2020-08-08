@@ -32,17 +32,17 @@ class Picker extends Component {
           {showAlpha && <Alpha color={color} ref={"alpha"} />}
           <div className="hui-picker-options">
             <span className="hui-picker-value">{currentColor}</span>
-            <a
-              className="hui-picker-link"
-              href="void:javascript;"
-              onClick={() => onClear()}
-            >清空</a>
             <button
               className="hui-picker-btn"
               onClick={() => onPick()}
             >
               确定
             </button>
+            <a
+              className="hui-picker-link"
+              href="void:javascript;"
+              onClick={() => onClear()}
+            >清空</a>
           </div>
         </div>
       </View>

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Component, PropType} from '../../libs/index';
 import {addEvent, removeEvent} from '../../libs/utils/addEvents';
-import {getTouchIdentifier, getControlPosition, createCoreData, createDraggableData, getBoundPosition, canDragX, canDragY} from './utils/domFunctions';
+import {getTouchIdentifier, getControlPosition, createCoreData, createDraggableData, getBoundPosition, canDragX, canDragY, matchSelect} from './utils/domFunctions';
 import './Draggable.scss';
 
 const eventsFor = {
@@ -54,7 +54,7 @@ export default class Draggable extends Component {
     // 保证元素在这个window下
     const node = this.findDOMNode();
     const {ownerDocument} = node;
-    if (this.props.disabled || !(e.target instanceof ownerDocument.defaultView.Node)) {
+    if (this.props.disabled || !(e.target instanceof ownerDocument.defaultView.Node) || (this.props.handle && !matchSelect(e.target, this.props.handle, this))) {
       return;
     }
     if (e.type === 'touchstart') e.preventDefault();
@@ -62,7 +62,6 @@ export default class Draggable extends Component {
     this.setState({touchIdentifier});
 
     const position = getControlPosition(e, touchIdentifier, this);
-
     if (position === null) return;
     const {x, y} = position;
     const coreEvent = createCoreData(this, x, y);
@@ -84,7 +83,7 @@ export default class Draggable extends Component {
     if (position == null) return;
     let {x, y} = position;
     const coreEvent = createCoreData(this, x, y);
-    this.onDrag(coreEvent);
+    this.onDrag(e, coreEvent);
     if (this.mounted === false) { 
       this.onMouseDragStop(new MouseEvent('mouseup'));
       return;
@@ -95,7 +94,7 @@ export default class Draggable extends Component {
     })
   }
 
-  onDrag = (coreEvent) => {
+  onDrag = (e, coreEvent) => {
     if (!this.state.dragging) return;
     const uiData = createDraggableData(this, coreEvent);
     const newState = {
@@ -120,13 +119,14 @@ export default class Draggable extends Component {
       uiData.deltaX = newState.x - this.state.x;
       uiData.deltaY = newState.y - this.state.y;
     }
+    this.props.onDrag && this.props.onDrag(e, uiData);
     this.setState(newState);
   }
 
   onMouseDragStop = (e) => {
     if (!this.state.dragging) return;
-    this.props.onMousUp && this.props.onMousUp(e);
     const position = getControlPosition(e, this.state.touchIdentifier, this);
+    this.props.onMousUp && this.props.onMousUp(position);
     if (position == null) return;
     const thisNode = this.findDOMNode();
     this.setState({
@@ -169,7 +169,7 @@ export default class Draggable extends Component {
   }
 
   render() {
-    const {axis, children, position, defaultPosition, controlled, disabled} = this.props;
+    const {axis, children, position, defaultPosition, disabled} = this.props;
     const {isDragging, x, y} = this.state;
     const draggableStateClass = {
       'hui-draggable': true,
@@ -182,6 +182,7 @@ export default class Draggable extends Component {
       'cursor-y': axis === 'y',
       'cursor-disable': axis === 'none'
     }
+    const controlled = disabled;
     const draggable = !controlled || this.state.dragging;
     const validPosition = position || defaultPosition;
     const transformOpt = {
@@ -190,9 +191,8 @@ export default class Draggable extends Component {
       y: (canDragY(this) && draggable) ?
         y : validPosition.y
     } 
-
     return React.cloneElement(React.Children.only(children), {
-      'className': this.classname(draggableStateClass, draggbleStatusClass),
+      'className': this.classname(draggbleStatusClass, draggableStateClass),
       'onMouseDown': this.onMouseDown,
       'onMouseUp': this.onMouseUp,
       'onTouchEnd': this.onTouchEnd,
@@ -207,6 +207,7 @@ export default class Draggable extends Component {
 Draggable.propType = {
   axis: PropType.oneOf(['both', 'x', 'y', 'none']),
   bounds: PropType.oneOfType([PropType.string, PropType.bool]),
+  handle: PropType.string,
   disabled: PropType.bool,
   scale: PropType.number,
   defaultPosition: PropType.object,

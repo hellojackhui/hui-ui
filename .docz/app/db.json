@@ -477,6 +477,11 @@
             "value": "自定义拖拽方向"
           },
           {
+            "slug": "自定义拖拽控制",
+            "depth": 2,
+            "value": "自定义拖拽控制"
+          },
+          {
             "slug": "拖拽范围限制",
             "depth": 2,
             "value": "拖拽范围限制"
@@ -1656,6 +1661,38 @@
                 }
               ],
               "returns": null
+            },
+            {
+              "name": "handleDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "ui",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "handleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "key",
+                  "type": null
+                },
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
             }
           ],
           "actualName": "Page"
@@ -1669,42 +1706,6 @@
           "description": "",
           "displayName": "Animate",
           "methods": [
-            {
-              "name": "onMotionStart",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "event",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onTransformStart",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "event",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onTransformEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "event",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
             {
               "name": "onMotionEnd",
               "docblock": null,
@@ -1816,6 +1817,54 @@
               }
             }
           }
+        }
+      ]
+    },
+    {
+      "key": "libs/component/index.js",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Component",
+          "methods": [
+            {
+              "name": "classnames",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "classname",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "...classes",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "styles",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "styles",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Component"
         }
       ]
     },
@@ -2716,6 +2765,429 @@
       ]
     },
     {
+      "key": "src/card/Card.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Card",
+          "methods": [],
+          "actualName": "Card",
+          "props": {
+            "header": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "bodyStyle": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/cascader/Cascader.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Cascader",
+          "methods": [
+            {
+              "name": "showSubMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "initMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "menu",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "hideSubMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "updatePopper",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleActiveItemChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "flattenOptions",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "options",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "ancestor",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clearValue",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "pickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                },
+                {
+                  "name": "close",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getKey",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "valueKey",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getChildren",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getCurrentLabels",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "inputChangeHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderFilterLabel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "option",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "highLight",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "label",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "keyword",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Cascader",
+          "props": {
+            "options": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.arrayOf(PropType.shape({\n  value: PropType.string\n})).isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "props": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{\n  children: 'children',\n  label: 'label',\n  value: 'value',\n  disabled: 'disabled'\n}",
+                "computed": false
+              }
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "placeholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "clearable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "expandTrigger": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'click'",
+                "computed": false
+              }
+            },
+            "filterable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showAllLevels": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "activeItemChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/cascader/CascaderMenu.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CascaderMenu",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "select",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "menuIndex",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "activeItem",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "menuIndex",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "activeOptions",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "CascaderMenu",
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/checkbox/CheckButton.jsx",
       "value": [
         {
@@ -3386,6 +3858,10 @@
               "modifiers": [],
               "params": [
                 {
+                  "name": "e",
+                  "type": null
+                },
+                {
                   "name": "coreEvent",
                   "type": null
                 }
@@ -3977,6 +4453,14 @@
               }
             },
             "onFocus": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onKeyUp": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
@@ -8706,7 +9190,11 @@
                 "raw": "PropType.string"
               },
               "required": false,
-              "description": ""
+              "description": "",
+              "defaultValue": {
+                "value": "'搜索不到数据哦～'",
+                "computed": false
+              }
             },
             "nodeKey": {
               "type": {
