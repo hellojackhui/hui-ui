@@ -1677,6 +1677,22 @@
                 }
               ],
               "returns": null
+            },
+            {
+              "name": "handleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "key",
+                  "type": null
+                },
+                {
+                  "name": "value",
+                  "type": null
+                }
+              ],
+              "returns": null
             }
           ],
           "actualName": "Page"
@@ -2766,6 +2782,400 @@
       ]
     },
     {
+      "key": "src/cascader/Cascader.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Cascader",
+          "methods": [
+            {
+              "name": "showSubMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "initMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "menu",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "hideSubMenu",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "updatePopper",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleActiveItemChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "flattenOptions",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "options",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "ancestor",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clearValue",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "pickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                },
+                {
+                  "name": "close",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "clickHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getKey",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "valueKey",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getChildren",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getCurrentLabels",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "inputChangeHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderFilterLabel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "option",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "highLight",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "label",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "keyword",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Cascader",
+          "props": {
+            "options": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.arrayOf(PropType.shape({\n  value: PropType.string\n})).isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "props": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{\n  children: 'children',\n  label: 'label',\n  value: 'value',\n  disabled: 'disabled'\n}",
+                "computed": false
+              }
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.array"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "[]",
+                "computed": false
+              }
+            },
+            "placeholder": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "clearable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "expandTrigger": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'click'",
+                "computed": false
+              }
+            },
+            "filterable": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "showAllLevels": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "activeItemChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/cascader/CascaderMenu.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CascaderMenu",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "select",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "menuIndex",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "activeItem",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "type": null
+                },
+                {
+                  "name": "menuIndex",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "activeOptions",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "CascaderMenu",
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/checkbox/CheckButton.jsx",
       "value": [
         {
@@ -3371,6 +3781,131 @@
       ]
     },
     {
+      "key": "src/draggable/Draggable.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Draggable",
+          "methods": [
+            {
+              "name": "onMouseDown",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onDrag",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                },
+                {
+                  "name": "coreEvent",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseDragStop",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onMouseUp",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onTouchEnd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "findDOMNode",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Draggable",
+          "props": {
+            "axis": {
+              "defaultValue": {
+                "value": "'both'",
+                "computed": false
+              },
+              "required": false
+            },
+            "scale": {
+              "defaultValue": {
+                "value": "1",
+                "computed": false
+              },
+              "required": false
+            },
+            "defaultPosition": {
+              "defaultValue": {
+                "value": "{\n  x: 0,\n  y: 0\n}",
+                "computed": false
+              },
+              "required": false
+            },
+            "position": {
+              "defaultValue": {
+                "value": "{\n  x: 0,\n  y: 0\n}",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/dropdown/Dropdown.jsx",
       "value": [
         {
@@ -3884,6 +4419,14 @@
               "required": false,
               "description": ""
             },
+            "onKeyUp": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            },
             "onBlur": {
               "type": {
                 "name": "custom",
@@ -3917,6 +4460,159 @@
               "description": ""
             },
             "onMouseLeave": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/input-number/InputNumber.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "InputNumber",
+          "methods": [
+            {
+              "name": "onIncrease",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onDecrease",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onStopInput",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "val",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "InputNumber",
+          "props": {
+            "defaultValue": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": ""
+            },
+            "min": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "0",
+                "computed": false
+              }
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "Number.MAX_SAFE_INTEGER",
+                "computed": true
+              }
+            },
+            "step": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.number"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "1",
+                "computed": false
+              }
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showInputControls": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "onChange": {
               "type": {
                 "name": "custom",
                 "raw": "PropType.func"
@@ -4454,159 +5150,6 @@
                 "raw": "PropType.any"
               },
               "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/input-number/InputNumber.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "InputNumber",
-          "methods": [
-            {
-              "name": "onIncrease",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onDecrease",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onStopInput",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "val",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onFocus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onBlur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "InputNumber",
-          "props": {
-            "defaultValue": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": ""
-            },
-            "min": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "0",
-                "computed": false
-              }
-            },
-            "max": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "Number.MAX_SAFE_INTEGER",
-                "computed": true
-              }
-            },
-            "step": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.number"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "1",
-                "computed": false
-              }
-            },
-            "size": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['large', 'small'])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showInputControls": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
             }
           }
         }
@@ -7501,6 +8044,184 @@
       ]
     },
     {
+      "key": "src/tabs/Pane.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Pane",
+          "methods": [],
+          "actualName": "Pane",
+          "props": {
+            "disabled": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "closable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/tabs/Tabs.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Tabs",
+          "methods": [
+            {
+              "name": "update",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "tabAdd",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "tabRemove",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "tab",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "index",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "scrollToActiveTab",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "scrollPrev",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "scrollNext",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getCurrentScrollOffset",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "setOffset",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "tabclick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "item",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "e",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "calcBarStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "firstRendering",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Tabs",
+          "props": {
+            "type": {
+              "defaultValue": {
+                "value": "'card'",
+                "computed": false
+              },
+              "required": false
+            },
+            "closable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "addable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            },
+            "editable": {
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/tag/Tag.jsx",
       "value": [
         {
@@ -8071,184 +8792,6 @@
               },
               "required": false,
               "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/tabs/Pane.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Pane",
-          "methods": [],
-          "actualName": "Pane",
-          "props": {
-            "disabled": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "closable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/tabs/Tabs.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Tabs",
-          "methods": [
-            {
-              "name": "update",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "tabAdd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "tabRemove",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "tab",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "index",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "e",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "scrollToActiveTab",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "scrollPrev",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "scrollNext",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getCurrentScrollOffset",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "setOffset",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "value",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "tabclick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "item",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "e",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "calcBarStyle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "firstRendering",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Tabs",
-          "props": {
-            "type": {
-              "defaultValue": {
-                "value": "'card'",
-                "computed": false
-              },
-              "required": false
-            },
-            "closable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "addable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
-            },
-            "editable": {
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              },
-              "required": false
             }
           }
         }
@@ -9758,58 +10301,6 @@
       ]
     },
     {
-      "key": "src/table/tableAction/TableAction.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "TableAction",
-          "methods": [
-            {
-              "name": "actionsFilters",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "actions",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "clickHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "onClick",
-                  "type": null
-                },
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "renderButtonLists",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "actions",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "TableAction"
-        }
-      ]
-    },
-    {
       "key": "src/table/infiniteScroll/InfiniteScroll.jsx",
       "value": [
         {
@@ -9939,58 +10430,34 @@
       ]
     },
     {
-      "key": "src/draggable/Draggable.jsx",
+      "key": "src/table/tableAction/TableAction.jsx",
       "value": [
         {
           "description": "",
-          "displayName": "Draggable",
+          "displayName": "TableAction",
           "methods": [
             {
-              "name": "onMouseDown",
+              "name": "actionsFilters",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "e",
+                  "name": "actions",
                   "type": null
                 }
               ],
               "returns": null
             },
             {
-              "name": "onMouseDrag",
+              "name": "clickHandler",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onDrag",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
+                  "name": "onClick",
                   "type": null
                 },
                 {
-                  "name": "coreEvent",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onMouseDragStop",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
                   "name": "e",
                   "type": null
                 }
@@ -9998,68 +10465,19 @@
               "returns": null
             },
             {
-              "name": "onMouseUp",
+              "name": "renderButtonLists",
               "docblock": null,
               "modifiers": [],
               "params": [
                 {
-                  "name": "e",
+                  "name": "actions",
                   "type": null
                 }
               ],
-              "returns": null
-            },
-            {
-              "name": "onTouchEnd",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "findDOMNode",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
               "returns": null
             }
           ],
-          "actualName": "Draggable",
-          "props": {
-            "axis": {
-              "defaultValue": {
-                "value": "'both'",
-                "computed": false
-              },
-              "required": false
-            },
-            "scale": {
-              "defaultValue": {
-                "value": "1",
-                "computed": false
-              },
-              "required": false
-            },
-            "defaultPosition": {
-              "defaultValue": {
-                "value": "{\n  x: 0,\n  y: 0\n}",
-                "computed": false
-              },
-              "required": false
-            },
-            "position": {
-              "defaultValue": {
-                "value": "{\n  x: 0,\n  y: 0\n}",
-                "computed": false
-              },
-              "required": false
-            }
-          }
+          "actualName": "TableAction"
         }
       ]
     }
