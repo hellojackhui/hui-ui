@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/hellojackhui/hui-ui/issues"
   },
-  "main": "./index.jsx",
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hellojackhui/hui-ui.git"
