@@ -1,8 +1,7 @@
 {
-  "name": "hui-ui",
-  "version": "0.1.0",
+  "name": "jackhui-ui",
+  "version": "0.1.1",
   "license": "MIT",
-  "private": true,
   "keywords": [
     "react",
     "react-component",
