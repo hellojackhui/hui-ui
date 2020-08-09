@@ -1,3 +1,6 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-cascader {
   display: inline-block;
   position: relative;
@@ -8,22 +11,20 @@
     height: 100%;
     line-height: 36px;
     padding: 0 25px 0 10px;
-    color: #1f2d3d;
+    color: $color-black-1;
     width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @include line(1);
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 14px;
+    font-size: $font-size-base;
     text-align: left;
   }
   &-menus {
     white-space: nowrap;
-    background: #fff;
+    background: $color-white;
     position: absolute;
     margin: 5px 0;
-    border: 1px solid #d1dbe5;
+    border: 1px solid $color-button-border;
     border-radius: 2px;
     box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
   }
@@ -32,8 +33,8 @@
     vertical-align: top;
     height: 204px;
     overflow: auto;
-    border-right: solid 1px #d1dbe5;
-    background-color: #fff;
+    border-right: solid 1px $color-button-border;
+    background-color: $color-white;
     box-sizing: border-box;
     margin: 0;
     padding: 6px 0;
@@ -42,21 +43,19 @@
       font-size: 14px;
       padding: 8px 30px 8px 10px;
       position: relative;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      color: #48576a;
+      @include line(1);
+      color: $color-dark-gray;
       height: 36px;
       line-height: 1.5;
       box-sizing: border-box;
       cursor: pointer;
       &.is-active, &:hover {
-        color: #fff;
-        background-color: #20a0ff;
+        color: $color-white;
+        background-color: $color-brand;
       }
       &.is-disabled {
-        color: #fff;
-        background-color: #f7f7f7;
+        color: $color-white;
+        background-color: $color-disabled;
       }
     }
   }

@@ -1,4 +1,6 @@
-@import '../../style/core/theme/theme.scss';
+@import '../variables/variables.scss';
+
+$color-breadcrumb-seperator: #bfcbd9 !default;
 
 .hui-breadcrumb {
   line-height: 1;
@@ -13,17 +15,17 @@
     cursor: pointer;
     &__wrap {
         transition: color .15s linear;
-        color: $assist-text;
+        color: $color-grey-1;
         &:hover {
-          color: $primary-color;
+          color: $color-brand;
         }
     }
     &__seperator {
         margin: 0 8px;
-        color: #bfcbd9;
+        color: $color-breadcrumb-seperator;
     }
     &.is-highlight &__wrap{
-      color: $primary-color;
+      color: $color-brand;
     }
     &:nth-last-of-type(1) &__seperator {
       display: none;

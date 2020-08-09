@@ -1,4 +1,4 @@
-@import '../../style/core/theme/theme.scss';
+@import '../variables/variables.scss';
 
 .hui-badge {
   display: inline-block;
@@ -13,8 +13,8 @@
     display: inline-block;
     outline: none;
     border-radius: 10px;
-    color: $white-color;
-    background-color: $error-color;
+    color: $color-white;
+    background-color: $color-error;
     font-size: 12px;
     height: 18px;
     line-height: 16px;

@@ -1,0 +1,201 @@
+/* mixin混合 */
+
+@mixin absolute-center($pos: absolute) {
+    position: $pos;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%);
+}
+
+@mixin active {
+    transition: background-color 0.3s;
+    &:active {
+        background-color: $color-grey-5;
+    }
+}
+
+@mixin alignhack($position: before, $margintop: 3px) {
+    &::#{$position} {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 100%;
+      vertical-align: middle;
+      margin-top: $margintop;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+@mixin disabled {
+  color: #bbb;
+}
+
+
+@mixin line($num: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @if ($num == 1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba($color: #000, $alpha: 0.3);
+}
+
+@function shade(
+  $color,
+  $percent
+) {
+  @return mix(#000, $color, $percent);
+}
+
+@function tint(
+  $color,
+  $percent
+) {
+  @return mix(#FFF, $color, $percent);
+}
+
+
+// 动画状态组
+// 动画状态，分为六部分：
+// enter/enter-active/enter-to
+// leave/leave-active/leave-to
+// 其中，enter-active与leave-active为过度态，负责动效的过度
+// 其余四种设置对应状态，完成补间动画的实现
+
+@mixin transition-active($name, $duration, $besier) {
+  transition: $name $duration $besier;
+}
+
+// 功能mixin
+@mixin base-button {
+  position: relative;
+  display: inline-block;
+  outline: 0;
+  margin: 0;
+  padding: 0 $spacing-h-lg;
+  max-width: 140px;
+  line-height: $line-height-form;
+  border: 0;
+  border-radius: 4px;
+  font-size: $font-base;
+  color: $color-white;
+}
+
+
+@mixin base-onepx {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+@mixin onepx-line($side, $color, $size: 1px) {
+  // 0.5px;
+  // box-shadow + scale;
+  // border-image + scale;
+  // ::after;
+  @if ($side == 'all') {
+    &::after {
+      @include base-onepx();
+      width: 200%;
+      height: 200%;
+      left: 0;
+      top: 0;
+      border: $size solid $color;
+      transform: scale(0.5);
+      transform-origin: left top;
+    }
+  }
+  @if ($side == 'left') {
+    &::after {
+      @include base-onepx();
+      width: $size;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $color;
+      transform: scaleX(0.5);
+      transform-origin: left top;
+    }
+  }
+  @if ($side == 'bottom') {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: $size;
+      bottom: 0;
+      left: 0;
+      background-color: $color;
+      transform: scaleY(0.5);
+      transform-origin: left bottom;
+    }
+  }
+  @if ($side == 'top') {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: $size;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      background-color: $color;
+      transform: scaleY(0.5);
+      transform-origin: left top;
+    }
+  }
+  @if ($side == 'right') {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: $size;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background-color: $color;
+      transform: scaleX(0.5);
+      transform-origin: right top;
+    }
+  }
+}
+
+// 三角形标识（tab页面）
+@mixin triangle($color: #000000, $size: 6px, $position: bottom) {
+  @if ($position == bottom) {
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border: $size solid transparent;
+      border-#{$position}-color: $color;
+      border-#{$position}-width: $size * 3 / 4;
+    }
+  }
+  
+}

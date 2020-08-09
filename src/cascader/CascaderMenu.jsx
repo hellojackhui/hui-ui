@@ -1,6 +1,6 @@
 import React from 'react';
 import {PropType, Component, View, Transition} from '../../libs/index';
-import './Cascader.scss';
+import 'module/Cascader.scss';
 
 export default class CascaderMenu extends Component {
   constructor(props) {

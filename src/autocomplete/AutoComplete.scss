@@ -1,4 +1,5 @@
 @import '../../style/core/theme/theme.scss';
+@import 'styles/core/variables/variables.scss';
 
 .hui-autocomplete {
     display: inline-block;
@@ -12,13 +13,13 @@
     &-suggestion {
       margin: 5px 0;
       padding: 0;
-      box-shadow: 0 0 6px 0 $box-shadow-shallow, 0 2px 4px 0 $box-shadow-deep;
+      box-shadow: 0 0 6px 0 rgba(0,0,0,.04), 0 2px 4px 0 rgba(0,0,0,.12);
       &__list {
         margin: 0;
         padding: 0;
         position: relative;
         max-height: 280px;
-        background-color: $white-color;
+        background-color: $color-white;
         padding: 6px 0;
         border-radius: 2px;
         z-index: 100;
@@ -34,11 +35,11 @@
           overflow: hidden;
           text-overflow: ellipsis;
           &:hover {
-            background-color: $fifth-primary-color;
+            background-color: $color-progress-bg;
           }
           &.is-selected {
-            background-color: $primary-color;
-            color: $white-color;
+            background-color: $color-brand;
+            color: $color-white;
           }
         }
       }

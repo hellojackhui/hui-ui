@@ -1,4 +1,4 @@
-@import '../../style/core/theme/theme.scss';
+@import '../variables/variables.scss';
 
 .hui-progress {
   position: relative;
@@ -14,7 +14,7 @@
       &__outer {
         height: 6px;
         border-radius: 100px;
-        background-color: $fifth-primary-color;
+        background-color: $color-white;
         overflow: hidden;
         position: relative;
         vertical-align: middle;
@@ -24,7 +24,7 @@
         left: 0;
         top: 0;
         height: 100%;
-        background-color: $third-success-color;
+        background-color: $color-success;
         text-align: right;
         border-radius: 100px;
         line-height: 1;
@@ -40,14 +40,14 @@
           top: 3px;
           display: inline-block;
           vertical-align: middle;
-          color: $white-color;
+          color: $color-white;
           font-size: 12px;
           margin: 0 5px;
         }
       }
     }
     .hui-progress-text {
-      color: $assist-text;
+      color: $color-text-secondary;
       display: inline-block;
       vertical-align: middle;
       margin-left: 10px;
@@ -68,9 +68,9 @@
     transform: translate(0, -50%);
   }
   &.is-success .hui-progress-bar__inner {
-    background-color: $second-success-color;
+    background-color: $color-success;
   }
   &.is-exception .hui-progress-bar__inner {
-    background-color: $error-color;
+    background-color: $color-error;
   }
 }

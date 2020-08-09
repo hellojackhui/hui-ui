@@ -1,4 +1,4 @@
-@import '../../style/core/theme/theme.scss';
+@import '../variables/variables.scss';
 
 .hui-alert {
   width: 100%;
@@ -12,16 +12,16 @@
   color: #fff;
   display: table;
   &--success {
-    background-color: $success-color;
+    background-color: $color-success;
   }
   &--info {
-    background-color: $primary-color;
+    background-color: $color-brand;
   }
   &--warning {
-    background-color: $warning-color;
+    background-color: $color-warning;
   }
   &--error {
-    background-color: $error-color;
+    background-color: $color-error;
   }
   &__icon {
     font-size: 16px;

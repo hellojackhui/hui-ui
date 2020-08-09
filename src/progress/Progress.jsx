@@ -3,13 +3,12 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-06 17:09:42 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-07-24 11:29:57
+ * @Last Modified time: 2020-08-09 20:17:07
  */
 
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
-import './Progress.scss';
-
+import 'module/Progress.scss';
 class Progress extends Component {
   static defaultProps = {
     percentage: 0,

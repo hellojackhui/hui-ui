@@ -1,3 +1,6 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-checkbox {
   display: inline-block;
   position: relative;
@@ -10,15 +13,15 @@
     line-height: 1;
     vertical-align: middle;
     &.is-checked .hui-checkbox__inner {
-      background-color: #50bfff;
-      border-color: #50bfff;
+      background-color: $color-brand;
+      border-color: $color-brand;
       &::after {
         transform: rotate(45deg) scale(1);
       }
     }
     &.is-indeterminate .hui-checkbox__inner {
-      background-color: #50bfff;
-      border-color: #50bfff;
+      background-color: $color-brand;
+      border-color: $color-brand;
       &::after {
         transform: scale(1) !important;
       }
@@ -30,20 +33,20 @@
       width: 10px;
       height: 1px;
       left: 2px;
-      background-color: #fff;
+      background-color: $color-white;
       transform: scale(0);
       transform-origin: center;
       transition: transform .15s cubic-bezier(.71,-.46,.88,.6) .05s;
     }
     &.is-disabled {
-      color: #bbb;
+      color: $color-disabled;
       cursor: not-allowed;
       & .hui-checkbox__inner {
-        background-color: #eef1f6;
-        border-color: #d1dbe5;
+        background-color: $color-light-gray;
+        border-color: $color-checked-disabled;
         cursor: not-allowed;
         &.is-checked {
-          background-color: #d1dbe5;
+          background-color: $color-checked-disabled;
         }
       }
     }
@@ -55,15 +58,15 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    border: 1px solid #bfcbd9;
+    border: 1px solid $color-button-border;
     border-radius: 4px;
-    background-color: #fff;
+    background-color: $color-white;
     box-sizing: border-box;
     cursor: pointer;
     &::after {
       content: '';
       position: absolute;
-      border: 2px solid #fff;
+      border: 2px solid $color-white;
       box-sizing: content-box;
       border-left: 0;
       border-top: 0;
@@ -111,9 +114,9 @@
 
   }
   &.is-checked .hui-checkbutton__inner{
-    color: #fff;
-    background-color: #20a0ff;
-    border-color: #20a0ff;
+    color:$color-white;
+    background-color: $color-brand;
+    border-color: $color-brand;
   }
   &.is-focus {
 
@@ -121,7 +124,7 @@
   &__inner {
     line-height: 1;
     white-space: nowrap;
-    border: 1px solid #bfcbd9;
+    border: 1px solid $color-button-border;
     border-left: 0;
     color: #1f2d3d;
     margin: 0;
@@ -132,7 +135,7 @@
     border-radius: 0;
   }
   &:first-of-type(1) .hui-checkbutton__inner {
-    border-left: 1px solid #bfcbd9;
+    border-left: 1px solid $color-button-border;
     border-radius: 4px 0 0 4px;
   }
   &:last-child .hui-checkbutton__inner {

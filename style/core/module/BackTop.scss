@@ -1,11 +1,11 @@
-@import '../../style/core/theme/theme.scss';
+@import '../variables/variables.scss';
 
 .hui-backtop {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: $bold-text;
-  font-size: 14px;
+  color: $color-text-base;
+  font-size: $font-size-base;
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -21,9 +21,9 @@
     height: 40px;
     line-height: 40px;
     overflow: hidden;
-    color: $white-color;
+    color: $color-white;
     text-align: center;
-    background-color: $primary-color;
+    background-color: $color-brand;
     border-radius: 20px;
   }
 }
