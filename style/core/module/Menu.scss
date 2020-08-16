@@ -1,21 +1,25 @@
+@import '../state/animate.scss';
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-menu {
   position: relative;
   border-radius: 2px;
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: #eef1f6;
+  background-color: $color-light-gray;
   &::after, &::before {
     display: table;
     content: "";
   }
   &--dark {
-    background-color: #324157;
+    background-color: $color-dark-gray;
     .hui-submenu {
       .hui-menu {
-        background-color: #1f2d3d;
+        background-color: $color-text-secondary;
         &__item:hover {
-          background-color: #d1dbe5;
+          background-color: $color-light-gray;
         }
       }
     }
@@ -24,7 +28,7 @@
     height: 56px;
     line-height: 56px;
     font-size: 14px;
-    color: #48576a;
+    color: $color-grey-0;
     padding: 0 20px;
     cursor: pointer;
     position: relative;
@@ -32,10 +36,10 @@
     box-sizing: border-box;
     white-space: nowrap;
     &:hover {
-      background-color: #d1dbe5;
+      background-color: $color-button-border;
     }
     &.is-active {
-      color: #20a0ff;
+      color: $color-brand;
     }
     &:first-of-type(1) {
       margin-left: 0;
@@ -44,7 +48,7 @@
       height: 56px;
       line-height: 56px;
       font-size: 14px;
-      color: #48576a;
+      color: $color-grey-0;
       padding: 0 20px;
       cursor: pointer;
       position: relative;
@@ -62,22 +66,22 @@
       cursor: pointer;
       position: relative;
       box-sizing: border-box;
-      border-bottom: 5px solid transparent;
+      @include onepx-line(bottom, transparent, 1px);
     }
     .hui-submenu {
       float: left;
       position: relative;
       &:hover {
         .hui-submenu__title {
-          border-bottom: 5px solid #20a0ff;
+          @include onepx-line(bottom, $color-brand, 5px);
         }
       }
       .hui-submenu__title {
         height: 60px;
         line-height: 60px;
-        border-bottom: 1px solid transparent;
+        @include onepx-line(bottom, transparent, 1px);
         &.is-active {
-          border-bottom: 5px solid #20a0ff;
+          @include onepx-line(bottom, $color-brand, 5px);
         }
       }
       .hui-submenu__icon {
@@ -85,7 +89,7 @@
         position: static;
         vertical-align: middle;
         margin-left: 5px;
-        color: #97a8be;
+        color: $color-grey-3;
         margin-top: -3px;
         transition: all 0.3s linear;
       }
@@ -93,15 +97,15 @@
         position: absolute;
         top: 65px;
         left: 0px;
-        border: 1px solid #d1dbe5;
+        border: 1px solid $color-button-border;
         padding: 5px 0;
-        background-color: #fff;
+        background-color: $color-white;
         z-index: 100;
         min-width: 100%;
         box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
       }
       .hui-menu__item:hover {
-        background-color: #d1dbe5;
+        background-color: $color-button-border;
       }
     }
   }
@@ -114,7 +118,7 @@
       line-height: normal;
       font-size: 14px;
       padding-left: 20px;
-      color: #97a8be;
+      color: $color-grey-3;
     }
   }
 }
@@ -125,21 +129,21 @@
     height: 56px;
     line-height: 56px;
     font-size: 14px;
-    color: #48576a;
+    color: $color-grey-0;
     padding: 0 20px;
     cursor: pointer;
     transition: border-color .3s,background-color .3s,color .3s;
     box-sizing: border-box;
     white-space: nowrap;
     &.is-active {
-      border-bottom: 5px solid #20a0ff;
+      @include onepx-line(bottom, $color-brand, 5px);
     }
     &:hover {
-      background-color: #d1dbe5;
+      background-color: $color-button-border;
     }
   }
   .hui-menu {
-    background-color: #eef1f6;
+    background-color: $color-grey-5;
   }
   .hui-menu__item {
     height: 50px;
@@ -147,7 +151,7 @@
     padding: 0 45px;
     min-width: 200px;
     &:hover {
-      background-color: #d1dbe5;
+      background-color: $color-button-border;
     }
   }
   &.is-opened > .hui-submenu__title .hui-submenu__icon {

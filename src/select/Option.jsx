@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, View} from '../../libs/index';
+import {Component, PropType, View} from 'libs/index';
 
 export default class Option extends Component {
   constructor(props) {

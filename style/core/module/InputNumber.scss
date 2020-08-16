@@ -1,17 +1,22 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+$color-input-number-hover: #8391a5 !default;
+
 .hui-input-number {
   display: inline-block;
   position: relative;
-  border: 1px solid #bfcbd9;
+  border: 1px solid $color-button-border;
   border-radius: 4px;
   &:hover {
-    border-color: #8391a5;
+    border-color: $color-input-number-hover;
   }
   &.is-disabled {
-    background-color: #eef1f6;
+    background-color: $color-checked-disabled;
     color: #bbb;
     cursor: not-allowed;
     &:hover {
-      border: 1px solid #d1dbe5;
+      border: 1px solid $color-button-border-hover;
     }
     .hui-input-number__increase {
       pointer-events: none;
@@ -20,14 +25,14 @@
       pointer-events: none;
     }
     &.is-focus {
-      border: 1px solid #d1dbe5;
+      border: 1px solid $color-button-border-hover;
       &:hover {
-        border: 1px solid #d1dbe5;
+        border: 1px solid $color-button-border-hover;
       }
     }
   }
   &.is-focus {
-    border: 1px solid #20a0ff;
+    border: 1px solid $color-brand;
   }
   &--large {
     font-size: 16px;
@@ -39,7 +44,7 @@
     }
   }
   &--small {
-    font-size: 14px;
+    font-size: $font-subtitle;
     & .hui-input__inner {
       height: 30px;
     }
@@ -61,12 +66,12 @@
     }
   }
   &--mini {
-    font-size: 12px;
+    font-size: $font-base;
     & .hui-input__inner {
       height: 25px;
     }
     .hui-input-number__increase {
-      font-size: 15px;
+      font-size: $font-title;
       height: 25px;
       .hui-icon-plus {
         position: relative;
@@ -74,7 +79,7 @@
       }
     }
     .hui-input-number__decrease {
-      font-size: 15px;
+      font-size: $font-title;
       height: 25px;
       .hui-icon-minus {
         position: relative;
@@ -83,7 +88,7 @@
     }
   }
   &:hover.is-focus {
-    border: 1px solid #20a0ff;
+    border: 1px solid $color-brand;
     outline: 0;
   }
   &__inner {
@@ -103,18 +108,18 @@
     top: 0px;
     line-height: 36px;
     width: 42px;
-    height: auto;
-    border-left: 1px solid #bfcbd9;
+    height: 38px;
+    border-left: 1px solid $color-button-border;
     text-align: center;
     color: #97a8be;
     cursor: pointer;
     z-index: 1;
-    color: #bfcbd9;
+    color: $color-button-border;
     &:hover {
-      color: #20a0ff;
+      color: $color-brand;
     }
     &.is-hide {
-      color: #d1dbe5;
+      color: $color-button-border-hover;
       cursor: not-allowed;
     }
   }
@@ -125,19 +130,19 @@
     width: 42px;
     line-height: 36px;
     font-size: 16px;
-    border-left: 1px solid #bfcbd9;
-    height: auto;
+    border-left: 1px solid $color-button-border;
+    height: 38px;
     cursor: pointer;
     z-index: 1;
     text-align: center;
-    color: #bfcbd9;
+    color: $color-button-border;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
     &:hover {
-      color: #20a0ff;
+      color: $color-brand;
     }
     &.is-hide {
-      color: #d1dbe5;
+      color: $color-button-border-hover;
       cursor: not-allowed;
     }
   }

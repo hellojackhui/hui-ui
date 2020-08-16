@@ -1,7 +1,7 @@
 import React from 'react';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 import Input from '../input/index';
-import './InputNumber.scss';
+import 'module/InputNumber.scss';
 
 
 export default class InputNumber extends Component {

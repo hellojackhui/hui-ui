@@ -1,9 +1,9 @@
 import React from 'react';
 import ClickOutside from 'react-click-outside';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 import Picker from './Picker';
 import Color from './color';
-import './ColorPicker.scss';
+import 'module/ColorPicker.scss';
 
 class ColorPicker extends Component {
   constructor(props) {

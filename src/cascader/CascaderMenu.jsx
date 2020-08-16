@@ -1,5 +1,5 @@
 import React from 'react';
-import {PropType, Component, View, Transition} from '../../libs/index';
+import {PropType, Component, View, Transition} from 'libs/index';
 import 'module/Cascader.scss';
 
 export default class CascaderMenu extends Component {

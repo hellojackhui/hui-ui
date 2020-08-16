@@ -1,5 +1,5 @@
 import React from 'react';
-import { Component } from '../../libs/index';
+import { Component } from 'libs/index';
 
 export default class ModalFooter extends Component {
   render() {

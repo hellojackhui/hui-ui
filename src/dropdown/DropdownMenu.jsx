@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Popper from 'popper.js';
-import { Component, PropType, Transition, View } from '../../libs';
+import { Component, PropType, Transition, View } from 'libs/index';
 
 class DropdownMenu extends Component {
   constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 import Button from '../button/index';
 import TransferPanel from './TransferPanel';
 import i18n from '../i18n';

@@ -1,7 +1,7 @@
 import React from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';
-import {Component, PropType, Transition, View} from '../../libs/index';
+import {Component, PropType, Transition, View} from 'libs/index';
 import Input from '../input/index';
 import Checkbox from '../checkbox/index';
 import Icon from '../icon/index';

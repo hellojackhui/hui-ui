@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Transition, View, PropType} from '../../libs/index';
+import {Transition, View, PropType} from 'libs/index';
 import MixinComponent from './MixinComponent';
 import './Menu.scss';
 

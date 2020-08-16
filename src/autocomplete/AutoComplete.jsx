@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ClickOutside from 'react-click-outside';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 import Input from '../input/index';
 import Suggestion from './Suggestion';
-import './AutoComplete.scss';
+import 'module/AutoComplete.scss';
 
 class AutoComplete extends Component {
   constructor(props) {

@@ -1,3 +1,9 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+@import '../state/animate.scss';
+
+$color-paragraph: #8391a5 !default;
+
 .hui-message {
   display: inline-block;
   min-width: 300px;
@@ -38,38 +44,16 @@
     right: 0;
     position: absolute;
     cursor: pointer;
-    color: #bfcbd9;
+    color: $color-tag-border;
     font-size: 14px;
   }
   p {
     font-size: 14px;
     margin: 0 34px 0 0;
-    color: #8391a5;
+    color: $color-paragraph;
     text-align: justify;
   }
   .is-disabled {
     display: none;
-  }
-}
-
-@keyframes enter {
-  from {
-    top: 0px;
-    opacity: 0;
-  }
-  to {
-    top: 20px;
-    opacity: 1;
-  }
-}
-
-@keyframes leave {
-  from {
-    top: 20px;
-    opacity: 1;
-  }
-  to {
-    top: 0px;
-    opacity: 0;
   }
 }

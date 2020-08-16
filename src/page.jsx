@@ -34,7 +34,7 @@ import BackTop from './backTop';
 import Divider from './divider';
 import Draggable from './draggable';
 import Cascader from './cascader';
-import {Component} from '../libs/index';
+import {Component} from 'libs/index';
 // import {demoData} from './tree/mockdata';
 
 let defaultDataSource = [];

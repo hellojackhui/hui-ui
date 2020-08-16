@@ -1,3 +1,6 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-modal {
   top: 0;
   right: 0;
@@ -20,8 +23,8 @@
     left: 50%;
     margin-left: -200px;
     min-width: 400px;
-    background-color: #ffffff;
-    border: 1px solid #d1dbe5;
+    background-color: $color-white;
+    @include onepx-line(all, $color-button-border, 1px);
     border-radius: 4px;
     z-index: 3004;
   }
@@ -32,7 +35,7 @@
   &__title {
     font-size: 18px;
     font-weight: 400;
-    color: #1f2d3d;
+    color: $color-text-title;
     line-height: 1;
   }
   &__close {
@@ -40,15 +43,15 @@
     right: 20px;
     top: 14px;
     font-size: 24px;
-    color: #bfcbd9;
+    color: $color-button-border;
     cursor: pointer;
     &:hover {
-      color: #20a0ff;
+      color: $color-brand;
     }
   }
   &__body {
     padding: 20px 20px;
-    color: #48576a;
+    color: $color-grey-0;
     font-size: 14px;
   }
   &__footer {

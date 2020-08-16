@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 import {waterMask} from './waterMask';
 
 export default class WaterMask extends Component {

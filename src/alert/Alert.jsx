@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, View, Transition} from '../../libs/index';
+import {Component, PropType, View, Transition} from 'libs/index';
 import 'module/Alert.scss';
 
 export default class Alert extends Component {

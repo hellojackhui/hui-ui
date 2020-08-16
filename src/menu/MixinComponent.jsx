@@ -1,4 +1,4 @@
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 
 
 export default class MixinComponent extends Component {

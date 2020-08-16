@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from '../../libs/index';
-import './Column.scss';
+import {Component, PropType} from 'libs/index';
+import 'module/Column.scss';
 
 class Column extends Component {
   static contextTypes = {

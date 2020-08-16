@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, Animate} from '../../libs/index';
+import {Component, PropType, Animate} from 'libs/index';
 import './NotificationItem.scss';
 import {default as Assets} from './assets';
 

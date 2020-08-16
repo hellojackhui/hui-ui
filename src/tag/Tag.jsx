@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import {Component, PropType, View} from '../../libs/index';
+import {Component, PropType, View} from 'libs/index';
 import './tag.scss';
 
 export default class Tag extends Component {

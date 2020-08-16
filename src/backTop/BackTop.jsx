@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, View, Transition} from '../../libs/index';
+import {Component, PropType, View, Transition} from 'libs/index';
 import 'module/BackTop.scss';
 
 export default class BackTop extends Component {

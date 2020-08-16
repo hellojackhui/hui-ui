@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType} from '../../libs/index';
+import {Component, PropType} from 'libs/index';
 import ajax from './ajax';
 import Cover from './Cover';
 import './AjaxUpload.scss';

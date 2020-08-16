@@ -1,5 +1,5 @@
 import React from 'react';
-import {PropType} from '../../libs/index';
+import {PropType} from 'libs/index';
 import Checkbox from './Checkbox';
 import 'module/Checkbox.scss';
 

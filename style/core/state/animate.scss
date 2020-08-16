@@ -15,3 +15,25 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes enter {
+  from {
+    top: 0px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes leave {
+  from {
+    top: 20px;
+    opacity: 1;
+  }
+  to {
+    top: 0px;
+    opacity: 0;
+  }
+}

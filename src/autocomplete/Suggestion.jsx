@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Component, PropType, View, Transition} from '../../libs/index';
+import {Component, PropType, View, Transition} from 'libs/index';
 import Popper from 'popper.js';
 
 class Suggestion extends Component {
