@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import './Rate.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Rate.scss';
 
 class Rate extends Component {
   constructor(props) {

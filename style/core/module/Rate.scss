@@ -1,3 +1,6 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-rate {
   height: 20px;
   line-height: 1;
@@ -10,9 +13,9 @@
   }
   &__star {
     position: relative;
-    font-size: 18px;
+    font-size: $font-size-xl;
     margin-right: 6px;
-    color: #bfcbd9;
+    color: $color-button-border;
     transition: .3s;
     &.hover {
       transform: scale(1.15);

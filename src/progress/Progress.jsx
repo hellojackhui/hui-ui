@@ -7,8 +7,8 @@
  */
 
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Progress.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Progress.scss';
 class Progress extends Component {
   static defaultProps = {
     percentage: 0,

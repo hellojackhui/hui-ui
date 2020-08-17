@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType, View} from 'libs/index';
+import {Component, PropType, View} from '../../libs/index';
 import Checkbox from '../checkbox/index';
 import Input from '../input/index';
 import i18n from '../i18n/index';

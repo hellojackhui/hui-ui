@@ -3,12 +3,12 @@
  * @Author: hellojackhui 
  * @Date: 2020-03-15 20:46:23 
  * @Last Modified by: hellojackhui
- * @Last Modified time: 2020-06-04 07:14:52
+ * @Last Modified time: 2020-08-17 21:54:32
  */
 
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import './Slider.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Slider.scss';
 import InputNumber from '../input-number';
 
 export default class Slider extends Component {

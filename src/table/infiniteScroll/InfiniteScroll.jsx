@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
+import {Component, PropType} from '../../../libs/index';
 import cloneDeep from 'lodash/cloneDeep';
 import isEqual from 'lodash/isEqual';
 

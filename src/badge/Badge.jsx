@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Badge.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Badge.scss';
 
 export default class Badge extends Component {
   getValue = () => {

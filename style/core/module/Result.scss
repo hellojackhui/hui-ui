@@ -1,3 +1,10 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+$color-result-bg: #fafafa !default;
+$color-text-title: rgba(0,0,0,.85) !default;
+$color-text-subtitle: rgba(0,0,0,.45) !default;
+
 .hui-result {
   padding: 48px 32px;
   &__icon {
@@ -5,22 +12,22 @@
     text-align: center;
   }
   &__title {
-    color: rgba(0,0,0,.85);
+    color: $color-text-title;
     font-size: 24px;
     line-height: 1.8;
     text-align: center;
     margin-bottom: 5px;
   }
   &__subtitle {
-    color: rgba(0,0,0,.45);
-    font-size: 14px;
+    color: $color-text-subtitle;
+    font-size: $font-size-base;
     line-height: 1.6;
     text-align: center;
   }
   &__content {
     margin-top: 24px;
     padding: 24px 40px;
-    background-color: #fafafa;
+    background-color: $color-result-bg;
   }
   &__extra {
     margin: 32px 0 0;

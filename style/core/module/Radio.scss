@@ -1,7 +1,12 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+$color-radio-hover: #eef1f6 !default;
+
 .hui-radio {
   position: relative;
   display: inline-block;
-  color: #1f2d3d;
+  color: $color-text-base;
   cursor: pointer;
   white-space: nowrap;
   &__icon {
@@ -11,24 +16,24 @@
     cursor: pointer;
     outline: 0;
     &.is-checked .hui-radio__inner {
-      background-color: #50bfff;
-      border: 1px solid #50bfff;
+      background-color: $color-brand;
+      @include onepx-line(all, $color-brand, 1px);
     }
     &.is-disabled {
       display: inline-block;
       .hui-radio__inner {
-        background-color: #eef1f6;
-        border-color: #d1dbe5;
+        background-color: $color-radio-hover;
+        border-color: $color-button-border;
         cursor: not-allowed;
         &::after {
-          background-color: #eef1f6;
+          background-color: $color-radio-hover;
         }
       }
       .hui-radio__input {
         pointer-events: none;
       }
       &+.hui-radio__title {
-        color: #d1dbe5;
+        color: $color-button-border;
         cursor: not-allowed;
       }
     }
@@ -38,7 +43,7 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    border: 1px solid #bfcbd9;
+    @include onepx-line(all, $color-button-border, 1px);
     border-radius: 50%;
     cursor: pointer;
     box-sizing: border-box;
@@ -52,7 +57,7 @@
       border-radius: 50%;
       margin-left: -3px;
       margin-top: -3px;
-      background-color: #fff;
+      background-color: $color-white;
       transition: transform .15s cubic-bezier(.71,-.46,.88,.6);
     }
   }
@@ -81,12 +86,12 @@
   position: relative;
   &__wrap {
     padding: 10px 15px;
-    border: 1px solid #bfcbd9;
+    @include onepx-line(all, $color-button-border, 1px);
     cursor: pointer;
     font-size: 14px;
     border-left: 0;
     white-space: nowrap;
-    background-color: #fff;
+    background-color: $color-white;
     text-align: center;
     box-sizing: border-box;
     outline: 0;
@@ -94,18 +99,18 @@
     transition: all .3s cubic-bezier(.645,.045,.355,1);
     border-radius: 0;
     &.is-disabled {
-      color: #bfcbd9;
+      color: $color-button-border;
       cursor: not-allowed;
       background-image: none;
-      background-color: #eef1f6;
-      border-color: #d1dbe5;
+      background-color: $color-radio-hover;
+      border-color: $color-button-border;
       box-shadow: none;
     }
     &.is-checked {
-      color: #ffffff;
+      color: $color-white;
       background-image: none;
-      background-color: #50bfff;
-      border-color: #50bfff;
+      background-color: $color-brand;
+      border-color: $color-brand;
       box-shadow: none;
     }
   }
@@ -117,7 +122,7 @@
     left: -999px;
   }
   &:first-of-type(1) .hui-radio-button__wrap {
-    border-left: 1px solid #bfcbd9;
+    @include onepx-line(left, $color-button-border, 1px);
     border-radius: 4px 0px 0px 4px;
   }
   &:last-child .hui-radio-button__wrap {

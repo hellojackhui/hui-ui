@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType, Animate} from 'libs/index';
-import './NotificationItem.scss';
+import {Component, PropType, Animate} from '../../libs/index';
+import '../../style/core/module/NotificationItem.scss';
 import {default as Assets} from './assets';
 
 export default class NotificationItem extends Component {

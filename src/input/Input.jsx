@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Input.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Input.scss';
 import {calculateTextareaStyle} from './utils';
 
 export default class Input extends Component {

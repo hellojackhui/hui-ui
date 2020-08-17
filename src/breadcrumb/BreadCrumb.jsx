@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/BreadCrumb.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/BreadCrumb.scss';
 
 export default class BreadCrumb extends Component {
   getChildContext() {

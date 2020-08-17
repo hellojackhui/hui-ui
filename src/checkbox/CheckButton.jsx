@@ -1,7 +1,7 @@
 import React from 'react';
-import {PropType} from 'libs/index';
+import {PropType} from '../../libs/index';
 import Checkbox from './Checkbox';
-import 'module/Checkbox.scss';
+import '../../style/core/module/Checkbox.scss';
 
 export default class CheckButton extends Checkbox {
 

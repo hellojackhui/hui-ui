@@ -1,3 +1,6 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-slider {
   position: relative;
   min-width: 500px;
@@ -7,14 +10,14 @@
     margin: 16px 0;
     box-sizing: border-box;
     border-radius: 3px;
-    background-color: #e4e8f1;
+    background-color: $color-progress-bg;
     vertical-align: middle;
     cursor: pointer;
   }
   &__thunk {
     height: 4px;
     position: absolute;
-    background-color: #20a0ff;
+    background-color: $color-brand;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
   }
@@ -38,7 +41,7 @@
     height: 12px;
     vertical-align: middle;
     top: 9px;
-    background-color: #20a0ff;
+    background-color: $color-brand;
     border-radius: 50%;
     transition: .2s;
     user-select: none;
@@ -58,7 +61,7 @@
     transform: translateX(-50%);
     font-size: 14px;
     padding: 8px 8px;
-    color: white;
+    color: $color-white;
     background: rgb(255, 73, 73);
     border-radius: 8px;
     opacity: 0;
@@ -73,14 +76,14 @@
       left: 50%;
       transform: translateX(-50%);
       border: 7px solid transparent;
-      border-top-color: #ff4949;
+      border-top-color: $color-error;
     }
   }
   &__stop {
     position: absolute;
     width: 4px;
     height: 4px;
-    background-color: #bfcbd9;
+    background-color: $color-button-border;
     border-radius: 50%;
   }
 }

@@ -192,6 +192,37 @@
       }
     },
     {
+      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "value": {
+        "name": "BreadCrumb",
+        "route": "/BreadCrumb",
+        "id": "74b1116b55b5545cdeb738c8d5cced2f",
+        "filepath": "src/breadcrumb/BreadCrumb.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "hidden": false,
+        "slug": "src-breadcrumb-bread-crumb",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "breadcrumb-面包屑",
+            "depth": 1,
+            "value": "BreadCrumb 面包屑"
+          },
+          {
+            "slug": "基本使用",
+            "depth": 2,
+            "value": "基本使用"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
+          }
+        ]
+      }
+    },
+    {
       "key": "src/badge/Badge.mdx",
       "value": {
         "name": "Badge",
@@ -233,32 +264,22 @@
       }
     },
     {
-      "key": "src/breadcrumb/BreadCrumb.mdx",
+      "key": "src/card/Card.mdx",
       "value": {
-        "name": "BreadCrumb",
-        "route": "/BreadCrumb",
-        "id": "74b1116b55b5545cdeb738c8d5cced2f",
-        "filepath": "src/breadcrumb/BreadCrumb.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/breadcrumb/BreadCrumb.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/breadcrumb/BreadCrumb.mdx",
+        "name": "Card",
+        "route": "/Card",
+        "id": "8ea95e41a991c0c2aa1539b418d3a658",
+        "filepath": "src/card/Card.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
         "hidden": false,
-        "slug": "src-breadcrumb-bread-crumb",
+        "slug": "src-card-card",
         "menu": "",
         "headings": [
           {
-            "slug": "breadcrumb-面包屑",
+            "slug": "card-卡片",
             "depth": 1,
-            "value": "BreadCrumb 面包屑"
-          },
-          {
-            "slug": "基本使用",
-            "depth": 2,
-            "value": "基本使用"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
+            "value": "Card 卡片"
           }
         ]
       }
@@ -290,27 +311,6 @@
             "slug": "属性",
             "depth": 2,
             "value": "属性"
-          }
-        ]
-      }
-    },
-    {
-      "key": "src/card/Card.mdx",
-      "value": {
-        "name": "Card",
-        "route": "/Card",
-        "id": "8ea95e41a991c0c2aa1539b418d3a658",
-        "filepath": "src/card/Card.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/card/Card.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/card/Card.mdx",
-        "hidden": false,
-        "slug": "src-card-card",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "card-卡片",
-            "depth": 1,
-            "value": "Card 卡片"
           }
         ]
       }
@@ -562,37 +562,6 @@
       }
     },
     {
-      "key": "src/icon/Icon.mdx",
-      "value": {
-        "name": "icon",
-        "route": "/icon",
-        "id": "214290ada325a22eb66e78829e745ec9",
-        "filepath": "src/icon/Icon.mdx",
-        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/icon/Icon.mdx",
-        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/icon/Icon.mdx",
-        "hidden": false,
-        "slug": "src-icon-icon",
-        "menu": "",
-        "headings": [
-          {
-            "slug": "icon-图标",
-            "depth": 1,
-            "value": "Icon 图标"
-          },
-          {
-            "slug": "按钮列表",
-            "depth": 2,
-            "value": "按钮列表"
-          },
-          {
-            "slug": "属性",
-            "depth": 2,
-            "value": "属性"
-          }
-        ]
-      }
-    },
-    {
       "key": "src/input/Input.mdx",
       "value": {
         "name": "Input",
@@ -664,6 +633,37 @@
             "slug": "事件回调",
             "depth": 3,
             "value": "事件回调"
+          }
+        ]
+      }
+    },
+    {
+      "key": "src/icon/Icon.mdx",
+      "value": {
+        "name": "icon",
+        "route": "/icon",
+        "id": "214290ada325a22eb66e78829e745ec9",
+        "filepath": "src/icon/Icon.mdx",
+        "fullpath": "/Users/huijiawei/Documents/projects/hui-ui/src/icon/Icon.mdx",
+        "link": "https://github.com/hellojackhui/hui-ui/edit/master/src/icon/Icon.mdx",
+        "hidden": false,
+        "slug": "src-icon-icon",
+        "menu": "",
+        "headings": [
+          {
+            "slug": "icon-图标",
+            "depth": 1,
+            "value": "Icon 图标"
+          },
+          {
+            "slug": "按钮列表",
+            "depth": 2,
+            "value": "按钮列表"
+          },
+          {
+            "slug": "属性",
+            "depth": 2,
+            "value": "属性"
           }
         ]
       }
@@ -2782,6 +2782,451 @@
       ]
     },
     {
+      "key": "src/checkbox/CheckButton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CheckButton",
+          "methods": [
+            {
+              "name": "getInnerStyle",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "CheckButton",
+          "props": {
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.number, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "group": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/checkbox/Checkbox.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Checkbox",
+          "methods": [
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onFocus",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onBlur",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "getLabel",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "props",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "e",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Checkbox",
+          "props": {
+            "checked": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.number, PropType.string])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "label": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "indeterminate": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "group": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/checkbox/CheckboxGroup.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "CheckboxGroup",
+          "methods": [
+            {
+              "name": "onChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "value",
+                  "type": null
+                },
+                {
+                  "name": "checked",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "CheckboxGroup",
+          "props": {
+            "min": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "max": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.arrayOf(PropType.string)"
+              },
+              "required": false,
+              "description": ""
+            },
+            "size": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['large', 'small'])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "fill": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "textColor": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "childContext": {
+            "group": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/color-picker/ColorPicker.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "ColorPicker",
+          "methods": [
+            {
+              "name": "changeHandler",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "color",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "onClear",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "resetColor",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hide",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onPick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "ColorPicker",
+          "props": {
+            "value": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showAlpha": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "format": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "() => {}",
+                "computed": false
+              }
+            }
+          },
+          "childContext": {
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/color-picker/Picker.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Picker",
+          "methods": [],
+          "actualName": "Picker",
+          "props": {
+            "color": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object.isRequired"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showPicker": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "showAlpha": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "onPick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "onClear": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            },
+            "onChange": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.func"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "function() {}",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "src/cascader/Cascader.jsx",
       "value": [
         {
@@ -3176,271 +3621,6 @@
       ]
     },
     {
-      "key": "src/checkbox/CheckButton.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CheckButton",
-          "methods": [
-            {
-              "name": "getInnerStyle",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "CheckButton",
-          "props": {
-            "checked": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.number, PropType.string])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "label": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "group": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/checkbox/Checkbox.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Checkbox",
-          "methods": [
-            {
-              "name": "parent",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onFocus",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onBlur",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "getLabel",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "props",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "e",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Checkbox",
-          "props": {
-            "checked": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.number, PropType.string])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "label": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "indeterminate": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "group": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/checkbox/CheckboxGroup.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "CheckboxGroup",
-          "methods": [
-            {
-              "name": "onChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "value",
-                  "type": null
-                },
-                {
-                  "name": "checked",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "CheckboxGroup",
-          "props": {
-            "min": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "max": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.string, PropType.number])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.arrayOf(PropType.string)"
-              },
-              "required": false,
-              "description": ""
-            },
-            "size": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['large', 'small'])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "fill": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "textColor": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "childContext": {
-            "group": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
       "key": "src/collapse/Collapse.jsx",
       "value": [
         {
@@ -3546,186 +3726,6 @@
               },
               "required": false,
               "description": ""
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/color-picker/ColorPicker.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "ColorPicker",
-          "methods": [
-            {
-              "name": "changeHandler",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "color",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "onClear",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "resetColor",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "hide",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "handleClickOutside",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onPick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "ColorPicker",
-          "props": {
-            "value": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showAlpha": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "format": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "() => {}",
-                "computed": false
-              }
-            }
-          },
-          "childContext": {
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/color-picker/Picker.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Picker",
-          "methods": [],
-          "actualName": "Picker",
-          "props": {
-            "color": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object.isRequired"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showPicker": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "showAlpha": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "onPick": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
-            },
-            "onClear": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
-            },
-            "onChange": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.func"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "function() {}",
-                "computed": false
-              }
             }
           }
         }
@@ -3898,243 +3898,6 @@
               "defaultValue": {
                 "value": "{\n  x: 0,\n  y: 0\n}",
                 "computed": false
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/dropdown/Dropdown.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Dropdown",
-          "methods": [
-            {
-              "name": "initEvent",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "handleMenuItemClick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "command",
-                  "optional": false,
-                  "type": null
-                },
-                {
-                  "name": "instance",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "show",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "hide",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "handleClick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "handleClickOutside",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "setDropdownElement",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "removeDropdownElement",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "Dropdown",
-          "props": {
-            "menuAlign": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOf(['start', 'end'])"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "'end'",
-                "computed": false
-              }
-            },
-            "hideOnClick": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "trigger": {
-              "defaultValue": {
-                "value": "'hover'",
-                "computed": false
-              },
-              "required": false
-            }
-          },
-          "childContext": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/dropdown/DropdownItem.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "DropdownItem",
-          "methods": [
-            {
-              "name": "handleClick",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "DropdownItem",
-          "props": {
-            "command": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.string"
-              },
-              "required": false,
-              "description": ""
-            },
-            "disabled": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            },
-            "divided": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": ""
-            }
-          },
-          "context": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
-              },
-              "required": false
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/dropdown/DropdownMenu.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "DropdownMenu",
-          "methods": [
-            {
-              "name": "onVisibleChange",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "visible",
-                  "optional": false,
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "placement",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onEnter",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "parent",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "onAfterLeave",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            }
-          ],
-          "actualName": "DropdownMenu",
-          "context": {
-            "component": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.any"
               },
               "required": false
             }
@@ -4793,6 +4556,243 @@
                 "value": "false",
                 "computed": false
               }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/dropdown/Dropdown.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Dropdown",
+          "methods": [
+            {
+              "name": "initEvent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleMenuItemClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "command",
+                  "optional": false,
+                  "type": null
+                },
+                {
+                  "name": "instance",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "show",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "hide",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "handleClickOutside",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "setDropdownElement",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "removeDropdownElement",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "Dropdown",
+          "props": {
+            "menuAlign": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOf(['start', 'end'])"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "'end'",
+                "computed": false
+              }
+            },
+            "hideOnClick": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "trigger": {
+              "defaultValue": {
+                "value": "'hover'",
+                "computed": false
+              },
+              "required": false
+            }
+          },
+          "childContext": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/dropdown/DropdownItem.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DropdownItem",
+          "methods": [
+            {
+              "name": "handleClick",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DropdownItem",
+          "props": {
+            "command": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.string"
+              },
+              "required": false,
+              "description": ""
+            },
+            "disabled": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            },
+            "divided": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": ""
+            }
+          },
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/dropdown/DropdownMenu.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "DropdownMenu",
+          "methods": [
+            {
+              "name": "onVisibleChange",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "visible",
+                  "optional": false,
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "placement",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onEnter",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "parent",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "onAfterLeave",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            }
+          ],
+          "actualName": "DropdownMenu",
+          "context": {
+            "component": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.any"
+              },
+              "required": false
             }
           }
         }
@@ -6687,159 +6687,6 @@
       ]
     },
     {
-      "key": "src/skeleton/Skeleton.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "Skeleton",
-          "methods": [
-            {
-              "name": "renderSkeletonPage",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "renderSkeletonHeader",
-              "docblock": null,
-              "modifiers": [],
-              "params": [],
-              "returns": null
-            },
-            {
-              "name": "renderSkeletonBody",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "active",
-                  "type": null
-                },
-                {
-                  "name": "paragraph",
-                  "type": null
-                },
-                {
-                  "name": "title",
-                  "type": null
-                },
-                {
-                  "name": "avatar",
-                  "type": null
-                }
-              ],
-              "returns": null
-            },
-            {
-              "name": "renderSkeletonParagraph",
-              "docblock": null,
-              "modifiers": [],
-              "params": [
-                {
-                  "name": "paragraph",
-                  "type": null
-                }
-              ],
-              "returns": null
-            }
-          ],
-          "actualName": "Skeleton",
-          "props": {
-            "active": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "false",
-                "computed": false
-              }
-            },
-            "loading": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            },
-            "avatar": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.oneOfType([PropType.bool, PropType.any])"
-              },
-              "required": false,
-              "description": ""
-            },
-            "paragraph": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.object"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "{\n  row: 3,\n}",
-                "computed": false
-              }
-            },
-            "title": {
-              "type": {
-                "name": "custom",
-                "raw": "PropType.bool"
-              },
-              "required": false,
-              "description": "",
-              "defaultValue": {
-                "value": "true",
-                "computed": false
-              }
-            }
-          }
-        }
-      ]
-    },
-    {
-      "key": "src/skeleton/SkeletonButton.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SkeletonButton",
-          "methods": [],
-          "actualName": "SkeletonButton"
-        }
-      ]
-    },
-    {
-      "key": "src/skeleton/SkeletonCircle.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SkeletonCircle",
-          "methods": [],
-          "actualName": "SkeletonCircle"
-        }
-      ]
-    },
-    {
-      "key": "src/skeleton/SkeletonInput.jsx",
-      "value": [
-        {
-          "description": "",
-          "displayName": "SkeletonInput",
-          "methods": [],
-          "actualName": "SkeletonInput"
-        }
-      ]
-    },
-    {
       "key": "src/slider/Slider.jsx",
       "value": [
         {
@@ -7191,6 +7038,159 @@
               "required": false
             }
           }
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/Skeleton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "Skeleton",
+          "methods": [
+            {
+              "name": "renderSkeletonPage",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderSkeletonHeader",
+              "docblock": null,
+              "modifiers": [],
+              "params": [],
+              "returns": null
+            },
+            {
+              "name": "renderSkeletonBody",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "active",
+                  "type": null
+                },
+                {
+                  "name": "paragraph",
+                  "type": null
+                },
+                {
+                  "name": "title",
+                  "type": null
+                },
+                {
+                  "name": "avatar",
+                  "type": null
+                }
+              ],
+              "returns": null
+            },
+            {
+              "name": "renderSkeletonParagraph",
+              "docblock": null,
+              "modifiers": [],
+              "params": [
+                {
+                  "name": "paragraph",
+                  "type": null
+                }
+              ],
+              "returns": null
+            }
+          ],
+          "actualName": "Skeleton",
+          "props": {
+            "active": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "false",
+                "computed": false
+              }
+            },
+            "loading": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            },
+            "avatar": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.oneOfType([PropType.bool, PropType.any])"
+              },
+              "required": false,
+              "description": ""
+            },
+            "paragraph": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.object"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "{\n  row: 3,\n}",
+                "computed": false
+              }
+            },
+            "title": {
+              "type": {
+                "name": "custom",
+                "raw": "PropType.bool"
+              },
+              "required": false,
+              "description": "",
+              "defaultValue": {
+                "value": "true",
+                "computed": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/SkeletonButton.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkeletonButton",
+          "methods": [],
+          "actualName": "SkeletonButton"
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/SkeletonCircle.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkeletonCircle",
+          "methods": [],
+          "actualName": "SkeletonCircle"
+        }
+      ]
+    },
+    {
+      "key": "src/skeleton/SkeletonInput.jsx",
+      "value": [
+        {
+          "description": "",
+          "displayName": "SkeletonInput",
+          "methods": [],
+          "actualName": "SkeletonInput"
         }
       ]
     },

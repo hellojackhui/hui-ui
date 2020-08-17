@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType, View, Transition} from 'libs/index';
-import 'module/BackTop.scss';
+import {Component, PropType, View, Transition} from '../../libs/index';
+import '../../style/core/module/BackTop.scss';
 
 export default class BackTop extends Component {
   ctx = this;

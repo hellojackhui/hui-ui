@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Collapse.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Collapse.scss';
 
 export default class Collapse extends Component {
   constructor(props) {

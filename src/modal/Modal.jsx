@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType, View, Transition} from 'libs/index';
-import 'module/Modal.scss';
+import {Component, PropType, View, Transition} from '../../libs/index';
+import '../../style/core/module/Modal.scss';
 
 export default class Modal extends Component {
   constructor(props) {

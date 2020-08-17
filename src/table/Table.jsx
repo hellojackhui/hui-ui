@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
+import {Component, PropType} from '../../libs/index';
 import {Resizable} from 'react-resizable';
 import Checkbox from '../checkbox/index';
 import Input from '../input/index';

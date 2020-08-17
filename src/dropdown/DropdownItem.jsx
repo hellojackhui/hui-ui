@@ -1,6 +1,6 @@
 import React from 'react';
-import { Component, PropType } from 'libs/index';
-import 'module/Dropdown.scss';
+import { Component, PropType } from '../../libs/index';
+import '../../style/core/module/Dropdown.scss';
 
 class DropdownItem extends Component {
   handleClick = () => {

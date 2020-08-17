@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PopperJS from 'popper.js';
-import {Component, PropType, View} from 'libs/index';
+import {Component, PropType, View} from '../../libs/index';
 import ClickOutside from 'react-click-outside';
 import CascaderMenu from './CascaderMenu';
 import Input from '../input/index';
-import 'module/Cascader.scss';
+import '../../style/core/module/Cascader.scss';
 
 
 class Cascader extends Component {

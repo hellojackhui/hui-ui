@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Row.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Row.scss';
 
 class Row extends Component {
   getChildContext() {

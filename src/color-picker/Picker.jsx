@@ -2,8 +2,8 @@ import React from 'react';
 import Alpha from './components/Alpha';
 import Color from './components/Color';
 import Hue from './components/Hue';
-import {Component, PropType, View} from 'libs/index';
-import 'module/Picker.scss';
+import {Component, PropType, View} from '../../libs/index';
+import '../../style/core/module/Picker.scss';
 
 
 class Picker extends Component {

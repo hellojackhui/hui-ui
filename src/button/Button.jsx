@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Button.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Button.scss';
 
 export default class Button extends Component {
   handleClick = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType} from 'libs/index';
-import 'module/Card.scss';
+import {Component, PropType} from '../../libs/index';
+import '../../style/core/module/Card.scss';
 
 export default class Card extends Component {
   render() {

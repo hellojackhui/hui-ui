@@ -1,3 +1,6 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
 .hui-notification {
   width: 330px;
   padding: 20px;
@@ -9,7 +12,7 @@
   animation-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
   animation-duration: 0.5s;
   animation-fill-mode: both;
-  background-color: #ffffff;
+  background-color: $color-white;
   overflow: hidden;
   z-index: 10000;
   &__enter {
@@ -35,14 +38,14 @@
   &__title {
     font-weight: 400;
     font-size: 16px;
-    color: #1f2d3d;
+    color: $color-text-base;
     margin: 0;
   }
   &__content {
     font-size: 14px;
     line-height: 21px;
     margin: 10px 0 0;
-    color: #8391a5;
+    color: $color-text-third;
     text-align: justify;
   }
   &__close {
@@ -53,7 +56,7 @@
     font-size: 14px;
     cursor: pointer;
     &:hover {
-      color: #50bfff;
+      color: $color-brand;
     }
   }
 }
