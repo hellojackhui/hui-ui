@@ -1,5 +1,5 @@
 .*
-test
-build
-.docz/
+test/
+build/
+.docz/**/*/
 .coverage/
