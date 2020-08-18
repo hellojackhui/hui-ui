@@ -92,7 +92,7 @@ export default class Input extends Component {
       return (
         <div style={this.styles()} className={this.classname(commonClassName)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           {prepend && <div className="hui-input-group__prepend">{prepend}</div>}
-          {icon &&  <span className="hui-input__icon" onClick={this.iconClickHandler}><i className={this.classnames('hui-icon', `hui-icon-${icon}`)}></i></span>}
+          {icon && <span className="hui-input__icon" onClick={this.iconClickHandler}><i className={this.classnames('hui-icon', `hui-icon-${icon}`)}></i></span>}
           <input 
             {...otherProps}
             ref="input"
