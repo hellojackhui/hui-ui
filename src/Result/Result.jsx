@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
 import Icon from '../icon/index';
-import './Result.scss';
+import '../../style/core/module/Result.scss';
 
 export default class Result extends Component {
   statusToIcon = (status) => {

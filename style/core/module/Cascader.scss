@@ -1,0 +1,67 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.hui-cascader {
+  display: inline-block;
+  position: relative;
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    line-height: 36px;
+    padding: 0 25px 0 10px;
+    color: $color-black-1;
+    width: 100%;
+    @include line(1);
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: $font-size-base;
+    text-align: left;
+  }
+  &-menus {
+    white-space: nowrap;
+    background: $color-white;
+    position: absolute;
+    margin: 5px 0;
+    border: 1px solid $color-button-border;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
+  }
+  &-menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 204px;
+    overflow: auto;
+    border-right: solid 1px $color-button-border;
+    background-color: $color-white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 6px 0;
+    min-width: 160px;
+    &__item {
+      font-size: 14px;
+      padding: 8px 30px 8px 10px;
+      position: relative;
+      @include line(1);
+      color: $color-dark-gray;
+      height: 36px;
+      line-height: 1.5;
+      box-sizing: border-box;
+      cursor: pointer;
+      &.is-active, &:hover {
+        color: $color-white;
+        background-color: $color-brand;
+      }
+      &.is-disabled {
+        color: $color-white;
+        background-color: $color-disabled;
+      }
+    }
+  }
+  .hui-input__icon {
+    position: absolute;
+    right: 0;
+    left: auto;
+  }
+}

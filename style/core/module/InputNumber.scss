@@ -1,0 +1,149 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+$color-input-number-hover: #8391a5 !default;
+
+.hui-input-number {
+  display: inline-block;
+  position: relative;
+  border: 1px solid $color-button-border;
+  border-radius: 4px;
+  &:hover {
+    border-color: $color-input-number-hover;
+  }
+  &.is-disabled {
+    background-color: $color-checked-disabled;
+    color: #bbb;
+    cursor: not-allowed;
+    &:hover {
+      border: 1px solid $color-button-border-hover;
+    }
+    .hui-input-number__increase {
+      pointer-events: none;
+    }
+    .hui-input-number__decrease {
+      pointer-events: none;
+    }
+    &.is-focus {
+      border: 1px solid $color-button-border-hover;
+      &:hover {
+        border: 1px solid $color-button-border-hover;
+      }
+    }
+  }
+  &.is-focus {
+    border: 1px solid $color-brand;
+  }
+  &--large {
+    font-size: 16px;
+    .hui-input-number__increase {
+      font-size: 25px;
+    }
+    .hui-input-number__decrease {
+      font-size: 25px;
+    }
+  }
+  &--small {
+    font-size: $font-subtitle;
+    & .hui-input__inner {
+      height: 30px;
+    }
+    .hui-input-number__increase {
+      font-size: 20px;
+      height: 30px;
+      .hui-icon-plus {
+        position: relative;
+        top: -1px;
+      }
+    }
+    .hui-input-number__decrease {
+      font-size: 20px;
+      height: 30px;
+      .hui-icon-minus {
+        position: relative;
+        top: -1px;
+      }
+    }
+  }
+  &--mini {
+    font-size: $font-base;
+    & .hui-input__inner {
+      height: 25px;
+    }
+    .hui-input-number__increase {
+      font-size: $font-title;
+      height: 25px;
+      .hui-icon-plus {
+        position: relative;
+        top: -4px;
+      }
+    }
+    .hui-input-number__decrease {
+      font-size: $font-title;
+      height: 25px;
+      .hui-icon-minus {
+        position: relative;
+        top: -4px;
+      }
+    }
+  }
+  &:hover.is-focus {
+    border: 1px solid $color-brand;
+    outline: 0;
+  }
+  &__inner {
+    padding-right: 85px;
+    .hui-input__inner {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border: 1px solid transparent;
+    }
+  }
+  &__input {
+    height: 42px;
+  }
+  &__increase {
+    position: absolute;
+    right: 42px;
+    top: 0px;
+    line-height: 36px;
+    width: 42px;
+    height: 38px;
+    border-left: 1px solid $color-button-border;
+    text-align: center;
+    color: #97a8be;
+    cursor: pointer;
+    z-index: 1;
+    color: $color-button-border;
+    &:hover {
+      color: $color-brand;
+    }
+    &.is-hide {
+      color: $color-button-border-hover;
+      cursor: not-allowed;
+    }
+  }
+  &__decrease {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 42px;
+    line-height: 36px;
+    font-size: 16px;
+    border-left: 1px solid $color-button-border;
+    height: 38px;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
+    color: $color-button-border;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    &:hover {
+      color: $color-brand;
+    }
+    &.is-hide {
+      color: $color-button-border-hover;
+      cursor: not-allowed;
+    }
+  }
+}

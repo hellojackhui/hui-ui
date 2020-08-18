@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Component, PropType} from '../../libs/index';
 import {addEvent, removeEvent} from '../../libs/utils/addEvents';
 import {getTouchIdentifier, getControlPosition, createCoreData, createDraggableData, getBoundPosition, canDragX, canDragY, matchSelect} from './utils/domFunctions';
-import './Draggable.scss';
+import '../../style/core/module/Draggable.scss';
 
 const eventsFor = {
   touch: {

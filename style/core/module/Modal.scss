@@ -1,0 +1,62 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.hui-modal {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  overflow: auto;
+  z-index: 10000;
+  &__mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 3000;
+  }
+  &__inner {
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+    min-width: 400px;
+    background-color: $color-white;
+    @include onepx-line(all, $color-button-border, 1px);
+    border-radius: 4px;
+    z-index: 3004;
+  }
+  &__header {
+    position: relative;
+    padding: 15px 20px 0;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-text-title;
+    line-height: 1;
+  }
+  &__close {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    font-size: 24px;
+    color: $color-button-border;
+    cursor: pointer;
+    &:hover {
+      color: $color-brand;
+    }
+  }
+  &__body {
+    padding: 20px 20px;
+    color: $color-grey-0;
+    font-size: 14px;
+  }
+  &__footer {
+    padding: 10px 20px 15px;
+    text-align: right;
+    box-sizing: border-box;
+  }
+}

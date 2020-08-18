@@ -1,0 +1,89 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.hui-slider {
+  position: relative;
+  min-width: 500px;
+  &__inner {
+    width: 100%;
+    height: 4px;
+    margin: 16px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: $color-progress-bg;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  &__thunk {
+    height: 4px;
+    position: absolute;
+    background-color: $color-brand;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  &__tip {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background-color: transparent;
+    z-index: 1001;
+    top: -18px;
+    display: inline-block;
+    text-align: center;
+    transform: translateX(-50%);
+    user-select: none;
+  }
+  &__icon {
+    width: 12px;
+    display: inline-block;
+    position: relative;
+    height: 12px;
+    vertical-align: middle;
+    top: 9px;
+    background-color: $color-brand;
+    border-radius: 50%;
+    transition: .2s;
+    user-select: none;
+    &:hover {
+      padding: 3px;
+      &+.hui-slider__tooltip {
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+  }
+  &__tooltip {
+    position: absolute;
+    will-change: top, left;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    padding: 8px 8px;
+    color: $color-white;
+    background: rgb(255, 73, 73);
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    z-index: -1;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      bottom: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 7px solid transparent;
+      border-top-color: $color-error;
+    }
+  }
+  &__stop {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: $color-button-border;
+    border-radius: 50%;
+  }
+}

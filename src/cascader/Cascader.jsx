@@ -5,7 +5,7 @@ import {Component, PropType, View} from '../../libs/index';
 import ClickOutside from 'react-click-outside';
 import CascaderMenu from './CascaderMenu';
 import Input from '../input/index';
-import './Cascader.scss';
+import '../../style/core/module/Cascader.scss';
 
 
 class Cascader extends Component {

@@ -1,0 +1,100 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.hui-popper {
+    position: absolute;
+    background: $color-white;
+    min-width: 150px;
+    border-radius: 2px;
+    @include onepx-line(all, $color-button-border, 1px);
+    padding: 10px;
+    z-index: 2000;
+    font-size: $font-base;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
+    &[x-placement^='top'] {
+      margin-bottom: 12px;
+    }
+    &[x-placement^='bottom'] {
+      margin-top: 12px;
+    }
+    &[x-placement^='right'] {
+      margin-right: 12px;
+    }
+    &[x-placement^='left'] {
+      margin-left: 12px;
+    }
+    &[x-placement^=top] .hui-popper__arrow {
+      bottom: -6px;
+      left: 50%;
+      margin-right: 3px;
+      border-top-color: $color-button-border;
+      border-bottom-width: 0;
+      &::after {
+        bottom: 1px;
+        margin-left: -6px;
+        border-top-color: $color-white;
+        border-bottom-width: 0;
+      }
+    }
+    &[x-placement^=bottom] .hui-popper__arrow {
+      top: -6px;
+      left: 50%;
+      margin-right: 3px;
+      border-bottom-color: $color-button-border;
+      border-top-width: 0;
+      &::after {
+        top: 1px;
+        margin-left: -6px;
+        border-bottom-color: $color-white;
+        border-top-width: 0;
+      }
+    }
+    &[x-placement^=left] .hui-popper__arrow {
+      top: 50%;
+      right: -6px;
+      margin-right: 3px;
+      border-left-color: $color-button-border;
+      border-right-width: 0;
+      &::after {
+        right: 1px;
+        bottom: -6px;
+        margin-left: -6px;
+        border-left-color: $color-white;
+        border-right-width: 0;
+      }
+    }
+    &[x-placement^=right] .hui-popper__arrow {
+      top: 50%;
+      left: -6px;
+      margin-right: 3px;
+      border-right-color: $color-button-border;
+      border-left-width: 0;
+      &::after {
+        bottom: -6px;
+        left: 1px;
+        border-top-color: $color-white;
+        border-left-width: 0;
+      }
+    }
+    & .hui-popper__arrow::after {
+      content: " ";
+      border-width: 6px;
+    }
+    & .hui-popper__arrow {
+      border-width: 6px;
+    }
+    & .hui-popper__arrow, & .hui-popper__arrow::after {
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+    }
+    &__title {
+      color: $color-text-base;
+      font-size: $font-subtitle;
+      line-height: 1;
+      margin-bottom: 9px;
+    }
+}

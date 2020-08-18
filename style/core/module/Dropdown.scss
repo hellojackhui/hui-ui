@@ -1,0 +1,51 @@
+@import '../theme/theme.scss';
+@import '../variables/variables.scss';
+
+$color-box-shadow: rgba(0,0,0,.12) !default;
+
+.hui-dropdown {
+  color: $color-text-base;
+  font-size: 14px;
+  display: inline-block;
+  position: relative;
+  &__caret-button {
+
+  }
+  &__icon {
+      
+  }
+  &-menu {
+    margin: 5px 0;
+    border: 1px solid $color-button-border;
+    box-shadow: 0 2px 4px $color-box-shadow, 0 0 6px $color-box-shadow;
+    padding: 6px 0;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    min-width: 95px;
+    background-color: $color-white;
+    &__item {
+      list-style: none;
+      line-height: 36px;
+      padding: 0 10px;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+  &-item {
+    list-style: none;
+    line-height: 36px;
+    padding: 0 10px;
+    margin: 0;
+    cursor: pointer;
+    &:not(.is-disabled):hover {
+      background-color: $color-grey-4;
+      color: $color-text-base;
+    }
+    &__divided {
+      position: relative;
+      margin-top: 6px;
+      border-top: 1px solid $color-button-border;
+    }
+  }
+}

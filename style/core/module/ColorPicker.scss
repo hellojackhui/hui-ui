@@ -1,0 +1,55 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+.hui-color-picker {
+    display: inline-block;
+    position: relative;
+    line-height: normal;
+    &__selector {
+        display: inline-block;
+        box-sizing: border-box;
+        height: 36px;
+        padding: 6px;
+        border: 1px solid $color-scrollbar-active;
+        border-radius: 4px;
+        font-size: 0;
+    }
+    &__color {
+        position: relative;
+        display: inline-block;
+        box-sizing: border-box;
+        border: 1px solid $color-grey-1;
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        &-inner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__empty {
+        font-size: 18px;
+        position: relative;
+        vertical-align: middle;
+        color: $color-grey-1;
+        position: absolute;
+        top: -4px;
+        left: 6px;
+    }
+    &__arrow {
+        display: inline-block;
+        margin-left: 5px;
+        position: relative;
+        top: 2px;
+        font-size: 15px;
+        vertical-align: top;
+        transition: all .2s linear;
+        transform-origin: 8px 9px;
+        &.is-rotate {
+          transform: rotate(180deg);
+        }
+      }
+}

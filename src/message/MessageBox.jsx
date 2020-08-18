@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component, Animate, PropType} from '../../libs/index';
-import './MessageBox.scss';
+import '../../style/core/module/MessageBox.scss';
 import {default as Assets} from './assets';
 
 

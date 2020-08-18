@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
-import './Loading.scss';
+import '../../style/core/module/Loading.scss';
 
 export default class Loading extends Component {
   // eslint-disable-next-line

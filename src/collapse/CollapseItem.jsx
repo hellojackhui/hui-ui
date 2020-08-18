@@ -1,6 +1,6 @@
 import React from 'react';
-import {Component, PropType, Transition, View} from '../../libs';
-import './Collapse.scss';
+import {Component, PropType, Transition, View} from '../../libs/index';
+import '../../style/core/module/Collapse.scss';
 
 export default class CollapseItem extends Component {
   // eslint-disable-next-line

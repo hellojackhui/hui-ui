@@ -1,0 +1,166 @@
+@import '../variables/variables.scss';
+
+$color-button-border: #C4C4C4 !default;
+$color-button-plain: #50BFFF !default;
+$color-button-plain-hover: #73CCFF !default;
+$color-button-warning-hover: #f9c855 !default;
+$color-button-error-hover: #ff6d6d !default;
+
+.hui-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid $color-button-border;
+  border-radius: 4px;
+  color: $color-black-1;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: $color-white;
+  margin: 0px;
+  outline-style: none;
+  &--large {
+    padding: 11px 19px;
+    font-size: 16px;
+  }
+  &--small {
+    padding: 7px 9px;
+    font-size: 14px;
+  }
+  &--mini {
+    padding: 4px;
+    font-size: 12px;
+  }
+  &--plain {
+    background-color: $color-white;
+    border-color: $color-button-border;
+    color: $color-black-1;
+    &:hover {
+      color: $color-button-plain-hover;
+      border-color: $color-button-plain-hover;
+      background: $color-white;
+    }
+  }
+  &--primary {
+    background-color: $color-button-plain;
+    border-color: $color-button-plain;
+    color: $color-white;
+    &.is-plain:hover {
+      color: $color-button-plain-hover;
+      border-color: $color-button-plain-hover;
+      background: $color-white;
+    }
+    &:hover {
+      background-color: $color-button-plain-hover;
+      border-color: $color-button-plain-hover;
+    }
+  }
+  &--text {
+    background-color: transparent;
+    border-color: transparent;
+    color: $color-button-plain;
+    &.is-plain:hover {
+      color: $color-button-plain-hover;
+    }
+    &:hover {
+      color: $color-button-plain-hover;
+    }
+  }
+  &--success {
+    background-color: $color-success;
+    border-color: $color-success;
+    color: $color-white;
+    &.is-plain:hover {
+      color: $color-success-hover;
+      border-color: $color-success-hover; 
+      background: $color-white;
+    }
+    &:hover {
+      background-color: $color-success-hover;
+      border-color: $color-success-hover;
+    }
+  }
+  &--info {
+    background-color: $color-button-plain;
+    border-color: $color-button-plain;
+    color: $color-white;
+    &.is-plain:hover {
+      color: $color-button-plain-hover;
+      border-color: $color-button-plain-hover;
+      background: $color-white;
+    }
+    &:hover {
+      background-color: $color-button-plain-hover;
+      border-color: $color-button-plain-hover;
+    }
+  }
+  &--warning {
+    background-color: $color-warning;
+    border-color: $color-warning;
+    color: $color-white;
+    &.is-plain:hover {
+      color: $color-button-warning-hover;
+      border-color: $color-button-warning-hover;
+      background: $color-white;
+    }
+    &:hover {
+      background-color: $color-button-warning-hover;
+      border-color: $color-button-warning-hover;
+    }
+  }
+  &--danger {
+    background-color: $color-error;
+    border-color: $color-error;
+    color: $color-white;
+    &.is-plain:hover {
+      color: $color-button-error-hover;
+      border-color: $color-button-error-hover;
+      background: $color-white;
+    }
+    &:hover {
+      background-color: $color-button-error-hover;
+      border-color: $color-button-error-hover;
+    }
+  }
+  &__icon {
+    position: relative;
+    top: 1px;
+    &+ span {
+      margin-left: 5px;
+    }
+  }
+  &+ & {
+    margin-left: 10px;
+  }
+  &__loading {
+    animation: icnloading 1s linear infinite;
+  }
+}
+
+.is-plain {
+  background-color: $color-white;
+  border-color: $color-button-border;
+  color: $color-black-1;
+}
+
+.hui-button.is-disabled {
+  background: $color-white;
+  cursor: not-allowed;
+  color: $color-button-border;
+  border-color: $color-button-border;
+  display: inline-block;
+}
+
+.is-loading {
+  pointer-events: none;
+  cursor: auto;
+  position: relative;
+}
+
+@keyframes icnloading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

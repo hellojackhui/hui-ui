@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Component, View, PropType, Transition} from '../../libs/index';
 import Popper from 'popper.js';
-import './PopOver.scss';
+import '../../style/core/module/PopOver.scss';
 
 export default class PopOver extends Component {
   constructor(props) {

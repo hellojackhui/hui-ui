@@ -1,0 +1,76 @@
+@import '../variables/variables.scss';
+
+.hui-progress {
+  position: relative;
+  line-height: 1;
+  &.hui-progress-line {
+    .hui-progress-bar {
+      padding-right: 50px;
+      width: 100%;
+      margin-right: -55px;
+      box-sizing: border-box;
+      display: inline-block;
+      vertical-align: middle;
+      &__outer {
+        height: 6px;
+        border-radius: 100px;
+        background-color: $color-white;
+        overflow: hidden;
+        position: relative;
+        vertical-align: middle;
+      }
+      &__inner {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: $color-success;
+        text-align: right;
+        border-radius: 100px;
+        line-height: 1;
+        &::after {
+          content: "";
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+        .hui-progress-bar__text {
+          position: absolute;
+          left: 50%;
+          top: 3px;
+          display: inline-block;
+          vertical-align: middle;
+          color: $color-white;
+          font-size: 12px;
+          margin: 0 5px;
+        }
+      }
+    }
+    .hui-progress-text {
+      color: $color-text-secondary;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+      line-height: 1;
+    }
+  }
+  &.hui-progress-circle {
+    display: inline-block;
+  }
+  &.hui-progress-circle .hui-progress-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+  }
+  &.is-success .hui-progress-bar__inner {
+    background-color: $color-success;
+  }
+  &.is-exception .hui-progress-bar__inner {
+    background-color: $color-error;
+  }
+}

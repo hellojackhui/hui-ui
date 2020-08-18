@@ -3,13 +3,10 @@ import Alpha from './components/Alpha';
 import Color from './components/Color';
 import Hue from './components/Hue';
 import {Component, PropType, View} from '../../libs/index';
-import './Picker.scss';
+import '../../style/core/module/Picker.scss';
 
 
 class Picker extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
   render() {
     const {color, pickerIsShow, showAlpha, onClear, onPick} = this.props;
     const currentColor = color.value;

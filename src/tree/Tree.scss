@@ -1,4 +1,6 @@
 @import '../../style/core/theme/theme.scss';
+@import 'styles/core/variables/variables.scss';
+
 
 .hui-tree {
   display: inline-block;
@@ -7,7 +9,7 @@
     position: relative;
     max-width: 600px;
     text-align: center;
-    border: 1px solid $input-border-color;
+    border: 1px solid $color-input-border;
     border-radius: 8px;
     padding: 10px 5px;
   }
@@ -19,7 +21,7 @@
     display: inline-block;
     margin-top: 10px;
     min-height: 500px;
-    border: 1px solid $input-border-color;
+    border: 1px solid $color-input-border;
     border-radius: 8px;
     overflow: auto;
   }
@@ -30,10 +32,10 @@
     transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     cursor: pointer;
     &.is-active {
-      background-color: $table-hover-color;
+      background-color: $color-table-hover;
     }
     &:hover {
-      background-color: $background-color;
+      background-color: $color-tag-background;
     }
     .hui-icon-caret-down {
       vertical-align: middle;
@@ -45,7 +47,7 @@
     &__title {
       margin-left: 3px;
       .highLight {
-        color: $primary-color;
+        color: $color-brand;
       }
     }
     &__extend {
@@ -55,7 +57,7 @@
     }
   }
   &-loading {
-    color: $primary-color;
+    color: $color-brand;
     margin-right: 5px;
     font-size: 12px;
     vertical-align: middle;
@@ -70,7 +72,7 @@
     height: 100px;
     font-size: 14px;
     line-height: 1;
-    color: $tag-hover-border-color;
+    color: $color-tag-border;
     position: absolute;
     top: 0;
     left: 0;

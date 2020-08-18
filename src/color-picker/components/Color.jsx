@@ -1,7 +1,7 @@
 import React from 'react';
 import {Component, PropType} from '../../../libs/index';
 import dragFunction from '../draggable';
-import '../Picker.scss';
+import '../../../style/core/module/Picker.scss';
 
 class Color extends Component {
   constructor(props) {

@@ -4,7 +4,7 @@ import debounce from 'lodash/debounce';
 import ReactClickOutside from 'react-click-outside';
 import {Component, PropType} from '../../libs/index'
 import Button from '../button'
-require('./Dropdown.scss');
+require('../../style/core/module/Dropdown.scss');
 
 class Dropdown extends Component {
   constructor(props) {

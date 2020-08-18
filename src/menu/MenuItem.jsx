@@ -1,5 +1,5 @@
 import React from 'react';
-import { PropType } from '../../libs';
+import { PropType } from 'libs';
 import MixinComponent from './MixinComponent';
 import './Menu.scss';
 

@@ -1,0 +1,31 @@
+@import '../variables/variables.scss';
+
+.hui-badge {
+  display: inline-block;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  &__icon {
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    transform: translateY(-50%) translateX(100%);
+    padding: 0px 6px;
+    display: inline-block;
+    outline: none;
+    border-radius: 10px;
+    color: $color-white;
+    background-color: $color-error;
+    font-size: 12px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    z-index: 1000;
+  }
+  &__dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    right: 5px;
+    border-radius: 50%;
+  }
+}

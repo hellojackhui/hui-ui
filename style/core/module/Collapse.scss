@@ -1,0 +1,44 @@
+@import '../variables/variables.scss';
+@import '../mixins/mixins.scss';
+
+$color-collapse-border: #dfe6ec !default;
+
+.hui-collapse {
+  border: 1px solid $color-collapse-border;
+  border-radius: 0;
+  &-item {
+    &.is-active > &__header &__header__arrow {
+      transform: rotate(90deg);
+    }
+    &__header {
+      height: 43px;
+      line-height: 43px;
+      padding-left: 15px;
+      background-color: $color-white;
+      color: $color-grey-1;
+      cursor: pointer;
+      border-bottom: 1px solid $color-collapse-border;
+      font-size: 13px;
+      &__arrow {
+        margin-right: 8px;
+        transition: transform 0.3s;
+      }
+    }
+    &__content {
+      padding: 10px 15px;
+      font-size: 13px;
+      color: $color-grey-0;
+      line-height: 1.7;
+    }
+    &__wrap {
+      will-change: height;
+      background-color: $color-white;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-bottom: 1px solid $color-collapse-border;
+      &.is-disabled {
+        display: none;
+      }
+    }
+  }
+}

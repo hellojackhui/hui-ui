@@ -1,71 +1,36 @@
-import Alert from './alert';
-import Badge from './badge';
-import Tag from './tag';
-import Button from './button';
-import Radio from './radio';
-import Switch from './switch';
-import Loading from './loading';
-import Progress from './progress';
-import Message from './message';
-import Input from './input';
-import Checkbox from './checkbox';
-import Slider from './slider';
-import InputNumber from './input-number';
-import Tabs from './tabs';
-import Card from './card';
-import WaterMask from './watermask';
-import {Row, Column} from './layout/index';
-import Rate from './rate';
-import Steps from './steps';
-import Breadcrumb from './breadcrumb';
-import Tree from './tree';
-import Collapse from './collapse';
-import Transfer from './transfer';
-import ColorPicker from './color-picker';
-import Modal from './modal';
-import PopOver from './popover';
-import Dropdown from './dropdown';
-import Table from './table';
-import TableAction from './table/tableAction';
-import Skeleton from './skeleton/index';
-import AutoComplete from './autocomplete';
-import BackTop from './backTop';
-import Divider from './divider';
-import Draggable from './draggable';
-import Cascader from './cascader';
-
-export default {
-    Alert,
-    Badge,
-    Tag,
-    Button,
-    Radio,
-    Switch,
-    Loading,
-    Progress,
-    Message,
-    Input,
-    Checkbox,
-    Slider,
-    InputNumber,
-    Tabs,
-    Card,
-    WaterMask,
-    Row,
-    Column,
-    Rate,
-    Steps,
-    Breadcrumb,
-    Tree,
-    Collapse,
-    Transfer,
-    ColorPicker,
-    PopOver,
-    Dropdown,
-    Skeleton,
-    AutoComplete,
-    BackTop,
-    Divider,
-    Draggable,
-    Cascader,
-}
+export { default as Alert } from './alert';
+export { default as Badge } from './badge';
+export { default as Tag } from './tag';
+export { default as Button } from './button';
+export { default as Radio } from './radio';
+export { default as Switch } from './switch';
+export { default as Loading } from './loading';
+export { default as Progress } from './progress';
+export { default as Message } from './message';
+export { default as Input } from './input';
+export { default as Checkbox } from './checkbox';
+export { default as Slider } from './slider';
+export { default as InputNumber } from './input-number';
+export { default as Tabs } from './tabs';
+export { default as Card } from './card';
+export { default as WaterMask } from './watermask';
+export { default as Row } from './layout/Row';
+export { default as Column } from './layout/Column';
+export { default as Rate } from './rate';
+export { default as Steps } from './steps';
+export { default as Breadcrumb } from './breadcrumb';
+export { default as Tree } from './tree';
+export { default as Collapse } from './collapse';
+export { default as Transfer } from './transfer';
+export { default as ColorPicker } from './color-picker';
+export { default as Modal } from './modal';
+export { default as PopOver } from './popover';
+export { default as Dropdown } from './dropdown';
+export { default as Table } from './table';
+export { default as TableAction } from './table/tableAction';
+export { default as Skeleton } from './skeleton';
+export { default as AutoComplete } from './autocomplete';
+export { default as BackTop } from './backTop';
+export { default as Divider } from './divider';
+export { default as Draggable } from './draggable';
+export { default as Cascader } from './cascader';

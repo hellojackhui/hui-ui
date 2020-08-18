@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component, PropType} from '../../libs/index';
-import './Divider.scss';
+import '../../style/core/module/Divider.scss';
 
 
 class Divider extends Component {
